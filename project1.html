@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Project | DAV Portfolio</title>
+    <link rel="icon" type="image/png" href="icon01.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Heebo:wght@200;400;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@600;800&display=swap"
+        rel="stylesheet">
+
+    <!--social media link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <nav class="navbar navbar-top">
+            <div class="container">
+                <div class="nav-table">
+                    <a href="index.html" class="nav-logo">
+                        <img src="icon01_2.png" alt="" width="60">
+
+                    </a>
+                    <a href="index.html">
+                        <h1>DATA VISUALIZATION</h1>
+                    </a>
+                    <ul class="nav nav-right">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item custom-dropdown">
+                            <details>
+                                <summary class="active nav-link">Projects</summary>
+                                <div class="dropdown-content">
+                                   <em>
+                                        <a href="project1.html">Data Visualization</a>
+                                        <a href="project2.html">Research Project</a>
+                                        <a href="project3.html">Case Study 1</a>
+                                        <a href="project4.html">Case Study 2</a>
+                                        <a href="project5.html">Front-End Development</a>
+                                    </em>
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+    </header>
+    <div class="main-dark main">
+        <div class="project">
+
+            <div class="projecttitle">
+                <h1>Art in Renaissance, Baroque, and Rococo</h1>
+
+                <div class=" projecticon">
+                    <a href="https://github.com/Lanjing0803/pfch.wwg" target="_blank">
+                        <i class="fab fa-github"></i> GitHub Repository
+                    </a>
+
+                    <a href="https://sites.google.com/pratt.edu/pfch-wwg/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Project Website
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="projectcontainer">
+                <div>
+                    <h2>Introduction</h2>
+                    <p>Art is a way people express themselves. Imagine looking at a time when art changed a lot. That is
+                        the Renaissance, a "rebirth" of art.<br>
+                        This project aims to visually analyze Renaissance artworks, focusing on elements including
+                        color palette, culture, medium, and themes. While we'll analyze the Baroque and Rococo
+                        movements as extensions of the Renaissance style, the primary focus will remain on the
+                        Renaissance's art and artists.
+                        Understanding this time helps us see how people lived and offers insights into artistic
+                        expression throughout history.
+
+                    </p>
+
+                </div>
+<!--
+                <div>
+                    <h2>Tools and Dataset</h2>
+                    <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">Tools: </em> Python, R,
+                        Adobe Illustrator, Excel</p>
+                    <p><em style="font-weight: bold; text-transform: uppercase;margin-right:1%">Dataset: </em> The
+                        primary source of artwork data for this analysis was <em class="hover-effect">The Metropolitan Museum of Art (MET)</em>.
+                        The dataset was obtained from both MET's open access CSV data on GitHub and the MET API.</p>
+                        <div class="projectcontent">
+                            <div class="project-content-left2">
+                        <p>
+                            During the process of cleaning the CSV dataset on MET Github, I faced several challenges. Sorting out the
+                            relevant artworks from the dataset was the most difficult part as the CSV file contained art
+                            from diverse cultures, styles, and periods. Therefore, I finally used Python as the main
+                            tool to request data from the MET API and applied specific search terms such as ‘Renaissance
+                            art’ and a time frame from 1400 to 1600 to narrow down the results. Then, after taking some
+                            time to refine the dataset using Excel, I was able to successfully clean and prepare the
+                            dataset for the analysis.
+                        </p></div>
+                        <div class="project-content-left2">
+                        <picture class="projectimg3">
+                            <a href="jpeg\project1-process.svg" target="_blank">
+                            <img src="jpeg\project1-process.svg" alt="project1-process" style="padding-top:20px;"></a>
+                        </picture></div>
+                    </div>
+
+
+                    <div>
+                        <h2>Process Highlights</h2>
+                        <div>
+                            <div class="projectcontent">
+                                <div class="project-content-left2">
+                                    <p
+                                        style="font-weight: bold; text-transform: uppercase; padding-bottom: 0; margin-bottom: 0">
+                                        <em>How artists use color?</em>
+                                    </p>
+                                    <p>
+                                        I collected hex color codes for dominant colors in Renaissance artworks and used
+                                        R's 'ggplot2' to create a color palette visualization.
+                                    </p>
+                                </div>
+                                <div class="project-content-left2">
+                                    <picture class="projectimg">
+                                        <img src="jpeg\colors_rococo.jpeg" alt="How artists use color?">
+                                    </picture>
+
+                                </div>
+                            </div>
+                            <div class="projectcontent">
+                                <div class="project-content-left2">
+                                    <p
+                                        style="font-weight: bold; text-transform: uppercase;padding-bottom:0;margin-bottom:0">
+                                        <em>What
+                                            Words Popped Up Most?</em>
+                                    </p>
+                                    <p>
+                                        I cleaned artwork title datasets for different art movements and then used two
+                                        R packages 'wordcloud2' and 'jiebaR' to generate word clouds for the most
+                                        frequent words
+                                        in titles.
+                                    </p>
+                                </div>
+                                <div class="project-content-left2">
+                                    <picture class="projectimg">
+                                        <img src="jpeg\wordcloud.jpg" alt="What Words Popped Up Most?">
+                                    </picture>
+                                </div>
+
+                            </div>
+
+                            <div class="projectcontent">
+                                <div class="project-content-left2">
+
+                                    <p
+                                        style="font-weight: bold; text-transform: uppercase;padding-bottom:0;margin-bottom:0">
+                                        <em>What
+                                            medium ARTISTS used?</em>
+                                    </p>
+
+                                    <p>
+                                        I used R's 'ggplot2' package to create pie charts that display the distribution
+                                        of
+                                        mediums used in artwork.
+                                    </p>
+                                </div>
+                                <div class="project-content-left2">
+                                    <picture class="projectimg">
+                                        <img src="jpeg\renaissnace_medium.png" alt="What medium ARTISTS used?"
+                                            style="background-color: aliceblue;">
+                                    </picture>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                   <div>
+                    <h2>UX Research</h2>
+                    <p>I conducted interviews with two art and design professionals for my initial version of the infographic.  Below are valuable feedback summary.</p>
+                    <div class="pros-cons">
+                        
+                                <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">What I'm doing good at</em></p>
+                                <ul class="cons">
+                                    <li>Text Legibility</li>
+                                    <li>Storytelling Enhancement</li>
+                                    <li>Graph Improvement</li>
+                                    <li>Missing Information</li>
+                                </ul>
+                                <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">What I should improve</em></p>
+                                <ul class="pros">
+                                    <li>Engaging Topic</li>
+                                    <li>Stylish Typography</li>
+                                    <li>Informative Content</li>
+                                    <li>Consistent Design</li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+
+
+                    -->
+                    <div>
+                        <h2>Final Infographics</h2>
+                        <div class="projectimg2">
+                            <a href="jpeg\final-02.jpg" target="_blank">
+                                <img src="jpeg\final-02.jpg" alt="final02"></a>
+                        </div>
+                        <div class="projectimg2">
+                            <a href="jpeg\final-03.jpg" target="_blank">
+                                <img src="jpeg\final-03.jpg" alt="final03"></a>
+                        </div>
+
+
+                    </div>
+                    <div class="project-content-left">
+                        <details>
+                            <summary>
+                                <p
+                                    style="font-weight: bold; text-transform: uppercase;padding-bottom:0;margin-bottom:0">
+                                    <em>Reference ▽</em>
+                                </p>
+                            </summary>
+                            <div id="content">
+                                <p>Metropolitan Museum of Art. (2023). Open Access. GitHub Repository. Retrieved May 2,
+                                    2023, from https://github.com/metmuseum/openaccess</p>
+                                <p>artincontext. (2022, October 10). Art Periods – A Detailed Look at the Art History
+                                    Timeline. https://artincontext.org/art-periods/</p>
+                                <p>Cartwright, M. (2020, October 20). Colour & Technique in Renaissance Painting. World
+                                    History Encyclopedia.
+                                    https://www.worldhistory.org/article/1628/colour–technique-in-renaissance-painting/
+                                </p>
+                                <p>World History Encyclopedia. (2019, January 31). Renaissance art timeline. World
+                                    History Encyclopedia. https://www.worldhistory.org/timeline/Renaissance_Art/</p>
+                                <p>Ajvazi, I. (2023). Art History: Renaissance, Baroque, Rococo. Caravaggio Academy of
+                                    Arts. https://doi.org/10.17613/t0bg-rs48</p>
+                                <p>Voight, J. (2023, March 28). What is the difference between Baroque and Rococo art?
+                                    https://www.musicalexpert.org/what-is-the-difference-between-baroque-and-rococo-art.htm
+                                </p>
+                                <p>Tate. (n.d.). Renaissance. Tate. https://www.tate.org.uk/art/art-terms/r/renaissance
+                                </p>
+                            </div>
+                        </details>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="custom-footer">
+            <div class="footer-content">
+                <div class="footer-text text-gray">
+                    <p>2023 &copy; Design by Wenge Wang</p>
+                </div>
+
+                <div class="footer-icon">
+                    <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+                </div>
+
+            </div>
+
+        </footer>
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const content = document.getElementById('content');
+                const regex = /https:\/\/\S+/g; // Regular expression to match URLs
+
+                content.innerHTML = content.innerHTML.replace(regex, function (match) {
+                    return `<a href="${match}" target="_blank">${match}</a>`;
+                });
+            });
+
+            window.addEventListener('beforeunload', function () {
+                window.scrollTo(0, 0);
+            });
+        </script>
+
+</body>
+
+</html>

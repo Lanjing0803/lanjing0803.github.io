@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wenge Wang | DAV Portfolio</title>
+    <link rel="icon" type="image/png" href="icon01.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Heebo:wght@200;400;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@600;800&display=swap"
+        rel="stylesheet">
+
+    <!--social media link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header class="header fixed-top">
+        <nav class="navbar navbar-top">
+            <div class="container">
+                <div class="nav-table">
+                    <a href="index.html" class="nav-logo">
+                        <img src="icon01_2.png" alt="" width="60">
+
+                    </a>
+                    <a href="index.html">
+                        <h1>WENGE WANG</h1>
+                    </a>
+                    <ul class="nav nav-right">
+                        <li class="active">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item custom-dropdown">
+                            <details>
+                                <summary class="nav-link">Projects</summary>
+                                <div class="dropdown-content">
+                                   <em>
+                                        <a href="project1.html">Data Visualization</a>
+                                        <a href="project2.html">Research Project</a>
+                                        <a href="project3.html">Case Study 1</a>
+                                        <a href="project4.html">Case Study 2</a>
+                                        <a href="project5.html">Front-End Development</a>
+                                    </em>
+                                </div>
+                            </details>
+                    </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+
+    </header>
+    <div class='parallax'>
+        <div class="fixed banner text-white text-center" id="content-container">
+            <h1 >PORTFOLIO</h1>
+            <p ><em>WENGE WANG | Data Analytics and Visualization 2024</em></p>
+        </div>
+        <div class="scroll-hint">
+            <div class="scroll-icon">
+            
+            </div>
+        </div>
+    </div>
+    <div class="main main-dark">
+        <div class="title text-gray-1">
+            <div class="container">
+                <ul class="title-links">
+                    
+                    <li><em class="info-label ">1. Data Visualization</em><a class="hover-effect2" href="project1.html">Art in Renaissance, Baroque, and Rococo </a></li>
+                    
+                    <li><em class="info-label">2. Research Project:</em><a class="hover-effect2" href="project2.html">Youth Data Literacy Project</a></li>
+                    
+                    <li><em class="info-label">3. Case Study</em><a class="hover-effect2" href="project3.html">Smithsonian Institute Website UX Research</a></li>
+                 
+                    <li><em class="info-label">4. Case Study</em><a class="hover-effect2" href="project4.html">Unmoderated Remote User Testing</a></li>
+                   
+                    <li><em class="info-label">5. Front-End Development</em><a class="hover-effect2" href="project4.html">Portfolio Website Programming</a></li>
+                  
+                    
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+   <footer class="custom-footer">
+    <div class="footer-content">
+        <div class="footer-text text-gray">
+            <p>2023 &copy; Design by Wenge Wang</p>
+        </div>
+
+        <div class="footer-icon">
+            <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</footer>
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var scrollHint = document.querySelector(".scroll-hint");
+
+            window.addEventListener("scroll", function() {
+                if (window.scrollY > 20) { // Adjust the scroll threshold as needed
+                    scrollHint.style.display = "none";
+                } else {
+                    scrollHint.style.display = "block";
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const parallaxContainer = document.querySelector('.parallax');
+    const contentContainer = document.querySelector('#content-container');
+    const maxScroll = 400; 
+
+    if (scrollPosition <= maxScroll) {
+        const opacity = scrollPosition / maxScroll;
+        parallaxContainer.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+        contentContainer.style.opacity = 1 - opacity;
+    }
+});
+window.addEventListener('beforeunload', function () {
+            window.scrollTo(0, 0);   });
+    </script>
+
+</body>
+
+</html>
