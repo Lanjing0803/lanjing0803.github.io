@@ -269,7 +269,7 @@ header{background-color: #0b0b0b;margin:0;padding:0;top:0}
     min-height: 100vh;
     overflow: hidden;
     position: relative;
-    background-image: url('https://lanjing0803.github.io/img/grow.gif');
+    background-image: url('grow.gif');
 }
 .parallax2 {
     background-size: cover;
