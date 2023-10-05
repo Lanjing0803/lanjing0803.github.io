@@ -111,7 +111,7 @@ summary:hover {
 
 .social-media-icons {
     text-align: center;
-    margin-top: 20px; /* Adjust this to control the vertical spacing */
+    margin-top: 20px; 
 }
 
 .social-media-icons a {
@@ -168,11 +168,48 @@ summary:hover {
         flex-direction: column;
     }
 }
+.float-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
 
+
+
+  .left-text,
+  .right-text {
+    white-space: nowrap;
+  }
+
+  .left-text1 {
+    transform: rotate(-90deg);
+    position: fixed;
+    top: 60%;
+    left: 2vw;
+    transform-origin: top left;
+    transform-origin: center left;
+  }
+  .left-text {
+    transform: rotate(-90deg); 
+    position: fixed;
+    top: 50%;
+    left: 2vw;
+    transform-origin: top left;
+    transform-origin: center left;
+  }
+  .right-text {
+    transform: rotate(90deg); 
+    position: fixed;
+    top: 50%;
+    right: 2vw;
+    transform-origin: top right;
+    transform-origin: center right;
+  }
 
 .title {
     position: relative;
-    min-height: 100vh;
     overflow: hidden;
     text-align: center;
 }
@@ -190,7 +227,6 @@ summary:hover {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    min-height: 100vh;
     padding: 140px 0;
     margin: 0;
     list-style: none;
@@ -202,26 +238,15 @@ summary:hover {
   }
 .title .title-links li a {
     display: block;
-    padding: 20px 0;
+    padding: 10px 0;
     font-size: 2.4rem;
     color: inherit;
     text-decoration: none;
-    opacity: .35;
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
 }
-@media (max-width: 768px) {
-    .title{
-        max-width:90vw;
-        margin-left:5vw;
-    }
-    .title .title-links li a {
-        font-size: 150%;
-        color: #a2a42d;
-        opacity: 0.8;
-    }
-}
+
 .title .title-links li a span {
     margin-right: 18px;
     font-size: 1.2rem;
@@ -234,8 +259,45 @@ summary:hover {
     font-size: 2.5em;
 }
 
+.project-thumbnail{
+    width:50vw;
+    height:auto;
+}
+.project-info{
+        margin-bottom:10px;
+}
+.slide{
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    transition: transform 0.5s ease; 
+    transform-origin: center center;
 
 
+}
+#slide-container {
+    perspective: 1200px; 
+    overflow: hidden;
+    width: 100%;
+    min-height: 120vh; 
+  }
+  
+  
+
+    @media (max-width: 768px) {
+        .title{
+            max-width:90vw;
+            margin-left:5vw;
+        }
+        .title .title-links li a {
+            font-size: 150%;
+            color: #a2a42d;
+            opacity: 0.8;
+        }
+        .slide{
+            height:50vh
+        }
+    }
 /*------------------------------------------------------------------
 
   Dark content style
@@ -318,17 +380,17 @@ header{background-color: #0b0b0b;margin:0;padding:0;top:0}
     font-family: "Montserrat Alternates";
     color: #e2e2e2fa;
     margin: 0;
-    font-size: 8rem;
+    font-size: 7rem;
     transition: font-size 0.15s ease;
 }
 @media (max-width: 768px)  {
     .banner h1{
-        font-size:5rem;
+        font-size:5.3rem;
     }
 }
 @media (max-width: 520px)  {
     .banner h1{
-        font-size:3rem;
+        font-size:3.3rem;
     }
 }
 .banner p {
@@ -380,20 +442,20 @@ transition: font-size 0.15s ease;
 }
 @media (max-width: 768px)  {
     .parallax2 h1{
-        font-size:3.5rem;
+        font-size:3.7rem;
     }
     .intro{
         width: 60%;
-        font-size:100%;
+        font-size:120%;
     }
 }
 @media (max-width: 520px)  {
     .parallax2 h1{
-        font-size:2rem;
+        font-size:2.5rem;
     }
     .intro{
         width: 70%;
-        font-size:100%;
+        font-size:120%;
     }
   
 }
@@ -402,12 +464,10 @@ transition: font-size 0.15s ease;
     border: 1.5px solid white; 
     border-radius: 10px;
     padding: 20px;
-    margin-left: 60%;
     margin-top: 40px;
     width: 300px;
     box-shadow: 0px 0px 10px #007bff3b;
-    margin-right: 150px;
-    position: absolute;
+    margin-right: 100px;
     z-index: 0;
 }
 
@@ -660,7 +720,8 @@ a:not([href]):not([tabindex]):focus {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
+    margin-top:3vh;
 }
 
 @media (min-width:576px) {
@@ -889,7 +950,7 @@ a:not([href]):not([tabindex]):focus {
 }
 
 .logo-and-text {
-    display: flex; /* Use flexbox to align items horizontally */
+    display: flex; 
     align-items: center; 
     gap: 10px; 
     margin-bottom:0;
@@ -979,9 +1040,8 @@ a:not([href]):not([tabindex]):focus {
   /*two columns for the academic backgroun part in about page*/
   .academic{display: flex;
     justify-content: space-between;
-    margin-right: 250px;
-    max-width:60%;
-  
+    max-width:70%;
+  margin-left:10vw;
 }
     
 .content-left{
@@ -996,13 +1056,12 @@ a:not([href]):not([tabindex]):focus {
     border-right: 50px solid transparent;
     border-bottom: 100px solid #a2a42d; 
     position: absolute;
-    top: 85%; /* Adjust to vertically center the star */
-    left: 80%; /* Adjust to horizontally center the star */
+    top: 85%; 
+    left: 80%; 
     transform: translate(-50%, -50%) rotate(36deg); 
     opacity:1;
 }
 /*timeline*/
-/* Basic Reset */
 
   
   .timeline {
@@ -1031,7 +1090,6 @@ a:not([href]):not([tabindex]):focus {
   .timeline-event-content {
     flex: 3;
     padding: 10px;
-    /*border: 1px solid #007bff; */
     border-left: none;
     border-radius: 0 5px 5px 0;
     
@@ -1104,6 +1162,56 @@ a:not([href]):not([tabindex]):focus {
     text-decoration: none;
     transition: color 0.3s; 
 }
+.primary-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    background-color: white;
+    color: #333; 
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px; 
+}
+
+.primary-button:hover {
+    background-color: transparent;
+    color: white;
+ 
+}
+
+
+.project-navigation {
+    position: fixed;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 9999;
+}
+
+.arrow {
+    font-size: 50px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left-arrow {
+    margin-left: 10px; 
+}
+
+.right-arrow {
+    margin-right: 10px;
+}
+
+
+
 
   .projecttitle{
     min-height: 30vh; 
@@ -1130,7 +1238,11 @@ text-align: center;
     text-align: left;
 }
 .projectcontainer h2{
-    padding-bottom:10px;
+    padding-bottom:30px;
+}
+.projectcontainer p{
+    padding-top:0;
+    margin-top:0;
 }
   
   .projectimg img {
@@ -1177,10 +1289,10 @@ details {
     max-width: 100%;
     overflow-x: auto;
 }
-/*.academiccontainer{
-    display:flex;
-    flex-direction: row;
-} */
+.pdf{
+    width:100%; height:600px;
+    margin-top:20px;
+}
 @media (min-width:1115px){
 #project5-response{
     margin-top:50px;
@@ -1192,6 +1304,7 @@ details {
         display:none;
         }
     
+
 }
 @media (max-width: 1115px)  {
     .projectcontent {
@@ -1209,14 +1322,26 @@ details {
       .projectimg img{
         margin-top:0
       }
-     /* .academiccontainer{
-        display: flex;
-        flex-direction: column;
-    }*/
+      .parallax3 {
+        max-width:100vw;
+    }
+    .parallax3 h1{
+        font-size:200%;
+    }
+    .parallax3 h2{
+        font-size:130%;
+    }
+    .parallax3 h3{
+        font-size:100%;
+    }
+
+    .skill-card li{
+        font-size:80%;
+    }
 }
 @media (max-width: 768px)  {
-    .project{max-width:56vw;
-        left: 22vw;}
+    .project{max-width:66vw;
+        left: 16vw;}
     .projecttitle{
         height:40vh;
      }
@@ -1237,11 +1362,27 @@ details {
       .projectimg img,  .projectimg2 img {
         width: 40vw;
 }
-
+.skill-card{
+    margin-top:10px;margin-bottom:20px;
 }
+.arrow {
+    font-size: 25px;}
+    .academiccontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .float-container{
+        display:none
+    }
+    .experience {
+        display:none
+    }
+}
+
+
 @media (max-width: 520px)  {
-    .project{max-width:60vw;
-        left: 20vw;}
+    .project{max-width:80vw;
+        left: 10vw;}
     .projecttitle{
        height:20vh;
     }
@@ -1269,8 +1410,7 @@ details {
 
 .projecticon {
         font-size:70%;
-        display: flex;
-    flex-direction: column;
+
     }
     .projecticon a{
        padding-top:5px
@@ -1280,6 +1420,35 @@ details {
         }
         .nav-logo img{
             width:40px;
+        }
+        .pdf{
+            width:100%; height:300px;
+        }
+        .parallax3 {
+            max-width:100vw;
+        }
+        .parallax3 h1{
+            font-size:200%;
+        }
+        .parallax3 h2{
+            font-size:120%;
+        }
+        .parallax3 h3{
+            font-size:100%;
+        }
+        .skill-card li{
+            font-size:80%;
+        }
+        .skill-card{
+            margin-right:0;
+         margin-bottom:20px;
+         max-width:60vw;
+        }
+        .timeline-event{
+            margin-bottom:0
+        }
+        .timeline-event-content{
+            font-size: 80%;;
         }
     }
 
@@ -1299,5 +1468,32 @@ details {
         padding-left:0;
         text-align:center
    }
+   
+.projecticon {
+    font-size:70%;
+    padding:10px;
+}
+.projecticon a{
+   padding-top:3px;
+   margin-bottom:10px;
+}
+.navbar li{
+    font-size:60%;
+    }
+    .nav-logo img{
+        width:30px;
+    }
+.primary-button{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    background-color: white;
+    color: #333; 
+}
+
    }
     
+
+   
