@@ -33,26 +33,13 @@
 
                     </a>
                     <a href="index.html">
-                        <h1>WENGE WANG</h1>
+                        <h1>PORTFOLIO</h1>
                     </a>
                     <ul class="nav nav-right">
                         <li class="active">
                             <a href="index.html">Home</a>
                         </li>
-                        <li class="nav-item custom-dropdown">
-                            <details>
-                                <summary class="nav-link">Projects</summary>
-                                <div class="dropdown-content">
-                                   <em>
-                                        <a href="project1.html">Data Visualization</a>
-                                        <a href="project2.html">Research Project</a>
-                                        <a href="project3.html">Case Study 1</a>
-                                        <a href="project4.html">Case Study 2</a>
-                                        <a href="project5.html">Front-End Development</a>
-                                    </em>
-                                </div>
-                            </details>
-                    </li>
+
                         <li>
                             <a href="about.html">About</a>
                         </li>
@@ -71,79 +58,163 @@
     </header>
     <div class='parallax'>
         <div class="fixed banner text-white text-center" id="content-container">
-            <h1 >PORTFOLIO</h1>
-            <p ><em>WENGE WANG | Data Analytics and Visualization 2024</em></p>
+            <h1>WENGE WANG</h1>
+            <p><em>Data Analytics and Visualization 2024</em></p>
         </div>
         <div class="scroll-hint">
             <div class="scroll-icon">
-            
+
             </div>
         </div>
     </div>
+
+
+
     <div class="main main-dark">
         <div class="title text-gray-1">
             <div class="container">
-                <ul class="title-links">
-                    
-                    <li><em class="info-label ">1. Data Visualization</em><a class="hover-effect2" href="project1.html">Art in Renaissance, Baroque, and Rococo </a></li>
-                    
-                    <li><em class="info-label">2. Research Project:</em><a class="hover-effect2" href="project2.html">Youth Data Literacy Project</a></li>
-                    
-                    <li><em class="info-label">3. Case Study</em><a class="hover-effect2" href="project3.html">Smithsonian Institute Website UX Research</a></li>
-                 
-                    <li><em class="info-label">4. Case Study</em><a class="hover-effect2" href="project4.html">Unmoderated Remote User Testing</a></li>
-                   
-                    <li><em class="info-label">5. Front-End Development</em><a class="hover-effect2" href="project4.html">Portfolio Website Programming</a></li>
+                <div class="float-container">
+                    <div class="left-text1">wwang24@outlook.com</div>
+                   <div class="right-text"> <a href="about.html">ABOUT</a></div>
                   
-                    
+                  </div>
+                <ul class="title-links" id="slide-container">
+                    <li class="slide">
+                        <a href="project1.html">
+                            <picture> <img src="jpeg\small1.svg" alt="Project 1 Thumbnail" class="project-thumbnail">
+                            </picture>
+                        
+                        <div class="project-info">
+                            <div class="project-title hover-effect2">Art in Renaissance, Baroque, and Rococo</div></a>
+                            <div class="project-subtitle">Programming & Visualization</div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <a href="project2.html">
+                            <picture><img src="jpeg\small2.svg" alt="Project 2 Thumbnail" class="project-thumbnail">
+                            </picture>
+                        
+                        <div class="project-info">
+                            <div class="project-title hover-effect2">Data Literacy with, for, and by Youth</div></a>
+                            <div class="project-subtitle">Research & Visualization</div>
+                        </div>
+                    </li>
+                    <!-- Repeat for other projects -->
+                    <li class="slide">
+                        <a  href="project3.html">
+                            <picture><img src="jpeg\small3.svg" alt="Project 3 Thumbnail" class="project-thumbnail">
+                            </picture>
+                        
+                        <div class="project-info">
+                            <div class="project-title hover-effect2">Smithsonian Institute Website UX Research</div></a>
+                            <div class="project-subtitle">User Experience Case Study</div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <a href="project4.html">
+                            <picture><img src="jpeg\small4.svg" alt="Project 4 Thumbnail" class="project-thumbnail">
+                            </picture>
+                        
+                        <div class="project-info">
+                            <div class="project-title hover-effect2">Unmoderated Remote User Testing</div></a>
+                            <div class="project-subtitle">User Testing Case Study</div>
+                        </div>
+                    </li>
 
                 </ul>
             </div>
-
         </div>
+
+
+
     </div>
 
-   <footer class="custom-footer">
-    <div class="footer-content">
-        <div class="footer-text text-gray">
-            <p>2023 &copy; Design by Wenge Wang</p>
+
+    <footer class="custom-footer">
+        <div class="footer-content">
+            <div class="footer-text text-gray">
+                <p>2023 &copy; Designed by Wenge Wang</p>
+            </div>
+
+            <div class="footer-icon">
+                <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+            </div>
         </div>
+    </footer>
 
-        <div class="footer-icon">
-            <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
-        </div>
-    </div>
-</footer>
 
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var scrollHint = document.querySelector(".scroll-hint");
+  
 
-            window.addEventListener("scroll", function() {
-                if (window.scrollY > 20) { // Adjust the scroll threshold as needed
-                    scrollHint.style.display = "none";
-                } else {
-                    scrollHint.style.display = "block";
-                }
-            });
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    var scrollHint = document.querySelector(".scroll-hint");
+    var parallaxContainer = document.querySelector('.parallax');
+    var contentContainer = document.querySelector('#content-container');
+    var maxScroll = 400; 
+    var isTransitioned = false;
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 20) {
+            scrollHint.style.display = "none";
+        } else {
+            scrollHint.style.display = "block";
+        }
+    });
+
+    window.addEventListener('scroll', function () {
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition <= maxScroll) {
+            var opacity = scrollPosition / maxScroll;
+            parallaxContainer.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+            contentContainer.style.opacity = 1 - opacity;
+            isTransitioned = false;
+        } else if (!isTransitioned) {
+        
+            isTransitioned = true;
+        }
+
+
+        if (isTransitioned && scrollPosition <= maxScroll) {
+            parallaxContainer.style.display = "block";
+            contentContainer.style.position = "relative";
+        }
+    });
+
+    // Scroll to the top when the page loads -- test
+    window.addEventListener('beforeunload', function () {
+        window.scrollTo(0, 0);
+    });
+
+    // Slide scrolling
+    const slideContainer = document.getElementById('slide-container');
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    const slideHeight = window.innerHeight -0.2 * window.innerHeight; 
+
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateY(${index * slideHeight}px)`;
+    });
+
+    slideContainer.addEventListener('wheel', (event) => {
+
+        if (event.deltaY > 0 && currentSlide < slides.length - 1) {
+            currentSlide++;
+        } else if (event.deltaY < 0 && currentSlide > 0) {
+            currentSlide--;
+        }
+
+        const translateY = -currentSlide * slideHeight;
+
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateY(${translateY + 1.15*index * slideHeight}px)`;
         });
-
-        window.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY;
-    const parallaxContainer = document.querySelector('.parallax');
-    const contentContainer = document.querySelector('#content-container');
-    const maxScroll = 400; 
-
-    if (scrollPosition <= maxScroll) {
-        const opacity = scrollPosition / maxScroll;
-        parallaxContainer.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
-        contentContainer.style.opacity = 1 - opacity;
-    }
+    });
 });
-window.addEventListener('beforeunload', function () {
-            window.scrollTo(0, 0);   });
-    </script>
+
+
+</script>
+
 
 </body>
 
