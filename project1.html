@@ -43,20 +43,7 @@
                         <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li class="nav-item custom-dropdown">
-                            <details>
-                                <summary class="active nav-link">Projects</summary>
-                                <div class="dropdown-content">
-                                   <em>
-                                        <a href="project1.html">Data Visualization</a>
-                                        <a href="project2.html">Research Project</a>
-                                        <a href="project3.html">Case Study 1</a>
-                                        <a href="project4.html">Case Study 2</a>
-                                        <a href="project5.html">Front-End Development</a>
-                                    </em>
-                                </div>
-                            </details>
-                        </li>
+                       
                         <li>
                             <a href="about.html">About</a>
                         </li>
@@ -75,17 +62,21 @@
 
     </header>
     <div class="main-dark main">
+        <div class="project-navigation">
+            <a href="index.html" class="arrow arrow-left">&larr;</a>
+            <a href="project2.html" class="arrow arrow-right">&rarr;</a>
+        </div>
         <div class="project">
 
             <div class="projecttitle">
                 <h1>Art in Renaissance, Baroque, and Rococo</h1>
 
                 <div class=" projecticon">
-                    <a href="https://github.com/Lanjing0803/pfch.wwg" target="_blank">
+                    <a href="https://github.com/Lanjing0803/pfch.wwg" target="_blank" class="primary-button">
                         <i class="fab fa-github"></i> GitHub Repository
                     </a>
 
-                    <a href="https://sites.google.com/pratt.edu/pfch-wwg/" target="_blank">
+                    <a href="https://sites.google.com/pratt.edu/pfch-wwg/" target="_blank" class="primary-button">
                         <i class="fas fa-external-link-alt"></i> Project Website
                     </a>
                 </div>
@@ -107,128 +98,6 @@
                     </p>
 
                 </div>
-<!--
-                <div>
-                    <h2>Tools and Dataset</h2>
-                    <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">Tools: </em> Python, R,
-                        Adobe Illustrator, Excel</p>
-                    <p><em style="font-weight: bold; text-transform: uppercase;margin-right:1%">Dataset: </em> The
-                        primary source of artwork data for this analysis was <em class="hover-effect">The Metropolitan Museum of Art (MET)</em>.
-                        The dataset was obtained from both MET's open access CSV data on GitHub and the MET API.</p>
-                        <div class="projectcontent">
-                            <div class="project-content-left2">
-                        <p>
-                            During the process of cleaning the CSV dataset on MET Github, I faced several challenges. Sorting out the
-                            relevant artworks from the dataset was the most difficult part as the CSV file contained art
-                            from diverse cultures, styles, and periods. Therefore, I finally used Python as the main
-                            tool to request data from the MET API and applied specific search terms such as ‘Renaissance
-                            art’ and a time frame from 1400 to 1600 to narrow down the results. Then, after taking some
-                            time to refine the dataset using Excel, I was able to successfully clean and prepare the
-                            dataset for the analysis.
-                        </p></div>
-                        <div class="project-content-left2">
-                        <picture class="projectimg3">
-                            <a href="jpeg\project1-process.svg" target="_blank">
-                            <img src="jpeg\project1-process.svg" alt="project1-process" style="padding-top:20px;"></a>
-                        </picture></div>
-                    </div>
-
-
-                    <div>
-                        <h2>Process Highlights</h2>
-                        <div>
-                            <div class="projectcontent">
-                                <div class="project-content-left2">
-                                    <p
-                                        style="font-weight: bold; text-transform: uppercase; padding-bottom: 0; margin-bottom: 0">
-                                        <em>How artists use color?</em>
-                                    </p>
-                                    <p>
-                                        I collected hex color codes for dominant colors in Renaissance artworks and used
-                                        R's 'ggplot2' to create a color palette visualization.
-                                    </p>
-                                </div>
-                                <div class="project-content-left2">
-                                    <picture class="projectimg">
-                                        <img src="jpeg\colors_rococo.jpeg" alt="How artists use color?">
-                                    </picture>
-
-                                </div>
-                            </div>
-                            <div class="projectcontent">
-                                <div class="project-content-left2">
-                                    <p
-                                        style="font-weight: bold; text-transform: uppercase;padding-bottom:0;margin-bottom:0">
-                                        <em>What
-                                            Words Popped Up Most?</em>
-                                    </p>
-                                    <p>
-                                        I cleaned artwork title datasets for different art movements and then used two
-                                        R packages 'wordcloud2' and 'jiebaR' to generate word clouds for the most
-                                        frequent words
-                                        in titles.
-                                    </p>
-                                </div>
-                                <div class="project-content-left2">
-                                    <picture class="projectimg">
-                                        <img src="jpeg\wordcloud.jpg" alt="What Words Popped Up Most?">
-                                    </picture>
-                                </div>
-
-                            </div>
-
-                            <div class="projectcontent">
-                                <div class="project-content-left2">
-
-                                    <p
-                                        style="font-weight: bold; text-transform: uppercase;padding-bottom:0;margin-bottom:0">
-                                        <em>What
-                                            medium ARTISTS used?</em>
-                                    </p>
-
-                                    <p>
-                                        I used R's 'ggplot2' package to create pie charts that display the distribution
-                                        of
-                                        mediums used in artwork.
-                                    </p>
-                                </div>
-                                <div class="project-content-left2">
-                                    <picture class="projectimg">
-                                        <img src="jpeg\renaissnace_medium.png" alt="What medium ARTISTS used?"
-                                            style="background-color: aliceblue;">
-                                    </picture>
-
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                   <div>
-                    <h2>UX Research</h2>
-                    <p>I conducted interviews with two art and design professionals for my initial version of the infographic.  Below are valuable feedback summary.</p>
-                    <div class="pros-cons">
-                        
-                                <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">What I'm doing good at</em></p>
-                                <ul class="cons">
-                                    <li>Text Legibility</li>
-                                    <li>Storytelling Enhancement</li>
-                                    <li>Graph Improvement</li>
-                                    <li>Missing Information</li>
-                                </ul>
-                                <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">What I should improve</em></p>
-                                <ul class="pros">
-                                    <li>Engaging Topic</li>
-                                    <li>Stylish Typography</li>
-                                    <li>Informative Content</li>
-                                    <li>Consistent Design</li>
-                                </ul>
-                            
-                            </div>
-                        </div>
-
-
-                    -->
                     <div>
                         <h2>Final Infographics</h2>
                         <div class="projectimg2">
@@ -278,7 +147,7 @@
         <footer class="custom-footer">
             <div class="footer-content">
                 <div class="footer-text text-gray">
-                    <p>2023 &copy; Design by Wenge Wang</p>
+                    <p>2023 &copy; Designed by Wenge Wang</p>
                 </div>
 
                 <div class="footer-icon">
@@ -292,18 +161,14 @@
 
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const content = document.getElementById('content');
-                const regex = /https:\/\/\S+/g; // Regular expression to match URLs
-
-                content.innerHTML = content.innerHTML.replace(regex, function (match) {
-                    return `<a href="${match}" target="_blank">${match}</a>`;
-                });
-            });
-
+          
             window.addEventListener('beforeunload', function () {
                 window.scrollTo(0, 0);
             });
+
+
+   
+
         </script>
 
 </body>
