@@ -43,20 +43,7 @@
                         <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li class="nav-item custom-dropdown">
-                            <details>
-                                <summary class="active nav-link">Projects</summary>
-                                <div class="dropdown-content">
-                                   <em>
-                                        <a href="project1.html">Data Visualization</a>
-                                        <a href="project2.html">Research Project</a>
-                                        <a href="project3.html">Case Study 1</a>
-                                        <a href="project4.html">Case Study 2</a>
-                                        <a href="project5.html">Front-End Development</a>
-                                    </em>
-                                </div>
-                            </details>
-                        </li>
+                       
                         <li>
                             <a href="about.html">About</a>
                         </li>
@@ -75,6 +62,10 @@
 
     </header>
     <div class="main-dark main">
+        <div class="project-navigation">
+            <a href="project2.html" class="arrow arrow-left">&larr;</a>
+            <a href="project4.html" class="arrow arrow-right">&rarr;</a>
+        </div>
         <div class="project">
 
             <div class="projecttitle">
@@ -83,7 +74,7 @@
                 <div class=" projecticon">
 
                     <a href="https://ixd.prattsi.org/2023/05/case-study-smithsonian-institute-traveling-exhibition-services-sites-website-ux-research/"
-                        target="_blank">
+                        target="_blank" class="primary-button">
                         <i class="fas fa-external-link-alt"></i> Project Post
                     </a>
                 </div>
@@ -103,23 +94,16 @@
                         accessibility. The ultimate goal is to align the website more closely with SITES' mission of
                         extending the Smithsonian experience to global communities.
                     </p>
-                  <!--  <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">My Role: </em> There
-                        were 4 of us on the team. I was primarily responsible for or involved in brainstorming ideas for
-                        the user testing scenario, conducting the actual user tests, analyzing the data we collected,
-                        and ultimately coming up with one recommendation to improve the website. I also had a hand in
-                        designing the final report and presenting our findings to the client.</p>
-                    <p><em style="font-weight: bold; text-transform: uppercase;margin-right:1%">Dataset: </em> The
-                        primary source of artwork data for this analysis was The Metropolitan Museum of Art (MET).
-                        The dataset was obtained from both MET's open access CSV data on GitHub and the MET API.</p>-->
+              
                 </div>
-               
+               <iframe src="sites.pdf" scrolling="yes"class="pdf"></iframe>
             </div>
         </div>
     </div>
     <footer class="custom-footer">
         <div class="footer-content">
             <div class="footer-text text-gray">
-                <p>2023 &copy; Design by Wenge Wang</p>
+                <p>2023 &copy; Designed by Wenge Wang</p>
             </div>
 
             <div class="footer-icon">
@@ -133,14 +117,7 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const content = document.getElementById('content');
-            const regex = /https:\/\/\S+/g; // Regular expression to match URLs
-
-            content.innerHTML = content.innerHTML.replace(regex, function (match) {
-                return `<a href="${match}" target="_blank">${match}</a>`;
-            });
-        });
+     
 
         window.addEventListener('beforeunload', function () {
             window.scrollTo(0, 0);
