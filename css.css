@@ -268,7 +268,7 @@ summary:hover {
 }
 .slide{
     width: 100%;
-    min-height: 100%;
+    min-height: 10%;
     position: absolute;
     transition: transform 0.5s ease; 
     transform-origin: center center;
@@ -295,7 +295,11 @@ summary:hover {
             opacity: 0.8;
         }
         .slide{
-            height:50vh
+            height:10vh
+        }
+        .project-thumbnail{
+            width:90vw;
+            height:auto;
         }
     }
 /*------------------------------------------------------------------
@@ -1352,7 +1356,10 @@ details {
     }
 }
 @media (max-width: 768px)  {
-   
+    .parallax {
+  
+        background-image: url('grow-small.gif');
+    }
     .project{max-width:66vw;
         left: 16vw;}
     .projecttitle{
@@ -1511,4 +1518,3 @@ details {
    }
     
 
-   
