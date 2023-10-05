@@ -387,6 +387,7 @@ header{background-color: #0b0b0b;margin:0;padding:0;top:0}
     .banner h1{
         font-size:5.3rem;
     }
+    
 }
 @media (max-width: 520px)  {
     .banner h1{
@@ -446,7 +447,7 @@ transition: font-size 0.15s ease;
     }
     .intro{
         width: 60%;
-        font-size:120%;
+        font-size:100%;
     }
 }
 @media (max-width: 520px)  {
@@ -1126,9 +1127,17 @@ a:not([href]):not([tabindex]):focus {
       border-left: 1px solid #007bff;
       
     }
-    
+    .parallax2 {
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        min-height: 100vh;
+        overflow: hidden;
+        position: relative;
+        background-image: none;
+        background-color: #101010;
   }
-
+  }
   
   /*project page*/
   .project{
@@ -1338,8 +1347,12 @@ details {
     .skill-card li{
         font-size:80%;
     }
+    .projecticon{
+        font-size:90%
+    }
 }
 @media (max-width: 768px)  {
+   
     .project{max-width:66vw;
         left: 16vw;}
     .projecttitle{
@@ -1351,7 +1364,9 @@ details {
     .project h2{
         font-size:100%;
     }
-     
+     iframe{
+        display:none
+     }
     .timeline,.projectcontent {
         flex-direction: column; 
       }
