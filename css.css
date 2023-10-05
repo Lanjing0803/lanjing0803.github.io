@@ -1356,10 +1356,7 @@ details {
     }
 }
 @media (max-width: 768px)  {
-    .parallax {
-       max-height: 100vh;
-        background-image: url('grow-small.gif');
-    }
+
     .project{max-width:66vw;
         left: 16vw;}
     .projecttitle{
