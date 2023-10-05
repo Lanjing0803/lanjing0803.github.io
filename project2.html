@@ -43,20 +43,7 @@
                         <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li class="nav-item custom-dropdown">
-                            <details>
-                                <summary class="active nav-link">Projects</summary>
-                                <div class="dropdown-content">
-                                   <em>
-                                        <a href="project1.html">Data Visualization</a>
-                                        <a href="project2.html">Research Project</a>
-                                        <a href="project3.html">Case Study 1</a>
-                                        <a href="project4.html">Case Study 2</a>
-                                        <a href="project5.html">Front-End Development</a>
-                                    </em>
-                                </div>
-                            </details>
-                        </li>
+                       
                         <li>
                             <a href="about.html">About</a>
                         </li>
@@ -75,6 +62,10 @@
 
     </header>
     <div class="main-dark main">
+        <div class="project-navigation">
+            <a href="project1.html" class="arrow arrow-left">&larr;</a>
+            <a href="project3.html" class="arrow arrow-right">&rarr;</a>
+        </div>
         <div class="project">
 
             <div class="projecttitle">
@@ -82,7 +73,7 @@
 
                 <div class=" projecticon">
 
-                    <a href="https://sites.google.com/pratt.edu/data-activism-for-youth/" target="_blank">
+                    <a href="https://sites.google.com/pratt.edu/data-activism-for-youth/" target="_blank" class="primary-button">
                         <i class="fas fa-external-link-alt"></i> Project Website
                     </a>
                 </div>
@@ -102,56 +93,18 @@
                     </p>
 
                 </div>
- <!-- 
-                <div>
-                    <h2>Tools and Dataset</h2>
-                    <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">Tools: </em> Tableau,
-                        R,
-                        Adobe Illustrator, Excel</p>
-                    <p><em style="font-weight: bold; text-transform: uppercase;margin-right:1%">Dataset: </em>The
-                        dataset includes data literacy activity information, and responses collected from surveys filled
-                        out by teenagers during our data
-                        literacy sessions held between 2021 and 2022. </p>
-                </div>
---> 
+
                 <div>
                     <h2>Infographic Report</h2>
                     <div class="projectimg2">
-                        <!-- <a href="jpeg\final infographic.jpg" target="_blank">-->
-                           <picture> <img src="jpeg\final infographic.jpg" alt="final02"></picture>  <!-- </a>-->
+                 
+                           <picture> <img src="jpeg\final infographic.jpg" alt="final02"></picture>  
                     </div>
 
 
 
                 </div>
-               <!--  <div>
-                    <h2>Reflection</h2>
-                    <p>Creating the infographic for the youth literacy project was a new experience for me. I learned
-                        how to analyze interview datasets, which was a new format to me since it included both
-                        quantitative and qualitative data. I used Tableau Public to generate and compare different
-                        charts, and Adobe Illustrator to create a visually appealing layout. </p>
-                    <div class="pros-cons">
-                        <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">What I learnt
-                                about</em></p>
-                        <ul class="pros">
-                            <li>Clean and organize data for infographics</li>
-                            <li>Use varied charts for data visuals</li>
-                            <li>Create visually appealing layouts</li>
-                            <li>Incorporate storytelling in data presentation</li>
-                        </ul>
-
-                         
-                        <p><em style="font-weight: bold; text-transform: uppercase; margin-right:1%">What I should
-                                improve</em></p>
-                    <ul class="cons">
-                            <li>Creating responsive infographics for different screen sizes</li>
-                            <li>Utilizing interactive elements in digital infographics</li>
-                        </ul>
-                
-                    </div>
-                </div>-->
-
-
+            
 
                 <div class="project-content-left">
                     <details>
@@ -172,7 +125,7 @@
     <footer class="custom-footer">
         <div class="footer-content">
             <div class="footer-text text-gray">
-                <p>2023 &copy; Design by Wenge Wang</p>
+                <p>2023 &copy; Designed by Wenge Wang</p>
             </div>
 
             <div class="footer-icon">
@@ -186,14 +139,7 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const content = document.getElementById('content');
-            const regex = /https:\/\/\S+/g; // Regular expression to match URLs
-
-            content.innerHTML = content.innerHTML.replace(regex, function (match) {
-                return `<a href="${match}" target="_blank">${match}</a>`;
-            });
-        });
+     
 
         window.addEventListener('beforeunload', function () {
             window.scrollTo(0, 0);
