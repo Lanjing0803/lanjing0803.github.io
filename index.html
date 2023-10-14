@@ -30,7 +30,6 @@
                 <div class="nav-table">
                     <a href="index.html" class="nav-logo">
                         <img src="icon01_2.png" alt="" width="60">
-
                     </a>
                     <a href="index.html">
                         <h1>PORTFOLIO</h1>
@@ -39,7 +38,6 @@
                         <li class="active">
                             <a href="index.html">Home</a>
                         </li>
-
                         <li>
                             <a href="about.html">About</a>
                         </li>
@@ -51,10 +49,6 @@
                 </div>
             </div>
         </nav>
-
-
-
-
     </header>
     <div class='parallax'>
         <div class="fixed banner text-white text-center" id="content-container">
@@ -63,68 +57,76 @@
         </div>
         <div class="scroll-hint">
             <div class="scroll-icon">
-
             </div>
         </div>
     </div>
-
-
 
     <div class="main main-dark">
         <div class="title text-gray-1">
             <div class="container">
                 <div class="float-container">
                     <div class="left-text1">wwang24@outlook.com</div>
-                   <div class="right-text"> <a href="about.html">ABOUT</a></div>
-                  
-                  </div>
+                    <div class="right-text"><a href="about.html">ABOUT</a></div>
+                </div>
                 <ul class="title-links" id="slide-container">
                     <li class="slide">
                         <a href="project1.html">
-                            <picture> <img src="jpeg\small1.svg" alt="Project 1 Thumbnail" class="project-thumbnail">
+                            <picture>
+                                <img src="jpeg\small1.svg" alt="Project 1 Thumbnail" class="project-thumbnail">
+                                <!-- <img src="jpeg\small1.png" alt="Project 1 Thumbnail" class="project-thumbnail"> -->
                             </picture>
-                        
-                        <div class="project-info">
-                            <div class="project-title hover-effect2">Art in Renaissance, Baroque, and Rococo</div></a>
-                            <div class="project-subtitle">Programming & Visualization</div>
-                        </div>
+
+                            <div class="project-info">
+                                <div class="project-title hover-effect2">Art in Renaissance, Baroque, and Rococo</div>
+                            </div>
+
+                        </a>
+                        <div class="project-subtitle">Programming & Visualization</div>
                     </li>
                     <li class="slide">
                         <a href="project2.html">
-                            <picture><img src="jpeg\small2.svg" alt="Project 2 Thumbnail" class="project-thumbnail">
+                            <picture><img src="jpeg\small2.svg" alt="Project 2 Thumbnail" class="project-thumbnail"></picture>
+                            <!-- <picture><img src="jpeg\small2.jpg" alt="Project 2 Thumbnail" class="project-thumbnail"> -->
                             </picture>
-                        
-                        <div class="project-info">
-                            <div class="project-title hover-effect2">Data Literacy with, for, and by Youth</div></a>
-                            <div class="project-subtitle">Research & Visualization</div>
-                        </div>
+
+                            <div class="project-info">
+                                <div class="project-title hover-effect2">Data Literacy with, for, and by Youth</div>
+                            </div>
+                        </a>
+                        <div class="project-subtitle">Research & Visualization</div>
+
                     </li>
                     <!-- Repeat for other projects -->
                     <li class="slide">
-                        <a  href="project3.html">
-                            <picture><img src="jpeg\small3.svg" alt="Project 3 Thumbnail" class="project-thumbnail">
+                        <a href="project3.html">
+                            <picture><img src="jpeg\small3.svg" alt="Project 3 Thumbnail" class="project-thumbnail"></picture>
+                            <!-- <picture><img src="jpeg\small3.png" alt="Project 3 Thumbnail" class="project-thumbnail"> -->
                             </picture>
-                        
-                        <div class="project-info">
-                            <div class="project-title hover-effect2">Smithsonian Institute Website UX Research</div></a>
-                            <div class="project-subtitle">User Experience Case Study</div>
-                        </div>
+
+                            <div class="project-info">
+                                <div class="project-title hover-effect2">Smithsonian Institute Website UX Research</div>
+                            </div>
+                        </a>
+                        <div class="project-subtitle">User Experience Case Study</div>
+
                     </li>
                     <li class="slide">
                         <a href="project4.html">
                             <picture><img src="jpeg\small4.svg" alt="Project 4 Thumbnail" class="project-thumbnail">
                             </picture>
-                        
-                        <div class="project-info">
-                            <div class="project-title hover-effect2">Unmoderated Remote User Testing</div></a>
-                            <div class="project-subtitle">User Testing Case Study</div>
-                        </div>
+                            <!-- <picture><img src="jpeg\small4.png" alt="Project 4 Thumbnail" class="project-thumbnail"></picture> -->
+
+                            <div class="project-info">
+                                <div class="project-title hover-effect2">Unmoderated Remote User Testing</div>
+                            </div>
+                        </a>
+                        <div class="project-subtitle">User Testing Case Study</div>
+
                     </li>
 
                 </ul>
             </div>
         </div>
-
 
 
     </div>
@@ -142,142 +144,110 @@
         </div>
     </footer>
 
-
-   <!-- <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             var scrollHint = document.querySelector(".scroll-hint");
+            var parallaxContainer = document.querySelector('.parallax');
+            var contentContainer = document.querySelector('#content-container');
+            var maxScroll = 400;
+            var isTransitioned = false;
 
             window.addEventListener("scroll", function () {
-                if (window.scrollY > 20) { // Adjust the scroll threshold as needed
+                if (window.scrollY > 20) {
                     scrollHint.style.display = "none";
                 } else {
                     scrollHint.style.display = "block";
                 }
             });
+
+            window.addEventListener('scroll', function () {
+                var scrollPosition = window.scrollY;
+
+                if (scrollPosition <= maxScroll) {
+                    var opacity = scrollPosition / maxScroll;
+                    parallaxContainer.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+                    contentContainer.style.opacity = 1 - opacity;
+                    isTransitioned = false;
+                } else if (!isTransitioned) {
+
+                    isTransitioned = true;
+                }
+
+
+                if (isTransitioned && scrollPosition <= maxScroll) {
+                    parallaxContainer.style.display = "block";
+                    contentContainer.style.position = "relative";
+                }
+            });
+
+            // Scroll to the top when the page loads -- test
+            window.addEventListener('beforeunload', function () {
+                window.scrollTo(0, 0);
+            });
+
+            // Slide scrolling
+            const slideContainer = document.getElementById('slide-container');
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            const slideHeight = 0.8 * window.innerHeight;
+            // const slideHeight = 300;
+            // console.log('slideHeight', slideHeight);
+
+            slides.forEach((slide, index) => {
+                // console.log('slide', slide);
+                // console.log('index', index);
+                slide.style.transform = `translateY(${index * slideHeight}px)`;
+            });
+
+            slideContainer.addEventListener('wheel', (event) => {
+                // console.log('event', event);
+                if (event.deltaY > 0 && currentSlide < slides.length - 1) {
+                    currentSlide++;
+                } else if (event.deltaY < 0 && currentSlide > 0) {
+                    currentSlide--;
+                }
+
+                const translateY = -currentSlide * slideHeight;
+
+                // slides.forEach((slide, index) => {
+                //     slide.style.transform = `translateY(${translateY + 1.15 * index * slideHeight}px)`;
+                // });
+                
+                slides.forEach((slide, index) => {
+                    slide.style.transform = `translateY(${translateY + 1.15 * index * slideHeight}px)`;
+                });
+            });
+
+            // let startY
+            // slideContainer.addEventListener('touchstart', function (e) {
+            //     console.log('e', e);
+            //     startY = e.touches[0].clientY;
+            // });
+
+            // slideContainer.addEventListener('touchmove', function (e) {
+            //     var deltaY = e.touches[0].clientY - startY;
+            //     // 根据 deltaY 的值来模拟滚动效果
+            //     console.log('deltaY', deltaY);
+            //     if (deltaY > 0 && currentSlide < slides.length - 1) {
+            //         currentSlide++;
+            //     } else if (deltaY < 0 && currentSlide > 0) {
+            //         currentSlide--;
+            //     }
+
+            //     const translateY = -currentSlide * slideHeight;
+            //     console.log('translateY', translateY);
+
+            //     slides.forEach((slide, index) => {
+            //         slide.style.transform = `translateY(${translateY + 1.15 * index * slideHeight}px)`;
+            //     });
+            // });
         });
+    </script>
 
-        window.addEventListener('scroll', function () {
-            const scrollPosition = window.scrollY;
-            const parallaxContainer = document.querySelector('.parallax');
-            const contentContainer = document.querySelector('#content-container');
-            const maxScroll = 400;
-
-            if (scrollPosition <= maxScroll) {
-                const opacity = scrollPosition / maxScroll;
-                parallaxContainer.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
-                contentContainer.style.opacity = 1 - opacity;
-            }
-        });
-        // Scroll to the top when the page loads -- test
-        window.addEventListener('beforeunload', function () {
-            window.scrollTo(0, 0);
-        });
-
-
-        
-        const slideContainer = document.getElementById('slide-container');
-const slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
-const slideHeight = window.innerHeight; 
-
-// Set the initial positions of the slides
-slides.forEach((slide, index) => {
-  slide.style.transform = `translateY(${index * slideHeight}px)`;
-});
-
-// Monitor the scroll wheel event
-slideContainer.addEventListener('wheel', (event) => {
-  // Calculate the direction of the scroll
-  if (event.deltaY > 0 && currentSlide < slides.length - 1) {
-    currentSlide++;
-  } else if (event.deltaY < 0 && currentSlide > 0) {
-    currentSlide--;
-  }
-
-  // Calculate the translateY value for the current slide
-  const translateY = -currentSlide * slideHeight;
-  
-  // Apply the transform to all slides
-  slides.forEach((slide, index) => {
-    slide.style.transform = `translateY(${translateY + index * slideHeight}px)`;
-  });
-});
-
-
-
-        
-    </script>-->
-
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    var scrollHint = document.querySelector(".scroll-hint");
-    var parallaxContainer = document.querySelector('.parallax');
-    var contentContainer = document.querySelector('#content-container');
-    var maxScroll = 400; // Adjust the scroll threshold as needed
-    var isTransitioned = false;
-
-    // Scroll hint toggle
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 20) {
-            scrollHint.style.display = "none";
-        } else {
-            scrollHint.style.display = "block";
-        }
-    });
-
-    // Parallax and section transition
-    window.addEventListener('scroll', function () {
-        var scrollPosition = window.scrollY;
-
-        if (scrollPosition <= maxScroll) {
-            var opacity = scrollPosition / maxScroll;
-            parallaxContainer.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
-            contentContainer.style.opacity = 1 - opacity;
-            isTransitioned = false;
-        } else if (!isTransitioned) {
-            isTransitioned = true;
-        }
-
-        if (isTransitioned && scrollPosition <= maxScroll) {
-            parallaxContainer.style.display = "block";
-            contentContainer.style.position = "relative";
-        }
-    });
-
-    // Scroll to the top when the page loads -- test
-    window.addEventListener('beforeunload', function () {
-        window.scrollTo(0, 0);
-    });
-
-    // Slide scrolling
-    const slideContainer = document.getElementById('slide-container');
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-    const slideHeight = window.innerHeight -0.2 * window.innerHeight; 
-
- 
-    slides.forEach((slide, index) => {
-        slide.style.transform = `translateY(${index * slideHeight}px)`;
-    });
-
-    slideContainer.addEventListener('wheel', (event) => {
-        if (event.deltaY > 0 && currentSlide < slides.length - 1) {
-            currentSlide++;
-        } else if (event.deltaY < 0 && currentSlide > 0) {
-            currentSlide--;
-        }
-
-        const translateY = -currentSlide * slideHeight;
-        slides.forEach((slide, index) => {
-            slide.style.transform = `translateY(${translateY + 1.15*index * slideHeight}px)`;
-        });
-    });
-});
-
-
-</script>
-
-
+    <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+    <script>
+        var vConsole = new window.VConsole();
+    </script> -->
 </body>
 
 </html>
