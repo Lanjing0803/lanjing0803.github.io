@@ -376,8 +376,7 @@ header {
     min-height: 100vh;
     overflow: hidden;
     position: relative;
-    background-image: linear-gradient(rgba(16, 16, 16, 0), rgba(16, 16, 16, 0.3) 10%, rgba(16, 16, 16, 1)), url('https://images.unsplash.com/photo-1641895977042-b0172877530e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3870&q=80');
-    background-color: #101010;
+     background-color: #101010;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1199,8 +1198,6 @@ a:not([href]):not([tabindex]):focus {
         min-height: 100vh;
         overflow: hidden;
         position: relative;
-        background-image: none;
-        background-color: #101010;
     }
 }
 
