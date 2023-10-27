@@ -376,7 +376,7 @@ header {
     min-height: 100vh;
     overflow: hidden;
     position: relative;
-     background-color: #101010;
+     background-color: #101010 !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -390,7 +390,7 @@ header {
     min-height: 100vh;
     overflow: hidden;
     position: relative;
-    background-color: #101010;
+    background-color: #101010 ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1198,7 +1198,7 @@ a:not([href]):not([tabindex]):focus {
         min-height: 100vh;
         overflow: hidden;
         position: relative;
-        background-color: #101010;
+        background-color: #101010 !important;
     }
 }
 
