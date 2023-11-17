@@ -1,0 +1,98 @@
+
+.intro-text{
+    padding-top:0;
+    max-width:60vw;
+}
+.intro-text p{
+    font-size:18px;
+    max-width:60vw;
+    font-weight: 200;
+    line-height: 50px;
+}
+.contact-wrapper {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    max-width: 840px;
+  }
+  
+  .form-horizontal {
+    max-width: 400px;
+    font-weight: 400;
+
+    padding-bottom:20px; 
+  }
+#message{
+  padding-top: 1em;
+}
+
+
+  .form-control, textarea {
+    
+    width: 40vw;
+    height: 50px; 
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+    border-radius: 0;
+    margin: 10px 0;
+    resize: none
+  }
+  
+  
+  .send-button {
+    width: 10vw;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    justify-content: right;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .send-button:hover {
+    background-color: #fff;
+    color:gray
+  }
+
+  .alt-send-button {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .alt-send-button i ,.alt-send-button {
+    padding-right:5px
+  }
+ 
+  .form-control::placeholder,
+textarea::placeholder {
+  font-size: 18px; 
+  color: gray;
+  vertical-align: center;
+}
+
+.intro-text{
+  padding-bottom:0;
+}
+footer{
+  justify-content: center;
+  z-index:-1;
+  display:flex
+}
+  .footer{position:absolute;
+      bottom:3vh;
+
+  }
+ 
+ 
+  .contact-image{
+    max-width: 430px;
+    position: absolute;
+    top: 3vh;
+    right: 13vw;
+    padding-top: 28vh;
+    z-index: -1
+  }
