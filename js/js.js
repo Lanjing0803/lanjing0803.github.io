@@ -1,21 +1,23 @@
 let currentSection = 0;
 let lastScrollTime = 0;
 
-
-window.addEventListener('wheel', (event) => {
-    const currentTime = new Date().getTime();
-    if (currentTime - lastScrollTime < 800) {
-        return;  
-    }
-    
-    if (event.deltaY > 0) {
-        scrollToSection(currentSection + 1);
-    } else {
-        scrollToSection(currentSection - 1);
-    }
-    
-    lastScrollTime = currentTime;
-});
+// Check if the screen width is greater than 768 pixels (adjust as needed)
+if (window.innerWidth > 768) {
+    window.addEventListener('wheel', (event) => {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastScrollTime < 800) {
+            return;  
+        }
+        
+        if (event.deltaY > 0) {
+            scrollToSection(currentSection + 1);
+        } else {
+            scrollToSection(currentSection - 1);
+        }
+        
+        lastScrollTime = currentTime;
+    });
+}
 
 function scrollToSection(sectionIndex) {
     const sections = document.querySelectorAll('.section');
@@ -29,7 +31,7 @@ function scrollToSection(sectionIndex) {
 }
 
 
- // Scroll to the top when the page loads -- NOT WORKING WHEN FIRST REFRESH
+
 
 
 window.addEventListener('unload', function () {
