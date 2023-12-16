@@ -28,9 +28,31 @@
 
 <body>
     <div id="content">
+        <div class="blur"></div>
 
+        <div class="particles" id="particles"></div>
+        <div class="navbar-mobile ">
+  
+            <input type="checkbox" id="overlay-input" />
+      <label for="overlay-input" id="overlay-button"><span></span></label>
+      <div id="overlay">
+        <ul>
+          <li><a href="index.html" class="inactive">ABOUT</a></li>
+          <li><a href="project.html" class="inactive">PROJECTS</a></li>
+          <!--   <li><a href="contact.html" class="inactive">GALLERY</a></li>-->
+          <li><strong><a href="contact.html" class="active">CONTACT</a></strong></li>
+          <li><a href="resume.pdf" target="_blank" class="menu-button">RESUME</a></li>
+        </ul>
+        <div class="overlay-footer row">
+          <p>2023 &copy; by Wenge Wang</p>
+          <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+      </div>
+      <div class="overlay-logo">WENGE<br>WANG</div>
+      </div>
+      </div>
         <!--1st page section-->
         <div class="section">
+          
             <nav>
                 <div class="navbar">
                     <ul class="left-menu">
@@ -48,8 +70,8 @@
 <div class="first-section">
                 <div class="intro-container column ">
                         <div class="intro-text">
-                            <div class="intro-lead-in appear-element">Let's Create the Future! 
-                                <p>Whether it's a project, collaboration, or just a chat, I'm eager to hear from you!</p></div>
+                            <div class="intro-lead-in "><div class="appear-element">Let's Create the Future! </div>
+                                <p class="down-element">Whether it's a project, collaboration, or just a chat, I'm eager to hear from you!</p></div>
 
                         </div>
 
@@ -74,7 +96,7 @@
                                 <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" id="message"
                                     autocomplete="off" required></textarea>
 
-                                <button class="send-button appear-element" id="submit" type="submit" value="SEND">
+                                <button class="send-button down-element3" id="submit" type="submit" value="SEND">
                                     <div class="alt-send-button">
                                         <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
                                     </div>
@@ -96,8 +118,8 @@
             </div>
               <footer >
   
-                <div class="footer" >
-                    <div >
+                <div class="footer">
+                    <div class="laptop-show-only">
                         <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
                     </div>
                     <div class="footer-icon">
