@@ -1,12 +1,9 @@
 
-.section{
-    
-  background-color: black;
-}
+
 .scroll-hint {
     position: absolute;
     bottom: 20px;
-    left: 49vw;
+    left: 48vw;
     text-align: center;
     opacity: 1;
     transition: opacity 0.5s; 
@@ -16,7 +13,7 @@
 .scroll-icon {
     width: 2vw;
     height: 2vw;
-    border: 2px solid white;
+    border: 2px solid;
     border-radius: 50%;
     font-size:20px;
     padding: 10px;
@@ -29,7 +26,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+
 }
 
 .intro-container{
@@ -77,7 +74,7 @@
     color:gray;
     
   text-transform: uppercase;
-    animation: fadeInOut 3s infinite alternate; 
+    animation: fadeInOut 2s infinite alternate; 
 }
 
 @keyframes fadeInOut {
@@ -118,7 +115,7 @@
 }
 
 #mode-toggle:checked + .toggle-label:before {
-    content: "UX";
+    content: "UI";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -137,7 +134,11 @@
     color: white;
     font-weight: bold;
 }
-
+#mode-toggle + .toggle-label::after {
+    color: white;
+    font-size: 14px;
+    margin-left: 5px;
+}
 
 .project-image {
     width: 650px;
@@ -146,12 +147,12 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50%;
+    top: 48vh;
     left: 38%;
     transform: translate(-50%, -50%);
     z-index: -1;
     overflow: hidden;
-    opacity:0.8
+    opacity:0.7
   }
 
   .project-image img {
@@ -185,8 +186,8 @@
     position: absolute;
     padding-top:43vh;
     padding-left:58vw;
-    width:28vw;
-    font-weight: 200;
+    width:23vw;
+    font-weight: 400;
     font-size:18px;
   }
   
@@ -196,7 +197,7 @@
 
 
   .award-container {
-    color: #FFD700;
+    color: #00ffcc;
     display: flex;
     align-items: center;
   }
@@ -205,7 +206,9 @@
     padding-right:10px;
   }
   .highlight{
-    color: #FFD700;}
+    color: black;}
+  .highlight1{
+    color: #00ffcc;}
 footer{
     justify-content: center;
     z-index:-1;
@@ -217,3 +220,67 @@ footer{
 
     }
    
+
+
+    @media (max-width: 1020px) {
+        .button-hint {
+            padding-top: 29px;
+        }
+    .explore-da-ux {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+    
+    }
+    .explore-da-ux .da-mode,.explore-da-ux .ux-mode{
+        padding:10px;
+    }
+    .scroll-hint{
+        left: 5vw;
+    }
+    .scroll-icon1 {
+        color: #97a9bd;
+    }
+    .project-title h2 {
+        font-size: 35px;
+        line-height: 1.5;
+    }
+    .project-content {
+        padding-top: 55vh;
+        padding-left: 5vw;
+        width: 76vw;
+        font-size: 15px;
+    }
+    .project-button {
+        padding-top: 31px;
+        font-size: 23px;
+    }
+    .footer {
+        bottom: -62px;
+        padding-top: 0;
+    }
+    .project-image {
+        position: absolute;
+        top: 25vh;
+        width: 126vw;
+        height: 485px;
+    }
+    .project-title {
+        max-width: 81vw;
+        height: 90vh;
+        padding-top: 0;
+    }
+
+    .project-title h2 {
+        padding-bottom: 3px;
+    }
+
+    .toggle-label {
+        width: 88px;
+    }
+
+
+
+    
+}
+
