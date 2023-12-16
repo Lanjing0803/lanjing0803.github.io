@@ -22,10 +22,29 @@
 </head>
 
 <body>
-    <div id="content">
+<div id="content">
+    <div class="navbar-mobile ">
+  
+        <input type="checkbox" id="overlay-input" />
+  <label for="overlay-input" id="overlay-button"><span></span></label>
+  <div id="overlay">
+    <ul>
+      <li><a href="index.html" class="inactive">ABOUT</a></li>
+      <li><strong></strong><a href="project.html" class="active">PROJECTS</a></strong></li>
+      <!--   <li><a href="contact.html" class="inactive">GALLERY</a></li>-->
+      <li><a href="contact.html" class="inactive">CONTACT</a></li>
+      <li><a href="resume.pdf" target="_blank" class="menu-button">RESUME</a></li>
+    </ul>
+    <div class="overlay-footer row">
+      <p>2023 &copy; by Wenge Wang</p>
+      <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+  </div>
+  <div class="overlay-logo">WENGE<br>WANG</div>
+  </div>
+  </div>
         <!--1st page section-->
-        <div class="section ">
-            <nav class=" da-mode">
+        <div class="section black section1" >
+            <nav class=" da-mode laptop-show-only">
                 <div class="navbar">
                     <ul class="left-menu">
                         <li><a href="index.html">WENGE WANG</a></li>
@@ -39,7 +58,7 @@
                     </ul>
                 </div>
             </nav>
-            <nav class="nav-ux ux-mode" style="display: none;">
+            <nav class="nav-ux ux-mode laptop-show-only" style="display: none;">
                 <div class="navbar">
                     <ul class="left-menu">
                         <li><a href="index.html">WENGE WANG</a></li>
@@ -57,35 +76,37 @@
             <div class="intro-container column down-element">
                 <p class="button-hint highlight">Click to Switch ▼</p>
 
-                <div class="explore-da-ux intro-text down-element">Explore
+                <div class="explore-da-ux intro-text down-element"><div class="da-mode blue">Explore</div><div class="ux-mode gray"style="display: none;">Explore</div>
                     <div class="mode-switch">
                         <input type="checkbox" id="mode-toggle">
                         <label for="mode-toggle" class="toggle-label"></label>
 
                     </div>
-                    Projects
+                    <div class="da-mode blue">Projects</div><div class="ux-mode gray"style="display: none;">Projects</div>
                 </div>
 
-                <div class="intro-para down-element da-mode">
+                <div class="intro-para down-element da-mode ">
                     <p>Discover a glimpse into the projects of Data Analytics and Visualization in 2023 </p>
                 </div>
-                <div class="intro-para down-element ux-mode" style="display: none;">
+                <div class="intro-para down-element ux-mode " style="display: none;">
                     <p>Discover a glimpse into the projects of User Interface and Experience in 2023 </p>
                 </div>
             </div>
-            <div class="scroll-hint  down-element3 da-mode" id="scroll-hint">
-                <div class="scroll-icon ">
+            <div class="scroll-hint  down-element3 da-mode gray" id="scroll-hint">
+                <div class="scroll-icon1 ">
                 </div>
             </div>
-            <div class="scroll-hint  down-element3 ux-mode"id="scroll-hint"  style="display: none;">
-                <div class="scroll-icon ">
+            <div class="scroll-hint  down-element3 ux-mode gray"id="scroll-hint"  style="display: none;">
+                <div class="scroll-icon1 ">
                 </div>
             </div>
         </div>
 
     </div>
+
+    
             <!--1st project-->
-            <div class="section">
+            <div class="section ">
                 <div class="column  da-mode">
                     <div class=" project-title">
 
@@ -93,7 +114,7 @@
                             Art in Renaissance, Baroque, and Rococo
                         </h2>
                         <p>
-                            PROGRAMMING | DATA ANALYSIS | DATA VISUALIZATION <span class="highlight">(PYTHON & R)</span>
+                            PROGRAMMING | DATA ANALYSIS | DATA VISUALIZATION <span class="highlight1">(PYTHON & R)</span>
                         </p>
                     </div>
                     <div class="project-content">
@@ -106,15 +127,93 @@
                         <div class="project-button"> <a href="da1.html"   class="primary-button">CASE
                                 STUDY</a>
                         </div>
-                    </div>
+                    
                     <div class="project-image ">
                         <img src="image\da-1.svg"
-                            alt="da-project-1 Image">
-
+                            alt="da-project-1 Image"data-scroll>
+</div>
                     </div>
                 </div>
 
-            <div class=" column ux-mode" style="display: none;">
+        
+
+
+                <div class=" column  ux-mode" style="display: none;">
+                    <div class=" project-title">
+
+                        <h2>
+                            Pratt Connect, A Website Designed for Pratt Students
+                        </h2>
+
+                        <p>
+                            Concept to Prototype | User-Centered Design
+                        </p>
+                    </div>
+                    <div class="project-content">
+                        <p>At Pratt Institute, the School of Information community is diverse and from various walks of
+                            life. For graduate students, the primary focus is to build progressive connections for
+                            academic and career development. In the age of information overload, it is important to
+                            streamline the networks, build meaningful connections, and in turn facilitate the Pratt
+                            cohort.
+                        </p>
+                        <div class="project-button"> <span  class="inprogress-button">IN PROGRESS</span>
+                        </div>
+                    
+                    <div class="project-image ">
+                        <img src="image\ux-3.svg"
+                            alt="ux-project-3 Image"data-scroll>
+</div>
+                    </div>
+
+                
+                    
+                </div>
+            
+        </div>
+
+
+            <!--2nd project-->
+            <div class="section ">
+                <div class="   column  da-mode">
+                    <div class=" project-title">
+
+                        <h2>
+                            Data Literacy with, for, and by Youth
+                        </h2>
+                        <div class="award-container">
+                            <i class="fas fa-award award-icon"></i>
+                            <p>NSF AWARDED PROJECT</p>
+                        </div>
+                        <p>
+                            DATA ANALYSIS | DATA VISUALIZATION <span class="highlight1">(TABLEAU)</span>
+                        </p>
+
+                    </div>
+                    <div class="project-content">
+
+                        <p>The goal of the Data Literacy with, for, and by Youth is to support data literacy programs
+                            for youth at
+                            the library. With the active participation of young people, the project aims to design,
+                            build, and test
+                            a prototype for youth-oriented data literacy activities, for use in after-school STEM
+                            programs at the
+                            public library.</p>
+                        <div class="project-button"> <a href="da2.html"   class="primary-button">CASE
+                                STUDY</a>
+                        </div>
+                    
+                    <div class="project-image ">
+                        <img src="image\da-2.svg"
+                            alt="da-project-2 Image"data-scroll>
+</div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class=" column ux-mode" style="display: none;">
                     <div class=" project-title">
 
                         <h2>
@@ -138,55 +237,46 @@
                         <div class="project-button"> <a href="ux1.html"   class="primary-button">CASE
                                 STUDY</a>
                         </div>
-                    </div>
+                   
                     <div class="project-image ">
                         <img src="image\ux-1.svg"
-                            alt="ux-project-1 Image">
-
+                            alt="ux-project-1 Image"data-scroll>
+ </div>
                     </div>
 
                 </div>
+            </div>
 
 
-
-            
-        </div>
-
-
-            <!--2nd project-->
-            <div class="section">
-                <div class="   column  da-mode">
+            <!--3rd project-->
+            <div class="section ">
+                
+           
+                <div class=" column  da-mode">
                     <div class=" project-title">
 
                         <h2>
-                            Data Literacy with, for, and by Youth
+                            Visualizing the Most Subscribed YouTube Channels
                         </h2>
-                        <div class="award-container">
-                            <i class="fas fa-award award-icon"></i>
-                            <p>NSF AWARDED PROJECT</p>
-                        </div>
                         <p>
-                            DATA ANALYSIS | DATA VISUALIZATION <span class="highlight">(TABLEAU)</span>
+                            DATA ANALYSIS | DATA VISUALIZATION <span class="highlight1">(TABLEAU)</span>
                         </p>
 
                     </div>
                     <div class="project-content">
 
-                        <p>The goal of the Data Literacy with, for, and by Youth is to support data literacy programs
-                            for youth at
-                            the library. With the active participation of young people, the project aims to design,
-                            build, and test
-                            a prototype for youth-oriented data literacy activities, for use in after-school STEM
-                            programs at the
-                            public library.</p>
-                        <div class="project-button"> <a href="da2.html"   class="primary-button">CASE
+                        <p> With over 2 billion monthly active users and over 1 billion hours of video watched daily,
+                            YouTube is one of the most popular social media platforms on the internet. 
+                            Analyzing the most popular YouTube channels can offer valuable insights into the online
+                            audience’s trends and preferences.</p>
+                        <div class="project-button"> <a href="da3.html"   class="primary-button">CASE
                                 STUDY</a>
                         </div>
-                    </div>
+                   
                     <div class="project-image ">
-                        <img src="image\da-2.svg"
-                            alt="da-project-2 Image">
-
+                        <img src="image\da-3.svg"
+                            alt="da-project-3 Image"data-scroll>
+ </div>
                     </div>
 
                 </div>
@@ -210,88 +300,22 @@
                             Unmoderated Remote User Testing to collect feedback from participants and generate
                             recommendations. 
                         </p>
-                        <div class="project-button"> <a href="https://docs.google.com/presentation/d/168AF_TMONMQa7YNlufeNiD3HhPOl-3vfZ8In-ZVFsZw/edit?usp=sharing"   class="primary-button">CASE
+                        <div class="project-button"> <a href="https://docs.google.com/presentation/d/168AF_TMONMQa7YNlufeNiD3HhPOl-3vfZ8In-ZVFsZw/edit?usp=sharing" target="_blank"  class="primary-button">CASE
                                 STUDY</a>
                         </div>
-                    </div>
+                    
                     <div class="project-image ">
                         <img src="image\ux-2.svg"
-                            alt="ux-project-2 Image">
-
+                            alt="ux-project-2 Image"data-scroll>
+</div>
                     </div>
 
                 </div>
-
-            </div>
-
-
-            <!--3rd project-->
-            <div class="section">
                 
-           
-                <div class=" column  da-mode">
-                    <div class=" project-title">
-
-                        <h2>
-                            Visualizing the Most Subscribed YouTube Channels
-                        </h2>
-                        <p>
-                            DATA ANALYSIS | DATA VISUALIZATION <span class="highlight">(TABLEAU)</span>
-                        </p>
-
-                    </div>
-                    <div class="project-content">
-
-                        <p> With over 2 billion monthly active users and over 1 billion hours of video watched daily,
-                            YouTube is one of the most popular social media platforms on the internet. 
-                            Analyzing the most popular YouTube channels can offer valuable insights into the online
-                            audience’s trends and preferences.</p>
-                        <div class="project-button"> <a href="da3.html"   class="primary-button">CASE
-                                STUDY</a>
-                        </div>
-                    </div>
-                    <div class="project-image ">
-                        <img src="image\da-3.svg"
-                            alt="da-project-3 Image">
-
-                    </div>
-
-                </div>
-
-                <div class=" column  ux-mode" style="display: none;">
-                    <div class=" project-title">
-
-                        <h2>
-                            Pratt Connect, A Website Designed for Pratt Students
-                        </h2>
-
-                        <p>
-                            Concept to Prototype | User-Centered Design
-                        </p>
-                    </div>
-                    <div class="project-content">
-                        <p>At Pratt Institute, the School of Information community is diverse and from various walks of
-                            life. For graduate students, the primary focus is to build progressive connections for
-                            academic and career development. In the age of information overload, it is important to
-                            streamline the networks, build meaningful connections, and in turn facilitate the Pratt
-                            cohort.
-                        </p>
-                        <div class="project-button"> <span class="inprogress-button">IN PROGRESS</span>
-                        </div>
-                    </div>
-                    <div class="project-image ">
-                        <img src="image\ux-3.svg"
-                            alt="ux-project-3 Image">
-
-                    </div>
-
-                
-                    
-                </div>
                 <footer >
   
-                    <div class="footer" >
-                        <div >
+                    <div class="footer">
+                        <div class="laptop-show-only">
                             <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
                         </div>
                         <div class="footer-icon">
