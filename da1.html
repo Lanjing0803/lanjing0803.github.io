@@ -19,11 +19,35 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
   <script type='text/javascript' src='js\case-study.js'></script>
 </head>
 
 <body>
+  <div class="navbar-mobile ">
+  
+    <input type="checkbox" id="overlay-input" />
+<label for="overlay-input" id="overlay-button"><span></span></label>
+<div id="overlay">
+<ul>
+  <li><a href="index.html" class="inactive">ABOUT</a></li>
+  <li><strong></strong><a href="project.html" class="active">PROJECTS</a></strong></li>
+  <!--   <li><a href="contact.html" class="inactive">GALLERY</a></li>-->
+  <li><a href="contact.html" class="inactive">CONTACT</a></li>
+  <li><a href="resume.pdf" target="_blank" class="menu-button">RESUME</a></li>
+</ul>
+<div class="overlay-footer row">
+  <p>2023 &copy; by Wenge Wang</p>
+  <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+</div>
+<div class="overlay-logo">WENGE<br>WANG</div>
+</div>
+</div>
+<div class="back-button">
+  <a href="#" onclick="history.go(-1); return false;">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+</div>
 
   <nav>
     <div class="navbar">
@@ -41,6 +65,7 @@
   </nav>
 
   <div class="project-section">
+
   <div class="intro-text">
     <div class="intro-heading">
       <div class="intro-lead-in appear-element">Art in Renaissance, Baroque, and Rococo</div>
@@ -58,9 +83,11 @@
   </div>
 
   <div class="cs-banner">
-    <img src="image\da-1.svg" alt="da-project-1 Image">
+    <img src="image\da-1.svg" alt="da-project-1 image" data-scroll>
   </div>
 
+
+<div>
   <div class="cs-content down-element2">
     <div class="case-study-nav ">
       <ul>
@@ -76,8 +103,7 @@
 
     <h3> About the Project</h3>
 
-
-    <div class="row">
+    <div class="row column">
       <div class="case-study-intro">
         <p>
           Art is a way people express themselves. Imagine looking at a time when art changed a lot. That is the
@@ -103,7 +129,7 @@
 
     </div>
   </div>
- 
+ </div>
   <div class="cs-content">
     <h4> PROCESS</h4>
     <div class="process-section">
@@ -124,7 +150,7 @@
     <div class="process-section">
       <h3>Analysis Highlights</h3>
 
-      <div class="row">
+      <div class="row column">
         <div class="process-details">
           <p>
             A color palette displaying how artists use color can be incredibly helpful for understanding
@@ -146,11 +172,8 @@
 
 
     <div class="process-section">
-      <div class="row">
-        <div class="process-image">
-          <img src="image\screenshot2.jpg" alt="wordcloud">
-
-        </div>
+      <div class="row column">
+        
         <div class="process-details">
           <p>
             I used R packages 'wordcloud2' and 'jiebaR' to create word clouds from artwork titles. This visually
@@ -160,13 +183,16 @@
             Enthroned, and Young. Overall, word cloud is a creative and effective way to help viewers know the top
             themes of Renaissance art, which is about religion and portraiture.</p>
         </div>
+<div class="process-image">
+          <img src="image\screenshot2.jpg" alt="wordcloud">
 
+        </div>
       </div>
     </div>
 
     <div class="process-section">
 
-      <div class="row">
+      <div class="row column">
         <div class="process-details">
           <p>
             I created pie charts using package ‘ggplot’ in R showing numeric data in the form of proportions. This chart
@@ -181,12 +207,14 @@
 
         </div>
         <div class="process-image" style="background-color:white; width:58vw">
-          <img src="image\rococo_medium.png" alt="baroque color palette">
-
+          <picture><img src="image\rococo_medium.png" alt="baroque color palette">
+          <figcaption>Rococo Art Medium</figcaption>
+        </picture>
         </div>
         <div class="process-image" style="background-color:white; width:58vw">
-          <img src="image\baroque_medium.png" alt="baroque color palette">
-
+          <picture><img src="image\baroque_medium.png" alt="baroque color palette">
+          <figcaption>Baroque Art Medium</figcaption>
+        </picture>
         </div>
       </div>
     </div>
@@ -206,8 +234,95 @@
             infographic was created.</p>
         </div>
       </div>
+      <h6> UX Research Insights</h6>
+        <div class="skills">
+        <ul class="lines">
+          <li class="line l--0">
+            <span class="line__label title">
+              Performance Level
+            </span>
+          </li>
+          <li class="line l--25">
+            <span class="line__label">
+             0
+            </span>
+          </li>
+          <li class="line l--50">
+            <span class="line__label">
+              1
+            </span>
+          </li>
+          <li class="line l--75">
+            <span class="line__label">
+              2
+            </span>
+          </li>
+          <li class="line l--100">
+            <span class="line__label">
+              3
+            </span>
+          </li>
+        </ul>
+        
+        <div class="charts">
+          <div class="chart chart--dev">
+            <span class="chart__title gray">Something I needed to improve...</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 98%;">
+                <span class="chart__label">
+                 Overall Readability
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 83%;">
+                <span class="chart__label">
+                  Storytelling
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 78%;">
+                <span class="chart__label">
+                  Missing Header & Footer
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 60%;">
+                <span class="chart__label">
+                 Hierarchy
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 43%;">
+                <span class="chart__label">
+                  Color Match
+                </span>
+              </li>
+          
+            </ul>
+          </div>
+          
+          <div class="chart chart--prod">
+            <span class="chart__title gray">Something I did well...</span>
+            <ul class="chart--horiz">
+            <li class="chart__bar" style="width: 88%;">
+              <span class="chart__label">
+                Interesting Topic
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 73%;">
+              <span class="chart__label">
+                Engaging Information
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 48%;">
+              <span class="chart__label">
+                Font Choice
+              </span>
+            </li>
+          </ul>
+          </div>
+        
+        </div>
+      </div>
     </div>
-      <div class="cs-content-row">
+
+      <!--<div class="cs-content-row">
         <h1 style="flex:1" class="hollow-text">Something I did well...</h1>
         <div class="container">
 
@@ -218,7 +333,6 @@
                 <p>&ldquo;I like the beautiful typography and font choices that enhanced readability.&rdquo;</p><span
                   class="quote-arrow"></span>
               </div>
-              <!--<span class="grid-testimonials-citation">PROS</span>-->
             </li>
             <li>
               <div>
@@ -268,13 +382,14 @@
         </div>
 
 
-      </div>
-  
+      </div>-->
+    
+      
 
 
   </div>
   <h3 style="position:absolute;z-index:2;padding-left: 13vw;padding-top:13vh" > Final Output</h3>
-  <div class="carousel">
+  <div class="carousel ">
     <div class="carousel__nav">
       <span id="moveLeft" class="carousel__arrow">
         <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
@@ -330,9 +445,13 @@
 
   <div class="other-projects cs-content">
     <p>We've reached the finish line!</p>
-  <h2 class="section-title">Want to see more? </h2>
-
-  <div class="project-entire">
+  <h2 class="section-title">Want to see more?<br class="mobile-show-only">Next Project: </h2>
+  <div class="mobile-show-only">
+  
+  <div class="project-button"> <a href="da2.html" class="secondary-button"><p>Data Literacy with, for, and by Youth</p></a>
+  </div>
+</div>
+  <div class="project-entire laptop-show-only">
     <div class="project-container">
     
       <div class="item" style="background-image: url(image/da-2.svg);">
@@ -373,16 +492,18 @@
 
 </div>
 </div>
+</div>
+
   <footer>
 
     <div class="footer">
-      <div>
+      <div class="laptop-show-only">
         <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
       </div>
       <div class="footer-icon">
         <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
             aria-hidden="true">wwang24@outlook.com</i></a>
-            <a href="da1.html" ><i class="fas fa-arrow-up"></i></a>
+            <a href="da1.html" ><i class="fas fa-arrow-up laptop-show-only"></i></a>
       </div>
     </div>
 
