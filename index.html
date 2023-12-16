@@ -18,19 +18,45 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
 
   <script type='text/javascript' src='js\js.js'></script>
 </head>
-<div class="view-on-laptop-notification">
+<!--<div class="view-on-laptop-notification">
   <p>This content is currently a work in progress and is best suited for viewing on a laptop. For the optimal experience, please switch to a larger screen. Thank you!</p>
-</div>
+</div>-->
 <body>
 
 
   <div id="content">
+    
+    <div class="navbar-mobile ">
+  
+      <input type="checkbox" id="overlay-input" />
+<label for="overlay-input" id="overlay-button"><span></span></label>
+<div id="overlay">
+  <ul>
+    <li><strong><a href="index.html" class="active">ABOUT</a></strong></li>
+    <li><a href="project.html" class="inactive">PROJECTS</a></li>
+    <!--   <li><a href="contact.html" class="inactive">GALLERY</a></li>-->
+    <li><a href="contact.html" class="inactive">CONTACT</a></li>
+    <li><a href="resume.pdf" target="_blank" class="menu-button">RESUME</a></li>
+  </ul>
+  <div class="overlay-footer row">
+    <p>2023 &copy; by Wenge Wang</p>
+    <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+</div>
+<div class="overlay-logo">WENGE<br>WANG</div>
+</div>
+</div>
+    <!--1st page section-->    
+  
+    <div class="section animated-section" >
+    <svg class="wave-top" width="100" viewBox="0 0 1200 250">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 108.306L50 114.323C100 120.34 200 132.374 300 168.476C400 204.578 500 264.749 600 246.698C700 228.647 800 132.374 900 108.306C1000 84.2382 1100 132.374 1150 156.442L1200 180.51V-8.5451e-06H1150C1100 -8.5451e-06 1000 -8.5451e-06 900 -8.5451e-06C800 -8.5451e-06 700 -8.5451e-06 600 -8.5451e-06C500 -8.5451e-06 400 -8.5451e-06 300 -8.5451e-06C200 -8.5451e-06 100 -8.5451e-06 50 -8.5451e-06H0V108.306Z" fill="#f0eff2"/>
+</svg>   
 
-    <!--1st page section-->
-    <div class="section">
+
       <nav>
         <div class="navbar">
           <ul class="left-menu">
@@ -44,24 +70,26 @@
             <li><a href="resume.pdf" target="_blank" class="menu-button">RESUME</a></li>
           </ul>
         </div>
+
       </nav>
+  
+        
       <div class="header-section first-section">
         <div class="intro-container">
           <div>
             <div class="intro-text">
               <div class="intro-heading">
-                <div class="intro-lead-in appear-element">Hello, I'm a</div>
+                <div class="intro-lead-in appear-element black">Hello, I'm a</div>
                 <div class="text-container">
                   <div class="text-slider appear-element">
-                    <div class="text-item">Web Developer</div>
                     <div class="text-item">Data Analyst</div>
-                    <div class="text-item">UI/UX Designer</div>
-                    <div class="text-item">Freelance Illustrator</div>
+                    <div class="text-item">UI Designer</div>
+                    <div class="text-item">Web Developer</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="intro-para appear-element">
+            <div class="intro-para appear-element black">
               <p>Welcome to my website, where data science and art merge! With my data science background, I can
                 handle complex data, discover patterns, and share insights. I'm also a big fan of art, which fuels
                 my creativity and outside-the-box thinking. This blend of analytical and artistic skills brings a
@@ -75,9 +103,8 @@
               </div>
             </div>
           </div>
-          <div class=" intro-image down-element">
+         <!-- <div class=" intro-image down-element">
 
-            <!-- SOLAR SYSTEM -->
             <div class="spinner-box">
               <div class="solar-system">
                 <div class="earth-orbit orbit">
@@ -93,14 +120,18 @@
               </div>
             </div>
 
-          </div>
+          </div>-->
         </div>
 
       </div>
+      <div class="scroll-hint1  down-element3  gray" id="scroll-hint">
+        <div class="scroll-icon1 ">
+        </div>
+    </div>
     </div>
     <!--2nd page section-->
-    <div class="section">
-      <h2 class="section-title">Selected Projects</h2>
+    <div class="section section1">
+      <h2 class="section-title gray">Selected Projects</h2>
 
       <div class="project-entire">
         <div class="project-container">
@@ -142,12 +173,37 @@
               </div>
             </div>
           </div>
+          <div class="card">
+            <div class="card__front" style="background-image: url(image/da-1.svg);">Data Visualization</div>
+            <div class="card__back column">
+              <h4>ART IN RENAISSANCE, BAROQUE, AND ROCOCO</h4>
+              <div class="project-button"> <a href="da1.html" class="secondary-button">CASE STUDY</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__front" style="background-image: url(image/da-2.svg);">NSF Awarded Project</div>
+            <div class="card__back column">
+              <h4>DATA LITERACY WITH, FOR, AND BY YOUTH</h4>
+              <div class="project-button"> <a href="da2.html" class="secondary-button">CASE STUDY</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__front" style="background-image: url(image/ux-1.svg);">UX Research</div>
+            <div class="card__back column">
+              <h4>SITES WEBSITE USABILITY RESEARCH</h4>
+              <div class="project-button"> <a href="ux1.html" class="secondary-button">CASE STUDY</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="view-all"><a href="project.html" class="menu-button">VIEW ALL</a></div>
+      <div class="view-all "><a href="project.html" class="menu-button bg-gray gray">VIEW ALL</a></div>
     </div>
-    <!--3rd page section-->
-    <div class="section">
+    <!--3rd page section
+    <div class="section" style=" background-color:black">
       <div class="working-experience">
         <h2>I had the pleasure of working with these awesome companies</h2>
         <div class="page">
@@ -193,12 +249,14 @@
         </div>
       </div>
 
-    </div>
+    </div>-->
     <!--4th page section-->
-    <div class="section" style=" background-image: linear-gradient(black 70%,  #5800d3)">
+    <div class="section" >
       <div class="aboutpage-contact">
         <div class="intro-image">
-          <img src="image\photo-1614540723127-aaf1b641f1fa.jpg" alt="HomePage-Contact Image">
+    
+            <div class="shape"></div>
+          
         </div>
         <div class="aboutpage-contact-title">
           <div class="intro-text">
@@ -206,7 +264,7 @@
           </div>
         </div>
         <div class="column">
-          <div class="aboutpage-contact-content" style="margin-right:8vw">
+          <div class="aboutpage-contact-content white" style="margin-right:8vw">
             <p>
               Ready to create an exciting project together? Whether you have a brilliant idea to bring to life, need
               assistance with data insights, or want to discuss a captivating UX research project, I'm here to turn your
@@ -214,7 +272,7 @@
               reality. Let's collaborate and get started!</p>
           </div>
           <div class="aboutpage-contact-content-button">
-            <a href="contact.html" class="primary-button"> CONTACT ME</a>
+            <a href="contact.html" class="menu-button"> CONTACT ME</a>
           </div>
         </div>
 
@@ -226,7 +284,7 @@
       <footer>
 
         <div class="footer">
-          <div>
+          <div class="laptop-show-only">
             <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
           </div>
           <div class="footer-icon">
@@ -251,9 +309,27 @@
       textItems[currentItem].style.transform = 'translateY(0)';
     }
 
-    setInterval(nextText, 3000);
+    setInterval(nextText, 2000);
     textItems[currentItem].style.opacity = 1;
 
+
+    const wave3 = "M0 108.306L50 114.323C100 120.34 200 132.374 300 168.476C400 204.578 500 264.749 600 246.698C700 228.647 800 132.374 900 108.306C1000 84.2382 1100 132.374 1150 156.442L1200 180.51V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V108.306Z",
+      wave4 = "M0 250L50 244.048C100 238.095 200 226.19 300 226.19C400 226.19 500 238.095 600 232.143C700 226.19 800 202.381 900 196.429C1000 190.476 1100 202.381 1150 208.333L1200 214.286V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V250Z",
+      wave1 = "M0 250L50 238.095C100 226.19 200 202.381 300 166.667C400 130.952 500 83.3333 600 101.19C700 119.048 800 202.381 900 214.286C1000 226.19 1100 166.667 1150 136.905L1200 107.143V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V250Z",
+      wave2 = "M0 125L50 111.111C100 97.2222 200 69.4444 300 97.2222C400 125 500 208.333 600 236.111C700 263.889 800 236.111 900 229.167C1000 222.222 1100 236.111 1150 243.056L1200 250V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V125Z";
+
+anime({
+  targets: '.wave-top > path',
+  easing: 'linear',
+  duration: 10000,
+  loop: true,
+  d: [
+    { value: [wave1, wave2] },
+    { value: wave3 },
+    { value: wave4 },
+    { value: wave1 },
+  ],
+});
   </script>
 
 
