@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Analysis Projects | WW Portfolio</title>
+    <link rel="icon" type="image/png" href='image/icon01_2.png'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css\css.css">
+    <link rel="stylesheet" href="css\cs.css">
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&display=swap" rel="stylesheet">
+
+    <!--social media link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script type='text/javascript' src='js\case-study.js'></script>
+</head>
+
+<body>
+    <div class="navbar-mobile ">
+  
+        <input type="checkbox" id="overlay-input" />
+    <label for="overlay-input" id="overlay-button"><span></span></label>
+    <div id="overlay">
+    <ul>
+        <li><a href="index.html" class="inactive">ABOUT</a></li>
+        <li><strong></strong><a href="daproject.html" class="active">DATA</a></strong></li>
+        <li><a href="uxproject.html" class="inactive">UX</a></li>
+        <li><a href="OTHER.html" class="inactive">OTHER</a></li>
+        <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
+    </ul>
+    <div class="overlay-footer row">
+      <p>2023 &copy; by Wenge Wang</p>
+      <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+    </div>
+    <div class="overlay-logo">WENGE<br>WANG</div>
+    </div>
+    </div>
+    <div class="back-button">
+      <a href="#" onclick="history.go(-1); return false;">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+    </div>
+    <nav>
+        <div class="navbar">
+            <ul class="left-menu">
+                <li><a href="index.html">WENGE WANG</a></li>
+            </ul>
+            <ul class="right-menu">
+                <li><a href="index.html" class="inactive">ABOUT</a></li>
+                <li><strong></strong><a href="daproject.html" class="active">DATA</a></strong></li>
+                <li><a href="uxproject.html" class="inactive">UX</a></li>
+                <li><a href="OTHER.html" class="inactive">OTHER</a></li>
+                <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="project-section">
+        <div class="intro-text" style="width:70vw">
+            <div class="intro-heading">
+                <div class="intro-lead-in appear-element">Visualizing the Most Subscribed YouTube Channels</div>
+            </div>
+
+        </div>
+
+        <div class="cs-button cs-button-da3 down-element">
+
+            <a href="https://public.tableau.com/views/VisualizingtheMostSubscribedYouTubeChannels/Dashboard3?:language=en-US&:display_count=n&:origin=viz_share_link"
+                target="_blank" class="primary-button">
+                <i class="fas fa-chart-bar"></i> Tableau Dashboard
+            </a>
+        </div>
+
+        <div class="cs-banner">
+            <img src="image\da-3.svg" alt="da-project-1 Image" data-scroll>
+        </div>
+
+        <div class="cs-content down-element2">
+            <div class="case-study-nav ">
+                <ul>
+                    <li><em><a href="index.html" class="inactive">Home</a></em></li>
+                    <li><span>/</span></li>
+                    <li><em><a href="project.html" class="inactive">Projects</a></em></li>
+                    <li><span>/</span></li>
+                    <li><em><a href="da1.html" class="active">Visualizing the Most Subscribed YouTube Channels</a></em>
+                    </li>
+                </ul>
+            </div>
+            <h4>OVERVIEW</h4>
+
+
+            <h3> About the Project</h3>
+
+
+            <div class="row column">
+                <div class="case-study-intro">
+                    <p>
+                        In recent years, the digital realm has been evolving rapidly. With over 2 billion monthly active
+                        users and over 1 billion hours of video watched daily, YouTube is one of the most popular social
+                        media platforms on the internet. In YouTube, subscription is one way to measure a channel’s
+                        success.
+                        The most popular YouTube channels have millions or billions of subscribers and views, making
+                        them
+                        incredibly influential content creators on the internet. In this project, I analyzed popular
+                        channels, examining factors such as subscriber counts, view metrics, and overall
+                        influence.</p>
+                </div>
+                <div class="column">
+                    <div class="case-study-details">
+                        <h5>Date</h5>
+                        <p>Feb 2, 2023</p>
+                    </div>
+
+                    <div class="case-study-details">
+                        <h5>Tools</h5>
+                        <p>Tableau, Excel, OpenRefine</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cs-content">
+            <h4> PROCESS</h4>
+            <div class="process-section">
+                <h3>Data Cleaning & Preparation</h3>
+                <div class="row" style="padding-right:3vw;">
+                    <div class="process-details">
+                        <p>Analyzing the most popular YouTube channels can offer valuable insights into the online
+                            audience’s trends and preferences. To get an overview, the csv dataset I selected from
+                            Kaggle
+                            named ‘Most Subscribed YouTube Channels’ contains 7 columns: rank, youtuber, subscribers,
+                            video
+                            views, video count, category, and started, which includes both quantitative dimensions and
+                            categorical dimensions and has a limitation in started years from 1970 to 2021 (Kaggle,
+                            2023).<br>
+                            Before visualizing, I used OpenRefine to clean the dataset. Compared with tools such as R
+                            and
+                            Excel, OpenRefine simplifies the process of cleaning and standardizing data through
+                            functions
+                            like
+                            filtering, clustering, and text manipulation, resulting in efficient data preparation for
+                            analysis.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="process-section">
+                <h3>Analysis Highlights</h3>
+
+                <div class="column">
+                    <div class="process-details" >
+                        <p>According to the charts, which display the top 5 categories on YouTube of views, features,
+                            and
+                            subscriptions, valuable insights into the preferences and behaviors of YouTube users are
+                            provided.
+                            By examining the graphs, we can see that music and entertainment are the two most dominating
+                            industries among all the channels.</p>
+
+                    </div>
+                    <div class="process-image">
+                        <div class="mobile-show-only">
+                            <picture> <img src="image\da3-chart1.png"
+                                         alt="da-project-3-1 Image"></picture>
+                      
+                           </div>
+                          <div class='tableauPlaceholder laptop-show-only' id='viz1701304681213' style='position: relative'><noscript><a
+                                    href='#'><img alt='Dashboard 1 '
+                                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;Top5CategoriesonYouTubeViewsFeaturesandSubscriptions&#47;Dashboard1&#47;1_rss.png'
+                                        style='border: none' /></a></noscript><object class='tableauViz'
+                                style='display:none;'>
+                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                                <param name='embed_code_version' value='3' />
+                                <param name='site_root' value='' />
+                                <param name='name'
+                                    value='Top5CategoriesonYouTubeViewsFeaturesandSubscriptions&#47;Dashboard1' />
+                                <param name='tabs' value='no' />
+                                <param name='toolbar' value='yes' />
+                                <param name='static_image'
+                                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;Top5CategoriesonYouTubeViewsFeaturesandSubscriptions&#47;Dashboard1&#47;1.png' />
+                                <param name='animate_transition' value='yes' />
+                                <param name='display_static_image' value='yes' />
+                                <param name='display_spinner' value='yes' />
+                                <param name='display_overlay' value='yes' />
+                                <param name='display_count' value='yes' />
+                                <param name='language' value='en-US' />
+                            </object></div>
+                        <script
+                            type='text/javascript'>                    var divElement = document.getElementById('viz1701304681213'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.maxWidth = '1400px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; vizElement.style.maxHeight = '527px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+                    </div>
+                </div>
+            </div>
+            <div class="process-section">
+
+                <div class="column">
+                    <div class="process-details" >
+                        <p>Linear regression analysis indicates a positive correlation (R-square value of 0.68) between
+                            YouTube subscribers and views. This suggests that as the number of subscribers
+                            increases, the total video views also increase. The right chart presents category-specific
+                            prediction equations, highlighting the Shows category with the highest slope coefficient and
+                            a
+                            strong linear relationship (high R-square score) between subscribers and video views.</p>
+
+                    </div>
+                    <div class="process-image">
+                     <div class="mobile-show-only">
+              <picture> <img src="image\da3-chart2.png"
+                           alt="da-project-3-2 Image"></picture>
+        
+             </div>
+            <div class='tableauPlaceholder laptop-show-only' id='viz1701304826528' style='position: relative'><noscript><a
+                                    href='#'><img alt='Dashboard 2 '
+                                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalyzingtheRelationshipbetweenYouTubeSubscribersandViewsACategory-BasedLinearRegressionAnalysis&#47;Dashboard2&#47;1_rss.png'
+                                        style='border: none' /></a></noscript><object class='tableauViz'
+                                style='display:none;'>
+                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                                <param name='embed_code_version' value='3' />
+                                <param name='site_root' value='' />
+                                <param name='name'
+                                    value='AnalyzingtheRelationshipbetweenYouTubeSubscribersandViewsACategory-BasedLinearRegressionAnalysis&#47;Dashboard2' />
+                                <param name='tabs' value='no' />
+                                <param name='toolbar' value='yes' />
+                                <param name='static_image'
+                                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalyzingtheRelationshipbetweenYouTubeSubscribersandViewsACategory-BasedLinearRegressionAnalysis&#47;Dashboard2&#47;1.png' />
+                                <param name='animate_transition' value='yes' />
+                                <param name='display_static_image' value='yes' />
+                                <param name='display_spinner' value='yes' />
+                                <param name='display_overlay' value='yes' />
+                                <param name='display_count' value='yes' />
+                                <param name='language' value='en-US' />
+                            </object></div>
+                        <script
+                            type='text/javascript'>                    var divElement = document.getElementById('viz1701304826528'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.maxWidth = '1400px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; vizElement.style.maxHeight = '527px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-section">
+
+                <div class="column">
+                    <div class="process-details" >
+                        <p>To gain a detailed insight into video views, I compared views by category and start
+                            year using a pie chart and a scatter plot, with an outlier value in News and Politics in
+                            1970
+                            removed for consistency. These two graphs illustrate the relationship between views and
+                            start
+                            years, with channels created in 2006 being the most popular and the music category in 2009
+                            having the most views.</p>
+
+                    </div>
+                    <div class="process-image">
+                        <div class="mobile-show-only">
+                            <picture> <img src="image\da3-chart3.png"
+                                         alt="da-project-3-3 Image"></picture>
+                      
+                           </div>
+                          <div class='tableauPlaceholder laptop-show-only' id='viz1701304416645' style='position: relative'><noscript><a
+                                    href='#'><img alt='Dashboard 3 '
+                                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalVideoViewsbyCategoryandStartYear&#47;Dashboard3&#47;1_rss.png'
+                                        style='border: none' /></a></noscript><object class='tableauViz'
+                                style='display:none;'>
+                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                                <param name='embed_code_version' value='3' />
+                                <param name='site_root' value='' />
+                                <param name='name' value='TotalVideoViewsbyCategoryandStartYear&#47;Dashboard3' />
+                                <param name='tabs' value='no' />
+                                <param name='toolbar' value='yes' />
+                                <param name='static_image'
+                                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalVideoViewsbyCategoryandStartYear&#47;Dashboard3&#47;1.png' />
+                                <param name='animate_transition' value='yes' />
+                                <param name='display_static_image' value='yes' />
+                                <param name='display_spinner' value='yes' />
+                                <param name='display_overlay' value='yes' />
+                                <param name='display_count' value='yes' />
+                                <param name='language' value='en-US' />
+                                <param name='filter' value='publish=yes' />
+                            </object></div>
+                        <script type='text/javascript'>
+                            var divElement = document.getElementById('viz1701304416645');
+                            var vizElement = divElement.getElementsByTagName('object')[0];
+                            vizElement.style.width = '100%'; vizElement.style.maxWidth = '1400px';
+                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                            vizElement.style.maxHeight = '527px'; var scriptElement = document.createElement('script');
+                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                            vizElement.parentNode.insertBefore(scriptElement, vizElement);          
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cs-content-white">
+
+            <div class="cs-content">
+                <h4> INFOGRAPHIC DISPLAY</h4>
+
+                <div class="process-section">
+                    <h3>Conclusion & Reflection</h3>
+                    <div class="process-details">
+                        <p>The analysis of the most subscribed YouTube channels has revealed some interesting
+                            insights, and data visualization helps explain the topic in an easy-to-understand format.
+                            According to the data analysis, we have seen that the top channels are dominated by fields
+                            in
+                            the music and entertainment industry. Also, different industries present different
+                            popularity.
+                            Some channels with fewer subscribers sometimes have more views and more engagement with
+                            their
+                            audience. Further research can explore how specific factors, such as average view duration
+                            and
+                            audience retention, impact video views within individual category. In conclusion, this
+                            analysis
+                            presents a prospect for further research and analysis in this dynamic and rapidly changing
+                            industry, helping self-media practitioners optimize their strategies and increase the reach.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <h3 style="position:absolute;z-index:2;padding-left: 13vw;padding-top:13vh"> Final Output</h3>
+        <div class="carousel">
+            <div class="carousel__nav">
+                <span id="moveLeft" class="carousel__arrow">
+                    <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+                    </svg>
+                </span>
+                <span id="moveRight" class="carousel__arrow">
+                    <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="carousel-item carousel-item--1">
+                <div class="carousel-item__image" style=" background-image: url(image/da3-laptop-mockup.jpg);"></div>
+                <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                        <h2 class="carousel-item__subtitle">Mockup 1</h2>
+                        <h5 class="carousel-item__title"> <div class="laptop-show-only">Infographic </div>Responsive Design for Laptop
+                        </h5>
+                        <p class="carousel-item__description">I first designed a refined Tableau infographic for laptop
+                            displays.<br><br>
+                            <a href="https://public.tableau.com/app/profile/wenge.wang/viz/VisualizingtheMostSubscribedYouTubeChannels/Dashboard3"
+                                target="_blank" class="primary-button">
+                                <i class="fas fa-chart-bar"></i> View on Tableau
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel-item--2">
+                <div class="carousel-item__image" style=" background-image: url(image/da3-mobile-mockup.jpg);"></div>
+                <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                        <h2 class="carousel-item__subtitle">Mockup 2</h2>
+                        <h5 class="carousel-item__title"><div class="laptop-show-only">Infographic </div>Responsive Design for Mobile
+                        </h5>
+                        <p class="carousel-item__description">After the laptop version, I optimized the
+                            Tableau infographic for mobile devices.<br><br>
+                            <a href="https://public.tableau.com/app/profile/wenge.wang/viz/VisualizingtheMostSubscribedYouTubeChannels/Dashboard3"
+                                target="_blank" class="primary-button">
+                                <i class="fas fa-chart-bar"></i> View on Tableau
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="other-projects cs-content">
+            <p>We've reached the finish line!</p>
+          <h2 class="section-title">Want to see more?<br class="mobile-show-only">Next Project: </h2>
+          <div class="mobile-show-only">
+          
+          <div class="project-button"> <a href="ux1.html" class="secondary-button"><p>SITES Website Usability Research</p></a>
+          </div>
+        </div>
+            <div class="project-entire laptop-show-only">
+                <div class="project-container">
+
+                    <div class="item" style="background-image: url(image/da-1.svg);">
+                        <div class="item-desc">
+                            <h3>Data Visualization</h3>
+                            <h4>Art in Renaissance, Baroque, and Rococo</h4>
+
+                            <div class="project-button"> <a href="da1.html" class="secondary-button">CASE STUDY</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(image/da-2.svg);">
+                        <div class="item-desc">
+                            <h3>NSF Awarded Project</h3>
+                            <h4>Data Literacy with, for, and by Youth</h4>
+
+                            <div class="project-button"> <a href="da2.html" class="secondary-button">CASE STUDY</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(image/ux-3.svg);">
+                        <div class="item-desc">
+                            <h3>Concept to Prototype</h3>
+                            <h4>Pratt Connect, A Website Designed for Pratt Students</h4>
+
+                            <div class="project-button"> <a href="ux0.html" class="secondary-button">CASE STUDY</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <a href="da3.html" class="scroll-hint ">
+                <div class="scroll-icon"></div>
+            </a>
+
+        </div>
+    </div>
+    <footer>
+
+        <div class="footer">
+            <div class="laptop-show-only">
+                <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
+            </div>
+            <div class="footer-icon">
+                <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
+                        aria-hidden="true">wwang24@outlook.com</i></a>
+                <a href="da3.html"><i class="fas fa-arrow-up laptop-show-only"></i></a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

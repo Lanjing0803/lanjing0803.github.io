@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Analysis Projects | WW Portfolio</title>
+  <link rel="icon" type="image/png" href='image/icon01_2.png'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css\css.css">
+  <link rel="stylesheet" href="css\cs.css">
+  <!--font-->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&display=swap" rel="stylesheet">
+
+  <!--social media link-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+  <script type='text/javascript' src='js\case-study.js'></script>
+</head>
+
+<body>
+  <div class="navbar-mobile ">
+  
+    <input type="checkbox" id="overlay-input" />
+<label for="overlay-input" id="overlay-button"><span></span></label>
+<div id="overlay">
+<ul>
+  <li><a href="index.html" class="inactive">ABOUT</a></li>
+  <li><strong></strong><a href="daproject.html" class="active">DATA</a></strong></li>
+  <li><a href="uxproject.html" class="inactive">UX</a></li>
+  <li><a href="OTHER.html" class="inactive">OTHER</a></li>
+  <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
+</ul>
+<div class="overlay-footer row">
+  <p>2023 &copy; by Wenge Wang</p>
+  <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+</div>
+<div class="overlay-logo">WENGE<br>WANG</div>
+</div>
+</div>
+<div class="back-button">
+  <a href="#" onclick="history.go(-1); return false;">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+</div>
+
+  <nav>
+    <div class="navbar">
+      <ul class="left-menu">
+        <li><a href="index.html">WENGE WANG</a></li>
+      </ul>
+      <ul class="right-menu">
+        <li><a href="index.html" class="inactive">ABOUT</a></li>
+        <li><strong></strong><a href="daproject.html" class="active">DATA</a></strong></li>
+        <li><a href="uxproject.html" class="inactive">UX</a></li>
+        <li><a href="OTHER.html" class="inactive">OTHER</a></li>
+        <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="project-section">
+
+  <div class="intro-text">
+    <div class="intro-heading">
+      <div class="intro-lead-in appear-element">Art in Renaissance, Baroque, and Rococo</div>
+    </div>
+
+  </div>
+
+  <div class="cs-button down-element">
+    <a href="https://github.com/Lanjing0803/pfch.wwg" target="_blank" class="primary-button">
+      <i class="fab fa-github"></i> GitHub Repository
+    </a>
+    <a href="https://sites.google.com/pratt.edu/pfch-wwg/" target="_blank" class="primary-button">
+      <i class="fas fa-external-link-alt"></i> Project Website
+    </a>
+  </div>
+
+  <div class="cs-banner">
+    <img src="image\da-1.svg" alt="da-project-1 image" data-scroll>
+  </div>
+
+
+<div>
+  <div class="cs-content down-element2">
+    <div class="case-study-nav ">
+      <ul>
+        <li><em><a href="index.html" class="inactive">Home</a></em></li>
+        <li><span>/</span></li>
+        <li><em><a href="project.html" class="inactive">Projects</a></em></li>
+        <li><span>/</span></li>
+        <li><em><a href="da1.html" class="active">Art in Renaissance, Baroque, and Rococo</a></em></li>
+      </ul>
+    </div>
+    <h4>OVERVIEW</h4>
+
+
+    <h3> About the Project</h3>
+
+    <div class="row column">
+      <div class="case-study-intro">
+        <p>
+          Art is a way people express themselves. Imagine looking at a time when art changed a lot. That is the
+          Renaissance, a "rebirth" of art.
+          This project aims to visually analyze Renaissance artworks, focusing on elements including color palette,
+          culture, medium, and themes. While we'll analyze the Baroque and Rococo movements as extensions of the
+          Renaissance style, the primary focus will remain on the Renaissance's art and artists. Understanding this time
+          helps us see how people lived and offers insights into artistic expression throughout history.</p>
+      </div>
+      <div class="column">
+        <div class="case-study-details">
+          <h5>Date</h5>
+          <p>May 9, 2023</p>
+        </div>
+        
+        <div class="case-study-details">
+          <h5>Tools</h5>
+          <p>Phyton, R, Adobe Illustrator</p>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+ </div>
+  <div class="cs-content">
+    <h4> PROCESS</h4>
+    <div class="process-section">
+      <h3>Data Cleaning & Preparation</h3>
+      <div class="row" style="padding-right:3vw;">
+      <div class="process-details">
+        <p>
+          To analyze artworks from various historical periods, I gathered data from The Metropolitan Museum of Art (MET)
+          using open access CSV and MET API. Sorting the relevant artworks was challenging due to their diversity, but I
+          finally narrowed it down by using specific search terms like 'Renaissance art' and a timeframe of 1400 to 1600
+          in
+          Phyton. After refining the dataset in Excel, I visualized the data using R ggplot and transformed it
+          into a cool infographic with Adobe Illustrator. While time-consuming, this process allowed for a
+          comprehensive visual analysis of the artwork data.</p>
+      </div>
+    </div>
+  </div>
+    <div class="process-section">
+      <h3>Analysis Highlights</h3>
+
+      <div class="row column">
+        <div class="process-details">
+          <p>
+            A color palette displaying how artists use color can be incredibly helpful for understanding
+            the choices made by artists and the culture during that time. In Renaissance art, painters had a limited
+            palette, using dark
+            tones like brown, ochre, and gray for depth and
+            warmth, and brighter colors like red, green, blue, and gold more subtly. I collected color data with hex
+            codes in Phyton
+            and used R's 'ggplot2' to create a visual palette for each period. Instead of varying sizes to show
+            dominance, I opted for
+            equal-sized color squares, suiting the project's theme and the final infographic's design.</p>
+        </div>
+        <div class="process-image">
+          <img src="image\colors_baroque2.jpeg" alt="baroque color palette">
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="process-section">
+      <div class="row column">
+        
+        <div class="process-details">
+          <p>
+            I used R packages 'wordcloud2' and 'jiebaR' to create word clouds from artwork titles. This visually
+            engaging approach conveys a lot of information in an accessible and memorable way. In Renaissance art,
+            common words included religious figures like Child, Saint, Virgin, Christ, Madonn, Annunciation, and Angels.
+            Portraiture-related terms like Portrait and Man were also frequent, along with words like Holy Family,
+            Enthroned, and Young. Overall, word cloud is a creative and effective way to help viewers know the top
+            themes of Renaissance art, which is about religion and portraiture.</p>
+        </div>
+<div class="process-image">
+          <img src="image\screenshot2.jpg" alt="wordcloud">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="process-section">
+
+      <div class="row column">
+        <div class="process-details">
+          <p>
+            I created pie charts using package ‘ggplot’ in R showing numeric data in the form of proportions. This chart
+            for Renaissane art mediums shows the different mediums used by artists during Renaissance period. From it,
+            it is clear to see
+            that more than 50% of Renaissance artworks were created using oil as the primary medium.</p>
+        </div>
+        <div class="process-image" style="background-color:white; width:58vw">
+          <picture><img src="image\renaissnace_medium.png" alt="baroque color palette">
+            <figcaption>Renaissance Art Medium</figcaption>
+          </picture>
+
+        </div>
+        <div class="process-image" style="background-color:white; width:58vw">
+          <picture><img src="image\rococo_medium.png" alt="baroque color palette">
+          <figcaption>Rococo Art Medium</figcaption>
+        </picture>
+        </div>
+        <div class="process-image" style="background-color:white; width:58vw">
+          <picture><img src="image\baroque_medium.png" alt="baroque color palette">
+          <figcaption>Baroque Art Medium</figcaption>
+        </picture>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cs-content-white">
+    <div class="cs-content">
+      <h4 > INFOGRAPHIC ITERATION</h4>
+      <div class="process-section">
+        <h3 >UX Research</h3>
+        <div class="process-details">
+          <p>Before I came out with the final version of the infographic, I conducted UX research with individuals
+            interested in art history or visual design. They provided feedback on the infographic's clarity, suggested
+            improvements in areas like header and text color, and also introduced me to Figma for a more interactive
+            design. This research led to a more user-friendly design, and after further refinement, the final
+            infographic was created.</p>
+        </div>
+      </div>
+      <h6> UX Research Insights</h6>
+        <div class="skills">
+        <ul class="lines">
+          <li class="line l--0">
+            <span class="line__label title">
+              Performance Level
+            </span>
+          </li>
+          <li class="line l--25">
+            <span class="line__label">
+             0
+            </span>
+          </li>
+          <li class="line l--50">
+            <span class="line__label">
+              1
+            </span>
+          </li>
+          <li class="line l--75">
+            <span class="line__label">
+              2
+            </span>
+          </li>
+          <li class="line l--100">
+            <span class="line__label">
+              3
+            </span>
+          </li>
+        </ul>
+        
+        <div class="charts">
+          <div class="chart chart--dev">
+            <span class="chart__title gray">Something I needed to improve...</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 98%;">
+                <span class="chart__label">
+                 Overall Readability
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 83%;">
+                <span class="chart__label">
+                  Storytelling
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 78%;">
+                <span class="chart__label">
+                  Missing Header & Footer
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 60%;">
+                <span class="chart__label">
+                 Hierarchy
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 43%;">
+                <span class="chart__label">
+                  Color Match
+                </span>
+              </li>
+          
+            </ul>
+          </div>
+          
+          <div class="chart chart--prod">
+            <span class="chart__title gray">Something I did well...</span>
+            <ul class="chart--horiz">
+            <li class="chart__bar" style="width: 88%;">
+              <span class="chart__label">
+                Interesting Topic
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 73%;">
+              <span class="chart__label">
+                Engaging Information
+              </span>
+            </li>
+            <li class="chart__bar" style="width: 48%;">
+              <span class="chart__label">
+                Font Choice
+              </span>
+            </li>
+          </ul>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+      <!--<div class="cs-content-row">
+        <h1 style="flex:1" class="hollow-text">Something I did well...</h1>
+        <div class="container">
+
+          <ul class="grid-testimonials1 grid-testimonials">
+
+            <li>
+              <div>
+                <p>&ldquo;I like the beautiful typography and font choices that enhanced readability.&rdquo;</p><span
+                  class="quote-arrow"></span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p>&ldquo;I think the topic about Renaissance Art is very interesting, and the infographic presents
+                  a wealth of engaging information.&rdquo;</p><span class="quote-arrow"></span>
+              </div>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="cs-content-row">
+        <h1 style="flex:1;" class="hollow-text">Something I needed to improve...</h1>
+        <div class="container">
+          <ul class="grid-testimonials2 grid-testimonials">
+
+            <li>
+              <div>
+                <p>&ldquo;The text is hard to read due to its unclear color.&rdquo;</p><span class="quote-arrow"></span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p>&ldquo;The content would be more engaging with a better storytelling.&rdquo;</p><span
+                  class="quote-arrow"></span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p>&ldquo;The infographic is missing header or footer information.&rdquo;</p><span
+                  class="quote-arrow"></span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p>&ldquo;The word cloud graph could be improved by creating a clearer hierarchy and ensuring it matches
+                  the color scheme of the infographic.&rdquo;</p><span class="quote-arrow"></span>
+              </div>
+            </li>
+
+
+
+          </ul>
+        </div>
+
+
+      </div>-->
+    
+      
+
+
+  </div>
+  <h3 style="position:absolute;z-index:2;padding-left: 13vw;padding-top:13vh" > Final Output</h3>
+  <div class="carousel ">
+    <div class="carousel__nav">
+      <span id="moveLeft" class="carousel__arrow">
+        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+        </svg>
+      </span>
+      <span id="moveRight" class="carousel__arrow">
+        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+        </svg>
+      </span>
+    </div>
+    <div class="carousel-item carousel-item--1">
+      <div class="carousel-item__image" style=" background-image: url(image/da1-1.jpg);"></div>
+      <div class="carousel-item__info">
+        <div class="carousel-item__container">
+          <h2 class="carousel-item__subtitle">Infographic 1 </h2>
+          <h5 class="carousel-item__title">Detailed Renaissance Art Analysis</h5>
+          <p class="carousel-item__description">This infographic provides an in-depth analysis of Renaissance art,
+            exploring anatomy, color palette, medium, culture, and themes.</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item carousel-item--2">
+      <div class="carousel-item__image" style=" background-image: url(image/da1-2.jpg);"></div>
+      <div class="carousel-item__info">
+        <div class="carousel-item__container">
+          <h2 class="carousel-item__subtitle">Infographic 2 </h2>
+          <h5 class="carousel-item__title">Comparing Renaissance, Baroque, and Rococo Art</h5>
+          <p class="carousel-item__description">This infographic offers a clear visual comparison of art from the
+            Renaissance, Baroque, and Rococo periods, using a consistent template to maintain clarity and
+            organization.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item carousel-item--3">
+      <div class="carousel-item__image" style=" background-image: url(image/magzine1-mockup.jpg);"></div>
+      <div class="carousel-item__info">
+        <div class="carousel-item__container">
+          <h2 class="carousel-item__subtitle">Mockup </h2>
+          <h5 class="carousel-item__title">Infographics Guide Book</h5>
+          <p class="carousel-item__description">Transforms infographics into a resources handbooks.</p>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="other-projects cs-content">
+    <p>We've reached the finish line!</p>
+  <h2 class="section-title">Want to see more?<br class="mobile-show-only">Next Project: </h2>
+  <div class="mobile-show-only">
+  
+  <div class="project-button"> <a href="da2.html" class="secondary-button"><p>Data Literacy with, for, and by Youth</p></a>
+  </div>
+</div>
+  <div class="project-entire laptop-show-only">
+    <div class="project-container">
+    
+      <div class="item" style="background-image: url(image/da-2.svg);">
+        <div class="item-desc">
+          <h3>NSF Awarded Project</h3>
+          <h4>Data Literacy with, for, and by Youth</h4>
+          
+          <div class="project-button"> <a href="da2.html" class="secondary-button">CASE STUDY</a>
+          </div>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(image/da-3.svg);">
+        <div class="item-desc">
+          <h3>Data Visualization</h3>
+          <h4>Visualizing the Most Subscribed YouTube Channels</h4>
+         
+          <div class="project-button"> <a href="da3.html" class="secondary-button">CASE STUDY</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="item" style="background-image: url(image/ux-1.svg);">
+        <div class="item-desc">
+          <h3>UX Research</h3>
+          <h4>SITES Website Usability Research</h4>
+        
+          <div class="project-button"> <a href="ux1.html" class="secondary-button">CASE STUDY</a>
+          </div>
+        </div>
+      </div>
+     
+
+    </div>
+  </div>
+  <a href="da1.html" class="scroll-hint ">
+    <div class="scroll-icon"></div>
+</a>
+
+</div>
+</div>
+</div>
+
+  <footer>
+
+    <div class="footer">
+      <div class="laptop-show-only">
+        <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
+      </div>
+      <div class="footer-icon">
+        <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
+            aria-hidden="true">wwang24@outlook.com</i></a>
+            <a href="da1.html" ><i class="fas fa-arrow-up laptop-show-only"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
