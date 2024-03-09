@@ -1,11 +1,175 @@
 body{  background:#cfcfd7;color:black;overflow-y: auto;}
-
-
-nav {
-    padding-left: 6vw;
-    padding-right: 6vw; 
- 
+.author{
+    padding:0;
+    margin:5px;
+    font-weight:400;
+    font-size:20px;
+    text-transform: none;
 }
+.method{
+    font-weight:200;
+    font-size:18px
+}
+.methodcontainer{
+    gap:100px;
+    padding-top:8vh;
+    padding-bottom:15vh
+}
+    .navbar-mobile {
+        display: block!important;
+        position: relative;
+      }
+
+      #overlay-button {
+        position: fixed;
+        left: 80vw;
+        top: 3em;
+        padding: 26px 11px;
+        z-index: 5000;
+        cursor: pointer;
+        user-select: none;
+        background: #403F45;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+      }
+    
+      #overlay-button span {
+        height: 4px;
+        width: 35px;
+        border-radius: 2px;
+        background-color: white;
+        position: relative;
+        display: block;
+        transition: all .2s ease-in-out;
+    
+      }
+    
+      #overlay-button span:before,
+      #overlay-button span:after {
+        height: 4px;
+        width: 35px;
+        border-radius: 2px;
+        background-color: white;
+        position: absolute;
+        content: "";
+        transition: all .2s ease-in-out;
+      }
+    
+      #overlay-button span:before {
+        top: -10px;
+      }
+    
+      #overlay-button span:after {
+        top: 10px;
+      }
+    
+      #overlay-button:hover span,
+      #overlay-button:hover span:before,
+      #overlay-button:hover span:after {
+        background: white;
+      }
+    
+      input[type=checkbox] {
+        display: none;
+      }
+    
+      input[type=checkbox]:checked~#overlay {
+        visibility: visible;
+      }
+    
+      input[type=checkbox]:checked~#overlay-button:hover span,
+      input[type=checkbox]:checked~#overlay-button span {
+        background: transparent;
+      }
+    
+      input[type=checkbox]:checked~#overlay-button span:before {
+        transform: rotate(45deg) translate(7px, 7px);
+        opacity: 1;
+      }
+    
+      input[type=checkbox]:checked~#overlay-button span:after {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+    
+      #overlay {
+        height: 100vh;
+        width: 100vw;
+        background: #403F45;
+        z-index: 2000;
+        visibility: hidden;
+        position: fixed;
+        left: 0;
+    
+      }
+    
+      #overlay.active {
+        visibility: visible;
+    
+      }
+    
+      #overlay ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100vh;
+        padding-left: 0;
+        list-style-type: none;
+      }
+    
+      #overlay li {
+        padding: 1.1em;
+    }
+    
+      #overlay li a {
+        color: white;
+        text-decoration: none;
+          font-size: 23px;
+      }
+    
+    
+      #overlay li a:hover,
+      #overlay li .active:active {
+        color: white
+      }
+    
+      #overlay li .active::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    
+      .overlay-footer {
+        top: 92vh;
+        position: absolute;
+        text-align: center;
+        color: #97a9bd;
+        transform: translateX(50%);
+        font-family: "Font Awesome 5 Free";
+      }
+    
+      .overlay-logo {
+        position: absolute;
+        font-size: 2.8em;
+        left: 10vw;
+        top: 0.9em;
+        font-weight: 600;
+        color: #97a9bd;
+        line-height: 1em;
+        font-family: "Font Awesome 5 Free";
+      }
+
+      
+
+
+
 
 .case-study-nav .active{
     color:gray
@@ -81,11 +245,11 @@ hr {
   }
 
 .cs-content {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     padding-left: 13vw;
     padding-right: 13vw;
-    
+    line-height: 2
 }
 
 .cs-content-white {
@@ -97,7 +261,8 @@ hr {
 }
 
 .case-study-details p {
-    font-size: 13px;
+    font-size: 18px;
+    font-weight: 200;
 }
 
 h1 {
@@ -108,7 +273,7 @@ h1 {
 h4 {
     font-size: 23px;
     font-weight: 400;
-    padding-top: 48px;
+    padding-top: 15vh;
     color:gray
 }
 .item-desc h4{
@@ -121,7 +286,8 @@ h3 {
 
 h5 {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 800;
+    color: gray;
 }
 h6{
     font-size: 23px;
@@ -129,22 +295,25 @@ h6{
     color:gray;
     padding-bottom:10px
 }
+iframe {
+  border: none; 
+
+}
 .intro-text {
     position: absolute;
     z-index: 1;
     padding-left: 13vw;
-    width: 50vw;
-    padding-top: 10vw;
-    font-size: 63px;
-    color:white
-}
+    width: 58vw;
+    padding-top: 13vw;
+    font-size: 68px;
+    color:white;}
 
 .cs-button {
     font-size: 13px;
     position: absolute;
     z-index: 1;
     padding-left: 13vw;
-    padding-top: 48vh;
+    padding-top: 60vh;
     display: flex;
     flex-direction: row;
 }
@@ -155,12 +324,11 @@ h6{
 }
 
 .cs-banner {
-    max-height: 60vh;
+    max-height: 80vh;
     width: 100vw;
    z-index:0;
     position: relative;
     overflow:hidden;
-    padding-top: 2vw;
     padding-bottom: 1vw;
 }
 
@@ -169,7 +337,7 @@ h6{
     width: 100%;
     height: auto;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
+opacity:0.8
 }
 
 
@@ -199,7 +367,77 @@ h6{
     text-decoration: none;
  
 }
-
+.arttimeline{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin-bottom:33px
+}
+.arttimeline .row{
+    gap:10vw
+}
+.artcontainer{
+        width: 50%; 
+        height: auto; 
+        padding-top:50px;
+    }
+    
+    .artcontainer img {
+        width: 6vw; 
+        height: auto;
+        z-index:1 ;
+        position: relative; 
+        transition: transform 0.3s ease;
+    }
+    .artcontainer:hover img {
+        transform: scale(1.5);
+    }
+    .artinfo {
+        position: fixed;
+        background-color: white;
+        color: black;
+        padding: 0px 20px 20px 20px;
+        border-radius: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+        z-index:10;
+        max-width:18vw
+    }
+    
+    .artinfo h4{
+        padding-top:7vh
+    }
+    .artinfo p, .quote p {
+        font-size:15px;
+        margin: 0;
+    }
+    .timeline {
+        position: absolute;
+       bottom: 43px;
+        width: 100%;
+        text-align: center;
+        z-index:0
+    }
+    
+    .atline {
+        width: 100%;
+        border-top: 2px solid grey; 
+        margin: 0 auto;
+        position: relative; 
+    }
+    
+    .atarrow {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent; /* Adjust arrow size as needed */
+        border-bottom: 10px solid transparent; /* Adjust arrow size as needed */
+        border-left: 15px solid grey; /* Adjust arrow color as needed */
+        position: absolute;
+        bottom: -9px;
+        right: 0;
+    }
 
 
 
@@ -207,11 +445,11 @@ h6{
 .case-study-intro {
     width: 58vw;
     padding-top: 0;
-    padding-right: 28px
+    line-height: 2;
 }
 
 .case-study-details {
-    padding-left: 13px;
+    padding-left: 53px;
     padding-bottom: 10px;
     max-width: 38vw;
 }
@@ -429,7 +667,12 @@ footer {
 }
 
 
+.scrollcontainer {
+    display: flex;
+    flex-direction: row;
+    
 
+}
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -515,17 +758,11 @@ footer {
 
 }
 .other-projects{
-    background-color: gray;
+    background-color: white;
     padding-bottom:8vh;
     padding-top:8vh;
 }
-.other-projects p{
-    font-weight:400;
-    color:white;
-}
-.other-projects h2{
-    color:white;
-}
+
 .project-entire{
     min-height:33vh;
 }
@@ -767,8 +1004,19 @@ footer {
 .process-model.contact-us-tab li.visited i {
     border-color: #e5e5e5; 
 }
-
-
+.colorwheel{
+    padding-bottom:30vh;
+    height:70vh;
+    width: fit-content;
+   overflow:hidden;
+   z-index:5
+}
+.colorwheel iframe{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position:absolute;
+}
 
 @media screen and (max-width: 560px) {
   .more-icon-preocess.process-model li span {
@@ -805,7 +1053,7 @@ footer {
 
 
 .process-details {
-  
+    line-height: 2.3;
     padding: 10px 10px 10px 0;
   }
 
@@ -1037,12 +1285,54 @@ footer {
     font-size: 0.2em;
   }
 
-  
+  @media (max-width: 1120px) {
+    h1{
+        font-size:48px;
+        
+    }
+  }
       @media (max-width: 1020px) {
+        .scrollcontainer {
+            display: flex;
+            flex-direction: row;
+       
+        }
+    .artinfo p {
+        font-size:13px;}
+        .artinfo{
+            max-width:23vw
+        }
+        .artinfo h4{
+            font-size:15px
+        }
+        .atline {
+
+            border-top: 2px solid #403F45; 
+        }
+        .arttimeline{ margin-bottom:20px}
+        .arttimeline .row{
+            gap:5vw
+        }
+    
+        .artcontainer{
+            width: 50%; 
+            height: auto; 
+        }
+        .artcontainer img {
+            width: 8vw; 
+            height: auto; 
+        }
+        .timeline {
+            bottom: 25px;}
+        h1{
+            font-size:1em;
+            line-height: 1.6em;
+        }
         .problem-section .process-details {
             max-width: 80vw;
         }
         .cs-content {
+            font-size: 15px;
             padding-left: 11vw;
             padding-right: 11vw;
         }
@@ -1098,11 +1388,8 @@ footer {
         .da2-final-output{
             padding-bottom:58px; width:73vw
         }
-        h4{
-            color:black
-        }
+        
         h3 {
-                color: gray;
             padding-top: 41px;}
         .process-details {
             padding: 25px 10px 43px 0
@@ -1120,7 +1407,8 @@ footer {
         h2 {
             padding-left: 0;}
         h5 {
-            font-size: 23px;}
+            font-size: 15px;
+        line-height: 1.6em;}
         .scroll-icon{
             padding:23px;
           }
@@ -1139,7 +1427,7 @@ footer {
         }
         .intro-text {
             padding-top: 27vh;
-            font-size: 53px;
+            font-size: 38px;
         }
         .cs-button a {
             margin-right: 0;
@@ -1149,7 +1437,7 @@ footer {
             padding-top: 0;
         }
         .cs-button {
-            padding-top: 50vh;
+            padding-top: 53vh;
             flex-direction: column;
         }
         .cs-button-da3 {
@@ -1242,7 +1530,7 @@ footer {
                   }
                   
                   .intro-heading {
-                    width: 80vw;
-                    font-size: 33px;
+                    width: 73vw;
+                    font-size: 28px;
                 }
       }

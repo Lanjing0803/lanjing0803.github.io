@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8"> 
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Data Analysis Projects | WW Portfolio</title>
+  <title>How We See Art: A Journey Through Centuries | Wenge Wang Data Analytics Portfolio Website</title>
+  <meta name="description" content="Embark on a data-driven journey through centuries of art with 'How We See Art.' Explore diverse masterpieces and interpretations using advanced analytics techniques such as named entity recognition, word cloud generation, and sunburst chart visualization.">
+
   <link rel="icon" type="image/png" href='image/icon01_2.png'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="author" content="Wenge Wang">
   <link rel="stylesheet" href="css\css.css">
   <link rel="stylesheet" href="css\cs.css">
   <!--font-->
@@ -16,499 +18,376 @@
   <!--social media link-->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
   <script type='text/javascript' src='js\case-study.js'></script>
 </head>
+<style>
+    .left {
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    padding-left: 13vw;
+    
+}
+        .right {
+    width: 100vw;
+    height: 68vh;
+    overflow-y: auto;
+    padding: 41px 0 0 53vw;
+    z-index: 2;
+    padding-right: 13vw;
+    padding-left: 65vw;
+        }
+       
+  .image-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: -3vw;
+      background-image: url('image/topic.svg');
+      background-size: contain;
+      background-position: top;
+      background-repeat: no-repeat;
+      transition: background-image 0.3s ease;
+  }
 
+  .custom-line-break {
+      padding-top: 15vh;
+  }
+
+  .custom-bottom-break {
+      padding-bottom: 25vh;
+  }
+  @media (max-width: 1020px) {
+          .right {height: 48vh;margin-top:28px}
+          .custom-bottom-break {
+      padding-bottom: 5vh;
+  }
+        }
+</style>
 <body>
   <div class="navbar-mobile ">
-  
-    <input type="checkbox" id="overlay-input" />
-<label for="overlay-input" id="overlay-button"><span></span></label>
-<div id="overlay">
-<ul>
-  <li><a href="index.html" class="inactive">ABOUT</a></li>
-  <li><strong></strong><a href="daproject.html" class="active">DATA</a></strong></li>
-  <li><a href="uxproject.html" class="inactive">UX</a></li>
-  <li><a href="OTHER.html" class="inactive">OTHER</a></li>
-  <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
-</ul>
-<div class="overlay-footer row">
-  <p>2023 &copy; by Wenge Wang</p>
-  <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
-</div>
-<div class="overlay-logo">WENGE<br>WANG</div>
-</div>
-</div>
-<div class="back-button">
-  <a href="#" onclick="history.go(-1); return false;">
-    <i class="fas fa-arrow-left"></i>
-  </a>
-</div>
 
-  <nav>
-    <div class="navbar">
-      <ul class="left-menu">
-        <li><a href="index.html">WENGE WANG</a></li>
-      </ul>
-      <ul class="right-menu">
+    <input type="checkbox" id="overlay-input" />
+    <label for="overlay-input" id="overlay-button"><span></span></label>
+    <div id="overlay">
+      <ul>
         <li><a href="index.html" class="inactive">ABOUT</a></li>
         <li><strong></strong><a href="daproject.html" class="active">DATA</a></strong></li>
         <li><a href="uxproject.html" class="inactive">UX</a></li>
         <li><a href="OTHER.html" class="inactive">OTHER</a></li>
-        <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
+        <li><a href="contact.html" class="menu-button">CONTACT</a></li>
       </ul>
+      <div class="overlay-footer row">
+        <p>2024 &copy; by Wenge Wang</p>
+        <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+      </div>
+      <div class="overlay-logo">WENGE<br>WANG</div>
     </div>
-  </nav>
+  </div>
+  <div class="back-button">
+    <a href="#" onclick="history.go(-1); return false;">
+      <i class="fas fa-arrow-left"></i>
+    </a>
+  </div>
+
+ 
 
   <div class="project-section">
-
-  <div class="intro-text">
-    <div class="intro-heading">
-      <div class="intro-lead-in appear-element">Art in Renaissance, Baroque, and Rococo</div>
-    </div>
-
-  </div>
-
-  <div class="cs-button down-element">
-    <a href="https://github.com/Lanjing0803/pfch.wwg" target="_blank" class="primary-button">
-      <i class="fab fa-github"></i> GitHub Repository
-    </a>
-    <a href="https://sites.google.com/pratt.edu/pfch-wwg/" target="_blank" class="primary-button">
-      <i class="fas fa-external-link-alt"></i> Project Website
-    </a>
-  </div>
-
-  <div class="cs-banner">
-    <img src="image\da-1.svg" alt="da-project-1 image" data-scroll>
-  </div>
-
-
-<div>
-  <div class="cs-content down-element2">
-    <div class="case-study-nav ">
-      <ul>
-        <li><em><a href="index.html" class="inactive">Home</a></em></li>
-        <li><span>/</span></li>
-        <li><em><a href="project.html" class="inactive">Projects</a></em></li>
-        <li><span>/</span></li>
-        <li><em><a href="da1.html" class="active">Art in Renaissance, Baroque, and Rococo</a></em></li>
-      </ul>
-    </div>
-    <h4>OVERVIEW</h4>
-
-
-    <h3> About the Project</h3>
-
     <div class="row column">
-      <div class="case-study-intro">
-        <p>
-          Art is a way people express themselves. Imagine looking at a time when art changed a lot. That is the
-          Renaissance, a "rebirth" of art.
-          This project aims to visually analyze Renaissance artworks, focusing on elements including color palette,
-          culture, medium, and themes. While we'll analyze the Baroque and Rococo movements as extensions of the
-          Renaissance style, the primary focus will remain on the Renaissance's art and artists. Understanding this time
-          helps us see how people lived and offers insights into artistic expression throughout history.</p>
+    <div class="intro-text">
+      <div class="intro-heading">
+        <div class="intro-lead-in appear-element"><h1>How We See Art:<br> A Journey Through Centuries</h1></div>
+      
       </div>
-      <div class="column">
-        <div class="case-study-details">
-          <h5>Date</h5>
-          <p>May 9, 2023</p>
-        </div>
-        
-        <div class="case-study-details">
-          <h5>Tools</h5>
-          <p>Phyton, R, Adobe Illustrator</p>
-        </div>
-
-
-      </div>
-
+      <div><h2 class="author appear-element">by Wenge Wang</h2></div>
+</div>
     </div>
-  </div>
- </div>
-  <div class="cs-content">
-    <h4> PROCESS</h4>
-    <div class="process-section">
-      <h3>Data Cleaning & Preparation</h3>
-      <div class="row" style="padding-right:3vw;">
-      <div class="process-details">
-        <p>
-          To analyze artworks from various historical periods, I gathered data from The Metropolitan Museum of Art (MET)
-          using open access CSV and MET API. Sorting the relevant artworks was challenging due to their diversity, but I
-          finally narrowed it down by using specific search terms like 'Renaissance art' and a timeframe of 1400 to 1600
-          in
-          Phyton. After refining the dataset in Excel, I visualized the data using R ggplot and transformed it
-          into a cool infographic with Adobe Illustrator. While time-consuming, this process allowed for a
-          comprehensive visual analysis of the artwork data.</p>
-      </div>
+
+    <div class="cs-button down-element">
+      <a href="https://github.com/Lanjing0803/pfch.wwg" target="_blank" class="primary-button">
+        <i class="fab fa-github"></i> GitHub Repository
+      </a>
+      <a href="https://studentwork.prattsi.org/infovis/visualization/art-in-renaissance-baroque-and-rococo/" target="_blank" class="primary-button">
+        <i class="fas fa-external-link-alt"></i> 2023 EDA Archive
+      </a>
     </div>
-  </div>
-    <div class="process-section">
-      <h3>Analysis Highlights</h3>
 
-      <div class="row column">
-        <div class="process-details">
-          <p>
-            A color palette displaying how artists use color can be incredibly helpful for understanding
-            the choices made by artists and the culture during that time. In Renaissance art, painters had a limited
-            palette, using dark
-            tones like brown, ochre, and gray for depth and
-            warmth, and brighter colors like red, green, blue, and gold more subtly. I collected color data with hex
-            codes in Phyton
-            and used R's 'ggplot2' to create a visual palette for each period. Instead of varying sizes to show
-            dominance, I opted for
-            equal-sized color squares, suiting the project's theme and the final infographic's design.</p>
-        </div>
-        <div class="process-image">
-          <img src="image\colors_baroque2.jpeg" alt="baroque color palette">
-
-        </div>
-      </div>
+    <div class="cs-banner">
+      <img src="image\da-1.svg" alt="da-project-1 image" data-scroll>
     </div>
 
 
-    <div class="process-section">
-      <div class="row column">
-        
-        <div class="process-details">
-          <p>
-            I used R packages 'wordcloud2' and 'jiebaR' to create word clouds from artwork titles. This visually
-            engaging approach conveys a lot of information in an accessible and memorable way. In Renaissance art,
-            common words included religious figures like Child, Saint, Virgin, Christ, Madonn, Annunciation, and Angels.
-            Portraiture-related terms like Portrait and Man were also frequent, along with words like Holy Family,
-            Enthroned, and Young. Overall, word cloud is a creative and effective way to help viewers know the top
-            themes of Renaissance art, which is about religion and portraiture.</p>
-        </div>
-<div class="process-image">
-          <img src="image\screenshot2.jpg" alt="wordcloud">
-
-        </div>
-      </div>
-    </div>
-
-    <div class="process-section">
-
-      <div class="row column">
-        <div class="process-details">
-          <p>
-            I created pie charts using package ‘ggplot’ in R showing numeric data in the form of proportions. This chart
-            for Renaissane art mediums shows the different mediums used by artists during Renaissance period. From it,
-            it is clear to see
-            that more than 50% of Renaissance artworks were created using oil as the primary medium.</p>
-        </div>
-        <div class="process-image" style="background-color:white; width:58vw">
-          <picture><img src="image\renaissnace_medium.png" alt="baroque color palette">
-            <figcaption>Renaissance Art Medium</figcaption>
-          </picture>
-
-        </div>
-        <div class="process-image" style="background-color:white; width:58vw">
-          <picture><img src="image\rococo_medium.png" alt="baroque color palette">
-          <figcaption>Rococo Art Medium</figcaption>
-        </picture>
-        </div>
-        <div class="process-image" style="background-color:white; width:58vw">
-          <picture><img src="image\baroque_medium.png" alt="baroque color palette">
-          <figcaption>Baroque Art Medium</figcaption>
-        </picture>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="cs-content-white">
-    <div class="cs-content">
-      <h4 > INFOGRAPHIC ITERATION</h4>
-      <div class="process-section">
-        <h3 >UX Research</h3>
-        <div class="process-details">
-          <p>Before I came out with the final version of the infographic, I conducted UX research with individuals
-            interested in art history or visual design. They provided feedback on the infographic's clarity, suggested
-            improvements in areas like header and text color, and also introduced me to Figma for a more interactive
-            design. This research led to a more user-friendly design, and after further refinement, the final
-            infographic was created.</p>
-        </div>
-      </div>
-      <h6> UX Research Insights</h6>
-        <div class="skills">
-        <ul class="lines">
-          <li class="line l--0">
-            <span class="line__label title">
-              Performance Level
-            </span>
-          </li>
-          <li class="line l--25">
-            <span class="line__label">
-             0
-            </span>
-          </li>
-          <li class="line l--50">
-            <span class="line__label">
-              1
-            </span>
-          </li>
-          <li class="line l--75">
-            <span class="line__label">
-              2
-            </span>
-          </li>
-          <li class="line l--100">
-            <span class="line__label">
-              3
-            </span>
-          </li>
-        </ul>
-        
-        <div class="charts">
-          <div class="chart chart--dev">
-            <span class="chart__title gray">Something I needed to improve...</span>
-            <ul class="chart--horiz">
-              <li class="chart__bar" style="width: 98%;">
-                <span class="chart__label">
-                 Overall Readability
-                </span>
-              </li>
-              <li class="chart__bar" style="width: 83%;">
-                <span class="chart__label">
-                  Storytelling
-                </span>
-              </li>
-              <li class="chart__bar" style="width: 78%;">
-                <span class="chart__label">
-                  Missing Header & Footer
-                </span>
-              </li>
-              <li class="chart__bar" style="width: 60%;">
-                <span class="chart__label">
-                 Hierarchy
-                </span>
-              </li>
-              <li class="chart__bar" style="width: 43%;">
-                <span class="chart__label">
-                  Color Match
-                </span>
-              </li>
-          
-            </ul>
-          </div>
-          
-          <div class="chart chart--prod">
-            <span class="chart__title gray">Something I did well...</span>
-            <ul class="chart--horiz">
-            <li class="chart__bar" style="width: 88%;">
-              <span class="chart__label">
-                Interesting Topic
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 73%;">
-              <span class="chart__label">
-                Engaging Information
-              </span>
-            </li>
-            <li class="chart__bar" style="width: 48%;">
-              <span class="chart__label">
-                Font Choice
-              </span>
-            </li>
-          </ul>
-          </div>
-        
-        </div>
-      </div>
-    </div>
-
-      <!--<div class="cs-content-row">
-        <h1 style="flex:1" class="hollow-text">Something I did well...</h1>
-        <div class="container">
-
-          <ul class="grid-testimonials1 grid-testimonials">
-
-            <li>
-              <div>
-                <p>&ldquo;I like the beautiful typography and font choices that enhanced readability.&rdquo;</p><span
-                  class="quote-arrow"></span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>&ldquo;I think the topic about Renaissance Art is very interesting, and the infographic presents
-                  a wealth of engaging information.&rdquo;</p><span class="quote-arrow"></span>
-              </div>
-            </li>
-
-
-
-          </ul>
-        </div>
-      </div>
-
-      <div class="cs-content-row">
-        <h1 style="flex:1;" class="hollow-text">Something I needed to improve...</h1>
-        <div class="container">
-          <ul class="grid-testimonials2 grid-testimonials">
-
-            <li>
-              <div>
-                <p>&ldquo;The text is hard to read due to its unclear color.&rdquo;</p><span class="quote-arrow"></span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>&ldquo;The content would be more engaging with a better storytelling.&rdquo;</p><span
-                  class="quote-arrow"></span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>&ldquo;The infographic is missing header or footer information.&rdquo;</p><span
-                  class="quote-arrow"></span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>&ldquo;The word cloud graph could be improved by creating a clearer hierarchy and ensuring it matches
-                  the color scheme of the infographic.&rdquo;</p><span class="quote-arrow"></span>
-              </div>
-            </li>
-
-
-
-          </ul>
-        </div>
-
-
-      </div>-->
-    
+    <div>
+      <div class="cs-content down-element2">
+       
+        <h4 class="black">OVERVIEW</h4>
       
 
-
+<div class="row column">
+  <div class="case-study-intro">
+    <p><br>
+      Have you ever stopped to think about how art changes over time? <br>The intriguing shift from classical
+      masterpieces in the 15th century to the avant-garde expressions of pop arts in the 20th century? <br>Inspired by my personal fascination with
+      art history, I embarked on a journey through time, and analyzed artworks comprehensively from 15th century to the 20the century, using the Met (the Metropolitan Museum of Art) API.
+    </p>
   </div>
-  <h3 style="position:absolute;z-index:2;padding-left: 13vw;padding-top:13vh" > Final Output</h3>
-  <div class="carousel ">
-    <div class="carousel__nav">
-      <span id="moveLeft" class="carousel__arrow">
-        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
-        </svg>
-      </span>
-      <span id="moveRight" class="carousel__arrow">
-        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-        </svg>
-      </span>
-    </div>
-    <div class="carousel-item carousel-item--1">
-      <div class="carousel-item__image" style=" background-image: url(image/da1-1.jpg);"></div>
-      <div class="carousel-item__info">
-        <div class="carousel-item__container">
-          <h2 class="carousel-item__subtitle">Infographic 1 </h2>
-          <h5 class="carousel-item__title">Detailed Renaissance Art Analysis</h5>
-          <p class="carousel-item__description">This infographic provides an in-depth analysis of Renaissance art,
-            exploring anatomy, color palette, medium, culture, and themes.</p>
-
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item carousel-item--2">
-      <div class="carousel-item__image" style=" background-image: url(image/da1-2.jpg);"></div>
-      <div class="carousel-item__info">
-        <div class="carousel-item__container">
-          <h2 class="carousel-item__subtitle">Infographic 2 </h2>
-          <h5 class="carousel-item__title">Comparing Renaissance, Baroque, and Rococo Art</h5>
-          <p class="carousel-item__description">This infographic offers a clear visual comparison of art from the
-            Renaissance, Baroque, and Rococo periods, using a consistent template to maintain clarity and
-            organization.</p>
-
-        </div>
-      </div>
+  <div class="column">
+    <div class="case-study-details">
+      <h5><br>Date</h5>
+      <p>May, 2023</p>
+      
+     <p> Mar, 2024 (Update)</p>
     </div>
 
-    <div class="carousel-item carousel-item--3">
-      <div class="carousel-item__image" style=" background-image: url(image/magzine1-mockup.jpg);"></div>
-      <div class="carousel-item__info">
-        <div class="carousel-item__container">
-          <h2 class="carousel-item__subtitle">Mockup </h2>
-          <h5 class="carousel-item__title">Infographics Guide Book</h5>
-          <p class="carousel-item__description">Transforms infographics into a resources handbooks.</p>
+    <div class="case-study-details">
+      <h5>Tools</h5>
+      <p>Phyton, R, Adobe Illustrator, D3.js</p>
 
-        </div>
-      </div>
     </div>
+    <div class="case-study-details">
+      <br>
 
-
-  </div>
-
-  <div class="other-projects cs-content">
-    <p>We've reached the finish line!</p>
-  <h2 class="section-title">Want to see more?<br class="mobile-show-only">Next Project: </h2>
-  <div class="mobile-show-only">
-  
-  <div class="project-button"> <a href="da2.html" class="secondary-button"><p>Data Literacy with, for, and by Youth</p></a>
+    </div>
   </div>
 </div>
-  <div class="project-entire laptop-show-only">
-    <div class="project-container">
-    
-      <div class="item" style="background-image: url(image/da-2.svg);">
-        <div class="item-desc">
-          <h3>NSF Awarded Project</h3>
-          <h4>Data Literacy with, for, and by Youth</h4>
-          
-          <div class="project-button"> <a href="da2.html" class="secondary-button">CASE STUDY</a>
-          </div>
-        </div>
-      </div>
-      <div class="item" style="background-image: url(image/da-3.svg);">
-        <div class="item-desc">
-          <h3>Data Visualization</h3>
-          <h4>Visualizing the Most Subscribed YouTube Channels</h4>
-         
-          <div class="project-button"> <a href="da3.html" class="secondary-button">CASE STUDY</a>
-          </div>
 
-        </div>
+
+
       </div>
-      <div class="item" style="background-image: url(image/ux-1.svg);">
-        <div class="item-desc">
-          <h3>UX Research</h3>
-          <h4>SITES Website Usability Research</h4>
-        
-          <div class="project-button"> <a href="ux1.html" class="secondary-button">CASE STUDY</a>
-          </div>
-        </div>
+    </div>
+
+   
+
+
+    <div class="cs-content">
+      <h4> </h4>
+      <h3>Let's Take a Ride on the Time Machine of Art!</h3>
+      <p>Hover to explore &#10549;</p>
+      
+     <div class="arttimeline">
+      <div class="row">
+       <div class="artcontainer">
+       <img src="data:image/png;base64,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">
+       <div class="artinfo">
+        <h4>Vitruvian Man</h4>
+                    <p>Artist: Leonardo da Vinci</p>
+                    <p>Year: 1490</p>
+    </div>
       </div>
+     <div class="artcontainer">
+     <img src="data:image/png;base64,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">            
+     <div class="artinfo">
+      <h4>Mona Lisa</h4>
+      <p>Artist: Leonardo da Vinci</p>
+      <p>Year: 1503</p>
+  </div>
+    </div>
+                  <div class="artcontainer">
+                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3ElEQVR4nO3cT07bUBDH8dyDLqFHYOOFFz1BD0AzUjlFFSvb1g8OglCXPpWLBKh7I/cPSFQViZ8hcfz5SrNDRp6f58+bid5iAQAAAAAAAAAAAMye8/XXd8uqvl5W6T6q1LH0Xx/0PlpW9fdYfTsZz/mr+obT01YfXu+zT18uj7IF6L98zk8Do76+GkEAaScGCrCs0m22AM8f+vPD6Zta/Pm/XVtk2eNzBrLp+z/3FwFaAoiAHKSg30hBrRqgCFeKcKcL0oZ22tB2d+eAbS2rA9IFPUGAdj+6oE3/TgS0BDjIWdBLiICWAK8yDY09sdlGQOyJzVaAXP4+p/zYDDICZEIAETAMKaiRgkINUIRDF5SHIqwID+PQinC8sQ10OwGCAKevEgG5U9VNp64i4FAFmLp1BCDAVmw7jh2byJxi/jPNnHoEEKAgQCkCpKBOCmrUAEW4UIRLXZA2tNOGNs4BDmKFg1jpJGwUEUYRjVmQYVwyjCtNQ42jwzi6sQ+wkMnEQqawEQsrSSvJzk64melSflXf7fq3PDHnS/t+XUK6By8TE7T+ys9sAc7WF++jSj92/TIxwYtbP68vjxdj0N8A219CKh2ll52/qu/6L3805wMAAAAAAAAAAACLKfMANLIjJXoZbKwAAAAASUVORK5CYII=">
+                   <div class="artinfo">
+                    <h4>Composition with Red Blue and Yellow</h4>
+                    <p>Artist: Piet Mondrian</p>
+                    <p>Year: 1930</p>
+                </div>  
+                  </div>
+                    <div class="artcontainer">
+                    <img src="data:image/png;base64,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">
+                    <div class="artinfo">
+                      <h4>Le Rêve</h4>
+                      <p>Artist: Pablo Picasso</p>
+                      <p>Year: 1932</p>
+                  </div> 
+                  </div>
+                  </div>
+      <div class="timeline">
+        <div class="atline"></div>
+        <div class="atarrow"></div>
+        </div>            
+</div>
+</div>
+  <h4></h4>
+
+    <div class="scrollcontainer">
+      <div class="left">
+          <h3>
+              Visualizing Art's Evolution Through Artwork Titles
+          </h3>
+          <div class="image-container"></div>
+
+      </div>
+      <div class="right">
+        <h5 >NER Insights</h5> <br>
+        <p class="custom-bottom-break ">
+          I utilized NLTK's part-of-speech tagging and named entity recognition (NER) functionalities to identify and classify entities such as <span style="background-color: hsl(30, 30%, 50%);">Organization</span>, <span style="background-color: hsl(270, 10%, 70%)">Person</span>, and <span style="background-color: hsl(210, 50%, 50%);">GPE</span> (Geopolitical Entity).  <br> <br>Interestingly, GPE mentions and overall categorized topics may be limited in 20th-century artworks compared to other centuries. This observation suggests a shift in artistic themes.  
+        </p>
+          <h5 id="trigger"> Wordcloud (15th - 18th Century) </h5> <br>
+          <p class="custom-bottom-break ">
+            I further conducted an analysis of word frequency spanning the 15th to 18th centuries to gain detailed insights
+              into the
+              most prevalent topics.
+      
+              <br>  <br>
+              Frequent words like <span style="background-color: yellow;">Saint</span>, <span
+                  style="background-color: pink;">Child</span>, <span style="background-color: orange;">Virgin</span>,
+              highlighted above and in the wordcloud, are mostly related to religion, suggesting a significant focus
+              on <span style="background-color: rgb(193, 188, 188);">religious themes</span> during this period.
+          </p>
+          <br>
+          <h5 id="trigger2"> Wordcloud (19th - 20th Century) </h5> <br>
+          <p class="custom-bottom-break ">
+              Then I conducted another separate analysis of word frequency spanning the 19th to 20th centuries to compare the
+              differences between this time period and the previous one.
+              <br>  <br>
+              Frequent words like <span style="background-color: lightgreen;">Woman</span>, <span
+                  style="background-color: lightskyblue;">Garden</span>, <span
+                  style="background-color: lightseagreen;">Life</span>, highlighted above and in the wordcloud,
+              suggest a shift towards themes related to daily life, nature, and human experiences. This shift may
+              reflect changes in <span style="background-color: rgb(193, 188, 188);">societal values</span>, <span style="background-color: rgb(193, 188, 188);">artistic trends</span>, and the artists' exploration of more <span style="background-color: rgb(193, 188, 188);">personal</span> and
+              relatable subjects.
+          </p>
+          
+       
+      </div>
+  </div>
+
+  <div class="cs-content">
+  <h4> </h4>
+  <h3> Color Representation and Proportion</h3>
+  <p>
+    The color palettes used in artworks from the 15th century predominantly consisted of earthy tones, reflecting the prevalent artistic styles and pigment materials of the time. Shades of browns and muted tones were commonly observed, indicative of the natural pigments available during that era. In contrast, artworks from the 20th century exhibited a more diverse and vibrant range of colors compared to their 15th-century counterparts. 
+  </p>
+  <br>
+  <p>Click on different centuries to explore &#10549;</p>
+  <br>
+
+<div class="colorwheel">
+  <iframe src="image/sunburst_all.html" width="400" height="300" frameborder="0"></iframe>
+
+</div>
+
+</div>
+
+
+
+  <div class="cs-content sectionwhite row methodcontainer ">
+
+     
+   <div>
+     <h4 class="section-title black">Data and Methdology  </h4>
+      <p class="method">
+    The <a href="https://www.metmuseum.org/about-the-met/policies-and-documents/open-access" class="gray" target="_blank">Metropolitan Museum of Art (MET) API</a> was utilized as the primary data source for this project.
+    The MET API data underwent thorough cleaning and preprocessing for analysis. Artworks from the 15th to the 20th centuries were filtered for focused analysis. Challenges arose when retrieving image URLs due to restrictions, but alternative methods allowed comprehensive data acquisition from the MET website.
+    <br>
+   I used D3.js to create interactive visualizations showcasing the analyzed data. For instance, the color wheel, filtered by centuries, provides users with a visual representation of artists' palettes across different time periods. The interactive visualizations present a dynamic exploration of the artwork collection, providing users with an engaging and immersive experience. 
+</p>
+    </div>
+    <div><br>
+      <p class="method">The decision to present color analysis from both RGB and HSL perspectives is based on my personal experience as an artist, and is aimed to offer a comprehensive understanding of the color palettes utilized in the artwork. 
+  </p>
+      <h4 class="section-title black">Takeaways </h4>
+      <p class="method">
+        Through the recent project update, I refined my Python code, enhancing the data cleaning process for more accurate results. By setting clear research questions and narrowing down the time range for my analysis, I found that it brought more focus and depth to my research. This process reminded me of the importance of careful coding and thoughtful planning, which ultimately led to richer insights from the data. </p>
+    </div>
      
 
     </div>
   </div>
-  <a href="da1.html" class="scroll-hint ">
-    <div class="scroll-icon"></div>
-</a>
-
-</div>
-</div>
-</div>
+  </div>
 
   <footer>
 
     <div class="footer">
       <div class="laptop-show-only">
-        <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
+        <p>2024 &copy; Designed & Programmed by Wenge Wang</p>
       </div>
       <div class="footer-icon">
         <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
             aria-hidden="true">wwang24@outlook.com</i></a>
-            <a href="da1.html" ><i class="fas fa-arrow-up laptop-show-only"></i></a>
+        <a href="da1.html"><i class="fas fa-arrow-up laptop-show-only"></i></a>
       </div>
     </div>
 
   </footer>
+<script>
+const artContainers = document.querySelectorAll('.artcontainer');
 
+artContainers.forEach(artContainer => {
+    const artInfo = artContainer.querySelector('.artinfo');
+    const artInfoPlaceholder = artContainer.querySelector('.artinfo-placeholder');
+
+    artContainer.addEventListener('mouseover', function(event) {
+        const x = event.clientX ; 
+        const y = event.clientY ; 
+
+        artInfo.style.left = x + 'px';
+        artInfo.style.top = y + 'px';
+
+        artInfo.style.opacity = '1';
+        artInfo.style.visibility = 'visible';
+    });
+
+    artContainer.addEventListener('mouseout', function() {
+        artInfo.style.opacity = '0';
+        artInfo.style.visibility = 'hidden';
+    });
+});
+
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+<script>
+  window.addEventListener('scroll', function() {
+        var rightContainer = document.querySelector('.right');
+        var windowHeight = window.innerHeight;
+        var rightContainerHeight = rightContainer.offsetHeight;
+        var rightContainerTop = rightContainer.getBoundingClientRect().top;
+        var rightContainerBottom = rightContainerTop + rightContainerHeight;
+        var centerY = windowHeight / 3;
+
+        // If the top and bottom of the right container are within the center Y range
+        if (rightContainerTop <= centerY ) {
+            rightContainer.style.overflowY = 'auto';
+        } else {
+            rightContainer.style.overflowY = 'hidden';
+        }
+    });
+
+  var controller = new ScrollMagic.Controller();
+
+  var scene1 = new ScrollMagic.Scene({
+      triggerElement: '#trigger',
+      triggerHook: 0.5 
+  })
+  .on('enter', function (event) {
+      document.querySelector('.image-container').style.backgroundImage = "url('image/wordcloud1518.svg')";
+  })
+  .on('leave', function (event) {
+      document.querySelector('.image-container').style.backgroundImage = "url('image/topic.svg')";
+  })
+  .addTo(controller);
+
+  var scene2 = new ScrollMagic.Scene({
+  triggerElement: '#trigger2',
+  triggerHook: 0.5 
+})
+.on('enter', function (event) {
+  document.querySelector('.image-container').style.backgroundImage = "url('image/wordcloud1920.svg')";
+})
+.on('leave', function (event) {
+  document.querySelector('.image-container').style.backgroundImage = "url('image/wordcloud1518.svg')";
+})
+.addTo(controller);
+
+
+
+</script>
 </body>
-
 </html>

@@ -35,7 +35,9 @@
 .section1 {
   background: #f0eff2
 }
-
+.sectionwhite{
+  background:white
+}
 .section2 {
   background: linear-gradient(to right, #9d7bf2, #9d7bf2, #c9a4fa);
 }
@@ -597,9 +599,7 @@ a {
   padding-top: 8vh;
 }
 
-.project-section {
-  padding-top: 4vh;
-}
+
 
 .intro-image {
   max-width: 380px;
@@ -1100,8 +1100,12 @@ h4 {
   background-size: cover;
   margin-bottom: 0;
 }
-
-.card__front,.card2__front {
+.card__title{
+  font-size: 25px;
+  font-weight: 600;
+  text-align:center
+}
+.card2__front {
   font-size: 23px;
   font-weight: 600;
 }
@@ -1355,7 +1359,7 @@ figcaption {
 
   .intro-para {
     width: 75vw;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.5;
     font-weight: 400;
   }
@@ -1444,7 +1448,7 @@ figcaption {
     text-align: center;
   }
   .card2__front {
-    font-size: 18px;
+    font-size: 15px;
     text-align: left;
     align-items: start;
     padding-left:5vw
@@ -1475,6 +1479,7 @@ figcaption {
 
 }
 @media (max-width: 400px) {
+  h3{ font-size: 23px;}
 .footer {
   padding-top: 11.5vh;
 }
@@ -1498,7 +1503,7 @@ figcaption {
   }
 
   .secondary-button {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .intro-text {
