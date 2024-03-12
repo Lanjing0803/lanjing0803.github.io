@@ -16,7 +16,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&display=swap" rel="stylesheet">
 
   <!--social media link-->
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
 
@@ -24,7 +23,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
   <script type='text/javascript' src='js\case-study.js'></script>
-</head>
+
 <style>
     .left {
     width: 50vw;
@@ -68,8 +67,27 @@
           .custom-bottom-break {
       padding-bottom: 5vh;
   }
-        }
+        } .circle-colors-intro-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15vh;
+    }
+
+    .circle-colors-intro-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top-div-intro-skew {
+        width: 30px; 
+        height: 10px; 
+        margin: 0 5px; 
+        transform: skew(-20deg); 
+    }
 </style>
+</head>
 <body>
   <div class="navbar-mobile ">
 
@@ -126,8 +144,19 @@
     <div>
       <div class="cs-content down-element2">
        
-        <h4 class="black">OVERVIEW</h4>
-      
+       <div class="row">
+        <h4 class="black">OVERVIEW </h4>
+          <div class="circle-colors-intro-div">
+            <div class="blue-circle-intro top-div-intro-skew" style="background:rgb(26, 8, 43)"></div>
+            <div class="purple-circle-intro top-div-intro-skew" style="background: rgb(99, 77, 54)"></div>
+            <div class="pink-circle-intro top-div-intro-skew" style="background:rgb(166, 128, 89)"></div>
+            <div class="red-circle-intro top-div-intro-skew" style="background:rgb(242, 128, 13)"></div>
+            <div class="orange-circle-intro top-div-intro-skew" style="background:rgb(232, 179, 125)"></div>
+            <div class="yellow-circle-intro top-div-intro-skew" style="background: rgb(232, 225, 200)"></div>
+         
+          </div>
+ 
+        </div>
 
 <div class="row column">
   <div class="case-study-intro">
@@ -150,10 +179,7 @@
       <p>Phyton, R, Adobe Illustrator, D3.js</p>
 
     </div>
-    <div class="case-study-details">
-      <br>
-
-    </div>
+  
   </div>
 </div>
 
