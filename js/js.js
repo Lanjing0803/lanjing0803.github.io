@@ -4,7 +4,7 @@ let lastScrollTime = 0;
 if (window.innerWidth > 1020) {
     window.addEventListener('wheel', (event) => {
         const currentTime = new Date().getTime();
-        if (currentTime - lastScrollTime < 800) {
+        if (currentTime - lastScrollTime < 1500) {
             return;  
         }
         
