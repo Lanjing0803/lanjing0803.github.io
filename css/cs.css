@@ -1,10 +1,20 @@
 body{  background:#cfcfd7;color:black;overflow-y: auto;}
 .author{
     padding:0;
-    margin:5px;
-    font-weight:400;
-    font-size:20px;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-weight:200;
+    font-size:18px;
     text-transform: none;
+}
+.author a{
+    text-decoration: underline;
+
+}
+.subtitle{
+    font-size: 23px;
+    line-height: 33px;
+    padding-bottom:10px
 }
 .method{
     font-weight:200;
@@ -266,8 +276,8 @@ hr {
 }
 
 h1 {
-    font-size: 53px;
-    font-weight: 700;
+    font-size: 100px;
+    line-height: 1.3em;
 }
 
 h4 {
@@ -301,7 +311,7 @@ iframe {
 }
 .intro-text {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     padding-left: 13vw;
     width: 58vw;
     padding-top: 13vw;
@@ -407,7 +417,7 @@ opacity:0.8
     }
     
     .artinfo h4{
-        padding-top:7vh
+        padding-top:5vh
     }
     .artinfo p, .quote p {
         font-size:15px;
@@ -1255,7 +1265,7 @@ footer {
     overflow: visible;
   }
 
-  
+  .mindmap{user-select:none}
   .picker {
     position: relative;
     background: var(--c-bg);
@@ -1287,8 +1297,11 @@ footer {
 
   @media (max-width: 1120px) {
     h1{
-        font-size:48px;
+        font-size:70px;
         
+    }
+    .subtitle{
+line-height:1.5em
     }
   }
       @media (max-width: 1020px) {
@@ -1325,7 +1338,7 @@ footer {
         .timeline {
             bottom: 25px;}
         h1{
-            font-size:1em;
+            font-size:50px;
             line-height: 1.6em;
         }
         .problem-section .process-details {

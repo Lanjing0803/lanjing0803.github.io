@@ -208,10 +208,7 @@
 }
 
 
-html {
-  user-select: none;
 
-}
 
 .bold {
   font-weight: bold;
@@ -407,9 +404,7 @@ a {
 .primary-button {
   background-color: #403F45;
   padding: 9px 17px;
-
   border-radius: 25px;
-
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s, color 0.3s;
@@ -477,6 +472,7 @@ a {
   font-size: 78px;
   font-weight: 700;
   line-height: 90px;
+  user-select: none;
 }
 
 .intro-heading {
@@ -1430,8 +1426,8 @@ figcaption {
 
   .card {
     position: relative;
-    width: 69vw;
-    height: 145px;
+    width: 60vw;
+    height: 45vw;
     perspective: 1000px;
     cursor: pointer;
     display: block;

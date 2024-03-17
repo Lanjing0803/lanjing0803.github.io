@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&display=swap" rel="stylesheet">
+<style>
+svg{    position: absolute;}
+  .node {
+    cursor:default;
+  }
+
+  .node--leaf {
+    fill: white;
+  }
+
+  text {
+    font-family: 'Kanit', sans-serif; 
+    font-size:33px;
+    text-anchor: middle;
+
+  }
+
+  .label,
+  .node--root,
+  .node--leaf {
+    pointer-events: none;
+  }
+
+  .node-circle {
+    fill: none;
+    stroke: yellow;
+    stroke-width: 2px;
+  }
+
+  
+  .legend {
+    top: 70px;
+    left: 611px;
+    position:absolute;
+    font-family: 'Kanit', sans-serif; 
+}
+
+.legend-item {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 5px;
+}
+.legend-text{color:white;font-size:30px}
+.legend-percentage {
+    font-size: 23px;
+    color: yellow; }
+</style><script src="https://d3js.org/d3.v4.min.js"></script>
+
+<svg width="880" height="550"></svg>
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-percentage" style="margin-left: -80px;">53.3%</div>
+    <div class="legend-text" style="margin-left: -70px;">Shooter</div>
+</div>
+<div class="legend-item">
+  <div class="legend-percentage" style="margin-left: -60px;">26.7%</div>
+  <div class="legend-text" style="margin-left: -50px;">Action</div>
+</div>
+<div class="legend-item">
+  <div class="legend-percentage" style="margin-left: -40px;">10.0%</div>
+  <div class="legend-text" style="margin-left: -40px;">Sports</div>
+</div>
+<div class="legend-item">
+  <div class="legend-percentage" style="margin-left: -50px;">6.7%</div>
+  <div class="legend-text" style="margin-left: -60px;">Role-Playing</div>
+</div>
+<div class="legend-item">
+  <div class="legend-percentage" style="margin-left: -70px;">3.3%</div>
+  <div class="legend-text"  style="margin-left: -80px;">Action-Adventure </div>
+</div>
+</div>
+
+<script>
+    var svg = d3.select("svg"),
+      margin = 20,
+      diameter = Math.min(+svg.attr("width"), +svg.attr("height")),
+      g = svg.append("g").attr("transform", "translate(0, 0)");
+  
+    var color = d3.scaleLinear()
+      .domain([-1, 5])
+      .range(["#181413", "#181413"])
+      .interpolate(d3.interpolateHcl);
+  
+    var data = {
+      "name": "",
+      "children": [{
+              "name": "Shooter",
+              "size":  53.3
+            },
+            {
+              "name": "Action",
+              "size": 26.7
+            },
+            {
+              "name": "Sports",
+              "size":10
+            },
+            {
+              "name": " Role-Playing",
+              "size":  6.7
+            },
+            {
+              "name": "Action-Adventure",
+              "size":  3.3
+            }
+          ]
+    };
+  
+    var root = d3.hierarchy(data)
+      .sum(function(d) {
+        return d.size;
+      })
+      .sort(function(a, b) {
+        return b.value - a.value;
+      });
+  
+    var pack = d3.pack()
+      .size([diameter - margin, diameter - margin])
+      .padding(2);
+  
+    var focus = root,
+      nodes = pack(root).descendants(),
+      view;
+  
+    var node = g.selectAll("circle,text")
+      .data(nodes)
+      .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) {
+        return "translate(" + d.x + "," + d.y + ")";
+      });
+  
+
+    node.append("circle")
+      .attr("class", "node-circle")
+      .attr("r", function(d) {
+        return d.r;
+      })
+    node.filter(function(d) {
+      return d.r < 70;
+    })
+    .select("circle")
+    .style("fill", "#FFFF0080");
+  
+      node.filter(function(d) { return d.r > 70; }).append("text")
+  .attr("dy", ".3em")
+  .style("text-anchor", "middle")
+  .style("fill", "white") 
+  .text(function(d) {
+    return d.data.name.substring(0, d.r / 3);
+  });
+  
+ 
+  </script>
