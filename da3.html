@@ -238,30 +238,7 @@
 </style>
 
 <body>
-    <div class="navbar-mobile ">
 
-        <input type="checkbox" id="overlay-input" />
-        <label for="overlay-input" id="overlay-button"><span></span></label>
-        <div id="overlay">
-            <ul>
-                <li><a href="index.html" class="inactive">ABOUT</a></li>
-                <li><strong></strong><a href="daproject.html" class="active">DATA</a></strong></li>
-                <li><a href="uxproject.html" class="inactive">UX</a></li>
-                <li><a href="OTHER.html" class="inactive">OTHER</a></li>
-                <li><a href="contact.html" class="menu-button">CONTACT</a></li>
-            </ul>
-            <div class="overlay-footer row">
-                <p>2023 &copy; by Wenge Wang</p>
-                <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
-            </div>
-            <div class="overlay-logo">WENGE<br>WANG</div>
-        </div>
-    </div>
-    <div class="back-button">
-        <a href="#" onclick="history.go(-1); return false;">
-            <i class="fas fa-arrow-left"></i>
-        </a>
-    </div>
 
     <div class="project-section">
         <div class="column">
@@ -687,20 +664,17 @@
 <script>
 var controller = new ScrollMagic.Controller();
 
-// Initial setup
 var c1Opacity = 0.3; 
 var c2Opacity = 0.3; 
 var c3Opacity = 0.3; 
 
-// Function to set opacity for iframes
 function setOpacity(opacity, iframeClass) {
     document.querySelectorAll('.right iframe').forEach(function(iframe) {
         iframe.style.opacity = opacity;
     });
     document.querySelector(iframeClass).style.opacity = 1;
 }
-
-// Scene for triggering iframe with ID trigger
+setOpacity(c1Opacity, '.c1 iframe');
 var scene1 = new ScrollMagic.Scene({
     triggerElement: '#trigger',
     triggerHook: 0.5
