@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <!--social media link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -262,9 +261,10 @@
         </div>
 
         <div class="cs-button down-element">
-            <a href="https://github.com/Lanjing0803/Playalytics"  style="background-color: #66c0f4;" target="_blank" class="primary-button">
+            <a href="https://github.com/Lanjing0803/Playalytics" style="background-color: #66c0f4;" target="_blank"
+                class="primary-button">
                 <i class="fab fa-github"></i> GitHub Repository
-              </a>
+            </a>
             <a href="https://studentwork.prattsi.org/infovis/visualization/visualizing-video-game-sales-globally/"
                 target="_blank" class="primary-button" style="background-color: #66c0f4;">
                 <i class="fas fa-external-link-alt"></i> 2023 EDA Archive
@@ -403,8 +403,8 @@
                     </style>
                     <h5>Keyword Co-occurrence Network</h5><br>
                     <svg width="480" height="500"></svg>
-                    <p style="font-size:15px;text-align:end">Source from: <a
-                        target="_blank"  href="https://www.kaggle.com/datasets/kanchana1990/steam-store-2024-hot-picks-and-reviews/data">Kaggle</a>
+                    <p style="font-size:15px;text-align:end">Source from: <a target="_blank"
+                            href="https://www.kaggle.com/datasets/kanchana1990/steam-store-2024-hot-picks-and-reviews/data">Kaggle</a>
                     </p>
 
                     <script>
@@ -525,9 +525,12 @@
             <br>
             <p>
                 The clusters indicate distinct patterns in the relationship between critic scores and sales figures.
-                Informed by the elbow method, the optimal number of clusters (K) is 3. <span style="color:yellow;font-weight:400">Cluster 1 </span>suggests that products
-                with higher critic scores tend to achieve greater sales success, while <span style="color:#66c0f4;font-weight:400">Cluster 3</span> represents products
-                facing challenges in achieving both high sales and favorable critic scores. <span style="color:#c7d5e0;font-weight:400">Cluster 2</span> represents a
+                Informed by the elbow method, the optimal number of clusters (K) is 3. <span
+                    style="color:yellow;font-weight:400">Cluster 1 </span>suggests that products
+                with higher critic scores tend to achieve greater sales success, while <span
+                    style="color:#66c0f4;font-weight:400">Cluster 3</span> represents products
+                facing challenges in achieving both high sales and favorable critic scores. <span
+                    style="color:#c7d5e0;font-weight:400">Cluster 2</span> represents a
                 middle ground. Additionally, alongside each cluster, I visualized the proportion of each genre within
                 these clusters using circle packing diagrams.
             </p>
@@ -557,8 +560,9 @@
                 </div>
             </div>
             <p style="font-size:15px;text-align:end; margin-top: 70px;margin-right: 30px; ">Source from: <a
-                href="https://www.kaggle.com/datasets/asaniczka/video-game-sales-2024/data" target="_blank">Kaggle</a>
-        </p>
+                    href="https://www.kaggle.com/datasets/asaniczka/video-game-sales-2024/data"
+                    target="_blank">Kaggle</a>
+            </p>
 
         </div>
         <div class="cs-content">
@@ -578,8 +582,9 @@
                 <div class="iframe3d">
                     <iframe src="image/scatter_plot.html" width="100%" height="100%" frameborder="0"></iframe>
                     <p style="font-size:15px;text-align:end; margin-top: -68px;  margin-right: 104px;">Source from: <a
-                        href="https://www.kaggle.com/datasets/asaniczka/video-game-sales-2024/data" target="_blank">Kaggle</a>
-                </p>
+                            href="https://www.kaggle.com/datasets/asaniczka/video-game-sales-2024/data"
+                            target="_blank">Kaggle</a>
+                    </p>
 
                 </div>
                 <div class="iframe3dinfo">
@@ -609,7 +614,7 @@
                             <div class="color-dot" style="background-color: #1b2838;"></div>
                             <span> &lt; 2</span>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -622,8 +627,16 @@
             <div>
                 <h4 class="section-title black">Data and Methdology </h4>
                 <p class="method black" style="width:38vw">
-                    The two datasets utilized in this study was sourced from  <a href="https://www.kaggle.com/" class="gray" target="_blank">Kaggle</a>. With attributes such as sales figures, critic scores, genres, and etc., the richness and diversity of the datasets make them well-suited for conducting a comprehensive analysis of the video game industry. Before conducting any analysis, I cleaned missing data, standardized formats, and re-organized in new csv files for my research questions.
-<br>The combination of LDA topic modeling, K-means clustering, and 3D scatter plot visualization allowed for a comprehensive analysis of the video game datasets. However, I encountered challenges when I did the 3d scatter plot. The sales and release data for games were all over the map, varying widely across different genres. To tackle this, I used z-score normalization, which helped standardize the data,ensuring a more accurate and meaningful analysis.
+                    The two datasets utilized in this study was sourced from <a href="https://www.kaggle.com/"
+                        class="gray" target="_blank">Kaggle</a>. With attributes such as sales figures, critic scores,
+                    genres, and etc., the richness and diversity of the datasets make them well-suited for conducting a
+                    comprehensive analysis of the video game industry. Before conducting any analysis, I cleaned missing
+                    data, standardized formats, and re-organized in new csv files for my research questions.
+                    <br>The combination of LDA topic modeling, K-means clustering, and 3D scatter plot visualization
+                    allowed for a comprehensive analysis of the video game datasets. However, I encountered challenges
+                    when I did the 3d scatter plot. The sales and release data for games were all over the map, varying
+                    widely across different genres. To tackle this, I used z-score normalization, which helped
+                    standardize the data,ensuring a more accurate and meaningful analysis.
 
 
 
@@ -632,8 +645,14 @@
             <div>
                 <h4 class="section-title black">Takeaways </h4>
                 <p class="method black">
-                    Through this project, I learned more about data visualization using JavaScript libraries, and discovered the importance of selecting the appropriate visualization tools and techniques based on the research context. While both d3.js and plotly.js offer powerful capabilities, their suitability depends on factors such as the dataset's nature, analysis complexity, and audience requirements.  Additionally, I recognized the significance of preprocessing techniques like z-score normalization in standardizing data for more accurate visual representations. Overall, data visualization is an iterative process, and selecting and implementing visualization strategies need adaptability.
-                 </p>
+                    Through this project, I learned more about data visualization using JavaScript libraries, and
+                    discovered the importance of selecting the appropriate visualization tools and techniques based on
+                    the research context. While both d3.js and plotly.js offer powerful capabilities, their suitability
+                    depends on factors such as the dataset's nature, analysis complexity, and audience requirements.
+                    Additionally, I recognized the significance of preprocessing techniques like z-score normalization
+                    in standardizing data for more accurate visual representations. Overall, data visualization is an
+                    iterative process, and selecting and implementing visualization strategies need adaptability.
+                </p>
                 <br>
 
             </div>
@@ -650,8 +669,9 @@
             </div>
             <div class="footer-icon">
                 <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
-                        aria-hidden="true" style="    font-family: times;">wwang24@outlook.com</i></a>
-                <a href="da3.html"><i class="fas fa-arrow-up laptop-show-only"></i></a>
+                        aria-hidden="true"><span style="font-family: times;">wwang24@outlook.com</span></i></a>
+                <a href="index.html"><i class="fas fa-home"></i>
+                </a>
             </div>
         </div>
 
@@ -662,50 +682,50 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
 
 <script>
-var controller = new ScrollMagic.Controller();
+    var controller = new ScrollMagic.Controller();
 
-var c1Opacity = 0.3; 
-var c2Opacity = 0.3; 
-var c3Opacity = 0.3; 
+    var c1Opacity = 0.3;
+    var c2Opacity = 0.3;
+    var c3Opacity = 0.3;
 
-function setOpacity(opacity, iframeClass) {
-    document.querySelectorAll('.right iframe').forEach(function(iframe) {
-        iframe.style.opacity = opacity;
-    });
-    document.querySelector(iframeClass).style.opacity = 1;
-}
-setOpacity(c1Opacity, '.c1 iframe');
-var scene1 = new ScrollMagic.Scene({
-    triggerElement: '#trigger',
-    triggerHook: 0.5
-})
-.on('enter', function (event) {
-    setOpacity(c2Opacity, '.c2 iframe'); 
-    document.querySelector('.image-container').style.backgroundImage = "url('image/kmeans_cluster_plot_2.png')";
-})
-.on('leave', function (event) {
-    // Action when trigger is left
-    setOpacity(c1Opacity, '.c1 iframe'); 
-    document.querySelector('.image-container').style.backgroundImage = "url('image/kmeans_cluster_plot_1.png')";
-})
-.addTo(controller);
+    function setOpacity(opacity, iframeClass) {
+        document.querySelectorAll('.right iframe').forEach(function (iframe) {
+            iframe.style.opacity = opacity;
+        });
+        document.querySelector(iframeClass).style.opacity = 1;
+    }
+    setOpacity(c1Opacity, '.c1 iframe');
+    var scene1 = new ScrollMagic.Scene({
+        triggerElement: '#trigger',
+        triggerHook: 0.5
+    })
+        .on('enter', function (event) {
+            setOpacity(c2Opacity, '.c2 iframe');
+            document.querySelector('.image-container').style.backgroundImage = "url('image/kmeans_cluster_plot_2.png')";
+        })
+        .on('leave', function (event) {
+            // Action when trigger is left
+            setOpacity(c1Opacity, '.c1 iframe');
+            document.querySelector('.image-container').style.backgroundImage = "url('image/kmeans_cluster_plot_1.png')";
+        })
+        .addTo(controller);
 
-// Scene for triggering iframe with ID trigger2
-var scene2 = new ScrollMagic.Scene({
-    triggerElement: '#trigger2',
-    triggerHook: 0.5
-})
-.on('enter', function (event) {
-    // Action when trigger2 is entered
-    setOpacity(c3Opacity, '.c3 iframe'); // Set opacity for c3 iframe
-    document.querySelector('.image-container').style.backgroundImage = "url('image/kmeans_cluster_plot_3.png')";
-})
-.on('leave', function (event) {
-    // Action when trigger2 is left
-    setOpacity(c2Opacity, '.c2 iframe'); // Set opacity for c2 iframe
-    document.querySelector('.image-container').style.backgroundImage = "url('image/kmeans_cluster_plot_2.png')";
-})
-.addTo(controller);
+    // Scene for triggering iframe with ID trigger2
+    var scene2 = new ScrollMagic.Scene({
+        triggerElement: '#trigger2',
+        triggerHook: 0.5
+    })
+        .on('enter', function (event) {
+            // Action when trigger2 is entered
+            setOpacity(c3Opacity, '.c3 iframe'); // Set opacity for c3 iframe
+            document.querySelector('.image-container').style.backgroundImage = "url('image/kmeans_cluster_plot_3.png')";
+        })
+        .on('leave', function (event) {
+            // Action when trigger2 is left
+            setOpacity(c2Opacity, '.c2 iframe'); // Set opacity for c2 iframe
+            document.querySelector('.image-container').style.backgroundImage = "url('image/kmeans_cluster_plot_2.png')";
+        })
+        .addTo(controller);
 
 
 
