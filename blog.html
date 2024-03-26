@@ -35,6 +35,22 @@
 
 </head>
 <style>
+        #announcement-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+  }
+
+  #content {
+    padding-top: 40px; 
+  }
     h2 {
         font-weight: 300;
         text-transform: none;
@@ -88,8 +104,9 @@
   </style>
 </head>
 <body>
+  <div id="announcement-bar">Hey there! For a better experience, please view on laptop!</div>
 
-    
+  <div id="content">
     <div class="navbar-mobile ">
   
         <input type="checkbox" id="overlay-input" />
@@ -159,6 +176,32 @@
     </div>
 
   </footer>
+</div>
 
+
+<script>
+  var announcementBar = document.getElementById('announcement-bar');
+
+// Track the last scroll position
+var lastScrollPosition = window.pageYOffset;
+
+// Function to handle scroll events
+function handleScroll() {
+var currentScrollPosition = window.pageYOffset;
+
+// Check if scrolling down
+if (currentScrollPosition > lastScrollPosition) {
+  announcementBar.style.top = '-50px'; // Hide the announcement bar when scrolling down
+} else {
+  announcementBar.style.top = '0'; // Show the announcement bar when scrolling up
+}
+
+lastScrollPosition = currentScrollPosition; // Update last scroll position
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+</script>
 </body>
 </html>
