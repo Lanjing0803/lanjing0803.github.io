@@ -18,7 +18,7 @@ body{  background:#cfcfd7;color:black;overflow-y: auto;}
 }
 .method{
     font-weight:200;
-    font-size:18px
+    font-size:15px
 }
 .methodcontainer{
     gap:100px;
@@ -323,7 +323,7 @@ iframe {
     position: absolute;
     z-index: 1;
     padding-left: 13vw;
-    padding-top: 60vh;
+    padding-top: 430px;
     display: flex;
     flex-direction: row;
 }
@@ -334,7 +334,7 @@ iframe {
 }
 
 .cs-banner {
-    max-height: 80vh;
+    max-height: 68vh;
     width: 100vw;
    z-index:0;
     position: relative;
@@ -401,7 +401,7 @@ opacity:0.8
         transition: transform 0.3s ease;
     }
     .artcontainer:hover img {
-        transform: scale(1.5);
+        transform: scale(1.1);
     }
     .artinfo {
         position: fixed;
@@ -938,7 +938,7 @@ footer {
     height:70vh;
     width: fit-content;
    overflow:hidden;
-   z-index:5
+   z-index:5;
 }
 .colorwheel iframe{
     width:100%;
@@ -1365,7 +1365,7 @@ line-height:1.5em
             padding-top: 0;
         }
         .cs-button {
-            padding-top: 53vh;
+      
             flex-direction: column;
         }
         .cs-button-da3 {

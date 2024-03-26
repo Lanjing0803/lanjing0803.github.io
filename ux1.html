@@ -2,629 +2,704 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>UIUX Projects | WW Portfolio</title>
-  <link rel="icon" type="image/png" href='https://img.icons8.com/external-others-inmotus-design/67/external-W-kid-alphabet-others-inmotus-design-2.png'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5XWCBWZ4');</script>
+    <!-- End Google Tag Manager -->
 
-  <link rel="stylesheet" href="css\css.css">
-  <link rel="stylesheet" href="css\cs.css">
-  <!--font-->
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>We're Not Really Strangers UI Redesign | Wenge Wang</title>
+    <link rel="icon" type="image/png" href='https://img.icons8.com/doodle/96/love-message--v1.png'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wenge Wang">
+    <meta name="description"
+        content=" Experience the revamped 'We're Not Really Strangers' website—a hub for authentic connection and self-discovery. Our redesigned interface prioritizes accessibility and engagement, ensuring users embark on a seamless journey of meaningful interaction. Dive into a user-friendly space crafted to deepen human connections and spark profound conversations.">
 
-  <!--social media link-->
+    <link rel="stylesheet" href="css\css.css">
+    <link rel="stylesheet" href="css\cs.css">
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--social media link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <script type='text/javascript' src='js\case-study.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script type='text/javascript' src='js\case-study.js'></script>
 </head>
+<style>
+    body {
+        background-color: #FFFCFC;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .artcontainer {
+        width: auto;
+        height: auto;
+        padding-top: 0;    width: fit-content;
+        margin-bottom:30px
+    }
+.artcontainer i{font-size:38px;padding-top:20px}
+.red{color: #c10016;}
+.orange{color:#d0b100}
+    .artinfo {
+        color: white;
+        background-color: #403F45;
+        padding: 20px;
+        max-width: 400px;
+    }
+
+    .goals {
+        background-color: #ffce2e;
+        padding: 6px 17px;
+        border-radius: 25px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s, color 0.3s;
+        width: fit-content;
+        user-select: none;
+        transition: transform 0.3s ease;
+    }
+
+    .goals:hover {
+        transform: scale(1.05);
+    }
+
+    h4 {
+        color: black
+    }
+
+
+    .legend {
+        display: flex;
+        align-items: center;
+        min-width: 30vw;
+    }
+
+    .circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .bar2 {
+        background-color: #c10016;
+    }
+
+    .bar3 {
+        background-color: #7b00c8;
+    }
+
+    .bar4 {
+        background-color: #006a96;
+    }
+
+    .bar5 {
+        background-color: gray;
+    }
+
+    .percentage {
+        font-size: 68px;
+        font-weight: 600;
+        margin-right: 10vw;
+        line-height: 1.3;
+        padding-top: 10px;color:#c10016
+    }
+    .recommendation{height:100%}
+.recommendation img{ width: 480px;}
+.image-container, .image-container2, .image-container3{ 
+    width: 452px;
+    background-size: cover;
+    height: 450px;
+    margin-left: -180px;
+    transform: scale(0.7);
+    z-index: 2;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .left{
+    width:40vw;padding-right:18vw
+  }
+
+  .reflection-note{padding-top:10px;color:gray}
+</style>
 
 <body>
-  <div class="navbar-mobile ">
-  
-    <input type="checkbox" id="overlay-input" />
-<label for="overlay-input" id="overlay-button"><span></span></label>
-<div id="overlay">
-<ul>
-  <li><a href="index.html" class="inactive">ABOUT</a></li>
-  <li><strong></strong><a href="daproject.html" class="active">DATA</a></strong></li>
-  <li><a href="uxproject.html" class="inactive">UX</a></li>
-  <li><a href="OTHER.html" class="inactive">OTHER</a></li>
-  <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
-</ul>
-<div class="overlay-footer row">
-  <p>2023 &copy; by Wenge Wang</p>
-  <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
-</div>
-<div class="overlay-logo">WENGE<br>WANG</div>
-</div>
-</div>
-<div class="back-button">
-  <a href="#" onclick="history.go(-1); return false;">
-    <i class="fas fa-arrow-left"></i>
-  </a>
-</div>
-  <nav>
-    <div class="navbar">
-      <ul class="left-menu">
-        <li><a href="index.html">WENGE WANG</a></li>
-      </ul>
-      <ul class="right-menu">
-        <li><a href="index.html" class="inactive">ABOUT</a></li>
-        <li><strong></strong><a href="daproject.html" class="active">DATA</a></strong></li>
-        <li><a href="uxproject.html" class="inactive">UX</a></li>
-        <li><a href="OTHER.html" class="inactive">OTHER</a></li>
-        <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="project-section">
-    <!--1st section-->
-    <div class="column ">
-      <div class="intro-text">
-        <div class="intro-heading">
-          <div class="intro-lead-in appear-element"> SITES Website Usability Research</div>
-        </div>
-
-      </div>
-      <div class="award-container down-element2">
-        <i class="fas fa-user">CLIENT: SMITHSONIAN INSTITUTE</i>
-      </div>
-    </div>
-
-    <div class="cs-button down-element">
-      <a href="https://docs.google.com/presentation/d/1S6aUC8sZrulHWhTkCzKLjd4WDPJRLAlQ1vRlSJEeseQ/edit?usp=sharing"
-        target="_blank" class="primary-button">
-        <i class="fas fa-sitemap"></i> Design Report
-      </a>
-      <a href="https://www.sites.si.edu/s/" target="_blank" class="primary-button">
-        <i class="fas fa-external-link-alt"></i> Clients' Website
-      </a>
-    </div>
-
-    <div class="cs-banner">
-      <img src="image\ux-1.svg" alt="ux-project-1 Image"data-scroll>
-    </div>
-    
-   
 
 
-    <div class="cs-content down-element2">
-      <div class="case-study-nav ">
-        <ul>
-          <li><em><a href="index.html" class="inactive">Home</a></em></li>
-          <li><span>/</span></li>
-          <li><em><a href="project.html" class="inactive">Projects</a></em></li>
-          <li><span>/</span></li>
-          <li><em><a href="da1.html" class="active">SITES Website Usability Research</a></em></li>
-        </ul>
-      </div>
-      <h4>OVERVIEW</h4>
+    <div class="project-section">
+        <!--1st section-->
+        <div class="column ">
+            <div class="intro-text">
+                <div class="intro-heading">
+                    <div class="intro-lead-in appear-element black">
+                        <h1>UI Redesign <br>
+                            <div class="subtitle">We're Not Really Strangers Online Experience Evolution</div>
+                        </h1>
+                    </div>
 
-      <div class="paddig-bottom1">
-        <h3> About the Project</h3>
+                </div>
 
-
-        <div class="row column">
-          <div class="case-study-intro">
-            <p>
-              Smithsonian Institute Traveling Exhibition Services (SITES), a division of the Smithsonian Institution,
-              has
-              been creating and managing exhibitions for over 70 years, bringing knowledge, discovery, and experiences
-              to
-              audiences worldwide.The primary goal of our user experience (UX) research is to help SITES improve their
-              website and the experience for their target audience. We conducted several rounds of moderated user
-              testing
-              to
-              identify areas of improvement in the current website and provide actionable recommendations for enhancing
-              the
-              UX. By making the website more intuitive and accessible, we aim to help SITES achieve their mission of
-              bringing the Smithsonian experience to communities around the world.</p>
-          </div>
-          <div class="column">
-            <div class="row" style="padding-bottom:23px">
-              <div class="case-study-details">
-                <h5>Date</h5>
-                <p>May 6, 2023</p>
-              </div>
-              <div class="case-study-details">
-                <h5>Tools</h5>
-                <p>Figma, Notion, Google Form</p>
-              </div>
+                <div>
+                    <div>
+                        <h2 class="author appear-element black">by <a href="uxproject.html" class="black">Wenge
+                                Wang</a>, Yeatasmin Shiropa, Cici Lin, Dominique Dorvil</h2>
+                    </div>
+                </div>
             </div>
 
-            <div class="case-study-details">
-              <h5>My role</h5>
-              <p>My role includes brainstorming user testing scenarios, conducting tests, analyzing collected data,
-                formulating a website improvement recommendation, contributing to the final report's design, and
-                presenting
-                findings to the client.</p>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="cs-content-white">
-      <div class="cs-content">
-   
-      
-          <h3> Problem Statement</h3>
-          <div class="process-section">
-            <p >SITES is working to increase event bookings and enhance user engagement. Also, log in system creates a hurdle, and the manual booking process through phone calls is slowed
-              down due to a shortage of staff.</p>
-            </div>
-            </div>
-
-      </div>
-       <div class="cs-content">
-      
-      <h4>
-        OBJECTIVES & GOALS
-      </h4>
-        <div class="process-details">
-          <p>  <i class="fas fa-check-circle blue"></i> Develop strategies to increase engagement from the target audience</p>
-              <p>
-                <i class="fas fa-check-circle blue"></i> Streamline the login process for accessing additional exhibitions
-              </p>
         </div>
 
-     
-      </div>
-     <!-- <div class="cs-content">
-        <div class="problem-section centered column">
-
-          <h1 class="hollow-text paddig-bottom1">Objectives & Goals</h1>
-          <div class="process-details bold cs-content">
-            <p>  <i class="fas fa-check-circle "></i> Develop strategies to increase engagement from the target audience</p>
-              <p>
-                <i class="fas fa-check-circle"></i> Streamline the login process for accessing additional exhibitions
-              </p>
-          </div>
-        </div>
-      </div>-->
-
- 
-
-
-
-      </div>
-
-     <!-- <div class="cs-content">
-        <div class=" process-section centered column">
-          <h1 class="hollow-text paddig-bottom1">Process</h1>
-          <section class="design-process-section" id="process-tab">
-            <div class="pcontainer">
-
-              <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-                <li role="presentation" class="pactive">
-                  <a href="#Define" aria-controls="Define" role="tab" data-toggle="tab">
-                    <i class="fas fa-bullseye" aria-hidden="true"></i>
-                    <p>Define</p>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a href="#Discover" aria-controls="Discover" role="tab" data-toggle="tab">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <p>Discover</p>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a href="#Test" aria-controls="Test" role="tab" data-toggle="tab">
-                    <i class="fas fa-user" aria-hidden="true"></i>
-                    <p>Test</p>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a href="#Design" aria-controls="Design" role="tab" data-toggle="tab">
-                    <i class="fas fa-pencil-ruler" aria-hidden="true"></i>
-                    <p>Design</p>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a href="#Report" aria-controls="Report" role="tab" data-toggle="tab">
-                    <i class="fas fa-chart-bar" aria-hidden="true"></i>
-                    <p>Report</p>
-                  </a>
-                </li>
-              </ul>
-
+        <div class="cs-button down-element">
         
+            <a href="https://docs.google.com/presentation/d/168AF_TMONMQa7YNlufeNiD3HhPOl-3vfZ8In-ZVFsZw/edit?usp=sharing" target="_blank" class="primary-button"
+            style="background-color: #c10016;">
+            <i class="fas fa-external-link-alt"></i> Design Report
+        </a>
+
+        </div>
+        <div class="card-banner-imgae">
+            <img src="image/werenot.png" alt="We're Not Really Strangers Product" style="width: 530px;
+                padding-left: 55vw;
+                position: absolute;
+                padding-top: 18vh;" data-scroll>
+        </div>
+        <div class="cs-banner">
+
+            <div style="height:78vh" data-scroll></div>
+        </div>
+
+
+        <div class="cs-content down-element2">
+
+            <div class="row">
+                <h4 style="font-weight:600">Project Overview
+                    <i class="fa-solid fa-book-open"></i>
+                </h4>
+
+
+            </div>
+
+            <div class="row column">
+                <div class="case-study-intro">
+                    <p><br>
+                        In this project, we undertook a redesign initiative for the 'We're Not Really Strangers'
+                        website, a brand specializing in card games designed to foster deeper connections between
+                        individuals, whether in friendships or relationships. With the brand's core mission of
+                        facilitating meaningful interactions in mind, we conducted 11 comprehensive unmoderated user
+                        tests to pinpoint areas for improvement and provide tailored recommendations to enhance
+                        usability and engagement, fostering deeper connections with users along the way.
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="case-study-details">
+                        <h5><br>Date</h5>
+                        <p>Feb, 2023</p>
+                    </div>
+
+                    <div class="case-study-details">
+                        <h5>Tools</h5>
+                        <p>Figma, Google Sheets, Google Form, Google Slide</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="cs-content">
+            <br><br><br> <br>
+            <h3>What is 'We're Not Really Strangers'?</h3>
+
+            <p><a href="https://www.werenotreallystrangers.com/" target="_blank" class="red underline">"We're Not Really Strangers”</a> is a brand that sells ard games
+                meant for people to get to know each other better on different levels (friendships, relationships, etc).
+                The intention behind the brand is for players to forge meaningful connections with others.
+                <br>
+                The brand blew up on social media and are catered to young adults. Their online website allows users to
+                shop games and other merchandise, play quizzes, and download free games.
+            </p>
+
+
+
+
+        </div>
+
+
+
+
+        <div class="cs-content">
+            <br><br><br>
+            <h3>Who are the Users?</h3>
+            <div class="row column">
+                <div class="mindmapintro">
+                    <p>The product's users encompass a diverse spectrum of individuals, all driven by a shared desire
+                        for deeper connections with others.
+                        Central to their values are emotional intimacy, self-awareness, and empathy, shaping their
+                        interactions and relationships. These users embrace thought-provoking conversations that foster
+                        vulnerability and self-discovery, reflecting their openness to meaningful engagement and
+                        personal growth. For clarity, I built a mind map outlining their characteristics and perferences
+                        based on four metrics.
+                    </p><br>
+                    <div class="column">
+                        <div class="legend">
+                            <div class="circle bar2"></div>
+                            <span>Demographic Details</span>
+                        </div>
+                        <div class="legend">
+                            <div class="circle bar3"></div>
+                            <span>Psychographic Characteristics</span>
+                        </div>
+                        <div class="legend">
+                            <div class="circle bar4"></div>
+                            <span>Behavioral Tendencies</span>
+                        </div>
+                        <div class="legend">
+                            <div class="circle bar5"></div>
+                            <span>User Needs</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="mindmap" style="padding-left:50px">
+                        <style>
+                            .link.line {
+                                display: block;
+                            }
+
+                            .node circle {
+                                stroke: gray;
+                                stroke-width: 1px;
+
+                            }
+
+
+                            .node text {
+                                font: 11px sans-serif;
+                                pointer-events: none;
+                                font-family: 'Kanit', sans-serif;
+                                font-weight: 400;
+                            }
+                        </style>
+                        <svg width="480" height="500"></svg>
+                        <script>
+                            var graph = {
+                                "nodes": [
+                                    { "atom": "Target Users", "size": 300, "color": "#F5F5F8", },
+                                    { "atom": "18 - 35 Years Old", "size": 80, "size2": "4.7/5", "color": "#C10016" },
+
+                                    { "atom": "Openness", "size": 40, "size2": "4.3/5", "color": "#7b00c8" },
+                                    { "atom": "Vulnerability", "size": 40, "size2": "3.9/5", "color": "#7b00c8" },
+                                    { "atom": "Active", "size": 40, "color": "#7b00c8" },
+
+                                    { "atom": "Social Media", "size": 70, "color": "#006a96" },
+                                    { "atom": "Online Shopping", "size": 80, "color": "#006a96" },
+                                    { "atom": "Interest Groups", "size": 70, "color": "#006a96" },
+
+                                    { "atom": "Authentic Connection", "size": 100, "color": "gray" },
+                                    { "atom": "Meaningful Conversations", "size": 150, "color": "gray" },
+                                    { "atom": "Personal Growth", "size": 130, "color": "gray" },
+                                ],
+                                "links": [
+                                    { "source": 0, "target": 1, "bond": 1 },
+                                    { "source": 0, "target": 2, "bond": 1 },
+                                    { "source": 0, "target": 3, "bond": 1 },
+                                    { "source": 0, "target": 4, "bond": 1 },
+                                    { "source": 0, "target": 5, "bond": 1 },
+                                    { "source": 0, "target": 6, "bond": 1 },
+                                    { "source": 0, "target": 7, "bond": 1 },
+                                    { "source": 0, "target": 8, "bond": 1 },
+                                    { "source": 0, "target": 9, "bond": 1 },
+                                    { "source": 0, "target": 10, "bond": 1 }
+                                ]
+                            };
+
+
+                            var width = 600,
+                                height = 600;
+
+                            var radius = d3.scale.sqrt()
+                                .range([0, 6]);
+
+                            var svg = d3.select("svg")
+                                .attr("width", width)
+                                .attr("height", height);
+
+                            var force = d3.layout.force()
+                                .size([width, height])
+                                .charge(-1800)
+                                .linkDistance(200)
+                                .nodes(graph.nodes)
+                                .links(graph.links)
+                                .start();
+
+                            var link = svg.selectAll(".link")
+                                .data(graph.links)
+                                .enter().append("line")
+                                .attr("class", "link")
+                                .style("stroke", "gray");
+
+                            var nodes = svg.selectAll(".node")
+                                .data(graph.nodes)
+                                .enter().append("g")
+                                .attr("class", "node")
+                                .call(force.drag);
+
+                            var circles = nodes.append("circle")
+                                .attr("r", function (d) { return radius(d.size); })
+                                .style("fill", function (d) { return d.color; })
+                                .style("stroke", "none");
+
+                            var text = nodes.append("text")
+                                .attr("dy", ".35em")
+                                .attr("text-anchor", "middle")
+                                .text(function (d) { return d.atom; })
+                                .style("font-size", function (d) { return d.size === 300 ? "18px" : null; })
+                                .style("fill", function (d) { return (d.size === 300) ? "black" : "white"; });
+
+                            var clickedCircle = null;
+
+
+
+                            force.on("tick", function () {
+                                nodes.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+                                link.attr("x1", function (d) { return d.source.x; })
+                                    .attr("y1", function (d) { return d.source.y; })
+                                    .attr("x2", function (d) { return d.target.x; })
+                                    .attr("y2", function (d) { return d.target.y; });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cs-content">
+            <br><br><br>
+            <h3>Why Redesign?</h3>
+            <p>
+                We conducted 11 unmoderated user testing sessions on <a href="https://www.usertesting.com/" target="_blank"
+                    class="black underline">UserTesting</a>, targeting young students and simulating a college freshmen
+                social party environment to mimic real-world interactions. Each participant was given five main tasks
+                and questions aimed at understanding their preferences, expectations, and pain points within the context
+                of the product or service being tested. By analyzing videos from participants who recorded their
+                experiences on the website and performed the tasks while 'thinking aloud' in their own environments, we identified several key findings, indicating areas for improvement.
+            <div class="artcontainer underline gray">
+                <div>See the list of main tasks here.</div>
+                <div class="artinfo">
+                    <p style="font-weight:300;padding-top:10px">&#10102; Go to We're Not Really Strangers homepage and
+                        browse without clicking.</p>
+                    <p style="font-weight:300">&#10103; Look for what the brand is about to learn more about it.</p>
+                    <p style="font-weight:300">&#10104; Based on what you saw on this page, how would you describe
+                        “We’re Not Really Strangers” to a friend?</p>
+                    <p style="font-weight:300">&#10105; Would you visit this website again? </p>
+                    <p style="font-weight:300">&#10106; How easy or difficult was it to explore the navigation bar?</p>
+
+                </div>
+            </div>
+            </p>
+            <div class="row column" style="gap:88px;max-width:68vw">
+                <div class="column" style="max-width:600px"> <span class="percentage">90%</span>
+                    <p style="color:#c10016"> Found Site's Purpose Off-Task</p>
+                    <p style="padding-top:10px; color:#c10016; font-weight: 200;">Users found it easy to learn about the site's content, but this understanding was not achieved through tasks intended to define the site's purpose.</p>
+                </div>
+
+                <div class="column"><span class="percentage">81%</span>
+                    <p  style="color:#c10016">Encountered Visibility Issues</p>
+                    <p style="padding-top:10px; color:#c10016; font-weight: 200;">
+Users found it difficult to find the free downloaded games.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="cs-content">
+            <br><br><br>
+            <h3>Recommendation 1: Clearer Navigation</h3>
+           
             
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane " id="Define">
-                  <div class="design-process-content row centered ">
-                    <h3>Define</h3>
-                    <p class="text-left paddig-left1">During this phase, we met with our client, a Smithsonian
-                      representative, on Zoom to comprehend
-                      their challenges and requirements thoroughly.</p>
-                  </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="Discover" style="display: none;">
-                  <div class="design-process-content row centered ">
-                    <h3>Discover</h3>
-                    <p class="text-left paddig-left1 ">In the discovery phase, we did a comprehensive analysis of the
-                      client's existing website,
-                      Google Analytics data. This step involved creating user personas and establishing effective
-                      research methodologies.</p>
-                  </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="Test" style="display: none;">
-                  <div class="design-process-content row centered">
-                    <h3>Test</h3>
-                    <p class="text-left paddig-left1">Then, we conducted Moderated User Interviews to gather valuable
-                      insights into user
-                      experiences. Following these interviews, we further analyzed the collected data to identify
-                      specific user pain points and areas for improvement.</p>
-                  </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="Design" style="display: none;">
-                  <div class="design-process-content row centered">
-                    <h3>Design</h3>
-                    <p class="text-left paddig-left1">We utilized RIC scores to determine the priority of user issues
-                      and
-                      proceeded to design
-                      prototypes specifically addressing the top three concerns. Our focus was on creating a
-                      user-friendly and efficient interface to enhance overall usability.</p>
-                  </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="Report" style="display: none;">
-                  <div class="design-process-content row centered">
-                    <h3>Report</h3>
-                    <p class="text-left paddig-left1">The final step is to present a detailed report to our client. This
-                      report concluded
-                      findings from the entire process, along with actionable recommendations for enhancing the
-                      website.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>-->
-
-
- 
-
-
-   
-
-   
-
-
-
-
-    <div class="cs-content">
-      
-      <h4> METHODOLOGY</h4>
-      <div class="process-section">
-        <h3>Moderated User Testing + RIC Score</h3>
-        <div class="process-details">
-          <p>After conducting moderated user testing, we used a method called RIC score to prioritize user issues. RIC stands for Reach,
-            Impact, and Confidence. 'Reach' assesses the feature's potential user coverage,
-            'Impact' gauges the effect on individual users, and 'Confidence' measures our certainty regarding
-            impact and reach assessments.This
-            helped us determine
-            the severity of the issues identified during user testing, so we could focus on the most important ones
-            first. I created an Google Sheet for everyone to document their discovered user issues, and calculated the
-            RIC score. It was a useful tool for helping us improve efficiency to improve the overall user experience.
-          </p>
-        </div>
-
-        <table class="fixed_headers">
-          <thead>
-            <tr>
-              <th>User Problem</th>
-              <th>Reach</th>
-              <th>Impact</th>
-              <th>Confidence</th>
-              <th>Score</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Too much content to read, details like space taken up, secuity etc missing</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="bold">9</td>
-            </tr>
-            <tr>
-              <td>Users find the login frustrating</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="bold">9</td>
-            </tr>
-            <tr>
-              <td>Users didn't notice the price</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="bold">9</td>
-            </tr>
-            <tr>
-              <td>Viewing tour schedule is unclear with the dates and the unresponsive toggle</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="bold">9</td>
-            </tr>
-            <tr>
-              <td>The welcome statement is confusing</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td style="background-color: #e5e5e5;">2</td>
-              <td class="bold">8</td>
-            </tr>
-            <tr>
-              <td>Post a question button is confusing on what the button will do</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td style="background-color: #e5e5e5;">2</td>
-              <td style="background-color: #e5e5e5;">2</td>
-              <td class="bold">7</td>
-            </tr>
-            <tr>
-              <td>Content confusion in terms of "running feet", "security type"</td>
-              <td style="background-color:#e5e5e5;">2</td>
-              <td class="white" style="background-color: #5800d3;">3</td>
-              <td style="background-color: #e5e5e5;">2</td>
-              <td class="bold">7</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="project-button table-full-list"> <a
-            href="https://docs.google.com/spreadsheets/d/1VA9s4ZPYMda9iD-amydqfoagnuoQirdCwlXSS2B74Lc/edit?usp=sharing"
-            target="_blank" class="secondary-button gray-full-list">VIEW FULL LIST</a>
-        </div>
-      </div>
-
-      <div class="process-section">
-        <h3>Competitive Analysis</h3>
-        <div class="process-details">
-          <p>We also included a competitive analysis to verify our findings and ensure that our recommendations were in
-            line with industry best practices. We looked at other museums and programs to gain a better understanding of
-            how they approach user experience and what features and functionalities they offer.
-          </p>
-        </div>
-
-        <table class="fixed_headers">
-          <thead>
-            <tr>
-              <th>Organization</th>
-              <th>Login Option </th>
-              <th>Contents/</th>
-              <th>Crates</th>
-              <th>Trucks</th>
-              <th  class="laptop-show-only">Staffing</th>
-              <th>Booking</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>SITES</td>
-              <td class="white" style="background-color: #5800d3;">YES</td>
-              <td class="white" style="background-color: #5800d3;">YES</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td class="white laptop-show-only" style="background-color: #5800d3;">YES</td>
-
-              <td>EMAIL</td>
-            </tr>
-            <tr>
-              <td>NatGeo</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td class="white" style="background-color: #5800d3;">YES</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td class="laptop-show-only" style="background-color: #e5e5e5">NO</td>
-
-              <td>WEB FORM</td>
-            </tr>
-            <tr>
-              <td>AMNH</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td class="laptop-show-only" style="background-color: #e5e5e5">NO</td>
-
-              <td>WEB FORM</td>
-            </tr>
-            <tr>
-              <td>BK Museum</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td class="white" style="background-color: #5800d3;">YES</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td style="background-color: #e5e5e5">NO</td>
-              <td class="laptop-show-only" style="background-color: #e5e5e5">NO</td>
-
-              <td>EMAIL</td>
-            </tr>
-
-          </tbody>
-        </table>
-        <div class="project-button table-full-list"> <a
-            href="https://docs.google.com/spreadsheets/d/1w0iyCUkpqrvfhnN-QUxBepu2zE9-9se9NVxvwXBXYJM/edit?usp=sharing"
-            target="_blank" class="secondary-button gray-full-list">VIEW FULL LIST</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="cs-content-white">
-      <div class="cs-content">
-        <h4> FINAL OUTPUT</h4>
-
-        <div class="process-section">
-          <h3>Recommendation 1: Improve Landing Page</h3>
-          <div class="centered recommendation">
-            <div class="row column">
-              <div class="r-left">
-                <p><i class="fas fa-star"></i> Change introduction to be clearer & replace login with call scheduling
-                </p><br>
-                <img src="image\ux1-recommendation2-schedule.svg" alt="ux1-recommendation-2-schedule Image">
-              </div>
-              <div class="r-right">
-                <p><i class="fas fa-star"></i> Replace Login with search to facilitate easy exhibition search
-                </p><br class="laptop-show-only"><br class="laptop-show-only"><br class="laptop-show-only"><br class="laptop-show-only">
-
-              </div>
-            </div>
-            <div class="recommendation-image">
-              <img src="image\ux1-recommendation2.svg" alt="ux1-recommendation-2 Image">
-            </div>
-
-          </div>
-
-        </div>
-        <div class="process-section">
-          <h3>Recommendation 2: Increase Overall Readability</h3>
-          <div class="centered recommendation">
-            <div class="row column">
-              <div class="r-left"><br class="laptop-show-only"><br class="laptop-show-only"><br class="laptop-show-only"><br class="laptop-show-only">
-                <p><i class="fas fa-star"></i> Moving the title down improves readability</p>
-              </div>
-              <div class="r-right r-right2">
-                <p><i class="fas fa-star"></i> By making the title font larger, it draws the user’s eye
-                </p><br>
-                <p><i class="fas fa-star"></i> Removing the buttons helps keep the user focused on finding the exhibit
-                  information
-                </p>
-              </div>
-            </div>
-            <div class="recommendation-image recommendation-image1">
-              <img src="image\ux1-recommendation1.svg" alt="ux1-recommendation-1 Image">
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="process-section">
-          <h3>Recommendation 3: Reorganize Exhibit Page</h3>
-          <div class="centered recommendation">
-            <div class="row column">
-              <div class="r-left"><br class="laptop-show-only"><br class="laptop-show-only"><br class="laptop-show-only"><br class="laptop-show-only">
-                <p><i class="fas fa-star"></i> Crucial scheduling information is easy to jump to on the same page
-                </p>
-              </div>
-              <div class="r-right r-right2">
-                <p><i class="fas fa-star"></i> Users want more media and less text
-                </p>
-              </div>
-            </div>
-            <div class="recommendation-image recommendation-image2">
-              <img src="image\ux1-recommendation3.svg" alt="ux1-recommendation-3 Image">
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-
-
-    </div>
-
-
-
-
-    <div class="cs-content">
-      <h4> Reflection</h4>
-      <div class="process-section">
-        <h3>Takeaway</h3>
-        <div class="process-details">
-          <p>Presenting our work to the client was a great learning opportunity as well. I learned how to present my
-            work in a clear, concise, and engaging manner. Additionally, I learned how to handle questions and feedback
-            from clients, which is a crucial skill for any researcher.
+            <div class="row">
+        
+            <div class="left">
+                <p class="padding-top: 10px"><b>User Issue</b>:  Users have a difficult time finding free games. Many users were confused about labeling and mentioned they weren’t clear, and that size was an issue.</p>
+            <br><p id="trigger">
+                <b>Solution</b>: Fix Navigation Bar. Rename “Quiz” & “Online”, put under new tab “Online Content”, enlarge, and move social media icons to footer.
+            </p>
             <br>
-            The feedback we received from SITES team and also from the class was incredibly helpful. It gave me
-            insight into areas where I need to improve, such as using simpler language when presenting technical jargon
-            and use the proper color palette, which will definitely help to improve my future presentations. Overall,
-            this project was a wonderful learning experience that helped me to grow both as a researcher and as a team
-            member.
-          </p>
-        </div>
-
-      </div>
-
-
-
-    </div>
-
-
-
-    <div class="other-projects cs-content">
-      <p>We've reached the finish line!</p>
-      <h2 class="section-title">Want to see more?<br class="mobile-show-only">Next Project: </h2>
-      <div class="mobile-show-only">
-  
-        <div class="project-button"> <a href="da1.html" class="secondary-button"><p>Art in Renaissance, Baroque, and Rococo</p></a>
-        </div>
-      </div>
-      <div class="project-entire  laptop-show-only">
-        <div class="project-container">
-          <div class="item" style="background-image: url(image/ux-3.svg);">
-            <div class="item-desc">
-                <h3>Concept to Prototype</h3>
-                <h4>Pratt Connect, A Website Designed for Pratt Students</h4>
-
-                <div class="project-button"> <a href="ux0.html" class="secondary-button">CASE STUDY</a>
+            <p>See what the users say &#10549;</p>
+            <div class="row">
+                <div class="artcontainer underline gray">
+                    <i class="red fa-solid fa-face-meh"></i>
+                    <div class="artinfo">
+                      <p>"I wasn't able to find able to find a free game."</p>
+                    </div>
                 </div>
+                <div class="artcontainer underline gray">
+                    <i class="red fa-solid fa-face-meh"></i>
+                    <div class="artinfo ">
+                      <p>"I didn't really know what the online tab was for. it's like a little bit vague, online can mean anything."
+                    </p>
+                    </div>
+                </div>
+                <div class="artcontainer underline gray">
+                    <i class="orange fa-solid fa-face-meh"></i>
+                    <div class="artinfo ">
+                      <p>"Maybe if it could be a bit bigger so that people could see it more clearly, it would be easier to explore."
+                    </p>
+                    </div>
+                </div>
+                <div class="artcontainer underline gray">
+                    <i class="orange fa-solid fa-face-meh"></i>
+                    <div class="artinfo ">
+                      <p>"The place where it (the downloadable game) was in the online section was a little hidden.."
+                    </p>
+                    </div>
+                </div>
+        </div>
+        </div>
+            <div class="right">
+                <div class="recommendation">
+                    <img src="image/we1_1.png" alt="original website navbar">
+                     <div class="image-container" style=" margin-top: -230px;"></div>
+                </div>
+               
             </div>
         </div>
-          <div class="item" style="background-image: url(image/da-2.svg);">
-            <div class="item-desc">
-              <h3>NSF Awarded Project</h3>
-              <h4>Data Literacy with, for, and by Youth</h4>
-
-              <div class="project-button"> <a href="da2.html" class="secondary-button">CASE STUDY</a>
-              </div>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(image/da-3.svg);">
-            <div class="item-desc">
-              <h3>Data Visualization</h3>
-              <h4>Visualizing the Most Subscribed YouTube Channels</h4>
-
-              <div class="project-button"> <a href="da3.html" class="secondary-button">CASE STUDY</a>
-              </div>
-
-            </div>
-          </div>
-         
-
-
         </div>
-      </div>
-      <a href="ux1.html" class="scroll-hint">
-        <div class="scroll-icon"></div>
-      </a>
-    </div>
-  </div>
-</div>
-  <footer>
 
-    <div class="footer">
-      <div>
-        <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
-      </div>
-      <div class="footer-icon ">
-        <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
-            aria-hidden="true">wwang24@outlook.com</i></a>
-        <a href="ux1.html"><i class="fas fa-arrow-up  laptop-show-only"></i></a>
-      </div>
-    </div>
+        <div class="cs-content">
+            <br><br><br>
+            <h3>Recommendation 2: Add Filters to “Shop” Pages            </h3>
+           
+            
+            <div class="row">
+        
+            <div class="left">
+                <p class="padding-top: 10px"><b>User Issue</b>: Users face difficulties when attempting to apply filters to shop items on 'Shop' pages, such as those found in the 'Games' section.
+                 </p>
+            <br>
+            <p id="trigger2">
+                <b>Solution</b>: We added two filters. The first filter bar helps customers to find games based on specific categories, and the second filter bar is based on different criteria such as default, newest, trend, and price.
+            </p>
+            <br>
+            <p>See what the users say &#10549;</p>
+            <div class="row">
+                <div class="artcontainer underline gray">
+                    <i class="red fa-solid fa-face-meh"></i>
+                    <div class="artinfo">
+                      <p>"It's really hard to find what you're looking for."
+                    </p>
+                    </div>
+                </div>
+                <div class="artcontainer underline gray">
+                    <i class="red fa-solid fa-face-meh"></i>
+                    <div class="artinfo ">
+                      <p>"Some things you can't find and then you have to look for it for ages."
+                    </p>
+                    </div>
+                </div>
+           
+        </div>
+        </div>
+            <div class="right">
+                <div class="recommendation">
+                    <img src="image/we2_1.png" alt="original website navbar">
+                     <div class="image-container2" style=" margin-top: -180px;"></div>
+                </div>
+               
+            </div>
+        </div>
+        </div>
 
-  </footer>
+        <div class="cs-content">
+            <br><br><br>
+            <h3>Recommendation 3: Improve Information Clarity in 'About' Section </h3>
+           
+            
+            <div class="row">
+        
+            <div class="left">
+                <p class="padding-top: 10px"><b>User Issue</b>: "About" section is not clear enough for users to fully understand brand and mission. This lack of clarity undermines the effectiveness of the "About" section.
+                 </p>
+            <br>
+            <p id="trigger3">
+                <b>Solution</b>: Add more information to “About” section and add “About” as a title to match navigation bar labeling
+            </p>
+            <br>
+            <p>See what the users say &#10549;</p>
+            <div class="row">
+                <div class="artcontainer underline gray">
+                    <i class="red fa-solid fa-face-meh"></i>
+                    <div class="artinfo">
+                      <p>"It's really hard to actually find the company's mission."
+                    </p>
+                    </div>
+                </div>
+                <div class="artcontainer underline gray">
+                    <i class="red fa-solid fa-face-meh"></i>
+                    <div class="artinfo">
+                      <p>"I would say it seems like a dating app but it's about card game."
+                    </p>
+                    </div>
+                </div>
+                <div class="artcontainer underline gray">
+                    <i class="red fa-solid fa-face-meh"></i>
+                    <div class="artinfo">
+                      <p>"I think that needs to be defined a lot more because I was confused."
+                    </p>
+                    </div>
+                </div>
+             
+                </div>
+           
+        </div>
+
+            <div class="right">
+                <div class="recommendation">
+                    <img src="image/we3_1.png" alt="original website navbar">
+                     <div class="image-container3" style=" margin-top: -180px;"></div>
+                </div>
+               
+            </div>
+        </div>
+        </div>
+    <div class="cs-content">
+        <br><br><br>
+        <h3>Conclusion</h3>
+      <p>
+        “We’re Not Really Strangers” does a good job of setting a tone for their brand and appealing to their audience. However, locating certain things were difficult or hidden, which lead to the few changes we made to improve the site’s navigation.
+        Using the methodology of user testing allowed us to received feedback that provided direct visualization of user navigation and how participants interpreted our tasks and the website.
+       <br> We would like to extend our gratitude to competitors <b>"What Do You Meme"</b> and <b>"Cards Against Humanity"</b> for their inspirational contributions and insights, which have greatly enriched our understanding of this industry.
+       <br>  <br>Finally, it's important to note that these testing sessions and recommendations were conducted in February 2023, so there may be differences from the current state of the website. 
+    </p>
+    </div>   
+    
+    <div class="cs-content">
+        <br><br><br>
+        <h3>Reflection</h3>
+        <p>Change our questions for participants to understand better. We noticed the users interpreted the questions differently than what we intended which distorted some of the results. For example, only 18% of participants said the navigation was easy to use despite 100% of participants having issues navigating the website. Also we could have explained what a navigation bar is because almost all of our users did not know what a “navigation bar” was. 
+        </p>
+        <div class="reflection-note">
+            <p><span class="red"><b><i class="fa-solid fa-circle-xmark"></i> Ex:</b></span> How easy or difficult was it to explore the navigation bar?
+            </p>
+            <p><span class="red"><b><i class="fas fa-check-circle"></i> What we should have said:</b></span> How easy or difficult was it to use the navigation bar (page’s menu buttons in the upper right corner) to help you solve your tasks.
+        </p>
+    </div>
+        <br>
+        <p>One of our tasks were really hard to find because the navigation on the site is so poor. So in our task, we should have clarified that the task is able to be done because many of the participants believed that task wasn’t done on the site.
+        </p>
+        <div class="reflection-note">
+            <p><span class="red"><b><i class="fa-solid fa-circle-xmark"></i> Ex:</b></span> Find and download a free game that you and your friends would enjoy.
+            </p>
+            <p><span class="red"><b><i class="fas fa-check-circle"></i> What we should have said:</b></span> There are free games on this website. Please find the free online editions (download optional). Downloading only pops up another page.
+        </p>
+        </div>
+
+       </div>
+</div>       <br><br><br>       <br><br><br>
+       <footer>
+
+        <div class="footer">
+            <div>
+                <p>2024 &copy; Designed & Programmed by Wenge Wang</p>
+            </div>
+            <div class="footer-icon ">
+                <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"><span
+                            style="font-family: times;">wwang24@outlook.com</span></i></a>
+                <a href="uxproject.html"><i class="fas fa-home"></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
 
 </body>
+<script>
+
+    const artContainers = document.querySelectorAll('.artcontainer');
+
+    artContainers.forEach(artContainer => {
+        const artInfo = artContainer.querySelector('.artinfo');
+        const artInfoPlaceholder = artContainer.querySelector('.artinfo-placeholder');
+
+        artContainer.addEventListener('mouseover', function (event) {
+            const x = event.clientX;
+            const y = event.clientY;
+
+            artInfo.style.left = x + 'px';
+            artInfo.style.top = y + 'px';
+
+            artInfo.style.opacity = '1';
+            artInfo.style.visibility = 'visible';
+        });
+
+        artContainer.addEventListener('mouseout', function () {
+            artInfo.style.opacity = '0';
+            artInfo.style.visibility = 'hidden';
+        });
+    });
+
+
+    var controller = new ScrollMagic.Controller();
+
+    var scene1 = new ScrollMagic.Scene({
+      triggerElement: '#trigger',
+      triggerHook: 0.5
+    })
+      .on('enter', function (event) {
+        document.querySelector('.image-container').style.backgroundImage = "url('image/we1_2.png')";
+      })
+      .on('leave', function (event) {
+        document.querySelector('.image-container').style.backgroundImage = "none";
+      })
+      .addTo(controller);
+
+      var scene2 = new ScrollMagic.Scene({
+      triggerElement: '#trigger2',
+      triggerHook: 0.5
+    })
+      .on('enter', function (event) {
+        document.querySelector('.image-container2').style.backgroundImage = "url('image/we2_2.png')";
+      })
+      .on('leave', function (event) {
+        document.querySelector('.image-container2').style.backgroundImage = "none";
+      })
+      .addTo(controller);
+
+      var scene3 = new ScrollMagic.Scene({
+      triggerElement: '#trigger3',
+      triggerHook: 0.5
+    })
+      .on('enter', function (event) {
+        document.querySelector('.image-container3').style.backgroundImage = "url('image/we3_2.png')";
+      })
+      .on('leave', function (event) {
+        document.querySelector('.image-container3').style.backgroundImage = "none";
+      })
+      .addTo(controller);
+
+
+
+
+</script>
 
 </html>

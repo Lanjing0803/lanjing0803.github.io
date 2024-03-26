@@ -7,7 +7,7 @@
 }
 
 
-
+.underline{text-decoration: underline;}
 .gray {
   color: #97a9bd !important
 }
@@ -33,7 +33,7 @@
 }
 
 .section1 {
-  background: #f0eff2
+  background: #f7f7f8
 }
 .sectionwhite{
   background:white
@@ -65,7 +65,7 @@
   background:
     radial-gradient(ellipse at center, #FDEC00 0%, rgba(0, 0, 0, 0) 70%),
     radial-gradient(ellipse at center, #FDEC00 0%, rgba(0, 0, 0, 0) 70%),
-    radial-gradient(ellipse at center, #f0eff2 0%, rgba(0, 0, 0, 0) 70%) #e6e3e9;
+    radial-gradient(ellipse at center, #f7f7f8 0%, rgba(0, 0, 0, 0) 70%) #e6e3e9;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 900px 900px, 900px 900px, 900px 900px;
   background-attachment: fixed;
@@ -230,8 +230,8 @@
 }
 
 body {
-  background: #f0eff2;
-
+  background: #f7f7f8;
+  cursor:default;
   overflow: hidden;
   color: white;
   font-family: 'Kanit', sans-serif;
@@ -294,8 +294,8 @@ body {
 }
 
 .section {
-  padding-left: 8vw;
-  padding-right: 8vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
   height: 100vh;
   transition: transform 1s;
   justify-content: center;
@@ -303,15 +303,12 @@ body {
 }
 
 nav {
-  padding-top: 1.8vh;
   left: 0;
   right: 0;
   padding-left: 6vw;
   padding-right: 6vw;
   position: absolute;
   z-index: 1000;
-  background-color: #403F45;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
   border-radius: 0 0 38px 38px;
 
 }
@@ -321,8 +318,7 @@ nav {
 }
 
 .nav-ux .navbar ul .active {
-  color: black;
-}
+  color: black;}
 
 .navbar {
   display: flex;
@@ -339,16 +335,20 @@ ul {
 
 .left-menu {
   display: flex;
+  flex-direction: column;
+  text-align: left;
   order: 1;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 33px;
   padding-left: 2vw;
+  padding-top:20px;
+  
 }
 
 .left-menu a {
   display: flex;
   align-items: center;
-  font-family: "Font Awesome 5 Free";
+  font-family: Times;
 }
 
 
@@ -364,18 +364,18 @@ ul {
 }
 
 a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   position: relative;
 }
-
+.navbar ul li a, .navbar .left-menu a{color:gray}
 
 .inactive::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: white;
+  background-color: gray;
   bottom: 0;
   left: 0;
   transform: scaleX(0);
@@ -408,12 +408,12 @@ a {
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s, color 0.3s;
-
+  width: fit-content;
 }
 
 .menu-button {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid gray;
   padding: 8px 16px;
   border-radius: 25px;
 
@@ -437,10 +437,10 @@ a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .aboutpage-contact-content-button .menu-button {
-  background-color: #403F45;
-  border: 2px solid #403F45;
-  padding: 8px 16px;
-  border-radius: 25px;
+  background-color: transparent;
+  border: 2px solid #97a9bd;
+  padding: 3px 16px;
+  border-radius: 40px;
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s, color 0.3s;
@@ -607,17 +607,19 @@ a {
 
 :root {
   --secondary: rgba(0, 0, 0, 0) 90%;
-  --third: #FDEC00;
+  --third: white
 }
 
 .shape {
-  background: linear-gradient(45deg, var(#88D5BF) 0%, var(--secondary) 100%);
   animation: morph 8s ease-in-out infinite;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  height: 530px;
+  height: 719px;
   transition: all 1s ease-in-out;
-  width: 600px;
-  z-index: 5;
+  width: 1012px;
+  z-index: 0;
+  top: -29vh;
+  left: -5vw;
+  position:absolute
 }
 
 @keyframes morph {
@@ -711,19 +713,33 @@ h4 {
 .project-entire {
   margin: 0;
   padding: 5px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 63vh;
+
 }
 
 .project-container {
   display: flex;
-
+  flex-wrap: wrap; 
+  margin-bottom:80px;
+  margin-top: 30px;
 }
-
-
+.project-container .column{  
+  flex-basis: calc((100% - 20px) / 3);
+  box-sizing: border-box;
+  padding: 3px;
+  margin-bottom: 23px;
+}
+.about{
+  line-height:2.2em;
+  padding: 120px 60px 50px 60px;
+  max-width:70vw;
+  font-weight:300;
+  font-size:20px
+}
+.about p{padding-top:10px}
 .item {
   margin: 0 20px 10px;
   width: 22vw;
@@ -1048,12 +1064,14 @@ h4 {
 .figma{
     width:0.8em;
 }
+.card{      transition: all .3s ease-in-out;cursor: pointer;}
+.card:hover{transform:scale(1.04)}
 .card, .card2 {
   display: flex;
   flex-direction: row;
   position: relative;
-  width: 20vw;
-  height: 15vw;
+  width: 18vw;
+  height: 18vw;
   perspective: 1000px;
   cursor: pointer;
   margin: 3vh;
@@ -1066,6 +1084,7 @@ h4 {
 .card2__front:hover{
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 .card2__front p{
   font-size:0.5em;
@@ -1091,7 +1110,7 @@ h4 {
   height: 100%;
   backface-visibility: hidden;
   transition: 1s;
-  border-radius: 10px;
+  border-radius: 40vw;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 0;
@@ -1117,7 +1136,7 @@ h4 {
 .card .card__back .project-button{
   padding: 0 26px 0 26px;
 }
-
+.card__back .row{gap:5px}
 .card__back h4 {
   padding: 0 26px 0 26px;
   color:black
@@ -1330,7 +1349,7 @@ figcaption {
     text-align: center;
     color: #97a9bd;
     transform: translateX(50%);
-    font-family: "Font Awesome 5 Free";
+   font-family: Times;
   }
 
   .overlay-logo {
@@ -1341,7 +1360,7 @@ figcaption {
     font-weight: 600;
     color: #97a9bd;
     line-height: 1em;
-    font-family: "Font Awesome 5 Free";
+    font-family: Times;
   }
 
   .intro-text {
@@ -1405,8 +1424,8 @@ figcaption {
   }
 
   .shape {
-    height: 342px;
-    width: 374px;
+    height: 861px;
+    width: 909px;
   }
 
   .aboutpage-contact-content {
@@ -1426,8 +1445,8 @@ figcaption {
 
   .card {
     position: relative;
-    width: 60vw;
-    height: 45vw;
+    width: 40vw;
+    height: 40vw;
     perspective: 1000px;
     cursor: pointer;
     display: block;

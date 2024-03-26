@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5XWCBWZ4');</script>
+  <!-- End Google Tag Manager -->
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Data Literacy: with, for, and by Youth Infographic | Wenge Wang</title>
+  <meta name="description"
+    content="Explore Data Analysis Projects at the intersection of Data Literacy and Youth Engagement. NSF-supported initiative promoting data literacy among youth. Featuring infographics and insights. Visit the personal portfolio for more.">
+
+  <link rel="icon" type="image/png" href='https://img.icons8.com/doodle/96/left-and-right-arrows.png'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Wenge Wang">
+  <link rel="stylesheet" href="css\css.css">
+  <link rel="stylesheet" href="css\cs.css">
+  <!--font-->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&display=swap" rel="stylesheet">
+
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+  <script type='text/javascript' src='js\case-study.js'></script>
+</head>
+<style>
+  .titler {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2957A5
+  }
+
+  .dot-container {
+    display: grid;
+    grid-template-columns: repeat(5, 10px);
+    grid-gap: 20px;
+  }
+
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray
+  }
+
+  .dotFTime {
+    background-color: #F5834E
+  }
+
+  .dotFParticipation {
+    background-color: #FAC24A
+  }
+
+  .dotFTimeOther {
+    background: linear-gradient(to right, #F5834E 45%, gray 55%);
+  }
+
+  .dotFParticipationOther {
+    background: linear-gradient(to right, gray 45%, #FAC24A 55%);
+  }
+
+  .dotCDataset {
+    background-color: #c5de92;
+  }
+
+  .dotCDrawing {
+    background-color: #18A18D;
+  }
+
+  .dotCJamboard {
+    background-color: #2957A5;
+  }
+
+  .dotCcontextual {
+    background-color: #572B46;
+  }
+
+  .dotCDatasetContextual {
+    background: linear-gradient(to right, #c5de92 45%, #572B46 55%);
+  }
+
+  body {
+    background: #F5F9EC;
+    color: #2957A5
+  }
+
+  .left {
+    padding-right: 48px
+  }
+
+  .fa-solid {
+    font-size: 38px;
+    padding-right: 13px;
+    color: #c5de92;
+  }
+
+  .fa-face-meh {
+    color: #FAC24A
+  }
+
+  .fa-face-laugh {
+    color: #18A18D;
+  }
+
+  .fa-solid:hover {
+    opacity: 0.6
+  }
+
+  .teensquote {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .teensquotecontainer {
+    max-width: 20vw
+  }
+
+  .teensquote .quote {
+    position: absolute;
+    background-color: #c5de92;
+    color: #F5F9EC;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    top: 38px;
+    transform: translateX(10%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: 400;
+    z-index: 3
+  }
+
+  .teensquote .quote1 {
+    background-color: #18A18D;
+  }
+
+  .legend {
+    display: flex;
+    align-items: center;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .circle2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .bar2 {
+    background-color: #18A18D;
+  }
+
+  .bar3 {
+    background-color: #F5834E;
+  }
+
+  .percentage {
+    font-size: 68px;
+    font-weight: 600;
+    margin-right: 10vw;
+    line-height: 1.3
+  }
+
+  @media (max-width: 1020px) {
+    .fa-solid {
+      font-size: 23px;
+    }
+
+    .teensquotecontainer {
+      max-width: 100vw
+    }
+
+    .mindmap svg {
+      margin-right: 5vw
+    }
+  }
+</style>
+
+<body>
+
+
+  <div class="project-section">
+    <div class="column">
+      <div class="intro-text">
+        <div class="intro-heading">
+          <div class="intro-lead-in appear-element black">
+            <h1>Data Literacy <br><div class="subtitle">Exploring How Teens Co-Design After-School Programs</div></h1>
+          </div>
+
+        </div>
+
+        <div>
+          <div><h2 class="author appear-element black">by <a href="index.html" class="black">Wenge Wang</a></h2></div>
+        </div>
+      </div>
+      <div class="award-container down-element">
+   <img src="image/Pratt_Institute_Logo.svg" alt="Pratt Logo" style="width:100px">
+
+      </div>
+    </div>
+
+    <div class="cs-button down-element">
+
+      <a href="https://sites.google.com/pratt.edu/data-activism-for-youth/home" target="_blank" class="primary-button"
+        style="background-color: #18A18D;">
+        <i class="fas fa-external-link-alt"></i> Project Website
+      </a>
+      <a href="https://public.tableau.com/views/D3piechart1/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link" target="_blank" class="primary-button"
+      style="background-color: #18A18D;">
+      <i class="fas fa-external-link-alt"></i> Tableau Sketch
+    </a>
+    </div>
+
+
+    <div class="cs-banner" style=" max-height: 80vh;">
+      <img src="image\da-2.svg" alt="da-project-2 Image" data-scroll>
+    </div>
+
+
+
+    <div class="cs-content down-element2">
+
+      <h4 style="color:#2957A5">About the Project
+        <i class='fas fa-map-marker-alt' style='font-size:38px;color:#c5de92'></i>
+      </h4>
+
+      <div class="row column">
+        <div class="case-study-intro">
+          <p><br>
+            The goal of the <strong><em>Data Literacy with, for, and by Youth</em> </strong>is to support data literacy
+            programs for youth at the library.
+            <br>
+            This project recruited 25 teenagers ages 13-17, including those from underrepresented groups, to co-design and implement four to six 90-minuten critical data literacy sessions in a public library. 
+            My role is to create the data visualizations to summarize some of what the teens had to say about the data literacy
+            activities created and tested, alongside teen co-designers, during a series of Data Labs held at the
+            Brooklyn Public Library.
+          </p>
+        </div>
+        <div class="column">
+          <div class="case-study-details">
+            <h5><br>Date</h5>
+            <p>May, 2023</p>
+          </div>
+       
+          <div class="case-study-details">
+            <h5>Tools</h5>
+            <p>Tableau, R, Excel, Adobe Illustrator, D3.js</p>
+
+          </div>
+          <div class="case-study-details">
+            <br>
+
+          </div>
+      
+
+
+
+        </div>
+      </div>
+
+    </div>
+    <div class="cs-content">
+      <h4></h4>
+      <h3>What types of data literacy activities do teens engage the most?</h3>
+      <div class="row column">
+        <div class="mindmapintro">
+          <br>
+          <p>With data from activity resources and exit surveys, I categorized the types of activities preferred by
+            teens, and employed sentiment analysis to delve deeper. Teens rated a selection of
+            activities on a scale of 1 to 5, with 5 representing the highest rank.
+            The resulting chart presents the average scores for each activity and arranges their types in order. This
+            methodology provides useful insights on the most popular activities among teens.</p>
+          <div class="case-study-details" style="padding-left:0; ">
+            <p class="laptop-show-only "><br>Click on Activities to See Ratings <spam
+                style="font-size:1.3em">&#10230;</spam><br><br></p>
+
+
+            <p>Hover and See What Teen Participants Think &#10549;<br><br> </p>
+            <div class="teensquotecontainer">
+             
+              <div class="teensquote">
+                <i class="fa-solid fa-face-smile"></i>
+                <div class=" quote">
+                  <p> <strong>"I really like how each of us get to communicate with our peers and share our thoughts
+                      towards data literacy." </strong> </p>
+                </div>
+              </div>
+              <div class="teensquote">
+                <i class="fa-solid fa-face-smile"></i>
+                <div class=" quote">
+                  <p> <strong>"I like making the story and trying to connected it back to data literacy" </strong> </p>
+                </div>
+              </div>
+              <div class="teensquote">
+                <i class="fa-solid fa-face-laugh"></i>
+                <div class="quote1 quote">
+                  <p> <strong>"Everything was great and it never felt like a harsh environment and it felt relaxed. "
+                    </strong> </p>
+                </div>
+              </div>
+              <div class="teensquote">
+                <i class="fa-solid fa-face-laugh"></i>
+                <div class="quote1 quote">
+                  <p> <strong>"I want you to know that I really liked this program and I had so much fun. Thanks for
+                      this
+                      great opportunity. " </strong> </p>
+                </div>
+              </div>
+              <div class="teensquote">
+                <i class="fa-solid fa-face-smile"></i>
+                <div class=" quote">
+                  <p> <strong>"I liked the data, and doing our dream board. " </strong> </p>
+                </div>
+
+              </div>
+              <!--  <div class="teensquote">
+              <i class="fa-solid fa-face-meh"></i>
+              <div class="quote1 quote">
+                <p> <strong>“I would have done more icebreaker activities. I wanted to get to know my fellow teens a bit
+                    better. "</strong> </p>
+              </div>
+            </div>-->
+              <div class="teensquote">
+                <i class="fa-solid fa-face-smile"></i>
+                <div class=" quote">
+                  <p> <strong>"I liked how we discussed different options for open data for teens and how we all pitched
+                      in our ideas. " </strong> </p>
+                </div>
+
+              </div>
+             
+              <div class="teensquote">
+                <i class="fa-solid fa-face-smile"></i>
+                <div class=" quote">
+                  <p> <strong>"I liked the jamboard session and the data quiz game!" </strong> </p>
+                </div>
+
+              </div>
+              <div class="teensquote">
+                <i class="fa-solid fa-face-smile"></i>
+                <div class=" quote">
+                  <p> <strong>"I enjoyed brainstorming. " </strong> </p>
+                </div>
+
+              </div>
+             <div class="teensquote">
+              <i class="fa-solid fa-face-meh"></i>
+              <div class="quote1 quote">
+                <p> <strong>“I would also suggest trying the squirrel activity outdoors and creating your own dataset
+                    similar to the squirrel data. This might also be helpful."</strong> </p>
+              </div>
+            </div>
+            <div class="teensquote">
+              <i class="fa-solid fa-face-meh"></i>
+              <div class="quote1 quote">
+                <p> <strong>“I would have liked to explore my group's idea a bit more."</strong> </p>
+              </div>
+            </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div>
+          <div class="mindmap" style="padding-left:80px">
+            <style>
+              .link.line {
+                display: block;
+              }
+
+              .node circle {
+                stroke: #F5F9EC;
+                stroke-width: 1px;
+              }
+
+              .node circle:hover {
+                transform: scale(1.03);
+              }
+
+              .node text {
+                font: 11px sans-serif;
+                pointer-events: none;
+                font-family: 'Kanit', sans-serif;
+                font-weight: 600;
+              }
+            </style>
+            <svg width="480" height="700"></svg>
+
+            <script>
+              var graph = {
+                "nodes": [
+                  { "atom": "Activities", "size": 100, "color": "#F5F9EC", "x": 500, "y": 250 },
+                  { "atom": "Problem Solving", "size": 117, "size2": "4.7/5", "color": "#C5DE92", "x": 440, "y": 130 },
+                  { "atom": "Generating Ideas", "size": 76, "size2": "4.6/5", "color": "#FAC24A", "x": 560, "y": 130 },
+                  { "atom": "Reflecting", "size": 58, "size2": "4.3/5", "color": "#F5834E", "x": 620, "y": 250 },
+                  { "atom": "Interacting", "size": 58, "size2": "4.3/5", "color": "#2957A5", "x": 560, "y": 340 },
+                  { "atom": "Creative Making", "size": 53, "size2": "3.9/5", "color": "#18A18D", "x": 440, "y": 340 },
+                  { "atom": "Observing", "size": 28, "size2": "3.8/5", "color": "#572B46", "x": 380, "y": 250 },
+                  { "atom": "Hands-on with Dataset", "size": 10, "color": "#F5F9EC", "x": 320, "y": 130 },
+                  { "atom": "Brainstorming Through Discussion", "size": 10, "color": "#F5F9EC", "x": 650, "y": 80 },
+                  { "atom": "Brainstorming in a Google Doc", "size": 10, "color": "#F5F9EC", "x": 650, "y": 180 },
+                  { "atom": "Brainstorming in Jam Board", "size": 10, "color": "#F5F9EC", "x": 680, "y": 130 },
+                  { "atom": "Coming Up with Questions", "size": 10, "color": "#F5F9EC", "x": 740, "y": 250 },
+                  { "atom": "Thinking About Community Action", "size": 10, "color": "#F5F9EC", "x": 710, "y": 300 },
+                  { "atom": "Group Discussion", "size": 10, "color": "#F5F9EC", "x": 339.46, "y": 250 },
+                  { "atom": "Break-out Groups in Zoom", "size": 10, "color": "#F5F9EC", "x": 500, "y": 210 },
+                  { "atom": "Interacting in Chat", "size": 10, "color": "#F5F9EC", "x": 660.54, "y": 250 },
+                  { "atom": "Online Games", "size": 10, "color": "#F5F9EC", "x": 793.45, "y": 133.97 },
+                  { "atom": "Storytelling", "size": 10, "color": "#F5F9EC", "x": 866.03, "y": 293.45 },
+                  { "atom": "Drawing in Jam Board", "size": 10, "color": "#F5F9EC", "x": 866.03, "y": 506.55 },
+                  { "atom": "Demonstrations", "size": 10, "color": "#F5F9EC", "x": 793.45, "y": 589.46 },
+                  { "atom": "Ideas Presented in a PPT", "size": 10, "color": "#F5F9EC", "x": 660.54, "y": 650 },
+                  { "atom": "Watching Videos", "size": 10, "color": "#F5F9EC", "x": 500, "y": 710.54 },
+                  { "atom": "Handouts", "size": 10, "color": "#F5F9EC", "x": 339.46, "y": 650 }
+                ],
+                "links": [
+                  { "source": 0, "target": 1, "bond": 1 },
+                  { "source": 0, "target": 2, "bond": 1 },
+                  { "source": 0, "target": 3, "bond": 1 },
+                  { "source": 0, "target": 4, "bond": 1 },
+                  { "source": 0, "target": 5, "bond": 1 },
+                  { "source": 0, "target": 6, "bond": 1 },
+                  { "source": 1, "target": 7, "bond": 1 },
+                  { "source": 2, "target": 8, "bond": 1 },
+                  { "source": 2, "target": 9, "bond": 1 },
+                  { "source": 2, "target": 10, "bond": 1 },
+                  { "source": 3, "target": 11, "bond": 1 },
+                  { "source": 3, "target": 12, "bond": 1 },
+                  { "source": 4, "target": 13, "bond": 1 },
+                  { "source": 4, "target": 14, "bond": 1 },
+                  { "source": 4, "target": 15, "bond": 1 },
+                  { "source": 4, "target": 16, "bond": 1 },
+                  { "source": 5, "target": 17, "bond": 1 },
+                  { "source": 5, "target": 18, "bond": 1 },
+                  { "source": 6, "target": 19, "bond": 1 },
+                  { "source": 6, "target": 20, "bond": 1 },
+                  { "source": 6, "target": 21, "bond": 1 },
+                  { "source": 6, "target": 22, "bond": 1 }
+                ]
+              };
+
+
+              var width = 480,
+                height = 700;
+
+              var radius = d3.scale.sqrt()
+                .range([0, 6]);
+
+              var svg = d3.select("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+              var force = d3.layout.force()
+                .size([width, height])
+                .charge(-1200)
+                .linkDistance(100)
+                .nodes(graph.nodes)
+                .links(graph.links)
+                .start();
+
+              var link = svg.selectAll(".link")
+                .data(graph.links)
+                .enter().append("line")
+                .attr("class", "link")
+                .style("stroke", "gray")
+                .style("stroke-width", function (d) { return (d.bond * 2 - 1) * 2 + "px"; });
+
+              var nodes = svg.selectAll(".node")
+                .data(graph.nodes)
+                .enter().append("g")
+                .attr("class", "node")
+                .call(force.drag);
+
+              var circles = nodes.append("circle")
+                .attr("r", function (d) { return radius(d.size); })
+                .style("fill", function (d) { return d.color; })
+                .style("stroke", function (d) { return d.size === 100 ? "gray" : "none"; });
+
+              var text = nodes.append("text")
+                .attr("dy", ".35em")
+                .attr("text-anchor", "middle")
+                .text(function (d) { return d.atom; })
+                .style("font-size", function (d) { return d.size === 100 ? "16px" : null; })
+                .style("fill", function (d) { return (d.size === 10 || d.size === 100) ? "gray" : "#F5F9EC"; });
+
+              var clickedCircle = null;
+
+              circles.filter(function (d) { return d.size !== 100 && d.size !== 10; })
+                .on("click", function (d) {
+                  if (clickedCircle) {
+                    text.filter(function (e) { return e === clickedCircle && e.size !== 100 && e.size !== 10; })
+                      .style("font-size", function (e) { return e.size === 100 ? "16px" : null; })
+                      .attr("dy", ".35em");
+                  }
+
+                  text.text(function (e) {
+                    return e === d ? e.size2 : e.atom;
+                  });
+
+                  text.filter(function (e) { return e === d && e.size2; })
+                    .style("font-size", "20px")
+                    .attr("dy", ".45em");
+
+                  clickedCircle = d;
+                });
+
+              nodes.selectAll("circle")
+                .filter(function (d) { return d.size !== 100 && d.size !== 10; })
+                .style("cursor", "pointer");
+
+              force.on("tick", function () {
+                nodes.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+                link.attr("x1", function (d) { return d.source.x; })
+                  .attr("y1", function (d) { return d.source.y; })
+                  .attr("x2", function (d) { return d.target.x; })
+                  .attr("y2", function (d) { return d.target.y; });
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-content">
+      <div class="row column">
+        <div class="left">
+          <br class="mobile-show-only"><br>
+          <h3>What Kind of Data did teens like to explore?</h3>
+          <br>
+          <p>
+            <strong>There were 24 Data Labs, divided into four different series.
+            </strong> <br>
+            The first two series dealt with personal digital data and concepts like privacy, metadata, and algorithmic
+            bias. The last two sessions were focused on civic data and community needs. They were designed to be more
+            practical and hands-on with data.
+            <br>
+            <strong>The chart displays the average rating for each series, indicating the teens’ overall perceptions.
+            </strong> <br>
+            Teens liked working with civic data more than concepts associated with personal digital data.
+          </p>
+
+
+
+        </div>
+        <div class="right" style="margin-top:130px">
+          <div style="width: 500px;
+        height: 380px;
+        padding: 31px 31px 0 31px;
+        border: 2px solid #c5de92;
+        border-radius: 15px;">
+
+            <div class="column row">
+              <div class="legend">
+                <div class="circle bar2"></div>
+                <span>Personal Digital Data</span>
+              </div>
+              <div class="legend">
+                <div class="circle bar3"></div>
+                <span>Civic Data</span>
+              </div>
+            </div>
+            <div style="scale: 0.7;
+    height: 500px;
+    width: 1300px;transform: translate(-28%, -15%);">
+              <iframe src="image/dataliteracybar.html" width="100%" height="100%" frameborder="0"></iframe>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+   
+    <div class="cs-content">
+      <h4></h4>
+      <h3>Overall, How Did Teens like the Labs?</h3>
+      <br>
+      <div class="row column" style="gap:5vw;">
+        <div class="column"> <span class="percentage">80%</span>
+          <p> Continuing Learning</p>
+          <p style="padding-top:10px;  font-weight: 200;">Teens showed an 80%
+            interest in further learning more about data.</p>
+        </div>
+
+        <div class="column"><span class="percentage">80%</span>
+          <p>Contribution</p>
+          <p style="padding-top:10px;  font-weight: 200;">On average, teens rated their potential contribution to Data
+            Labs at 80%.</p>
+        </div>
+        <div class="column"> <span class="percentage">90%</span>
+          <p>Overall Interest</p>
+          <p style="padding-top:10px;  font-weight: 200;">On average, teens rated their evel of interest in the Data.
+            Labs overall at 90%</p>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="cs-content">
+      <h4></h4>
+      <h3>In These Areas, We Still Need to Improve:</h3>
+
+      <p style="max-width:60vw">In the exit survey dataset, I collected recommendations from teen participants and
+        concluded that the main areas to improve are <strong>facilitation</strong> and <strong>content</strong>.</p>
+      <br><br>
+      <div class="row column" style="gap:8vw; margin-bottom: 150px;">
+
+        <div class="row" style="gap:5vw">
+          <div class="issue1">
+            <div class="titler">Facilitation</div>
+            <div style="  width: 150px; 
+border-top: 1px solid #2957A5;
+margin-bottom: 20px;"></div>
+            <div class="dot-container">
+              <div class="dot dotFTime"></div>
+              <div class="dot dotFTimeOther "></div>
+              <div class="dot dotFTimeOther "></div>
+              <div class="dot dotFTimeOther "></div>
+              <div class="dot dotFTimeOther "></div>
+              <div class="dot dotFTimeOther "></div>
+              <div class="dot dotFTimeOther "></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot dotFParticipationOther"></div>
+              <div class="dot dotFParticipation"></div>
+              <div class="dot dotFParticipation"></div>
+        
+
+            </div>
+          </div>
+          <div class="issue2">
+            <div class="titler">Content</div>
+            <div style="  width: 150px; 
+border-top: 1px solid #2957A5;
+margin-bottom: 20px;"></div>
+            <div class="dot-container">
+              <div class="dot dotCDataset"></div>
+              <div class="dot dotCDataset"></div>
+              <div class="dot dotCDatasetContextual"></div>
+              <div class="dot dotCcontextual"></div>
+              <div class="dot dotCcontextual"></div>
+              <div class="dot dotCDrawing"></div>
+              <div class="dot dotCDrawing"></div>
+              <div class="dot dotCJamboard"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+
+        </div>
+        <div class=" column row" style=" margin-top: 29px; gap:3vw">
+
+          <div>
+        
+            <div class="legend">
+              <div class="circle2 dotFTime"></div>
+              <span>Time Management</span>
+            </div>
+            
+            <div class="legend">
+              <div class="circle2 dot"></div>
+              <span>Overall Activity design</span>
+            </div>
+            <div class="legend">
+              <div class="circle2 dotFParticipation"></div>
+              <span>Participation</span>
+            </div>
+          </div>
+          <div>
+            <div class="legend">
+              <div class="circle2 dotCDataset"></div>
+              <span>Dataset Usage</span>
+            </div>
+            <div class="legend">
+              <div class="circle2 dotCcontextual"></div>
+              <span>Contaxtual Learning</span>
+            </div>
+            <div class="legend">
+              <div class="circle2 dotCDrawing"></div>
+              <span>More Drawing Activities</span>
+            </div>
+            <div class="legend">
+              <div class="circle2 dotCJamboard"></div>
+              <span>More Jamboard Activities</span>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cs-content sectionwhite row methodcontainer ">
+
+
+      <div>
+        <h4 class="section-title black">Data and Methdology </h4>
+        <p class="method black" style="width:38vw">
+         The dataset used in this project is from the exist surverys of four data labs in <em><a href="https://sites.google.com/pratt.edu/data-activism-for-youth/home" class="gray underline" target="_blank">Data Literacy with, for, and by Youth</a></em>, funded by the National Science Foundation (Award #2005608). 
+        I used R and Excel to clean the survey data and conducted a comprehensive analysis of the teen participants' feedback regarding the data labs. This involved not only quantitative assessments but also sensitive analysis, digging deep into the specifics of their feedback to find meaningful insights.  
+     <br>
+     After many collaborative sessions with Professor Bowler, I refined the final infographic, prioritizing user-friendly visualization. Through thorough discussion and iterative feedback, we ensured that the infographic not only accurately conveyed the data but also presented meaningful insights in a digestible format. 
+    <br>
+    <a href="image/da2-1.jpg" target="_blank" style="color:gray;text-decoration: underline;">View the static infographic</a>
+    </p>
+ 
+   </div>
+      <div>
+        <h4 class="section-title black">Takeaways </h4>
+        <p class="method black">
+          After iterating through multiple versions, I've realized that data visualization goes beyond showcasing numeric insights. It's more than just designers and analysts expressing themselves—it's about addressing meaningful research questions and goals. Audience understanding is crucial. Effective visualization connects with viewers by tailoring visuals to their perspective and needs. By considering both the audience and the clients, I ensure that the information resonates and communicates effectively. This iterative process emphasizes the importance of prioritizing people in data visualization.  </p>
+        <br>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <footer>
+
+    <div class="footer">
+      <div class="laptop-show-only">
+        <p>2024 &copy; Designed & Programmed by Wenge Wang</p>
+      </div>
+      <div class="footer-icon">
+        <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
+            aria-hidden="true">wwang24@outlook.com</i></a>
+            <a href="index.html"><i class="fas fa-home"></i>
+            </a>
+                </div>
+    </div>
+
+  </footer>
+
+</body>
+<script>
+  const teensquotes = document.querySelectorAll('.teensquote');
+  teensquotes.forEach(teensquote => {
+    const quote = teensquote.querySelector('.quote');
+
+    teensquote.addEventListener('mouseenter', function () {
+      quote.style.opacity = '1';
+      quote.style.visibility = 'visible';
+    });
+
+    teensquote.addEventListener('mouseleave', function () {
+      quote.style.opacity = '0';
+      quote.style.visibility = 'hidden';
+    });
+  });
+</script>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Google Tag Manager -->
+   <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-5XWCBWZ4');</script>
+<!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GALLERY | WW Portfolio</title>
+  <link rel="icon" type="image/png" href='https://img.icons8.com/external-others-inmotus-design/67/external-W-kid-alphabet-others-inmotus-design-2.png'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Wenge Wang">
+
+  <link rel="stylesheet" href="css\css.css">
+  
+  <!--font-->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&display=swap" rel="stylesheet">
+
+  <!--social media link-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
+
+</head>
+<style>
+    h2 {
+        font-weight: 300;
+        text-transform: none;
+        font-size: 18px;
+        padding: 0;
+        margin: 0
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      overflow-y:scroll
+    }
+
+ 
+.footer{
+    color:black
+}
+.footer-icon a{
+    color:black
+}
+    .gallery {
+        
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 16px;
+      padding-left:3vw;
+      padding-right:3vw;
+    }
+
+    .gallery-item {
+      margin-top:10vh;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+.first-row{
+    margin-top:18vh
+}
+ 
+@media (max-width: 1020px) { .gallery {
+        gap: 0;
+        padding:0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    
+    <div class="navbar-mobile ">
+  
+        <input type="checkbox" id="overlay-input" />
+    <label for="overlay-input" id="overlay-button"><span></span></label>
+    <div id="overlay">
+    <ul>
+      <li><a href="index.html" class="inactive">DATA</a></li>
+      <li><a href="uxproject.html" class="inactive">UI/UX</a></li>
+      <li><strong><a href="blog.html" class="active">OTHER</a></strong></li>
+      <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
+    </ul>
+    <div class="overlay-footer row">
+      <p>2023 &copy; by Wenge Wang</p>
+      <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+    </div>
+    <div class="overlay-logo">WENGE<br>WANG</div>
+    </div>
+    </div>
+
+    <nav>
+      
+        <div class="navbar">
+          <div class="left-menu gray">
+            <a href="index.html">WENGE WANG</a>
+            <h2 style="padding-left:4px;">Data Visualization & UX Designer, available for hire</h2>
+        </div>
+            <ul class="right-menu">
+                <li><a href="index.html" class="inactive">DATA</a></li>
+                <li><a href="uxproject.html" class="inactive">UI/UX</a></li>
+                <li><strong><a href="blog.html" class="active">OTHER</a></strong></li>
+                <li><a href="contact.html"  class="menu-button">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+<div>
+  <div class="gallery">
+  
+    <div class="gallery-item first-row" >
+      <img src="image\graphic-spectracell.jpg" alt="Triplefold brochure design"> 
+    </div>
+    <div class="gallery-item first-row" >
+       <img src="image\graphic-spectracell2.jpg" alt="box design">
+      </div>
+  <div class="gallery-item first-row" >
+     <img src="image\cover2.jpg" alt="Cover2">
+    </div>
+   <!-- <div class="gallery-item">
+        <img src="image\cover1.jpg" alt="Cover1"> 
+      </div>
+      <div class="gallery-item">
+        <img src="image\cover3.jpg" alt="Cover3"> 
+      </div>-->
+ 
+  </div>
+</div>
+<footer>
+
+    <div class="footer">
+      <div class="laptop-show-only">
+        <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
+      </div>
+      <div class="footer-icon">
+        <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
+            aria-hidden="true">wwang24@outlook.com</i></a>
+        <a href="index.html"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+</html>

@@ -50,12 +50,13 @@ body{
   color:gray
 }
 .intro-lead-in{
-  color:#403F45;
+  color:#403F45;    gap: 50px;
 }
 .intro-text{
     padding-top:0;
-    max-width:60vw;
-  
+    max-width:80vw;
+    font-size: 63px;    flex-wrap: wrap;
+
 }
 .intro-text p{
     font-size:18px;

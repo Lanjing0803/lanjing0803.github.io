@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5XWCBWZ4');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mental Health Links: Mapping Interrelationships Among Mental Disorders | Wenge Wang</title>
+  <meta name="description"
+    content="Uncover insights into mental health trends with our data visualization project. Explore statistics and patterns using advanced techniques like hierarchical clustering and Multiple Correspondence Analysis (MCA). Gain valuable insights from datasets sourced from the CDC, NYC Health, and SAMHSA.">
+
+  <link rel="icon" type="image/png" href="https://img.icons8.com/doodle/96/apple-health.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Wenge Wang">
+  <link rel="stylesheet" href="css\css.css">
+  <link rel="stylesheet" href="css\cs.css">
+  <!--font-->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&display=swap" rel="stylesheet">
+
+  <!--social media link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/scrollama"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+  <script type='text/javascript' src='js\case-study.js'></script>
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+  <style>
+    body {
+      background-color: #F5F9FC;
+      color: rgb(101, 96, 98)
+    }
+
+    .left {
+      width: 32vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding-left: 13vw;
+    padding-right: 78px;
+    }
+
+    .primary-button {
+      background-color: rgb(89, 40, 237)
+    }
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: -3vw;
+      background-image: url('image/topic.svg');
+      background-size: contain;
+      background-position: top;
+      background-repeat: no-repeat;
+      transition: background-image 0.3s ease;
+      margin-top: 6vw;
+    }
+
+    .right {
+       width: 50%;
+    padding-right: 9vw;
+    float: left;
+    line-height: 2em;
+    }
+
+    .clearfix {
+      display: flex;
+      flex-direction: row;
+      padding-top: 30px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+.para{     padding: 47px 47px 40px 47px;
+    background-color:#009eb010;
+    border-radius: 25px;
+    margin: 177px -28px 20px 9px;
+  }
+    .para h4 {
+      line-height: 1.5;
+    padding-top: 2px;
+    }
+
+    .custom-bottom-break {
+      margin-bottom: 25vh;
+    }
+
+    .colorwheel {
+      height: 600px;
+      margin-left: -68px;
+      padding-top: 40px
+    }
+
+    .moods {
+      display: flex;
+      flex-direction: row;
+      width: 40vw;
+      padding-left: 8px;
+      margin-top: -10px
+    }
+
+    .artcontainer i:hover {
+      opacity: 0.5;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .artinfo {
+      position: fixed;
+      background-color: black;
+      color: #F5F9FC;
+      padding: 20px;
+    }
+
+    .artinfo h4 {
+      padding: 0;
+      line-height: 1
+    }
+
+    h1,h4 {
+      color: rgb(101, 96, 98)
+    }
+
+    .colorwheel iframe {
+      transform: scale(1.1)
+    }
+
+    h2 {
+      font-size: 48px;
+      padding-top: 26vh;
+      line-height: 2em;
+      padding-left: 0
+    }
+
+    .mentalhealthsvg {
+      position: absolute;
+      right: 0;
+      margin-right: 380px;
+      margin-top: 130px;
+      z-index: 1;
+    }
+
+    .heart {
+      position: absolute;
+      top: 256px;
+      left: 229px;
+      animation: bounce 3s infinite;
+    }
+
+    .gradient-bar-container {
+      position: relative;
+      width: 300px;
+      height: 30px;    margin-top: -20px;
+    }
+
+    .gradient-bar {
+      width: 308px;
+      margin-left: 48px;
+      height: 10px;
+      background: linear-gradient(to right, #edeff0, rgb(89, 40, 237));
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .label {
+      position: absolute;
+      top: -33px;
+      left: 0;
+      width: 125px;
+      text-align: center;
+    }
+
+    .label.right {
+      left: 273px;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(0.88);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+.quote{
+  margin-top:-18px;font-weight:300;font-size:18px;line-height:1.5;padding-bottom:20px
+}
+    .down-element3 {
+      animation: fadeIn3 4s ease-in-out forwards;
+
+    }
+
+    @media (max-width: 1020px) {
+      .custom-bottom-break {
+       margin-bottom: 2vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mentalhealthsvg" data-scroll>
+    <div class="heart">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100" class="down-element3">
+        <path fill="none" stroke="rgb(101, 96, 98)"
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:serif="http://www.serif.com/" width="180%" height="180%" viewBox="-50 0 600 525" version="1.1"
+      xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;" opacity=0>
+
+      <clipPath id="blob-background">
+        <path
+          d="M523.09,222.414C526.454,290.653 501.841,410.353 457.124,459.539C412.1,509.061 331.187,516.536 247.974,513.636C203.43,512.083 163.795,507.734 120.455,506.261C20.074,502.848 -40.817,380.328 -33.85,258.681C-21.29,39.385 98.092,2.868 263.066,7.667C394.288,11.484 515.889,76.35 523.09,222.414Z"
+          style="fill:#009eb060;fill-rule:nonzero;" />
+      </clipPath>
+      <g id="background" clip-path="url(#blob-background)">
+        <path id="blob"
+          d="M523.09,222.414C526.454,290.653 501.841,410.353 457.124,459.539C412.1,509.061 331.187,516.536 247.974,513.636C203.43,512.083 163.795,507.734 120.455,506.261C20.074,502.848 -40.817,380.328 -33.85,258.681C-21.29,39.385 98.092,2.868 263.066,7.667C394.288,11.484 515.889,76.35 523.09,222.414Z"
+          style="fill:#009eb020;fill-rule:nonzero;" />
+        <g id="pink-background-circle">
+          <path xmlns="http://www.w3.org/2000/svg"
+            d="M448.486,232.777C465.578,326.362 393.19,414.415 286.804,429.449C180.418,444.486 80.319,380.809 63.227,287.224C46.136,193.639 118.523,105.586 224.909,90.551C331.295,75.516 431.394,139.192 448.486,232.777"
+            style="fill:#009eb060;fill-rule:nonzero;" />
+        </g>
+        <path id="plus-symbol" opacity=0
+          d="M269.266,83.213L259.867,83.213L259.867,73.814L252.475,73.814L252.475,83.213L243.076,83.213L243.076,90.606L252.475,90.606L252.475,100.004L259.867,100.004L259.867,90.606L269.266,90.606L269.266,83.213Z"
+          style="fill:rgb(255,54,18);fill-rule:nonzero;" />
+      </g>
+      <g id="head" clip-path="url(#blob-background)" class="down-element">
+        <path id="head-outline"
+          d="M181.48,613.144L192.714,571.514C193.601,557.857 183.25,546.067 169.593,545.18L145.057,543.585C131.092,542.678 120.506,530.621 121.413,516.655L115.442,477.291C115.961,469.301 109.905,462.402 101.914,461.883L89.418,461.071C81.356,460.547 76.601,451.789 80.553,444.743L110.854,390.712C115.195,382.973 117.317,374.211 117.024,365.343C115.933,332.301 125.687,244.541 259.624,241.842C259.624,241.842 402.389,237.412 392.135,393.408C392.135,393.408 393.618,435.143 362.371,463.91C362.371,463.91 325.054,513.173 343.043,586.344L351.458,617.262"
+          style="fill:none;fill-rule:nonzero;stroke: rgb(101, 96, 98);stroke-width:4px;transform:scale(0.9);" />
+
+
+    </svg>
+
+
+  </div>
+
+  <div class="project-section">
+    <div class="row column">
+      <div class="intro-text">
+        <div class="intro-heading">
+          <div class="intro-lead-in appear-element">
+            <h1>Mental Health Links<br>
+              <div class="subtitle">Mapping Interrelationships Among Mental Disorders</div>
+            </h1>
+          </div>
+
+        </div>
+        <div>
+          <h2 class="author appear-element black">by <a href="index.html" class="black">Wenge Wang</a></h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cs-button down-element">
+    <a href="https://github.com/Lanjing0803/How-We-See-Art" target="_blank" class="primary-button">
+      <i class="fab fa-github"></i> GitHub Repository
+    </a>
+
+  </div>
+
+  <div class="cs-banner">
+    <div style="height:78vh" data-scroll></div>  </div>
+
+
+  <div>
+    <div class="cs-content down-element2">
+
+      <div class="row">
+        <h4 style="font-weight:600">Why It Important
+          <i class="fa-solid fa-notes-medical"></i>
+        </h4>
+
+
+      </div>
+
+      <div class="row column">
+        <div class="case-study-intro">
+          <p><br>
+            Mental disorders are a significant global concern, impacting millions of lives worldwide, from depression to
+            schizophrenia. Given their complexity and prevalence, understanding the connections between different
+            disorders
+            is crucial for developing effective prevention strategies, interventions, and treatments. <br>
+            This project explores these connections and influencing factors, providing insights accessible to the
+            general public. It delves into two key questions: How do various mental health disorders interconnect, and
+            what factors influence them?</p>
+        </div>
+        <div class="column">
+          <div class="case-study-details">
+            <h5><br>Date</h5>
+            <p>April, 2024</p>
+          </div>
+
+          <div class="case-study-details">
+            <h5>Tools</h5>
+            <p>Phyton, R, Google Sheet, D3.js</p>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+  <div class="clearfix">
+    <div class="left" id="stickyLeft">
+
+<h2 style="text-transform: none;">Let's examine the data</h2>
+<h3>
+  <i class="fa-solid fa-quote-right"></i>
+</h3>
+<h5 class="quote">Without mental health, there can be no true physical health.</h5>
+<h5><b> - Dr. Brock Chisholm</b></h5>
+    </div>
+
+    <div class="right">
+      <div class="para">
+        <h4 class=""><span style="font-size:68px;font-weight:400;">30%</span> of people experienced
+          suboptimal mental health for some days in the past 30 days.</h4>
+<br><br>
+        <h4>Specifically, people met these moods: </h4>
+        <div class="moods">
+          <div class="artcontainer">
+            <!-- Anxious -->
+            <i class="fa-solid fa-face-frown-open" style="color:#5928ed; font-size:58px;  margin-top: -2px;"></i>
+            <div class="artinfo">
+              <h4>Anxious</h4>
+              <p>58% people feel anxious</p>
+
+            </div>
+          </div>
+          <div class="artcontainer">
+
+            <!-- Agitated -->
+            <i class="fa-solid fa-face-angry" style="color:rgb(181, 25, 99); font-size:52px;"></i>
+            <div class="artinfo">
+              <h4>Agitated</h4>
+              <p>52% people feel agitated</p>
+
+            </div>
+          </div>
+
+          <div class="artcontainer">
+            <!-- Fatigued -->
+            <i class="fas fa-tired" style="color: rgb(0, 94, 96); font-size:52px;    margin-top: 1px;"></i>
+            <div class="artinfo">
+              <h4>Fatigued</h4>
+              <p>52% people feel fatigued</p>
+
+            </div>
+          </div>
+
+          <div class="artcontainer">
+            <!-- Depressed -->
+            <i class="fa-solid fa-face-sad-tear" style="color:rgb(0, 180, 197); font-size:41px;  margin-top: 6px;"></i>
+            <div class="artinfo">
+              <h4>Depressed</h4>
+              <p>41% people feel depressed</p>
+
+            </div>
+          </div>
+
+          <div class="artcontainer">
+
+            <!-- Despondent -->
+            <i class="fas fa-meh" style="color:rgb(101, 96, 98); font-size:28px;margin-top: 12px;"></i>
+            <div class="artinfo">
+              <h4>Despondent</h4>
+              <p>28% people feel despondent</p>
+
+            </div>
+          </div>
+
+          <div class="artcontainer">
+
+            <!-- Inadequate -->
+            <i class="fa-solid fa-face-meh-blank"
+              style="color:rgb(172, 174, 192); font-size:18px;margin-top: 18px;"></i>
+            <div class="artinfo">
+              <h4>Inadequate</h4>
+              <p>18% people feel inadequate</p>
+
+            </div>
+          </div>
+        </div>
+        <p style=" margin-right: 45px;;font-size:15px;line-height:3.8;text-align:end">Source from: <a class="gray"
+            target="_blank" href="https://www.cdc.gov/brfss/questionnaires/index.htm">CDC</a>, <a class="gray"
+            target="_blank"
+            href="https://www.nyc.gov/site/doh/data/data-sets/community-health-survey-public-use-data.page">NYC
+            Health</a>
+        </p>
+
+      </div>
+      <div class="para">
+        <h4 class=""><span style="font-size:68px;font-weight:400;">State</span>-wise, the situation
+          varies noticeably.</h4>
+        <iframe src="image/map.html" width="600" height="380" frameborder="0" style="margin-left:50px;"></iframe>
+
+        <div class="gradient-bar-container">
+          <div class="label">Mild</div>
+          <div class="label right">Serious</div>
+          <div class="gradient-bar"></div>
+        </div>
+
+        <p style="font-size:15px;line-height:3.8;text-align:end;    margin-top: -54px; margin-right: 45px;">Source from:
+          <a class="gray" target="_blank" href="https://www.cdc.gov/brfss/questionnaires/index.htm">CDC</a>
+        </p>
+      </div>
+      <div class="para">
+        <h4 class=""><span style="font-size:68px;font-weight:400;">Mental</span> disorders often
+          coexist, with <span style="color:rgb(0, 180, 197);font-weight:400">depression</span> and <span
+            style="color:rgb(37, 70, 240);font-weight:400">anxiety</span> being the most common conditions.
+        </h4>
+        <iframe src="image/cooccur_chord.html" width="700" height="480" frameborder="0"
+          style="padding-top:38px;margin-left:-80px;transform:scale(1.1)"></iframe>
+        <p style="font-size:15px;line-height:3.8;text-align:end;    margin-top: -103px; margin-right: 45px;">Source from:
+          <a class="gray" target="_blank" href="https://www.cdc.gov/brfss/questionnaires/index.htm">CDC</a>
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="cs-content">
+    <br><br> <br><br><br>
+    <h3>Mapping Mental Disorder Patterns: Hierarchical Clustering</h3>
+    <p style="max-width:70vw">
+      Besides the co-occurrence situation, I further explored how different mental health conditions relate to each
+      other using hierarchical clustering. It's based on the matrix of Hamming distance, which measures how similar or
+      different these disorders are. To make the results easier to understand, I cleaned up the data by removing cases
+      where only one mental disorder type was present. This helps to remove any confusion caused by irrelevant
+      information.
+    </p>
+
+    <iframe src="image/tree-polyline.html" width="900" height="580" frameborder="0"
+      style="padding-left:63px;transform:scale(1.1);padding-top:18px"></iframe>
+    <p style="font-size:15px;line-height:3.8;text-align:end;    margin-top: -93px; margin-right: 45px;">Source from:
+      <a class="gray" target="_blank" href="https://www.samhsa.gov/">SAMHSA</a>
+    </p>
+
+  </div>
+
+  <div class="cs-content">
+    <br><br><br><br>
+    <h3>Interplay Between Demographic Metrics and Mental Disorders</h3>
+    <p style="max-width:70vw">
+      Using Multivariate Correspondence Analysis (MCA) techniques, I navigated through mental health client-level
+      dataset from SAMHA, to uncover hidden patterns between demographic metrics such as age and gender, and mental
+      health disorders. Utilizing cosine similarity, a pivotal metric in data analysis, I precisely quantify the
+      strength of these relationships, ranging from 0 to 1. A value nearing 1 indicates a higher relation strength,
+      signifying a closer association between demographic factors and specific mental health conditions.
+      The data was meticulously rounded and filtered to exclude weaker relationships lower than 0.10, ensuring a focus
+      on
+      key findings.
+    </p>
+    <br>
+
+    <br>
+
+    <div class="colorwheel">
+      <iframe src="image/chord_cs.html" width="400" height="500" frameborder="0"></iframe>
+
+    </div>
+
+  </div>
+
+
+  <div class="cs-content sectionwhite row methodcontainer ">
+
+
+    <div>
+      <h4 class="section-title black">Data and Methdology </h4>
+      <p class="method">
+        The dataset utilized in this study was sourced from various reputable sources, including the Centers for Disease
+        Control and Prevention <a href="https://www.cdc.gov/brfss/questionnaires/index.htm" class="gray underline" target="_blank">(CDC)</a>,  <a href="https://www.nyc.gov/site/doh/data/data-sets/community-health-survey-public-use-data.page" class="gray underline" target="_blank">the New York City Health Department</a>, and the Substance Abuse and Mental Health
+        Services Administration  <a href="https://www.samhsa.gov/" class="gray underline" target="_blank">(SAMHSA)</a>.
+        <br>The binary data, representing the presence or absence of specific mental health conditions, was
+        processed using hierarchical clustering techniques, such as Hamming distance, to identify co-occurrence patterns
+        among different disorders. Additionally, categorical data, encompassing various demographic and diagnostic categories,
+        underwent analysis using multiple correspondence analysis (MCA) to reveal associations and trends within the
+        dataset.
+        <br>
+        Further research in this area could explore additional statistical techniques and expand the scope of analysis to uncover more nuanced patterns and correlations.
+      </p>
+    </div>
+    <div>
+
+      <h4 class="section-title black">Key Takeaways </h4>
+      <p class="method">
+        This project taught me a lot about mental health data analysis. By using techniques like Principal Component Analysis (PCA) and Multiple Correspondence Analysis (MCA), I found important connections in the data. MCA, particularly helpful with categorical data, was a standout choice. Working with Python for data modeling was a big step forward, helping me build accurate models. These experiences really boosted my statistical skills and set me up well for future projects.
+      </p>
+      <br>
+      <h4 class="section-title black">Special Thanks </h4>
+      <p class="method">
+        I began this project with limited knowledge of how to conduct Multiple Correspondence Analysis (MCA) in Python.
+        Special thanks to Max Halford for the invaluable <a href="https://maxhalford.github.io/prince/mca/" class="gray underline" target="_blank">Prince MCA tutorial</a>, which provided crucial guidance and insights throughout the project.
+      </p>
+    </div>
+
+
+  </div>
+  </div>
+  </div>
+
+  <footer>
+
+    <div class="footer">
+      <div class="laptop-show-only">
+        <p>2024 &copy; Designed & Programmed by Wenge Wang</p>
+      </div>
+      <div class="footer-icon">
+        <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
+            aria-hidden="true"><span style="font-family: times;">wwang24@outlook.com</span></i></a>
+        <a href="index.html"><i class="fas fa-home"></i>
+        </a>
+      </div>
+    </div>
+
+  </footer>
+  <script>
+
+
+    // Initialize Scrollama
+    var scroller = scrollama();
+    function setupScrollama() {
+      scroller
+        .setup({
+          step: '.left',
+          offset: 0.5,
+          debug: false
+        })
+        .onStepEnter(handleStepEnter);
+    }
+
+
+    function handleStepEnter(response) {
+      var leftElement = response.element;
+      var stickyLeft = document.getElementById('stickyLeft');
+
+      stickyLeft.classList.add('sticky');
+
+      response.direction === 'up' && stickyLeft.classList.remove('sticky');
+    }
+
+    // Initialize Scrollama setup
+    setupScrollama();
+
+
+    const artContainers = document.querySelectorAll('.artcontainer');
+
+    artContainers.forEach(artContainer => {
+      const artInfo = artContainer.querySelector('.artinfo');
+      const artInfoPlaceholder = artContainer.querySelector('.artinfo-placeholder');
+
+      artContainer.addEventListener('mouseover', function (event) {
+        const x = event.clientX;
+        const y = event.clientY;
+
+        artInfo.style.left = x + 'px';
+        artInfo.style.top = y + 'px';
+
+        artInfo.style.opacity = '1';
+        artInfo.style.visibility = 'visible';
+      });
+
+      artContainer.addEventListener('mouseout', function () {
+        artInfo.style.opacity = '0';
+        artInfo.style.visibility = 'hidden';
+      });
+    });
+
+
+    const mentalhealthbg = gsap.timeline();
+    mentalhealthbg
+      .set('svg', { opacity: 1 })
+      .addLabel('brainPop', 2.25)
+      .from("#pink-background-circle", {
+        y: 200,
+        scaleX: 2,
+        scaleY: 2,
+        transformOrigin: "center",
+        duration: 1.3
+      })
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chord Diagram</title>
+
+<style>
+    .chart-wrapper {
+        width: 100%;
+        position: relative;
+  
+    }
+    .entity {
+    cursor: pointer;
+}
+body{   margin:0;
+        font-family:'Kanit'}
+    #tooltip {
+        position: absolute;
+        width: 23vw;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        background-color: rgba(0,0, 0, 0.8);
+        color: #F5F9FC;
+        border-radius: 4px;
+        pointer-events: none;
+        font-size: 12px;
+
+    }
+    #tooltip.hidden {
+        display: none;
+    }
+    #newInputBox {
+  height: 30px;
+  width: 10px;
+}
+.annotation-note-label {
+  font-size: 11px;
+  color: black; 
+  font-weight:400;
+}
+p{font-size:11px;line-height:1em}
+#defaultAnnotation{position: absolute;left:838px;top:260px;transition: all 0.3s ease-in-out;padding:10px;}
+.line-container {
+  position: relative;padding-top:10px;
+transform:scale(0.8);left:-18px
+}
+svg{width:100vw}
+.line {
+  width: 250px;
+  height: 1.5px; 
+  background-color: rgb(210, 210, 210);
+  position: relative;
+  display:flex;
+  flex-direction: row;
+}
+
+
+h3{font-weight:400;margin-top:-30px}
+
+</style>
+</head>
+<body>
+<!-- HTML structure for the chart -->
+<div class="chart-wrapper" id="chord">
+    <div id="tooltip" class="hidden"></div>
+</div>
+
+
+
+<!-- Include D3.js and jQuery -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+
+// Based on https://bl.ocks.org/nbremer/1527c2dd26a26d9ee942
+var matrix = [];
+
+var alertCount = 600,
+  emptyPerc = 3,
+  emptyStroke = Math.round(alertCount * emptyPerc),
+  data = {
+    "names": [
+    "Trauma",	"Anxiety",	"ADHD",	"Conduct",	"Delirium",	"Bipolar",	"Depression",	"ODD",	"PDD",	"Personality",	"Schizophrenia",	"Alcohol",	"Other",
+    ],
+    "matrix": [
+  	[0,	218397,	88150,	10144,	1940,	98059,	261308,	17806,	6610,	36306,	45251,	50833,	100064],												
+[218397,	0,	120874,	8157,	3825,	140376,	547737,	15474,	17006,	35853,	71132,	58091,	138293],												
+[88150,	120874,	0,	22033,	393,	32537,	84685,	69462,	26665,	5192,	9729,	6838,	94803],												
+[10144,	8157,	22033,	0,	155,	2226,	7444,	4945,	2713,	692,	1964,	2402,	13657],												
+[1940,	3825,	393,	155,	0,	1809,	6092,	57,	147,	410,	4967,	731,	3948],												
+[98059,	140376,	32537,	2226,	1809,	0,	48877,	3247,	4125,	34233,	29413,	43254,	46968],												
+[261308,	547737,	84685,	7444,	6092,	48877,	0,	13918,	8170,	47416,	47517,	86244,	128508],												
+[17806,	15474,	69462,	4945,	57,	3247,	13918,	0,	3357,	340,	871,	1630,	20540],												
+[6610,	17006,	26665,	2713,	147,	4125,	8170,	3357,	0,	532,	4362,	304,	30340],												
+[36306,	35853,	5192,	692,	410,	34233,	47416,	340,	532,	0,	23808,	8669,	17661],												
+[45251,	71132,	9729,	1964,	4967,	29413,	47517,	871,	4362,	23808,	0,	52477,	62134],												
+[50833,	58091,	6838,	2402,	731,	43254,	86244,	1630,	304,	8669,	52477,	0,	29773],												
+[100064,	138293,	94803,	13657,	3948,	46968,	128508,	20540,	30340,	17661,	62134,	29773,	208],												
+ ],
+    "colors": ["rgb(210, 210, 210)",	"#2546f0",	"rgb(210, 210, 210)",	"rgb(210, 210, 210)",	"rgb(210, 210, 210)",	"rgb(210, 210, 210)",	"rgb(0, 180, 197)",	"rgb(210, 210, 210)",	"rgb(210, 210, 210)",	"rgb(210, 210, 210)",	"rgb(210, 210, 210)",	"rgb(210, 210, 210)",	"rgb(210, 210, 210)"],
+    "empty": emptyStroke,
+    "count": alertCount,
+    "graph": "#chord"
+  };
+
+var $graph = $(data.graph);
+
+var Names = data.names,
+  Matrix = data.matrix,
+  Colors = data.colors,
+  emptyStroke = data.empty;
+
+var wrapperWidth = 800,
+  width = wrapperWidth,
+  height = wrapperWidth * 0.5;
+
+var svg = d3.select(data.graph).append("svg")
+  .attr("width", (width))
+  .attr("height", (height))
+  .attr("xmlns", "http://www.w3.org/2000/svg")
+  .attr("xlink", "http://www.w3.org/1999/xlink");
+
+var outerRadius = wrapperWidth / 3.5 - 98,
+  innerRadius = outerRadius - 15,
+  opacityDefault = 0.4,
+  opacityLower = 0.03,
+  opacityLowest = 0.03, 
+  opacityFull = 1;
+
+var offset = Math.PI * (emptyStroke / (data.count + emptyStroke)) /4;
+
+var chord = d3.chord()
+  .padAngle(0.05)
+  .sortSubgroups(d3.descending) 
+  .sortChords(d3.descending);
+
+var arc = d3.arc()
+  .innerRadius(innerRadius)
+  .outerRadius(outerRadius)
+  .startAngle(startAngle)
+  .endAngle(endAngle);
+
+var ribbon = d3.ribbon()
+  .radius(innerRadius)
+  .startAngle(startAngle)
+  .endAngle(endAngle);
+
+var fill = d3.scaleOrdinal()
+  .domain(d3.range(Names.length))
+  .range(Colors);
+
+var wrapper = svg.append("g")
+  .attr("class", "chordWrapper")
+  .attr("transform", "translate(" + wrapperWidth / 2 + "," + height / 2 + ")")
+  .datum(chord(Matrix));
+
+////////////////////////////////////////////////////////////
+////////////////////// Entities ////////////////////////////
+////////////////////////////////////////////////////////////
+var entity = wrapper.selectAll(".entity")
+  .data(function(chords) {
+    return chords.groups;
+  })
+  .enter().append("g")
+  .attr("class", "entity")
+  .on("mouseover", function(d) {
+
+    wrapper.selectAll(".entity")
+  .transition()
+  .style("opacity", function(e) {
+    if (e === d) {
+      return opacityFull;
+    } else {
+      var linkedToHovered = false;
+      wrapper.selectAll(".chord").each(function(c) {
+        if ((c.source.index === d.index && c.target.index === e.index) || (c.source.index === e.index && c.target.index === d.index)) {
+          linkedToHovered = true;
+        }
+      });
+      return linkedToHovered ? opacityFull : opacityLower;
+    }
+  });
+    wrapper.selectAll(".chord")
+      .transition()
+      
+      .style("opacity", function(e) {
+        // Set full opacity for the related chord, lowest opacity for others
+        return (e.source.index === d.index || e.target.index === d.index) ? opacityDefault : opacityLower; 
+      });
+  })
+  .on("mouseout", function() {
+    wrapper.selectAll(".chord")
+      .transition()
+      .style("opacity", opacityDefault);
+      wrapper.selectAll(".entity")
+      .transition()
+      .style("opacity", opacityFull);
+
+  });
+
+// Add text
+entity.append("text")
+  .each(function(d) {
+    d.angle = ((d.startAngle + d.endAngle) / 2) + offset;
+  })
+  .style("fill", "rgb(101, 96, 98)")
+  .attr("font-size", "11px")
+  .attr("class", "titles")
+  .attr("text-anchor", function(d) {
+    return d.angle > Math.PI ? "end" : null;
+  })
+  .attr("transform", function(d, i) {
+    var c = arc.centroid(d);
+    return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")" + "translate(" + (innerRadius + 30) + ")" + (d.angle > Math.PI ? "rotate(180)" : "");
+  })
+  .text(function(d, i) {
+    return Names[i];
+  });
+
+// Draw each entity
+entity.append("path")
+  .style("fill", function(d) {
+    return fill(d.index);
+  })
+  .style("stroke", "none")
+  .style("pointer-events", function(d, i) {
+    return (Names[i] === "" ? "none" : "auto");
+  })
+  .attr("d", arc);
+
+
+  ////////////////////////////////////////////////////////////
+////////////////////// Chords //////////////////////////////
+////////////////////////////////////////////////////////////
+var flow = wrapper.selectAll('.chord')
+  .data(function(chords) {
+    return chords;
+  })
+  .enter().append("path")
+  .attr("class", "chord")
+  .attr("d", ribbon)
+  .style("fill", function(d) {
+    return fill(d.target.index);
+  })
+  .style("opacity", opacityDefault)
+  .style("stroke", "none")
+  .on("mouseover", function(d) {
+
+    var coordinates = [0, 0];
+    coordinates = d3.mouse(svg.node());
+    var x = coordinates[0];
+    var y = coordinates[1];
+
+    d3.select("#tooltip")
+      .style("left", (x - 20) + "px")
+      .style("top", (y +20)+"px")
+      .text(function() {
+    if (d.target.index !== undefined && Names[d.target.index] !== "") {
+      return [d.source.value, " instances where ", Names[d.target.index], " and ", Names[d.source.index], " co-occurred"].join("");
+    } else {
+      return ""; 
+    }
+   });
+   if (d.target.index !== undefined && Names[d.target.index] !== "") {
+  d3.select("#tooltip").classed("hidden", false);
+} else {
+  d3.select("#tooltip").classed("hidden", true);
+}
+
+d3.selectAll('path.chord').transition("fadeOnArc")
+  .style("opacity", opacityLowest);
+d3.select(this).transition("fadeOnArc")
+  .style("opacity", opacityFull);
+
+
+  })
+  .on("mouseout", function() {
+    d3.select("#tooltip").classed("hidden", true);
+    d3.selectAll('path.chord').transition("fadeOnArc")
+      .style("opacity", opacityDefault);
+
+  });
+
+function fade(opacity) {
+  return function(d, i) {
+    svg.selectAll("path.chord")
+      .filter(function(d) {
+        return d.source.index !== i && d.target.index !== i && Names[d.source.index] !== "";
+      })
+      .transition("fadeOnArc")
+      .style("opacity", opacity);
+      
+  };
+  
+} 
+function startAngle(d) {
+  return d.startAngle + offset;
+}
+
+function endAngle(d) {
+  return d.endAngle + offset;
+};
+
+
+
+
+</script>
+</body>
+</html>

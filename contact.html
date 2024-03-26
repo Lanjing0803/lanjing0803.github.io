@@ -2,11 +2,23 @@
 <html lang="en">
 
 <head>
+     <!-- Google Tag Manager -->
+     <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5XWCBWZ4');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contact | WW Portfolio</title>
+    <title>Contact Me| Wenge Wang</title>
     <link rel="icon" type="image/png" href='https://img.icons8.com/external-others-inmotus-design/67/external-W-kid-alphabet-others-inmotus-design-2.png'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wenge Wang">
 
     <link rel="stylesheet" href="css\css.css">
     <link rel="stylesheet" href="css\contact.css">
@@ -16,6 +28,7 @@
     <!--social media link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type='text/javascript' src='js\contact.js'></script>
     <script type='text/javascript' src='js\js.js'></script>
@@ -25,7 +38,25 @@
   emailjs.init("EldNu7SrLVytOduyl");
 </script>
 </head>
-
+<style>
+      h2 {
+        font-weight: 300;
+        text-transform: none;
+        font-size: 18px;
+        padding: 0;
+        margin: 0
+    }
+    .aboutpage-contact-content-button {
+    padding: 0;
+}
+.aboutpage-contact-content-button .menu-button {
+padding: 0px;
+    height: 70px;
+    width: 70px;
+    font-size: 15px;
+    text-align: center;
+    align-content: center;}
+</style>
 <body>
     <div id="content">
         <div class="blur"></div>
@@ -37,14 +68,13 @@
       <label for="overlay-input" id="overlay-button"><span></span></label>
       <div id="overlay">
         <ul>
-          <li><a href="index.html" class="inactive">ABOUT</a></li>
-          <li><a href="daproject.html" class="inactive">DATA</a></li>
+          <li><a href="index.html" class="inactive">DATA</a></li>
           <li><a href="uxproject.html" class="inactive">UX</a></li>
-          <li><a href="OTHER.html" class="inactive">OTHER</a></li>
+          <li><a href="blog.html" class="inactive">BLOG</a></li>
           <li><a href="contact.html"  class="menu-button active">CONTACT</a></li>
         </ul>
         <div class="overlay-footer row">
-          <p>2023 &copy; by Wenge Wang</p>
+          <p>2024 &copy; by Wenge Wang</p>
           <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
       </div>
       <div class="overlay-logo">WENGE<br>WANG</div>
@@ -55,14 +85,14 @@
           
             <nav>
                 <div class="navbar">
-                    <ul class="left-menu">
-                        <li><a href="index.html">WENGE WANG</a></li>
-                    </ul>
+                    <div class="left-menu gray">
+                        <a href="index.html">WENGE WANG</a>
+                        <h2 style="padding-left:4px;">Data Visualization & UX Designer, available for hire</h2>
+                    </div>
                     <ul class="right-menu">
-                        <li><a href="index.html" class="inactive">ABOUT</a></li>
-                        <li><a href="daproject.html" class="inactive">DATA</a></li>
+                        <li><a href="index.html" class="inactive">DATA</a></li>
                         <li><a href="uxproject.html" class="inactive">UX</a></li>
-                        <li><a href="OTHER.html" class="inactive">OTHER</a></li>
+                        <li><a href="blog.html" class="inactive">BLOG</a></li>
                         <li><a href="contact.html"  class="menu-button active">CONTACT</a></li>
                     </ul>
                 </div>
@@ -70,9 +100,21 @@
 <div class="first-section">
                 <div class="intro-container column ">
                         <div class="intro-text">
-                            <div class="intro-lead-in "><div class="appear-element">Let's Create the Future! </div>
-                                <p class="down-element">Whether it's a project, collaboration, or just a chat, I'm eager to hear from you!</p></div>
-
+                            <div class="intro-lead-in row column">
+                                <div class="appear-element">Let's Create the Future! 
+                                    &nbsp; 
+                                    
+                            </div>
+                            <div class="row">
+                            <div class="aboutpage-contact-content-button" >
+                                <a href="mailto:wwang24@outlook.com" class="menu-button gray" ><i class="fa-regular fa-envelope"></i></a>
+                              </div>
+                              <div class="aboutpage-contact-content-button" >
+                                <a href="https://www.linkedin.com/in/wangwenge/" class="menu-button gray" ><i class="fa-brands fa-linkedin-in"></i></a>
+                              </div>
+                            </div>
+</div>
+                            <p class="down-element">Whether it's a project, collaboration, or just a chat, I'm eager to hear from you!</p>
                         </div>
 
                         <div class="contact-wrapper down-element">
@@ -110,22 +152,20 @@
                     </div>
                   
             </div>
-            <div class="contact-image down-element" >
-               <picture><img
-                  src="image\message.jpg"
-                  alt="Contact Image"></picture>
-              </div>
+       
             </div>
               <footer >
   
                 <div class="footer">
                     <div class="laptop-show-only">
-                        <p>2023 &copy; Designed & Programmed by Wenge Wang</p>
+                        <p>2024 &copy; Designed & Programmed by Wenge Wang</p>
                     </div>
                     <div class="footer-icon">
-                      <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true">wwang24@outlook.com</i></a>
-                 
-                  </div>
+                        <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square"
+                            aria-hidden="true"><span style="font-family: times;">wwang24@outlook.com</span></i></a>
+                        <a href="index.html"><i class="fas fa-home"></i>
+                        </a>
+                      </div>
                 </div>
                 
             </footer>

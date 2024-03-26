@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%;"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    var option;
+
+    const data = {
+        "name": "Mental Disorder",
+        "itemStyle": { "color": "black" },
+        "children": [
+            {
+                //anxitey and depression
+                "children": [
+                {"children": [ {  "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "name": "Anxiety"}]}]}]}]}]}]}, ]}, ] },                                    
+                    {"children": [ {  "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "children":[{"name": "Depressive"}]}]}]}]}]}]}, ]}, ] },                                    
+                ]
+            },
+            {
+                //Trauma and other-other
+                "itemStyle": { "color": "#00b4c5" },
+                "children": [
+                {"children": [ {  "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "name": "Trauma"}]}]}]}]}]}]}, ]}, ] },                                    
+                    {
+                        //Other and ADHD-other
+                        "itemStyle": { "color": "#00b4c5" },
+                        "children": [
+                        {"children": [ {  "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "name": "Other"}]}]}]}]}]}, ]}, ] },                                    
+                            {
+                                //ADHD and Bipolar-other
+                                "itemStyle": { "color": "#00b4c5" },
+                                "children": [
+                                {"children": [ {  "children":[{ "children":[{ "children":[{ "children":[{ "children":[{ "name": "ADHD"}]}]}]}]}, ]}, ] },                                    
+                                    {
+                                        //Bipolar and schi-other
+                                        "itemStyle": { "color": "#00b4c5" },
+                                        "children": [
+                                            {"children": [ {  "children":[{ "children":[{ "children":[{ "children":[{ "name": "Bipolar"}]}]}]}, ]}, ] },
+                                            {
+                                                //Schi and Alchohol-other
+                                                "itemStyle": { "color": "#00b4c5" },
+                                                "children": [
+                                                   {"children": [ {  "children":[{ "children":[{ "children":[{ "name": "Schizophrenia" }]}]}, ]}, ] },
+                                                    {//alchohol and personality-other
+                                                        "itemStyle": { "color": "#00b4c5" },
+                                                        "children": [
+                                                           {"children": [ {  "children":[{ "children":[{"name": "Alchohol"},]}, ]}, ] },
+                                                            {
+                                                                "name": "",//ODD and PDD-other
+                                                                "children": [
+                                                                    { "name": "",    "children": [  { "name": "",  "children":[{"name": "ODD"}, ]}, ] },
+                                                                    {
+                                                                        "name": "",//PDD and conduct-other
+                                                                        "children": [
+                                                                            { "name": "",  "children": [
+                                                                                    { "name": "PDD", "value": 3938, "itemStyle":{ "color": "#00b4c5" } },
+                                                                                ] },
+                                                                            {
+                                                                                "name": "",//conduct and delirium
+                                                                                "itemStyle": { "color": "#00b4c5" },
+                                                                                "children": [
+                                                                                    { "name": "Conduct", "value": 3938, "itemStyle": { "color": "#00b4c5" } },
+                                                                                    { "name": "Delirium", "value": 3812, "itemStyle": { "color": "#00b4c5" } },
+                                                                                ]
+                                                                            },]
+                                                                    },]
+                                                            },]
+                                                    },]
+                                            },]
+                                    },]
+                            },
+                        ]
+                    }]
+            },
+        ]
+    }
+
+
+
+option = {
+ 
+  series: [
+    {
+      type: 'tree',
+      id: 0,
+      name: 'tree1',
+      data: [data],
+      top: '10%',
+      left: '18%',
+      bottom: '22%',
+      symbol: 'circle',
+      right: '20%',
+      symbolSize: 0,
+      edgeShape: 'polyline',
+      edgeForkPosition: '33%',
+      initialTreeDepth: 10,
+      lineStyle: {
+        width: 2,
+        color: 'lightgray',
+      },
+      label: {
+    
+        position: 'left',
+        color: 'rgb(101, 96, 98)',
+        fontSize: 15,        
+         fontFamily:'kanit',
+        verticalAlign: 'middle',
+        align: 'right'
+      },
+      leaves: {
+        label: {
+          color: 'rgb(101, 96, 98)',
+          fontSize: 12,
+          fontFamily:'kanit',
+          position: 'right',
+          verticalAlign: 'middle',
+          align: 'left',
+
+
+          formatter: function (params) {
+                // Check if the node is a leaf
+                if (params.data.children === undefined) {
+                    if (params.name === "Anxiety" ) {
+                        return '{a|' + params.name + '}';
+                     } else if (params.name === "Depressive" ) {
+                        return '{b|' + params.name + '}';
+                     } else if (params.name === "Trauma" ) {
+                        return '{c|' + params.name + '}';
+                    } else if (params.name === "Other" ) {
+                        return '{d|' + params.name + '}';
+                     } else if (params.name === "ADHD" ) {
+                        return '{e|' + params.name + '}';
+                     } else if (params.name === "Bipolar" ) {
+                        return '{f|' + params.name + '}';
+                     } else if (params.name === "Schizophrenia" ) {
+                        return '{g|' + params.name + '}';
+                     } else if (params.name === "Alchohol" ) {
+                        return '{h|' + params.name + '}';
+                     } else if (params.name === "ODD" ) {
+                        return '{i|' + params.name + '}';
+                     } else if (params.name === "PDD" ) {
+                        return '{j|' + params.name + '}';
+                     } else if (params.name === "Conduct" ) {
+                        return '{k|' + params.name + '}';
+                    } else {
+                        return '{l|' + params.name + '}';
+                    }
+                } else {
+                    return params.name;
+                }
+            },
+            rich: {
+                // Define text styles for different categories
+                a: { color: 'rgb(37, 70, 240)' },
+                b: { color: 'rgb(0, 180, 197)' },
+                c: { color: '#c44601' },
+                d: { color: 'rgb(137, 206, 0)' },
+                e:{color:'rgb(89, 40, 237)'},
+                f: { color: 'rgb(0, 191, 125)' },
+                g: { color: 'rgb(181, 25, 99)' },
+                h: { color: 'rgb(0, 158, 176)' },
+                i: { color: 'rgb(0, 158, 176)' },
+                j: { color: 'rgb(150, 127, 0)' },
+                k: { color: 'rgb(2, 147, 86)' },
+                l: { color: 'rgb(91, 163, 0)' }
+            }
+
+            
+    
+
+
+        }
+      },
+      emphasis:null,  
+      expandAndCollapse: false,
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
