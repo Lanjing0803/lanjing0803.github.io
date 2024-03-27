@@ -377,28 +377,18 @@ opacity:0.8
     text-decoration: none;
  
 }
-.arttimeline{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    margin-bottom:33px
-}
-.arttimeline .row{
-    gap:10vw
-}
+
 .artcontainer{
-        width: 50%; 
+    padding-top:10px;
         height: auto; 
-        padding-top:50px;
     }
     
     .artcontainer img {
-        width: 6vw; 
+        width: 38px; 
         height: auto;
         z-index:1 ;
         position: relative; 
-        transition: transform 0.3s ease;
+        transition: transform 0.1s ease;
     }
     .artcontainer:hover img {
         transform: scale(1.1);
@@ -407,47 +397,25 @@ opacity:0.8
         position: fixed;
         background-color: white;
         color: black;
-        padding: 0px 20px 20px 20px;
-        border-radius: 10px;
+        padding: 20px;
+        border-radius: 20px;
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s, visibility 0.3s;
         z-index:10;
-        max-width:18vw
+        max-width:500px;
+        transform:scale(0.8)
     }
     
     .artinfo h4{
-        padding-top:5vh
+        padding-top:0;font-size:23px
     }
     .artinfo p, .quote p {
         font-size:15px;
+        font-weight:300;
         margin: 0;
     }
-    .timeline {
-        position: absolute;
-       bottom: 43px;
-        width: 100%;
-        text-align: center;
-        z-index:0
-    }
-    
-    .atline {
-        width: 100%;
-        border-top: 2px solid grey; 
-        margin: 0 auto;
-        position: relative; 
-    }
-    
-    .atarrow {
-        width: 0;
-        height: 0;
-        border-top: 10px solid transparent; /* Adjust arrow size as needed */
-        border-bottom: 10px solid transparent; /* Adjust arrow size as needed */
-        border-left: 15px solid grey; /* Adjust arrow color as needed */
-        position: absolute;
-        bottom: -9px;
-        right: 0;
-    }
+
 
 
 
@@ -1224,32 +1192,15 @@ line-height:1.5em
     }
   }
       @media (max-width: 1020px) {
-       
+    
     .artinfo p {
         font-size:13px;}
-        .artinfo{
-            max-width:23vw
-        }
+        
         .artinfo h4{
             font-size:15px
         }
-        .atline {
-
-            border-top: 2px solid #403F45; 
-        }
-        .arttimeline{ margin-bottom:20px}
-        .arttimeline .row{
-            gap:5vw
-        }
+  
     
-        .artcontainer{
-            width: 50%; 
-            height: auto; 
-        }
-        .artcontainer img {
-            width: 8vw; 
-            height: auto; 
-        }
         .timeline {
             bottom: 25px;}
         h1{
