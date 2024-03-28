@@ -334,7 +334,7 @@ iframe {
 }
 
 .cs-banner {
-    max-height: 68vh;
+    max-height: 550px;
     width: 100vw;
    z-index:0;
     position: relative;
@@ -1296,7 +1296,7 @@ line-height:1.5em
         }
        
       .cs-banner {
-        max-height: 73vh;
+
         padding-top: 0;}
         .cs-banner img {
             width: 100vw;
