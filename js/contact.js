@@ -4,11 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("submit", function (e) {
       e.preventDefault(); 
 
-
       const name = document.querySelector('input[name="name"]').value;
-      const email = document.querySelector('input[name="email"]').value;
       const message = document.querySelector('textarea[name="message"]').value;
-
 
       const emailParams = {
         to_name: "Wenge",
@@ -31,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     });
 });
+
 
 
 
