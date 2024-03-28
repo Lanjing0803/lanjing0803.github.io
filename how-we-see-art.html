@@ -39,8 +39,10 @@
   <script type='text/javascript' src='js\case-study.js'></script>
 
   <style>
-  
-.primary-button{background-color:rgb(166, 128, 89)}
+    .primary-button {
+      background-color: rgb(166, 128, 89)
+    }
+
     .image-container {
       width: 100%;
       height: 100%;
@@ -53,7 +55,8 @@
       transition: background-image 0.3s ease;
       margin-top: 6vw;
     }
-  .left {
+
+    .left {
       width: 100vw;
       height: 70vh;
       position: sticky;
@@ -62,6 +65,7 @@
       padding-left: 13vw;
       padding-right: 10px
     }
+
     .right {
       width: 50%;
       height: 200vh;
@@ -112,7 +116,7 @@
 
     .circle-colors-intro-div {
       display: flex;
-      justify-content:flex-start;
+      justify-content: flex-start;
       align-items: center;
       padding-top: 15vh;
     }
@@ -142,28 +146,150 @@
     h1 {
       color: rgb(99, 77, 54)
     }
-    .randomart{background-color:  white;
-    padding: 50px;
-    border-radius: 25PX;
-    gap: 80px;
-  margin-top:30px}
-.randomart .primary-button{ cursor:pointer;     margin-top: 20px; color:white;font-size: 18px;border-color:transparent;}
-.randomart .primary-button:hover{  color: #97a9bd}
-.randomart h3{font-size:23px;font-weight:500;color:gray}
-.randomart p{font-weight:500;color:gray}
-#artworkImage img{object-fit: contain;    max-height: 400px;}
-.art-left{width:300px}
-.art-right{ align-content: center;}
+
+    .randomart {
+      background-color: white;
+      padding: 50px;
+      border-radius: 25PX;
+      gap: 80px;
+      margin-top: 30px
+    }
+
+    .randomart .primary-button {
+      cursor: pointer;
+      margin-top: 20px;
+      color: white;
+      font-size: 18px;
+      border-color: transparent;
+    }
+
+    .randomart .primary-button:hover {
+      color: #97a9bd
+    }
+
+    .randomart h3 {
+      font-size: 23px;
+      font-weight: 500;
+      color: gray
+    }
+
+    .randomart p {
+      font-weight: 500;
+      color: gray
+    }
+
+    #artworkImage img {
+      object-fit: contain;
+      max-height: 400px;
+    }
+
+    .art-left {
+      width: 300px
+    }
+
+    .art-right {
+      align-content: center;
+    }
+
+
+    .mondrian-container {
+      background-color: #000;
+      padding: 2px;
+      transform: scale(0.35);
+      opacity: 0.8;
+    }
+
+    .mondrian-container:after {
+      content: " ";
+      display: table;
+      width: 100%;
+      clear: both;
+    }
+
+    .yellow {
+      background-color: #FFD90A;
+    }
+
+    .red {
+      background-color: #CB0A1D;
+    }
+
+    .blue {
+      background-color: #2060A7;
+    }
+
+    .black-m {
+      background-color: #000;
+    }
+
+    .white {
+      background-color: #cfcfd7;
+    }
+
+
+    .cell {
+      float: left;
+    position: relative;
+    outline: 1.5px solid #000;
+    outline-offset: -1.5px;
+
+    }
+
+    .cell>.nested {
+      margin: 0px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+    .cell[class*="cell-8"] {
+      width: 100%;
+    }
+
+    .cell[class*="cell-6"] {
+      width: 75%;
+    }
+
+    .cell[class*="cell-4"] {
+      width: 50%;
+    }
+
+    .cell[class*="cell-2"] {
+      width: 25%;
+    }
+
+    .cell[class*="cell-"][class*="x8"] {
+      padding-bottom: 100%;
+    }
+
+    .cell[class*="cell-"][class*="x6"] {
+      padding-bottom: 75%;
+    }
+
+    .cell[class*="cell-"][class*="x4"] {
+      padding-bottom: 50%;
+    }
+
+    .cell[class*="cell-"][class*="x2"] {
+      padding-bottom: 25%;
+    }
+
+    .mondrian-container-container {
+      position: absolute;
+      width: 1000px;
+      height: 1000px;
+      right: -180px;
+      top: -180px;     opacity: 0.8;
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="back-button">
-    <a href="#" onclick="history.go(-1); return false;">
-        <i class="fas fa-arrow-left"></i>
-    </a>
-</div>
 
   <div class="project-section">
     <div class="row column">
@@ -171,10 +297,11 @@
         <div class="intro-heading">
           <div class="intro-lead-in appear-element">
             <h1>How We See Art<br>
-              
-             <div class="row column"><div class="subtitle">An Art Journey Through Centuries</div>
-            
-          </div>
+
+              <div class="row column">
+                <div class="subtitle">An Art Journey Through Centuries</div>
+
+              </div>
             </h1>
           </div>
 
@@ -185,83 +312,136 @@
       </div>
       <div class="award-container down-element">
         <img src="image/MET.svg" alt="The MetLogo" style="    width: 88px; margin-top: -30px;">
-     
-           </div>
+
       </div>
     </div>
+  </div>
 
-    <div class="cs-button down-element">
-      <a href="https://github.com/Lanjing0803/How-We-See-Art" target="_blank" class="primary-button">
-        <i class="fab fa-github"></i> GitHub Repository
-      </a>
-      <a href="https://studentwork.prattsi.org/infovis/visualization/art-in-renaissance-baroque-and-rococo/"
-        target="_blank" class="primary-button">
-        <i class="fas fa-external-link-alt"></i> 2023 EDA Archive
-      </a>
-    </div>
+  <div class="cs-button down-element">
+    <a href="https://github.com/Lanjing0803/How-We-See-Art" target="_blank" class="primary-button">
+      <i class="fab fa-github"></i> GitHub Repository
+    </a>
+    <a href="https://studentwork.prattsi.org/infovis/visualization/art-in-renaissance-baroque-and-rococo/"
+      target="_blank" class="primary-button">
+      <i class="fas fa-external-link-alt"></i> 2023 EDA Archive
+    </a>
+  </div>
+  <div data-scroll>
+    <div class="mondrian-container-container down-element2">
+      <div class="mondrian-container">
 
-    <div class="cs-banner">
-      <img src="image\da-1.svg" alt="da-project-1 image" data-scroll>
-    </div>
-
-
-    <div>
-      <div class="cs-content down-element2">
-<div class="row">
-          <h4 class="black">Overview </h4>   
-          <div class="circle-colors-intro-div">
-            <div class="top-div-intro-skew" style="background:rgb(26, 8, 43)"></div>
-            <div class="top-div-intro-skew" style="background: rgb(99, 77, 54)"></div>
-            <div class="top-div-intro-skew" style="background:rgb(166, 128, 89)"></div>
-            <div class="top-div-intro-skew" style="background:rgb(242, 128, 13)"></div>
-            <div class=" top-div-intro-skew" style="background:rgb(232, 179, 125)"></div>
-            <div class="top-div-intro-skew" style="background: rgb(232, 225, 200)"></div>
-</div>
-          </div>
-        <div class="row column">
-          <div class="case-study-intro">
-            <p ><br>
-              Have you ever stopped to think about how art changes over time? <br>The intriguing shift from classical
-              masterpieces in the 15th century to the avant-garde expressions of pop arts in the 20th century?
-              <br>Inspired by my personal fascination with
-              art history, I embarked on a journey through time, and analyzed artworks comprehensively from 15th century
-              to the 20the century, using the Met (the Metropolitan Museum of Art) API.
-            </p>
-          </div>
-          <div class="column">
-            <div class="case-study-details">
-              <h5><br>Date</h5>
-              <p>May, 2023; Mar, 2024 (Update)</p>
+        <div class="cell cell-4x4 yellow"></div>
+        <div class="cell cell-4x4">
+          <div class="nested">
+            <div class="cell cell-2x4 white"></div>
+            <div class="cell cell-6x4 blue"></div>
+            <div class="cell cell-6x4 white"></div>
+            <div class="cell cell-2x4 white">
+              <div class="nested">
+                <div class="cell cell-8x8 red"></div>
+                <div class="cell cell-8x8 black-m"></div>
+              </div>
             </div>
-
-            <div class="case-study-details">
-              <h5>Tools</h5>
-              <p>Phyton, R, Adobe Illustrator, D3.js</p>
-
-            </div>
-
           </div>
         </div>
 
-
+        <div class="cell cell-4x4">
+          <div class="nested">
+            <div class="cell cell-2x4 white"></div>
+            <div class="cell cell-6x4 white"></div>
+            <div class="cell cell-6x4 white"></div>
+            <div class="cell cell-2x4 red">
+              <div class="nested">
+                <div class="cell cell-8x4 black-m"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell cell-4x4 white">
+          <div class="nested">
+            <div class="cell cell-4x8">
+              <div class="nested">
+                <div class="cell cell-4x4 red"></div>
+                <div class="cell cell-4x4 white"></div>
+                <div class="cell cell-8x4 white"></div>
+                <div class="cell cell-8x8 white"></div>
+              </div>
+            </div>
+            <div class="cell cell-4x8 yellow"></div>
+          </div>
+        </div>
 
       </div>
     </div>
+  </div>
+
+  <div class="cs-banner">
+    <!-- <img src="image\da-1.svg" alt="da-project-1 image" data-scroll>
+   -->
+
+    <div style="height:78vh" data-scroll></div>
+  </div>
+
+
+  <div>
+    <div class="cs-content down-element2">
+      <div class="row">
+        <h4 class="black">Overview </h4>
+        <div class="circle-colors-intro-div">
+          <div class="top-div-intro-skew" style="background:rgb(26, 8, 43)"></div>
+          <div class="top-div-intro-skew" style="background: rgb(99, 77, 54)"></div>
+          <div class="top-div-intro-skew" style="background:rgb(166, 128, 89)"></div>
+          <div class="top-div-intro-skew" style="background:rgb(242, 128, 13)"></div>
+          <div class=" top-div-intro-skew" style="background:rgb(232, 179, 125)"></div>
+          <div class="top-div-intro-skew" style="background: rgb(232, 225, 200)"></div>
+        </div>
+      </div>
+      <div class="row column">
+        <div class="case-study-intro">
+          <p><br>
+            Have you ever stopped to think about how art changes over time? <br>The intriguing shift from classical
+            masterpieces in the 15th century to the avant-garde expressions of pop arts in the 20th century?
+            <br>Inspired by my personal fascination with
+            art history, I embarked on a journey through time, and analyzed artworks comprehensively from 15th century
+            to the 20the century, using the Met (the Metropolitan Museum of Art) API.
+          </p>
+        </div>
+        <div class="column">
+          <div class="case-study-details">
+            <h5><br>Date</h5>
+            <p>May, 2023; Mar, 2024 (Update)</p>
+          </div>
+
+          <div class="case-study-details">
+            <h5>Tools</h5>
+            <p>Phyton, R, Adobe Illustrator, D3.js</p>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
 
 
 
 
-    <div class="cs-content">
-      <h4> </h4>
+  <div class="cs-content">
+    <h4> </h4>
 
-      <h3>MET Random Art Odyssey</h3>   
-       
-  
-      <p>
-       Let's start an artful journey with the MET Random Art Odyssey, where I retrieved artwork data directly from the MET API. By setting the keyword limitation to 'painting,' I meticulously filtered the selection process to guarantee that every random artwork aligns perfectly with the project's focus. Click the shuffle button to see random artwork!
-      </p>
+    <h3>MET Random Art Odyssey</h3>
 
-     <!-- <div class="row " style="gap:33px">
+
+    <p>
+      Let's start an artful journey with the MET Random Art Odyssey, where artwork data is retrieved directly from the
+      MET API. With a keyword setting to 'painting', the collection emphasizes paintings mainly from the last century.
+      Click the shuffle button to see random artwork!
+    </p>
+
+    <!-- <div class="row " style="gap:33px">
         <div class="artcontainer">
           <img
             src="data:image/png;base64,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">
@@ -298,143 +478,145 @@
             <p>Year: 1932</p>
           </div>
         </div>
-      </div>--> 
- 
+      </div>-->
 
 
-      <div class="randomart row">
-    
+
+    <div class="randomart row">
+
       <div class="art-right">
         <div id="artworkImage"></div>
       </div>
-          <div class="art-left">
-        <button  class="primary-button " id="randomButton">Shuffle <i class="fa-solid fa-shuffle"></i></button>
-        <div id="artworkInfo" ></div>
+      <div class="art-left">
+        <button class="primary-button " id="randomButton">Shuffle <i class="fa-solid fa-shuffle"></i></button>
+        <div id="artworkInfo"></div>
         <br>
-        <p class="black">Check out my code snippet <a href=" https://github.com/Lanjing0803/How-We-See-Art/blob/main/random.html" target="_blank" class="underline" style="color:gray">here</a>       
+        <p class="black">Check out my code snippet <a
+            href=" https://github.com/Lanjing0803/How-We-See-Art/blob/main/random.html" target="_blank"
+            class="underline" style="color:gray">here</a>
         </p>
       </div>
     </div>
-    </div>
-    <h4></h4>
+  </div>
+  <h4></h4>
 
-    <div class="clearfix">
-      <div class="left" id="stickyLeft">
-        <h3>
-          Visualizing Art's Evolution Through Artwork Titles
-        </h3>
-        <div class="image-container"></div>
+  <div class="clearfix">
+    <div class="left" id="stickyLeft">
+      <h3>
+        Visualizing Art's Evolution Through Artwork Titles
+      </h3>
+      <div class="image-container"></div>
 
 
-      </div>
-
-      <div class="right">
-        <div class="para">
-          <h5 class="custom-line-break">NER Insights</h5> <br>
-          <p class="custom-bottom-break ">
-            I utilized NLTK's part-of-speech tagging and named entity recognition (NER) functionalities to identify and
-            classify entities such as <span style="background-color: hsl(30, 30%, 50%);">Organization</span>, <span
-              style="background-color: hsl(270, 10%, 70%)">Person</span>, and <span
-              style="background-color: hsl(210, 50%, 50%);">GPE</span> (Geopolitical Entity). <br> <br>Interestingly,
-            GPE
-            mentions and overall categorized topics may be limited in 20th-century artworks compared to other centuries.
-            This observation suggests a shift in artistic themes.
-          </p>
-        </div>
-        <div class="para">
-          <h5 id="trigger"> Wordcloud (15th - 18th Century) </h5> <br>
-          <p class="custom-bottom-break ">
-            I further conducted an analysis of word frequency spanning the 15th to 18th centuries to gain detailed
-            insights
-            into the
-            most prevalent topics.
-
-            <br> <br>
-            Frequent words like <span style="background-color: yellow;">Saint</span>, <span
-              style="background-color: pink;">Child</span>, <span style="background-color: orange;">Virgin</span>,
-            highlighted above and in the wordcloud, are mostly related to religion, suggesting a significant focus
-            on <span style="background-color: rgb(193, 188, 188);">religious themes</span> during this period.
-          </p>
-          <br>
-        </div>
-        <div class="para">
-          <h5 id="trigger2"> Wordcloud (19th - 20th Century) </h5> <br>
-          <p>
-            Then I conducted another separate analysis of word frequency spanning the 19th to 20th centuries to compare
-            the
-            differences between this time period and the previous one.
-            <br> <br>
-            Frequent words like <span style="background-color: lightgreen;">Woman</span>, <span
-              style="background-color: lightskyblue;">Garden</span>, <span
-              style="background-color: lightseagreen;">Life</span>, highlighted above and in the wordcloud,
-            suggest a shift towards themes related to daily life, nature, and human experiences. This shift may
-            reflect changes in <span style="background-color: rgb(193, 188, 188);">societal values</span>, <span
-              style="background-color: rgb(193, 188, 188);">artistic trends</span>, and the artists' exploration of more
-            <span style="background-color: rgb(193, 188, 188);">personal</span> and
-            relatable subjects.
-          </p>
-        </div>
-      </div>
     </div>
 
-    <div class="cs-content">
+    <div class="right">
+      <div class="para">
+        <h5 class="custom-line-break">NER Insights</h5> <br>
+        <p class="custom-bottom-break ">
+          I utilized NLTK's part-of-speech tagging and named entity recognition (NER) functionalities to identify and
+          classify entities such as <span style="background-color: hsl(30, 30%, 50%);">Organization</span>, <span
+            style="background-color: hsl(270, 10%, 70%)">Person</span>, and <span
+            style="background-color: hsl(210, 50%, 50%);">GPE</span> (Geopolitical Entity). <br> <br>Interestingly,
+          GPE
+          mentions and overall categorized topics may be limited in 20th-century artworks compared to other centuries.
+          This observation suggests a shift in artistic themes.
+        </p>
+      </div>
+      <div class="para">
+        <h5 id="trigger"> Wordcloud (15th - 18th Century) </h5> <br>
+        <p class="custom-bottom-break ">
+          I further conducted an analysis of word frequency spanning the 15th to 18th centuries to gain detailed
+          insights
+          into the
+          most prevalent topics.
 
-      <h3> Color Representation and Proportion</h3>
-      <p style="max-width:70vw">
-        I utilized Colorgram, a Python package, to extract the dominant colors from the overall artworks of each
-        century. The color palettes used in artworks from the 15th century predominantly consisted of earthy tones,
-        reflecting the prevalent artistic styles and pigment materials of the time. Shades of browns and muted tones
-        were commonly observed, indicative of the natural pigments available during that era. In contrast, artworks from
-        the 20th century exhibited a more diverse and vibrant range of colors compared to their 15th-century
-        counterparts.
+          <br> <br>
+          Frequent words like <span style="background-color: yellow;">Saint</span>, <span
+            style="background-color: pink;">Child</span>, <span style="background-color: orange;">Virgin</span>,
+          highlighted above and in the wordcloud, are mostly related to religion, suggesting a significant focus
+          on <span style="background-color: rgb(193, 188, 188);">religious themes</span> during this period.
+        </p>
+        <br>
+      </div>
+      <div class="para">
+        <h5 id="trigger2"> Wordcloud (19th - 20th Century) </h5> <br>
+        <p>
+          Then I conducted another separate analysis of word frequency spanning the 19th to 20th centuries to compare
+          the
+          differences between this time period and the previous one.
+          <br> <br>
+          Frequent words like <span style="background-color: lightgreen;">Woman</span>, <span
+            style="background-color: lightskyblue;">Garden</span>, <span
+            style="background-color: lightseagreen;">Life</span>, highlighted above and in the wordcloud,
+          suggest a shift towards themes related to daily life, nature, and human experiences. This shift may
+          reflect changes in <span style="background-color: rgb(193, 188, 188);">societal values</span>, <span
+            style="background-color: rgb(193, 188, 188);">artistic trends</span>, and the artists' exploration of more
+          <span style="background-color: rgb(193, 188, 188);">personal</span> and
+          relatable subjects.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-content">
+
+    <h3> Color Representation and Proportion</h3>
+    <p style="max-width:70vw">
+      I utilized Colorgram, a Python package, to extract the dominant colors from the overall artworks of each
+      century. The color palettes used in artworks from the 15th century predominantly consisted of earthy tones,
+      reflecting the prevalent artistic styles and pigment materials of the time. Shades of browns and muted tones
+      were commonly observed, indicative of the natural pigments available during that era. In contrast, artworks from
+      the 20th century exhibited a more diverse and vibrant range of colors compared to their 15th-century
+      counterparts.
+    </p>
+    <br>
+    <p>Click on different centuries to explore &#10549;</p>
+    <br>
+
+    <div class="colorwheel">
+      <iframe src="image/sunburst_all.html" width="400" height="300" frameborder="0"></iframe>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="cs-content sectionwhite row methodcontainer ">
+
+
+    <div>
+      <h4 class="section-title black">Data and Methdology </h4>
+      <p class="method">
+        The <a href="https://www.metmuseum.org/about-the-met/policies-and-documents/open-access" class="gray underline"
+          target="_blank">Metropolitan Museum of Art (MET) API</a> was utilized as the primary data source for this
+        project.
+        The MET API data underwent thorough cleaning and preprocessing for analysis. Artworks from the 15th to the
+        20th centuries were filtered for focused analysis. Challenges arose when retrieving image URLs due to
+        restrictions, but alternative methods allowed comprehensive data acquisition from the MET website.
+        <br>
+        I used D3.js to create visualizations. The Marimekko graph and the two word clouds effectively illustrated the
+        patterns and transitions found in artwork topics. And the interactive visualization, such as the color wheel,
+        filtered by centuries, provides users with a visual representation of artists' palettes across different time
+        periods.
       </p>
-      <br>
-      <p>Click on different centuries to explore &#10549;</p>
-      <br>
-
-      <div class="colorwheel">
-        <iframe src="image/sunburst_all.html" width="400" height="300" frameborder="0"></iframe>
-
-      </div>
-
+    </div>
+    <div><br>
+      <p class="method">The decision to present color analysis from both RGB and HSL perspectives is based on my
+        personal experience as an artist, and is aimed to offer a comprehensive understanding of the color palettes
+        utilized in the artwork.
+      </p>
+      <h4 class="section-title black">Takeaways </h4>
+      <p class="method">
+        Through the recent project update, I refined my Python code, enhancing the data cleaning process for more
+        accurate results. By setting clear research questions and narrowing down the time range for my analysis, I
+        found that it brought more focus and depth to my research. This process reminded me of the importance of
+        careful coding and thoughtful planning, which ultimately led to richer insights from the data. </p>
     </div>
 
 
-
-    <div class="cs-content sectionwhite row methodcontainer ">
-
-
-      <div>
-        <h4 class="section-title black">Data and Methdology </h4>
-        <p class="method">
-          The <a href="https://www.metmuseum.org/about-the-met/policies-and-documents/open-access" class="gray underline"
-            target="_blank">Metropolitan Museum of Art (MET) API</a> was utilized as the primary data source for this
-          project.
-          The MET API data underwent thorough cleaning and preprocessing for analysis. Artworks from the 15th to the
-          20th centuries were filtered for focused analysis. Challenges arose when retrieving image URLs due to
-          restrictions, but alternative methods allowed comprehensive data acquisition from the MET website.
-          <br>
-          I used D3.js to create visualizations. The Marimekko graph and the two word clouds effectively illustrated the
-          patterns and transitions found in artwork topics. And the interactive visualization, such as the color wheel,
-          filtered by centuries, provides users with a visual representation of artists' palettes across different time
-          periods.
-        </p>
-      </div>
-      <div><br>
-        <p class="method">The decision to present color analysis from both RGB and HSL perspectives is based on my
-          personal experience as an artist, and is aimed to offer a comprehensive understanding of the color palettes
-          utilized in the artwork.
-        </p>
-        <h4 class="section-title black">Takeaways </h4>
-        <p class="method">
-          Through the recent project update, I refined my Python code, enhancing the data cleaning process for more
-          accurate results. By setting clear research questions and narrowing down the time range for my analysis, I
-          found that it brought more focus and depth to my research. This process reminded me of the importance of
-          careful coding and thoughtful planning, which ultimately led to richer insights from the data. </p>
-      </div>
-
-
-    </div>
+  </div>
   </div>
   </div>
 
@@ -446,10 +628,10 @@
       </div>
       <div class="footer-icon ">
         <a href="mailto:wwang24@outlook.com"><i class="fa fa-envelope-square" aria-hidden="true"><span
-                    style="font-family: times;">wwang24@outlook.com</span></i></a>
+              style="font-family: times;">wwang24@outlook.com</span></i></a>
         <a href="index.html"><i class="fas fa-home"></i>
         </a>
-    </div>
+      </div>
     </div>
 
   </footer>
@@ -465,7 +647,7 @@
         const y = event.clientY;
 
         artInfo.style.left = x - 30 + 'px';
-        artInfo.style.top = y -10+ 'px';
+        artInfo.style.top = y - 10 + 'px';
 
         artInfo.style.opacity = '1';
         artInfo.style.visibility = 'visible';
@@ -477,7 +659,7 @@
       });
     });
 
- 
+
     // Initialize Scrollama
     var scroller = scrollama();
     function setupScrollama() {
@@ -532,100 +714,100 @@
       })
       .addTo(controller);
 
-    
-    
-    
-      document.getElementById('randomButton').addEventListener('click', async function() {
-            const keychainkey = "paintingIDs";
-            let res;
-            
-            // Check if localStorage contains paintingIDs
-            if (!localStorage.getItem(keychainkey)) {
-                console.log("Keychain entry does not exist... creating it");
-                const url = 'https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&medium=Paintings&departmentId=11&q=Painting';
-                
-                try {
-                    const response = await fetch(url);
-                    res = await response.json();
-                    localStorage.setItem(keychainkey, JSON.stringify(res));
-                } catch (error) {
-                    console.log('Error fetching data:', error);
-                    return;
-                }
-            } else {
-                console.log("Using keychain entry now");
-                res = JSON.parse(localStorage.getItem(keychainkey));
-            }
 
-            const max = res.total - 1;
-            console.log("Max: " + max);
-            const min = 0;
-            const random = Math.floor(Math.random() * (max - min + 1)) + min;
-            console.log("Random: " + random);
-            const picked = res.objectIDs[random];
-            console.log("Picked: " + picked);
-            const req2 = new Request('https://collectionapi.metmuseum.org/public/collection/v1/objects/' + picked);
-            
-            try {
-                const response2 = await fetch(req2);
-                const res2 = await response2.json();
-                const image = new Image();
-                image.src = res2.primaryImageSmall;
-                
-                image.onload = function() {
-                    displayArtworkInfo(image, res2);
-                };
-            } catch (error) {
-                console.log('Error fetching data:', error);
-            }
-        });
 
-        function displayArtworkInfo(image, artwork) {
-            const artworkInfoElement = document.getElementById('artworkInfo');
-            const artworkImageElement = document.getElementById('artworkImage');
 
-            artworkInfoElement.innerHTML = '';
-            artworkImageElement.innerHTML = '';
-            
-            const h3 = document.createElement('h3');
-            h3.textContent = artwork.title ? artwork.title : 'Unknown';
-            artworkInfoElement.appendChild(h3);
-            
-            const pArtist = document.createElement('p');
-            pArtist.textContent = "Artist: " + (artwork.artistDisplayName ? artwork.artistDisplayName : 'Unknown');
-            artworkInfoElement.appendChild(pArtist);
-            
-            const pDate = document.createElement('p');
-            pDate.textContent = "Date: " + (artwork.objectDate ? artwork.objectDate : 'Unknown');
-            artworkInfoElement.appendChild(pDate);
-            
-            const pMedium = document.createElement('p');
-            pMedium.textContent = "Medium: " + (artwork.medium ? artwork.medium : 'Unknown');
-            artworkInfoElement.appendChild(pMedium);
-            
-            artworkImageElement.appendChild(image);
+    document.getElementById('randomButton').addEventListener('click', async function () {
+      const keychainkey = "paintingIDs";
+      let res;
+
+      // Check if localStorage contains paintingIDs
+      if (!localStorage.getItem(keychainkey)) {
+        console.log("Keychain entry does not exist... creating it");
+        const url = 'https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&medium=Paintings&departmentId=11&q=Painting';
+
+        try {
+          const response = await fetch(url);
+          res = await response.json();
+          localStorage.setItem(keychainkey, JSON.stringify(res));
+        } catch (error) {
+          console.log('Error fetching data:', error);
+          return;
         }
+      } else {
+        console.log("Using keychain entry now");
+        res = JSON.parse(localStorage.getItem(keychainkey));
+      }
+
+      const max = res.total - 1;
+      console.log("Max: " + max);
+      const min = 0;
+      const random = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log("Random: " + random);
+      const picked = res.objectIDs[random];
+      console.log("Picked: " + picked);
+      const req2 = new Request('https://collectionapi.metmuseum.org/public/collection/v1/objects/' + picked);
+
+      try {
+        const response2 = await fetch(req2);
+        const res2 = await response2.json();
+        const image = new Image();
+        image.src = res2.primaryImageSmall;
+
+        image.onload = function () {
+          displayArtworkInfo(image, res2);
+        };
+      } catch (error) {
+        console.log('Error fetching data:', error);
+      }
+    });
+
+    function displayArtworkInfo(image, artwork) {
+      const artworkInfoElement = document.getElementById('artworkInfo');
+      const artworkImageElement = document.getElementById('artworkImage');
+
+      artworkInfoElement.innerHTML = '';
+      artworkImageElement.innerHTML = '';
+
+      const h3 = document.createElement('h3');
+      h3.textContent = artwork.title ? artwork.title : 'Unknown';
+      artworkInfoElement.appendChild(h3);
+
+      const pArtist = document.createElement('p');
+      pArtist.textContent = "Artist: " + (artwork.artistDisplayName ? artwork.artistDisplayName : 'Unknown');
+      artworkInfoElement.appendChild(pArtist);
+
+      const pDate = document.createElement('p');
+      pDate.textContent = "Date: " + (artwork.objectDate ? artwork.objectDate : 'Unknown');
+      artworkInfoElement.appendChild(pDate);
+
+      const pMedium = document.createElement('p');
+      pMedium.textContent = "Medium: " + (artwork.medium ? artwork.medium : 'Unknown');
+      artworkInfoElement.appendChild(pMedium);
+
+      artworkImageElement.appendChild(image);
+    }
 
 
-        function getRandomArtwork() {
-    const req = new Request('https://collectionapi.metmuseum.org/public/collection/v1/objects/436532');
-    
-    fetch(req)
+    function getRandomArtwork() {
+      const req = new Request('https://collectionapi.metmuseum.org/public/collection/v1/objects/436532');
+
+      fetch(req)
         .then(response => response.json())
         .then(data => {
-            const image = new Image();
-            image.src = data.primaryImageSmall;
-            image.onload = function() {
-                displayArtworkInfo(image, data);
-            };
+          const image = new Image();
+          image.src = data.primaryImageSmall;
+          image.onload = function () {
+            displayArtworkInfo(image, data);
+          };
         })
         .catch(error => console.log('Error fetching data:', error));
-}
+    }
 
-// Call getRandomArtwork function once the window is loaded
-window.addEventListener('load', getRandomArtwork);
+    // Call getRandomArtwork function once the window is loaded
+    window.addEventListener('load', getRandomArtwork);
 
-    </script>
+  </script>
 </body>
 
 </html>
