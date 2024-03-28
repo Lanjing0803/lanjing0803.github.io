@@ -308,7 +308,7 @@ nav {
   padding-left: 6vw;
   padding-right: 6vw;
   position: absolute;
-  z-index: 1000;
+
   border-radius: 0 0 38px 38px;
 
 }
@@ -342,7 +342,7 @@ ul {
   font-size: 33px;
   padding-left: 2vw;
   padding-top:20px;
-  
+  z-index:1
 }
 
 .left-menu a {
@@ -350,7 +350,8 @@ ul {
   align-items: center;
   font-family: Times;
 }
-
+.left-menu h2{    font-weight: 400;
+}
 
 .right-menu {
   font-size: 15px;
