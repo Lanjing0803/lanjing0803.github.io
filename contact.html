@@ -62,6 +62,8 @@
         padding: 0;
         margin: 0
     }
+    h3{    font-size: 23px;
+    font-weight: 400;}
     .aboutpage-contact-content-button {
     padding: 0;
 }
@@ -72,6 +74,10 @@ padding: 0px;
     font-size: 15px;
     text-align: center;
     align-content: center;}
+    .intro-text{    max-width: 1000px;}
+
+
+
 </style>
 <body>
     <div id="announcement-bar">👋 For optimal viewing, a laptop is recommended!</div>
@@ -79,7 +85,7 @@ padding: 0px;
     <div id="content">
         <div class="blur"></div>
 
-        <div class="particles" id="particles"></div>
+        <div class="particles laptop-show-only" id="particles"></div>
         <div class="navbar-mobile ">
   
             <input type="checkbox" id="overlay-input" />
@@ -98,8 +104,7 @@ padding: 0px;
       <div class="overlay-logo">WENGE<br>WANG</div>
       </div>
       </div>
-        <!--1st page section-->
-        <div class="section">
+    
           
             <nav>
                 <div class="navbar">
@@ -115,26 +120,31 @@ padding: 0px;
                     </ul>
                 </div>
             </nav>
-<div class="first-section">
-                <div class="intro-container column ">
+<div style="padding-top:10vh;    justify-content: center;
+display: flex;">
+                <div class="intro-container row" style="width:68vw;">
+
                         <div class="intro-text">
                             <div class="intro-lead-in row column">
-                                <div class="appear-element">Let's Create the Future! 
+                                <div class="appear-element">Let's Create the Future 🎉
                                     &nbsp; 
-                                    
+                                    <h3 class="down-element" style="color:gray">Keep in touch with me!</h3>
                             </div>
-                            <div class="row">
-                            <div class="aboutpage-contact-content-button" >
-                                <a href="mailto:wwang24@outlook.com" class="menu-button gray" ><i class="fa-regular fa-envelope"></i></a>
-                              </div>
-                              <div class="aboutpage-contact-content-button" >
-                                <a href="https://www.linkedin.com/in/wangwenge/" class="menu-button gray" ><i class="fa-brands fa-linkedin-in"></i></a>
-                              </div>
-                            </div>
+                        
 </div>
-                            <p class="down-element">Whether it's a project, collaboration, or just a chat, I'm eager to hear from you!</p>
-                        </div>
+<div class="row">
+  <div class="aboutpage-contact-content-button" >
+      <a href="mailto:wwang24@outlook.com" class="menu-button gray" ><i class="fa-regular fa-envelope"></i></a>
+    </div>
+    <div class="aboutpage-contact-content-button" >
+      <a href="https://www.linkedin.com/in/wangwenge/" class="menu-button gray" ><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </div>
 
+                        </div>
+                        <div class="column" style="padding-top:8px;z-index:10">
+                        <h3 class="down-element">OR, want to leave an anonymous note?</h3>
+                        <div class="postit1">
                         <div class="contact-wrapper down-element">
 
                              <form id="contact-form" class="form-horizontal emailjs-form" role="form" >
@@ -146,12 +156,12 @@ padding: 0px;
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                            <!--  <div class="form-group">
                                     <div>
                                         <input type="email" class="form-control" id="email" placeholder="EMAIL"
                                             name="email" autocomplete="off" value="" required>
                                     </div>
-                                </div>
+                                </div>--> 
 
                                 <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" id="message"
                                     autocomplete="off" required></textarea>
@@ -168,7 +178,8 @@ padding: 0px;
 
                   
                     </div>
-                  
+                  </div>
+            </div>
             </div>
        
             </div>
@@ -187,14 +198,14 @@ padding: 0px;
                 </div>
                 
             </footer>
-        </div>
+    
 
 
 
 
 
 
-    </div>
+
     </div>
   
     <script>

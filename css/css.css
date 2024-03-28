@@ -308,7 +308,7 @@ nav {
   padding-left: 6vw;
   padding-right: 6vw;
   position: absolute;
-
+  z-index: 10;
   border-radius: 0 0 38px 38px;
 
 }

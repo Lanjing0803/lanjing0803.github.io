@@ -47,7 +47,7 @@
 
 body{
   background: #f0eff2;
-  color:gray
+  color:gray;overflow:auto
 }
 .intro-lead-in{
   color:#403F45;    gap: 50px;
@@ -67,7 +67,7 @@ body{
 }
 .contact-wrapper {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     max-width: 840px;
   }
@@ -75,8 +75,8 @@ body{
   .form-horizontal {
     max-width: 400px;
     font-weight: 400;
+    padding: 20px;transform:scale(0.9);
 
-    padding-bottom:20px; 
   }
 #message{
   padding-top: 1em;
@@ -84,24 +84,23 @@ body{
 
 
   .form-control, textarea {
-    
-    width: 40vw;
-    height: 50px; 
+    width: 330px;
+    height: 50px;
     background-color: transparent;
     color: black;
     border: none;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #97a9bd;
     border-radius: 0;
     margin: 10px 0;
-    resize: none
+    resize: none;
   }
   
   
   .send-button {
     width: 10vw;
     background-color: transparent;
-    border: 2px solid black;
-    color: black;
+    border: 2px solid #97a9bd ;
+    color: #97a9bd ;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -145,7 +144,7 @@ textarea::placeholder {
 footer{
   justify-content: center;
   z-index:-1;
-  display:flex
+  display:flex;
 }
   .footer{position:absolute;
       bottom:3vh;
@@ -165,31 +164,48 @@ footer{
   }
 
 
-  
+  .postit1{
+    position:relative;
+    padding: 15px;
+    display: inline-block;
+    -webkit-box-shadow: 0 8px 10px -7px #999;
+    -moz-box-shadow: 0 8px 10px -7px #999;
+    box-shadow: 0 8px 10px -7px #999;
+    -webkit-border-bottom-right-radius: 60px 10px;
+    -moz-border-radius-bottomright: 60px 10px;
+    border-bottom-right-radius: 60px 10px;
+ }
+ .intro-container {
+display:flex;
+flex-direction: row;height:fit-content
+}
 
-  @media (max-width: 1020px) {
+  .postit1 {background: #EAF763;}
+
+  @media (max-width: 1050px) {
+
     .intro-container {
-      padding-top: 0;
-  }
+      flex-direction: column;    gap: 80px;
+      }
+      
   .contact-image{
     display:none
   }
+  .intro-text{font-size: 43px;}
   .intro-text p {
     line-height: 1.5;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+
 }
-.form-control, textarea {
-  width: 68vw;
-  height: 48px;
-}
+.footer{position:relative}
 .send-button {
   width: 28vw;
 }
 .particles{
   animation: rotate-container 5s infinite ease-in-out alternate;
 }
-
+.footoer{padding-top:0}
+.form-control, textarea {
+  width: 53vw;}
 }
 
 
