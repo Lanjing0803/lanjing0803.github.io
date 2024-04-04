@@ -282,10 +282,14 @@
 
         </div>
 
-        <div class="cs-banner" style=" max-height: 73vh;">
+        <div class="cs-banner" style=" height:530px">
             <img src="image\da-3.svg" alt="da-project-2 Image" data-scroll>
         </div>
 
+    
+        
+        
+ 
 
         <div class="cs-content down-element2">
             <h4>Overview
@@ -379,11 +383,15 @@
                         group is characterized by adventure, fantasy, and action, for gamers interested
                         in storytelling and exploration.
                     </p>
+                    <br>
+                    <p >Source from: <a target="_blank"
+                        href="https://www.kaggle.com/datasets/kanchana1990/steam-store-2024-hot-picks-and-reviews/data">Kaggle</a>
+                </p>
                 </div>
                 <div class="mindmap">
                     <style>
                         svg {
-                            transform: scale(0.65);
+                            transform: scale(0.71);
                             width: fit-content;
                             height: fit-content;
                             display: none;
@@ -413,9 +421,7 @@
                     </style>
                     <h5>Keyword Co-occurrence Network</h5><br>
                     <svg width="480" height="500"></svg>
-                    <p style="font-size:15px;text-align:end">Source from: <a target="_blank"
-                            href="https://www.kaggle.com/datasets/kanchana1990/steam-store-2024-hot-picks-and-reviews/data">Kaggle</a>
-                    </p>
+                 
 
                     <script>
                         var graph = {
@@ -528,10 +534,23 @@
             </div>
 
         </div>
-
+        <div class="cs-content">
+         <br><br><br>
+            <h3>User Score vs. Criitic Score</h3>
+            <br>
+            <p>
+                Despite a low R-squared value (less than 0.3), the scatter plot of user score versus critic score reveals intriguing trends. Notably, games with higher user scores, particularly those exceeding 0.5, exhibit a clear positive linear relationship with critic scores. However, for games with lower user ratings, the correlation appears more scattered, indicating a looser association. This suggests that while highly-rated games by users tend to receive favorable critic scores, the relationship is less consistent for games with lower user ratings.
+            </p><br>
+            <div class="score_plot">
+                <img src="image/user_critic_score.png" alt="games user score vs critic score scatter plot">
+        
+            <p style="font-size:15px;text-align:end">Source from: <a target="_blank"
+                href="https://www.kaggle.com/datasets/holmjason2/videogamedata">Kaggle</a>
+        </p>    </div>
+        </div>
         <div class="cs-content">
             <br><br>
-            <h3>From Critic Score to Sales: K-means Clustering</h3>
+            <h3>From Score to Sales: K-means Clustering</h3>
             <br>
             <p>
                 The clusters indicate distinct patterns in the relationship between critic scores and sales figures.
@@ -544,6 +563,13 @@
                 middle ground. Additionally, alongside each cluster, I visualized the proportion of each genre within
                 these clusters using circle packing diagrams.
             </p>
+            <div class="artcontainer" style="z-index: 10;position: relative;  width: fit-content;">
+                <p class="underline">See elbow chart here</p>
+                <div class="artinfo" style="height:auto;width: 100%;">
+                    <img src="image/Number of Clusters.png" alt="elbow chart for K means cluster" style="padding-left:10px;    width: 100%;">
+
+                </div>
+            </div>
             <div class="scrollcontainer">
 
                 <div class="left">
@@ -576,8 +602,7 @@
 
         </div>
         <div class="cs-content">
-            <br><br>
-            <br><br>
+         <br><br><br>
             <h3>Exploring Publisher Performance Across Genres</h3>
             <br>
             <p>
@@ -636,7 +661,7 @@
 
             <div>
                 <h4 class="section-title black">Data and Methdology </h4>
-                <p class="method black" style="width:38vw">
+                <p class="method black">
                     The two datasets utilized in this study was sourced from <a href="https://www.kaggle.com/"
                         class="gray underline" target="_blank">Kaggle</a>. With attributes such as sales figures, critic scores,
                     genres, and etc., the richness and diversity of the datasets make them well-suited for conducting a
@@ -663,8 +688,12 @@
                     in standardizing data for more accurate visual representations. Overall, data visualization is an
                     iterative process, and selecting and implementing visualization strategies need adaptability.
                 </p>
-                <br>
-
+              
+                <h4 class="section-title black"  style="padding-top:33px">Acknowledgments</h4>
+                <p class="method black">
+                    I learnt a lot from  <a href="https://learning.oreilly.com/library/view/data-visualization-with/9781098111861/"
+                    class="gray underline" target="_blank">'Data Visualization with Python and JavaScript, 2nd Edition'</a> by Kyran Dale. The book's thorough explanations of Pandas, Matplotlib, and Plotly significantly improved my grasp of these tools. The examples provided in Jupyter Notebook were particularly inspiring and guided me throughout the development of this project."
+                 </p>
             </div>
 
 
@@ -749,8 +778,8 @@
             const x = event.clientX;
             const y = event.clientY;
 
-            artInfo.style.left = x + 'px';
-            artInfo.style.top = y + 'px';
+            artInfo.style.left = x-20 + 'px';
+            artInfo.style.top = y-50 + 'px';
 
             artInfo.style.opacity = '1';
             artInfo.style.visibility = 'visible';

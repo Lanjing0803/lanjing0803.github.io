@@ -23,7 +23,9 @@ body{  background:#cfcfd7;color:black;overflow-y: auto;}
 .methodcontainer{
     gap:100px;
     padding-top:8vh;
-    padding-bottom:15vh
+    padding-bottom:15vh;
+    display:flex;
+    flex-direction: row;
 }
     .navbar-mobile {
         display: block!important;
@@ -283,7 +285,7 @@ h1 {
 h4 {
     font-size: 23px;
     font-weight: 400;
-    padding-top: 15vh;
+    padding-top: 13vh;
     color:gray
 }
 .item-desc h4{
@@ -417,7 +419,7 @@ opacity:0.8
     }
 
 
-
+.score_plot{width:60vw}
 
 
 .case-study-intro {
@@ -1192,14 +1194,18 @@ line-height:1.5em
     }
   }
       @media (max-width: 1020px) {
-    
+        .methodcontainer{
+      gap:20px;
+            display:flex;
+            flex-direction: column;
+        }
     .artinfo p {
         font-size:13px;}
         
         .artinfo h4{
             font-size:15px
         }
-  
+        .score_plot{width:78vw}
     
         .timeline {
             bottom: 25px;}
