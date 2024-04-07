@@ -42,7 +42,7 @@ body{          margin: 0; color: rgb(101, 96, 98);
   font-weight:400;
 }
 p{font-size:11px;line-height:1em}
-#defaultAnnotation{position: absolute;left:828px;top:188px;padding:10px;}
+#defaultAnnotation{position: absolute;left:808px;top:188px;padding:10px;}
 .line-container {
   position: relative;padding-top:20px;
 transform:scale(0.8);left:-18px
@@ -83,13 +83,11 @@ h5{margin-bottom:0}
   <div style="    margin-top: -115px;
   margin-left: -80px;
   padding-bottom: 100px;"><img width="38" height="38" src="https://img.icons8.com/cotton/64/descent-arrow.png" alt="descent-arrow" ></div>
-<h3 > Demographic Correlation with 12 Mental Disorders</h3>
-<br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 <h5 style="padding-left:8px">How to Read Symbols</h5>
 
   <p ><span style="font-size: 1em;padding-left:10px">★</span>  > 0.5 Cosine similarity</p>
-  <p ><span style="font-size: 1em;padding-left:10px;
-    position: relative;">&#x2022;</span>&nbsp;  ≥ 0.2 Cosine similarity</p>
+  <p ><span style="font-size: 1em;padding-left:10px;position: relative;">&nbsp;&#x2022;</span>&nbsp;&nbsp;  ≥ 0.2 Cosine similarity</p>
     
 
 
@@ -128,7 +126,7 @@ h5{margin-bottom:0}
       </div>
     </div>
 
-    <p style="font-size:15px;text-align:end;padding-top:80px">Source from: <a target="_blank" style=" color: #97a9bd;text-decoration: none;"
+    <p style="font-size:15px;text-align:end;padding-top:43px">Source from: <a target="_blank" style=" color: #97a9bd;text-decoration: none;"
       href="https://www.samhsa.gov/">SAMHSA</a>
 </p>
 
@@ -149,30 +147,30 @@ h5{margin-bottom:0}
 // Based on https://bl.ocks.org/nbremer/1527c2dd26a26d9ee942
 var matrix = [];
 
-var alertCount = 600,
+var alertCount=100,
   emptyPerc = 3,
   emptyStroke = Math.round(alertCount * emptyPerc),
   data = {
     "names": [
-    "ADHD",	"Alcohol ★",	"Anxiety",	"Bipolar",	"Conduct",	"Delirium",	"Depressive",	"ODD",	"Other",	"PDD",	"Personality",	"Schizophrenia ★","Trauma","", "15-17 years",	"18-20 years",	"21-24 years",	"25-29 years",	"30-34 years ",	"35-39 years ",	"40-44 years ",	"45-49 years ",	"50-54 years",	"55-59 years",	"60-64 years",	"65 years and older",	"Special education",	"0-8 grade",	"9-11 grade",	"12 grade (GED)",	"More than 12 grade",	"Full-time",	"Part-time",	"Employed full-time/part-time not differentiated",	"Unemployed",	"Not in labor force",	"Mexican",	"Puerto Rican",	"Other Hispanic or Latino origin",	"Not of Hispanic or Latino origin",	"Male",	"Female",	"Homeless",	"Private residence",	"Other residence",	"Never married",	"Now married",	"Separated (marital status)",	"Divorced, widowed",	"American Indian/Alaska Native",	"Asian",	"Black or African American",	"Native Hawaiian or Other Pacific Islander",	"White",	"Other race/two or more races",	"Other jurisdictions",	"Northeast region",	"Midwest region",	"South region",	"West region",	""		
+    "⊙ ADHD",	"✪ Alcohol",	"⊙ Anxiety",	"⊙ Bipolar",	"⊙ Conduct",	"⊙ Delirium",	"⊙ Depressive",	"⊙ ODD",	"⊙ Other",	"⊙ PDD",	"⊙ Personality",	"✪ Schizophrenia","⊙ Trauma","", "15-17 years",	"18-20 years",	"21-24 years",	"25-29 years",	"30-34 years ",	"35-39 years ",	"40-44 years ",	"45-49 years ",	"50-54 years",	"55-59 years",	"60-64 years",	"65 years and older",	"Special education",	"0-8 grade",	"9-11 grade",	"12 grade (GED)",	"More than 12 grade",	"Full-time",	"Part-time",	"Employed full-time/part-time not differentiated",	"Unemployed",	"Not in labor force",	"Mexican",	"Puerto Rican",	"Other Hispanic or Latino origin",	"Not of Hispanic or Latino origin",	"Male",	"Female",	"Homeless",	"Private residence",	"Other residence",	"Never married",	"Now married",	"Separated (marital status)",	"Divorced, widowed",	"American Indian/Alaska Native",	"Asian",	"Black or African American",	"Native Hawaiian or Other",	"White",	"Other race/two or more races",	"Other jurisdictions",	"Northeast region",	"Midwest region",	"South region",	"West region",	""		
     ],
     "matrix": [
-    [0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	37.38,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	11.56,	27.16,	0,	34.84,	15.51,	0,	0,	0,	28.11,	0,	0,	0,	0,	11.51,	11.51,	0,	0,	0,	43.24,	15.87,	0,	17.85,	0,	0,	12.97,	0,	11.24,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	74.11,	0,	20.69,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	15.18,	74.28,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	36.53,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	28.3,	0,	14.86,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	27.91,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	12.19,	0,	0,	0,	0,	0,	0,	0,	11.16,	0,	0,	0,	0,	11.8,	0,	0,	0,	11.28,	12.07,	0,	0,	0,	0,	10.05,	10.05,	0,	0,	0,	40.46,	0,	0,	34.36,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	37.1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	21.65,	25.66,	16.35,	14.69,	0,	0,	0,	26.22,	0,	0,	0,	0,	0,	0,	0,	0,	0,	34.47,	14.05,	0,	12.72,	0,	0,	16.03,	0,	10.68,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	39.97,	0,	13.2,	0,	0,	0,	0,	0,	0,	0,	15.89,	0,	0,	0,	0,	18.17,	18.17,	0,	0,	0,	39.25,	0,	0,	24.65,	0,	12.1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	36,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	29.86,	0,	15.01,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	28.17,	0,	0,	11.29,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	20.22,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	16.77,	10.95,	0,	0,	0,	15.05,	30.79,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	12.68,	16.83,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	16.19,	0,	0,	0,	26.23,	16.79,	0,	0,	0,	18.41,	0,	0,	0,	0,	5.63,	5.63,	0,	9.26,	14.11,	31.98,	15.19,	3.81,	8.48,	0,	0,	0,	0,	0,	0,	0,	0,	16.18,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	39.51,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	10.19,	35.11,	0,	16.66,	0,	14.22,	0,	0,	12.8,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	11.55,	0,	0,	0,	0,	0,	0,	0,	11.59,	0,	0,	0,	0,	0,	0,	0,	0,	0,	17.28,	0,	0,	0,	0,	0,	0,	0,	0,	0,	31.94,	0,	0,	36.5,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	65.61,	0,	15.99,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	24.7,	60.98,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	38.76,	7.15,	0,	0,	0,	0,	0,	0,	0,	0,	3.12,	0,	0,	0,	30.65,	0,	18.66,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	33.53,	7,	0,	14.25,	0,	0,	0,	0,	10.41,	0,	0,	0,	0,	0,	0,	0],									
+    [0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	7.476,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	2.312,	5.432,	0,	6.968,	3.102,	0,	0,	0,	5.622,	0,	0,	0,	0,	2.302,	2.302,	0,	0,	0,	8.648,	3.174,	0,	3.57,	0,	0,	2.594,	0,	2.248,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	14.822,	0,	4.138,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	3.036,	14.856,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	7.306,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	5.66,	0,	2.972,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	5.582,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	2.438,	0,	0,	0,	0,	0,	0,	0,	2.232,	0,	0,	0,	0,	2.36,	0,	0,	0,	2.256,	2.414,	0,	0,	0,	0,	2.01,	2.01,	0,	0,	0,	8.092,	0,	0,	6.872,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	7.42,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	4.33,	5.132,	3.27,	2.938,	0,	0,	0,	5.244,	0,	0,	0,	0,	0,	0,	0,	0,	0,	6.894,	2.81,	0,	2.544,	0,	0,	3.206,	0,	2.136,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	7.994,	0,	2.64,	0,	0,	0,	0,	0,	0,	0,	3.178,	0,	0,	0,	0,	3.634,	3.634,	0,	0,	0,	7.85,	0,	0,	4.93,	0,	2.42,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	7.2,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	5.972,	0,	3.002,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	5.634,	0,	0,	2.258,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	4.044,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	3.354,	2.19,	0,	0,	0,	3.01,	6.158,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	2.536,	3.366,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	3.238,	0,	0,	0,	5.246,	3.358,	0,	0,	0,	3.682,	0,	0,	0,	0,	0,	0,	0,	0,	2.822,	6.396,	3.038,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	3.236,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	7.902,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	2.038,	7.022,	0,	3.332,	0,	2.844,	0,	0,	2.56,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	2.31,	0,	0,	0,	0,	0,	0,	0,	2.318,	0,	0,	0,	0,	0,	0,	0,	0,	0,	3.456,	0,	0,	0,	0,	0,	0,	0,	0,	0,	6.388,	0,	0,	7.3,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	13.122,	0,	3.198,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	4.94,	12.196,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	7.752,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	6.13,	0,	3.732,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	6.706,	0,	0,	2.85,	0,	0,	0,	0,	2.082,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	emptyStroke],									
 	[37.38,	0,	36.53,	0,	37.1,	0,	36,	20.22,	0,	39.51,	0,	0,	38.76,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	7.15,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	12.19,	0,	0,	0,	0,	0,	0,	11.55,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
@@ -181,7 +179,7 @@ var alertCount = 600,
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	3.12,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	11.16,	0,	39.97,	0,	0,	0,	0,	11.59,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	16.19,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[11.56,	0,	0,	0,	0,	13.2,	0,	0,	0,	10.19,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
@@ -197,15 +195,15 @@ var alertCount = 600,
 	[0,	74.11,	0,	0,	0,	0,	0,	0,	0,	0,	0,	65.61,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	20.69,	0,	0,	0,	0,	0,	0,	0,	0,	0,	15.99,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[11.51,	0,	0,	10.05,	0,	18.17,	0,	0,	5.63,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[11.51,	0,	0,	10.05,	0,	18.17,	0,	0,	5.63,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[11.51,	0,	0,	10.05,	0,	18.17,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[11.51,	0,	0,	10.05,	0,	18.17,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	9.26,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	14.11,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[43.24,	0,	27.91,	40.46,	34.47,	39.25,	28.17,	0,	31.98,	0,	31.94,	0,	33.53,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[15.87,	0,	0,	0,	14.05,	0,	0,	0,	15.19,	0,	0,	0,	7,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[0,	0,	0,	0,	0,	0,	0,	0,	3.81,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
-	[17.85,	0,	0,	34.36,	12.72,	24.65,	11.29,	0,	8.48,	0,	36.5,	0,	14.25,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[15.87,	0,	0,	0,	14.05,	0,	0,	0,	15.19,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
+	[17.85,	0,	0,	34.36,	12.72,	24.65,	11.29,	0,	0,	0,	36.5,	0,	14.25,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	12.1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[12.97,	0,	0,	0,	16.03,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
@@ -218,9 +216,9 @@ var alertCount = 600,
 	[0,	0,	0,	0,	0,	0,	0,	16.83,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
 	[0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	emptyStroke,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0],									
- ],
-    "colors": ["#5928ed", "#005e60", "#2546f0", "#00bf7d", "#029356","#5ba300", "#00b4c5", "#009eb0", "#89ce00", "#967f00", "#e6308a", "#b51963","#c44601","transparent",
-    "#656062",	"#656062",	"#656062",	"#656062",	"#656062",	"#656062",	"#656062",	"#656062",	"#656062",	"#656062",	"#656062",	"#656062",	"#acaec0",	"#acaec0",	"#acaec0",	"#acaec0",	"#acaec0",	"#343132",	"#343132",	"#343132",	"#343132",	"#343132",	"#c2bdab",	"#c2bdab",	"#c2bdab",	"#c2bdab",	"gray",	"gray",	"#e6dadd",	"#e6dadd",	"#e6dadd",	"#a79ea1",	"#a79ea1",	"#a79ea1","#a79ea1",	"#a19a81",	"#a19a81",	"#a19a81",	"#a19a81",	"#a19a81",	"#a19a81",		"#d2d2d2",	"#d2d2d2",	"#d2d2d2",	"#d2d2d2",	"#d2d2d2",	"transparent"],
+],
+    "colors": ["rgb(89, 40, 237)", "#4073ff", "#96C3EB", "#14AAF5", "#158FAD","#6ACCBC", "#299438", "#7ECC49", "#AFB83B", "#FAD000", "#FF9933", "#DB4035","#B8255F","transparent",
+     "#918a89",	  "#918a89",	  "#918a89",	 "#918a89",	 "#918a89",	 "#918a89",	 "#918a89",	 "#918a89",	 "#918a89",	 "#918a89",	 "#918a89",	 "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	  "#918a89",	"transparent"],
     "empty": emptyStroke,
     "count": alertCount,
     "graph": "#chord"
@@ -244,16 +242,16 @@ var svg = d3.select(data.graph).append("svg")
   .attr("xlink", "http://www.w3.org/1999/xlink");
 
 var outerRadius = wrapperWidth / 3.5 - 98,
-  innerRadius = outerRadius - 8,
-  opacityDefault = 0.4,
+  innerRadius = outerRadius-3,
+  opacityDefault = 0.3,
   opacityLower = 0.03,
   opacityLowest = 0.03, 
   opacityFull = 1;
 
-var offset = Math.PI * (emptyStroke / (data.count + emptyStroke)) /2.5 ;
+var offset = Math.PI * (emptyStroke / (data.count + emptyStroke)) /2.3;
 
 var chord = d3.chord()
-  .padAngle(0.05)
+  .padAngle(0.04)
   .sortSubgroups(d3.descending) 
   .sortChords(d3.descending);
 
@@ -315,32 +313,32 @@ var entity = wrapper.selectAll(".entity")
     const entityName = Names[d.index];
     
     var annotations = [];
-    if (entityName === 'Alcohol ★') {
+    if (entityName === '✪ Alcohol') {
       annotations.push(
-        {color: "#2546f0",
+        {color: "#4073ff",
         note: {title: "Alcohol Top Metrics" ,     align: "left"},
-        x: 850,
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Region : Other jurisdictions ★ ", align: "left"},
-        x: 850,
+        note: {label: "1. Region : Other jurisdictions ★ ", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Ethnic : Puerto Rican ★",align: "left"},
-        x: 850,
+        note: {label: "2. Ethnic : Puerto Rican ★",align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Ethnic : Not of Hispanic or Latino origin •",align: "left"},
-        x: 850,
+        note: {label: "3. Ethnic : Not of Hispanic or Latino origin •",align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
@@ -348,46 +346,46 @@ var entity = wrapper.selectAll(".entity")
       
       );
     }
-    if (entityName === 'ADHD') {
+    if (entityName === '⊙ ADHD') {
       annotations.push(
-        {color: "#5928ed",
+        {color: "rgb(89, 40, 237)",
         note: {title: "ADHD Top Metrics" ,     align: "left"},
-        x: 850,
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "1. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Age : 15-17 years •",align: "left"},
-        x: 850,
+        note: {label: "2. Age : 15-17 years •",align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : More than 12 grade •",align: "left"},
-        x: 850,
+        note: {label: "3. Education : More than 12 grade •",align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Employment : Not in labor force •",align: "left"},
-        x: 850,
+        note: {label: "4. Employment : Not in labor force •",align: "left"},
+        x: 830,
           y: 323,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 9-11 grade •",align: "left"},
-        x: 850,
+        note: {label: "5. Education : 9-11 grade •",align: "left"},
+        x: 830,
      y: 343,
         dy: 0, dx: 0,
         connector: null,  
@@ -395,32 +393,32 @@ var entity = wrapper.selectAll(".entity")
       );
     }
 
-    if (entityName === 'Anxiety') {
+    if (entityName === '⊙ Anxiety') {
       annotations.push(
-        {color: "#00b4c5",
+        {color: "#96C3EB",
         note: {title: "Anxiety Top Metrics" ,     align: "left"},
-        x: 850,
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,
       },
       {
-        note: {label: "Age : 15-17 years •", align: "left"},
-        x: 850,
+        note: {label: "1. Age : 15-17 years •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 9-11 grade •",align: "left"},
-                x: 850,
+        note: {label: "2. Education : 9-11 grade •",align: "left"},
+                x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "3. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
@@ -428,70 +426,70 @@ var entity = wrapper.selectAll(".entity")
       );
     }
 
-    if (entityName === 'Bipolar') {
+    if (entityName === '⊙ Bipolar') {
       annotations.push(
         {
-       color: "#00bf7d", note: {title: "Bipolar Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#14AAF5", note: {title: "Bipolar Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
         {
-          note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+          note: {label: "1. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Divorced, widowed •", align: "left"},
-        x: 850,
+        note: {label: "2. Marital status : Divorced, widowed •", align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       }
       ); }
 
-      if (entityName === 'Conduct') {
+      if (entityName === '⊙ Conduct') {
       annotations.push(
         {
-       color: "#029356", note: {title: "Conduct Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#158FAD", note: {title: "Conduct Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
-        {note: {label: "Age : 15-17 years •", align: "left"},
-        x: 850,
+        {note: {label: "1. Age : 15-17 years •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "2. Marital status : Never married •", align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Employment : Not in labor force •",align: "left"},
-        x: 850,
+        note: {label: "3. Employment : Not in labor force •",align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 12 grade (GED) •",align: "left"},
-        x: 850,
+        note: {label: "4. Education : 12 grade (GED) •",align: "left"},
+        x: 830,
           y: 323,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 9-11 grade •",align: "left"},
-        x: 850,
+        note: {label: "5. Education : 9-11 grade •",align: "left"},
+        x: 830,
      y: 343,
         dy: 0, dx: 0,
         connector: null,  
@@ -499,213 +497,213 @@ var entity = wrapper.selectAll(".entity")
 
       ); }
 
-      if (entityName === 'Delirium') {
+      if (entityName === '⊙ Delirium') {
       annotations.push(
         {
-       color: "#5ba300", note: {title: "Delirium Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#6ACCBC", note: {title: "Delirium Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
-        {note: {label: "Age : 65 years and older •", align: "left"},
-        x: 850,
+        {note: {label: "1. Age : 65 years and older •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "2. Marital status : Never married •", align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
-      { note: {label: "Marital status : Divorced, widowed •", align: "left"},
-        x: 850,
+      { note: {label: "3. Marital status : Divorced, widowed •", align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Depressive') {
+      if (entityName === '⊙ Depressive') {
       annotations.push(
         {
-       color: "#89ce00", note: {title: "Depressive Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#299438", note: {title: "1. Depressive Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
         {
-        note: {label: "Age : 15-17 years •", align: "left"},
-        x: 850,
+        note: {label: "2. Age : 15-17 years •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 9-11 grade •",align: "left"},
-        x: 850,
+        note: {label: "3. Education : 9-11 grade •",align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "4. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'ODD') {
+      if (entityName === '⊙ ODD') {
       annotations.push(
         {
-       color: "#009eb0", note: {title: "ODD Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#7ECC49", note: {title: "ODD Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
         {
-        note: {label: " Employment : Not in labor force •",align: "left"},
-        x: 850,
+        note: {label: "1. Employment : Not in labor force •",align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
-      {note: {label: "Age : 15-17 years •", align: "left"},
-   x: 850,
+      {note: {label: "2. Age : 15-17 years •", align: "left"},
+   x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Other') {
+      if (entityName === '⊙ Other') {
       annotations.push(
         {
-       color: "#005e60", note: {title: "Other Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#AFB83B", note: {title: "Other Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
         {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
-        y: 263,
-        dy: 0, dx: 0,
-        connector: null,  
-      },
-      {       
-         note: {label: " Education : More than 12 grade •",align: "left"},
-       x: 850,
-             y: 283,
-        dy: 0, dx: 0,
-        connector: null,  
-      }); }
-
-      if (entityName === 'PDD') {
-      annotations.push(
-        {
-       color: "#967f00", note: {title: "PDD Top Metrics" ,     align: "left"},
-        x: 850,
-        y:233,
-        dy: 0, dx: 0,
-        connector: null,  
-      },
-      {note: {label: "Age : 15-17 years •", align: "left"},
- x: 850,
+        note: {label: "1. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {       
-        note: {label: " Education : 9-11 grade •",align: "left"},
-       x: 850,
+         note: {label: "2. Education : More than 12 grade •",align: "left"},
+       x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Personality') {
+      if (entityName === '⊙ PDD') {
       annotations.push(
         {
-       color: "#e6308a",  note: {title: "Personality Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#FAD000", note: {title: "PDD Top Metrics" ,     align: "left"},
+        x: 830,
+        y:233,
+        dy: 0, dx: 0,
+        connector: null,  
+      },
+      {note: {label: "1. Age : 15-17 years •", align: "left"},
+ x: 830,
+        y: 263,
+        dy: 0, dx: 0,
+        connector: null,  
+      },
+      {       
+        note: {label: "2. Education : 9-11 grade •",align: "left"},
+       x: 830,
+             y: 283,
+        dy: 0, dx: 0,
+        connector: null,  
+      }); }
+
+      if (entityName === '⊙ Personality') {
+      annotations.push(
+        {
+       color: "#FF9933",  note: {title: "Personality Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {        
-        note: {label: "Marital status : Divorced, widowed •", align: "left"},
- x: 850,
+        note: {label: "1. Marital status : Divorced, widowed •", align: "left"},
+ x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {       
-        note: {label: "Marital status : Never married •", align: "left"},
-       x: 850,
+        note: {label: "2. Marital status : Never married •", align: "left"},
+       x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Schizophrenia ★') {
+      if (entityName === '✪ Schizophrenia') {
       annotations.push(
         {
-       color: "#b51963",  note: {title: "Schizophrenia Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#DB4035",  note: {title: "Schizophrenia Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {        
-        note: {label: " Ethnic : Puerto Rican ★",align: "left"},
- x: 850,
+        note: {label: "1. Ethnic : Puerto Rican ★",align: "left"},
+ x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {       
-        note: {label: "Region : Other jurisdictions ★ ", align: "left"},
-       x: 850,
+        note: {label: "2. Region : Other jurisdictions ★ ", align: "left"},
+       x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
-      }, {note: {label: "Race : Other race/two or more races •", align: "left"},
-   x: 850,
+      }, {note: {label: "3. Race : Other race/two or more races •", align: "left"},
+   x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Trauma') {
+      if (entityName === '⊙ Trauma') {
       annotations.push(
         {
-       color: "#c44601",  note: {title: "Trauma Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#B8255F",  note: {title: "Trauma Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {        
-        note: {label: "Age : 15-17 years •", align: "left"},
-       x: 850,
+        note: {label: "1. Age : 15-17 years •", align: "left"},
+       x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {       
-        note: {label: "Marital status : Never married •", align: "left"},
-       x: 850,
+        note: {label: "2. Marital status : Never married •", align: "left"},
+       x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
-      }, { note: {label: " Education : 9-11 grade •",align: "left"},
-   x: 850,
+      }, { note: {label: "3. Education : 9-11 grade •",align: "left"},
+   x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
@@ -739,7 +737,7 @@ entity.append("text")
     d.angle = ((d.startAngle + d.endAngle) / 2) + offset;
   })
   .style("fill", function(d, i) {
-    return data.colors[i]; // Assuming data.colors is an array of color values
+    return data.colors[i]; 
   })
   .attr("font-size", "11px")
   .attr("class", "titles")
@@ -748,7 +746,7 @@ entity.append("text")
   })
   .attr("transform", function(d, i) {
     var c = arc.centroid(d);
-    return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")" + "translate(" + (innerRadius + 30) + ")" + (d.angle > Math.PI ? "rotate(180)" : "");
+    return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")" + "translate(" + (innerRadius + 18) + ")" + (d.angle > Math.PI ? "rotate(180)" : "");
   })
   .text(function(d, i) {
     return Names[i];
@@ -807,39 +805,39 @@ var flow = wrapper.selectAll('.chord')
 d3.selectAll('path.chord').transition("fadeOnArc")
   .style("opacity", opacityLowest);
 d3.select(this).transition("fadeOnArc")
-  .style("opacity", opacityFull);
+  .style("opacity", opacityDefault);
 
 
 
-    const entityName = Names[d.source.index];
+    const entityName = Names[d.target.index];
     
     var annotations = [];
-    if (entityName === 'Alcohol ★') {
+    if (entityName === '✪ Alcohol') {
       annotations.push(
-        {color: "#2546f0",
+        {color: "#4073ff",
         note: {title: "Alcohol Top Metrics" ,     align: "left"},
-        x: 850,
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Region : Other jurisdictions ★ ", align: "left"},
-        x: 850,
+        note: {label: "1. Region : Other jurisdictions ★ ", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Ethnic : Puerto Rican ★",align: "left"},
-        x: 850,
+        note: {label: "2. Ethnic : Puerto Rican ★",align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Ethnic : Not of Hispanic or Latino origin •",align: "left"},
-        x: 850,
+        note: {label: "3. Ethnic : Not of Hispanic or Latino origin •",align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
@@ -847,46 +845,46 @@ d3.select(this).transition("fadeOnArc")
       
       );
     }
-    if (entityName === 'ADHD') {
+    if (entityName === '⊙ ADHD') {
       annotations.push(
-        {color: "#5928ed",
+        {color: "rgb(89, 40, 237)",
         note: {title: "ADHD Top Metrics" ,     align: "left"},
-        x: 850,
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "1. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Age : 15-17 years •",align: "left"},
-        x: 850,
+        note: {label: "2. Age : 15-17 years •",align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : More than 12 grade •",align: "left"},
-        x: 850,
+        note: {label: "3. Education : More than 12 grade •",align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Employment : Not in labor force •",align: "left"},
-        x: 850,
+        note: {label: "4. Employment : Not in labor force •",align: "left"},
+        x: 830,
           y: 323,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 9-11 grade •",align: "left"},
-        x: 850,
+        note: {label: "5. Education : 9-11 grade •",align: "left"},
+        x: 830,
      y: 343,
         dy: 0, dx: 0,
         connector: null,  
@@ -894,32 +892,32 @@ d3.select(this).transition("fadeOnArc")
       );
     }
 
-    if (entityName === 'Anxiety') {
+    if (entityName === '⊙ Anxiety') {
       annotations.push(
-        {color: "#00b4c5",
+        {color: "#96C3EB",
         note: {title: "Anxiety Top Metrics" ,     align: "left"},
-        x: 850,
+        x: 830,
         y:233,
         dy: 0, dx: 0,
-        connector: null,  
+        connector: null,
       },
       {
-        note: {label: "Age : 15-17 years •", align: "left"},
-        x: 850,
+        note: {label: "1. Age : 15-17 years •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 9-11 grade •",align: "left"},
-                x: 850,
+        note: {label: "2. Education : 9-11 grade •",align: "left"},
+                x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "3. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
@@ -927,70 +925,70 @@ d3.select(this).transition("fadeOnArc")
       );
     }
 
-    if (entityName === 'Bipolar') {
+    if (entityName === '⊙ Bipolar') {
       annotations.push(
         {
-       color: "#00bf7d", note: {title: "Bipolar Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#14AAF5", note: {title: "Bipolar Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
         {
-          note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+          note: {label: "1. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Divorced, widowed •", align: "left"},
-        x: 850,
+        note: {label: "2. Marital status : Divorced, widowed •", align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       }
       ); }
 
-      if (entityName === 'Conduct') {
+      if (entityName === '⊙ Conduct') {
       annotations.push(
         {
-       color: "#029356", note: {title: "Conduct Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#158FAD", note: {title: "Conduct Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
-        {note: {label: "Age : 15-17 years •", align: "left"},
-        x: 850,
+        {note: {label: "1. Age : 15-17 years •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "2. Marital status : Never married •", align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Employment : Not in labor force •",align: "left"},
-        x: 850,
+        note: {label: "3. Employment : Not in labor force •",align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 12 grade (GED) •",align: "left"},
-        x: 850,
+        note: {label: "4. Education : 12 grade (GED) •",align: "left"},
+        x: 830,
           y: 323,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 9-11 grade •",align: "left"},
-        x: 850,
+        note: {label: "5. Education : 9-11 grade •",align: "left"},
+        x: 830,
      y: 343,
         dy: 0, dx: 0,
         connector: null,  
@@ -998,217 +996,218 @@ d3.select(this).transition("fadeOnArc")
 
       ); }
 
-      if (entityName === 'Delirium') {
+      if (entityName === '⊙ Delirium') {
       annotations.push(
         {
-       color: "#5ba300", note: {title: "Delirium Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#6ACCBC", note: {title: "Delirium Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
-        {note: {label: "Age : 65 years and older •", align: "left"},
-        x: 850,
+        {note: {label: "1. Age : 65 years and older •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "2. Marital status : Never married •", align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
-      { note: {label: "Marital status : Divorced, widowed •", align: "left"},
-        x: 850,
+      { note: {label: "3. Marital status : Divorced, widowed •", align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Depressive') {
+      if (entityName === '⊙ Depressive') {
       annotations.push(
         {
-       color: "#89ce00", note: {title: "Depressive Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#299438", note: {title: "1. Depressive Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
         {
-        note: {label: "Age : 15-17 years •", align: "left"},
-        x: 850,
+        note: {label: "2. Age : 15-17 years •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: " Education : 9-11 grade •",align: "left"},
-        x: 850,
+        note: {label: "3. Education : 9-11 grade •",align: "left"},
+        x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       },
       {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
+        note: {label: "4. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'ODD') {
+      if (entityName === '⊙ ODD') {
       annotations.push(
         {
-       color: "#009eb0", note: {title: "ODD Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#7ECC49", note: {title: "ODD Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
         {
-        note: {label: " Employment : Not in labor force •",align: "left"},
-        x: 850,
+        note: {label: "1. Employment : Not in labor force •",align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
-      {note: {label: "Age : 15-17 years •", align: "left"},
-   x: 850,
+      {note: {label: "2. Age : 15-17 years •", align: "left"},
+   x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Other') {
+      if (entityName === '⊙ Other') {
       annotations.push(
         {
-       color: "#005e60", note: {title: "Other Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#AFB83B", note: {title: "Other Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
         {
-        note: {label: "Marital status : Never married •", align: "left"},
-        x: 850,
-        y: 263,
-        dy: 0, dx: 0,
-        connector: null,  
-      },
-      {       
-         note: {label: " Education : More than 12 grade •",align: "left"},
-       x: 850,
-             y: 283,
-        dy: 0, dx: 0,
-        connector: null,  
-      }); }
-
-      if (entityName === 'PDD') {
-      annotations.push(
-        {
-       color: "#967f00", note: {title: "PDD Top Metrics" ,     align: "left"},
-        x: 850,
-        y:233,
-        dy: 0, dx: 0,
-        connector: null,  
-      },
-      {note: {label: "Age : 15-17 years •", align: "left"},
- x: 850,
+        note: {label: "1. Marital status : Never married •", align: "left"},
+        x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {       
-        note: {label: " Education : 9-11 grade •",align: "left"},
-       x: 850,
+         note: {label: "2. Education : More than 12 grade •",align: "left"},
+       x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Personality') {
+      if (entityName === '⊙ PDD') {
       annotations.push(
         {
-       color: "#e6308a",  note: {title: "Personality Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#FAD000", note: {title: "PDD Top Metrics" ,     align: "left"},
+        x: 830,
+        y:233,
+        dy: 0, dx: 0,
+        connector: null,  
+      },
+      {note: {label: "1. Age : 15-17 years •", align: "left"},
+ x: 830,
+        y: 263,
+        dy: 0, dx: 0,
+        connector: null,  
+      },
+      {       
+        note: {label: "2. Education : 9-11 grade •",align: "left"},
+       x: 830,
+             y: 283,
+        dy: 0, dx: 0,
+        connector: null,  
+      }); }
+
+      if (entityName === '⊙ Personality') {
+      annotations.push(
+        {
+       color: "#FF9933",  note: {title: "Personality Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {        
-        note: {label: "Marital status : Divorced, widowed •", align: "left"},
- x: 850,
+        note: {label: "1. Marital status : Divorced, widowed •", align: "left"},
+ x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {       
-        note: {label: "Marital status : Never married •", align: "left"},
-       x: 850,
+        note: {label: "2. Marital status : Never married •", align: "left"},
+       x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Schizophrenia ★') {
+      if (entityName === '✪ Schizophrenia') {
       annotations.push(
         {
-       color: "#b51963", color: "#b51963",  note: {title: "Schizophrenia Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#DB4035",  note: {title: "Schizophrenia Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {        
-        note: {label: " Ethnic : Puerto Rican ★",align: "left"},
- x: 850,
+        note: {label: "1. Ethnic : Puerto Rican ★",align: "left"},
+ x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {       
-        note: {label: "Region : Other jurisdictions ★ ", align: "left"},
-       x: 850,
+        note: {label: "2. Region : Other jurisdictions ★ ", align: "left"},
+       x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
-      }, {note: {label: "Race : Other race/two or more races •", align: "left"},
-   x: 850,
+      }, {note: {label: "3. Race : Other race/two or more races •", align: "left"},
+   x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       }); }
 
-      if (entityName === 'Trauma') {
+      if (entityName === '⊙ Trauma') {
       annotations.push(
         {
-       color: "#c44601",  note: {title: "Trauma Top Metrics" ,     align: "left"},
-        x: 850,
+       color: "#B8255F",  note: {title: "Trauma Top Metrics" ,     align: "left"},
+        x: 830,
         y:233,
         dy: 0, dx: 0,
         connector: null,  
       },
       {        
-        note: {label: "Age : 15-17 years •", align: "left"},
-       x: 850,
+        note: {label: "1. Age : 15-17 years •", align: "left"},
+       x: 830,
         y: 263,
         dy: 0, dx: 0,
         connector: null,  
       },
       {       
-        note: {label: "Marital status : Never married •", align: "left"},
-       x: 850,
+        note: {label: "2. Marital status : Never married •", align: "left"},
+       x: 830,
              y: 283,
         dy: 0, dx: 0,
         connector: null,  
-      }, { note: {label: " Education : 9-11 grade •",align: "left"},
-   x: 850,
+      }, { note: {label: "3. Education : 9-11 grade •",align: "left"},
+   x: 830,
         y: 303,
         dy: 0, dx: 0,
         connector: null,  
       }); }
+
 
     const makeAnnotations = d3.annotation()
       .annotations(annotations)
