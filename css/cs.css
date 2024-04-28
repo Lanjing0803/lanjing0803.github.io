@@ -1210,7 +1210,7 @@ line-height:1.5em
         .timeline {
             bottom: 25px;}
         h1{
-            font-size:50px;
+            font-size:46px;
             line-height: 1.6em;
         }
         .problem-section .process-details {
@@ -1322,7 +1322,7 @@ line-height:1.5em
             padding-top: 0;
         }
         .cs-button {
-      
+      padding-top:500px;
             flex-direction: column;
         }
         .cs-button-da3 {
@@ -1331,7 +1331,7 @@ line-height:1.5em
             display:none
         }
         .case-study-intro {
-            width: 81vw;
+            width: 73vw;
         }
         .case-study-details {
             padding-left: 0;

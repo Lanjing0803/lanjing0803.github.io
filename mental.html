@@ -14,7 +14,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Mental Health Links: Mapping Interrelationships Among Mental Disorders | Wenge Wang</title>
+  <title>Mental Health Links: Pratt InfoShow 2024 Project | Wenge Wang</title>
   <meta name="description"
     content="Uncover insights into mental health trends with our data visualization project. Explore statistics and patterns using advanced techniques like hierarchical clustering and Multiple Correspondence Analysis (MCA). Gain valuable insights from datasets sourced from the CDC, NYC Health, and SAMHSA.">
 
@@ -97,6 +97,7 @@
     .para h4 {
       line-height: 1.5;
     padding-top: 2px;
+    font-size:18px
     }
 
     .custom-bottom-break {
@@ -142,9 +143,9 @@
     .colorwheel iframe {
       transform: scale(1.1)
     }
-
+.highlight{font-size:68px;font-weight:400;}
     h2 {
-      font-size: 48px;
+      font-size: 33px;
       padding-top: 26vh;
       line-height: 2em;
       padding-left: 0
@@ -168,13 +169,13 @@
     .gradient-bar-container {
       position: relative;
       width: 300px;
-      height: 30px;    margin-top: -20px;
+      height: 30px;   
     }
 
     .gradient-bar {
-      width: 308px;
-      margin-left: 48px;
-      height: 10px;
+      width: 13vw;
+    margin-left: 290px;
+      height: 13px;
       background: linear-gradient(to right, #edeff0, rgb(89, 40, 237));
       border-radius: 15px;
       overflow: hidden;
@@ -182,16 +183,18 @@
 
     .label {
       position: absolute;
-      top: -33px;
+      top: -10px;
       left: 0;
-      width: 125px;
-      text-align: center;
+      width: 300px;
     }
 
     .label.right {
-      left: 273px;
+      left: 11vw;
+    padding-left: 330px;
     }
-
+.cooccur{
+  padding-top:38px;margin-left:-80px;transform:scale(1.1)
+}
     @keyframes bounce {
       0% {
         transform: scale(1);
@@ -212,17 +215,95 @@
       animation: fadeIn3 4s ease-in-out forwards;
 
     }
-
+.source{
+  font-size: 15px;
+    line-height: 3.8;
+    margin-top: -163px;
+    margin-right: 45px;
+}
+.source2{    
+  justify-content: end;
+    display: flex;}
+.tree{padding-left:63px;transform:scale(1.1);padding-top:18px}
     @media (max-width: 1020px) {
+      html{    overflow-x: hidden;}
       .custom-bottom-break {
        margin-bottom: 2vh;
       }
+      .clearfix{flex-direction: column;padding-top: 0;}
+    
+    .clearfix .left{
+      width: 83vw;
+      height: fit-content;
     }
+    .clearfix .right{
+      width: 83vw;
+      padding-right: 5vw;
+    padding-left: 5vw;
+    line-height:1.5em
+    }
+    .clearfix .right .para{
+      margin: 88px -28px 20px 9px;
+    }
+    h2{font-size: 33px;}
+    h3{padding-top:0}
+    h4{font-size: 15px !important;}
+    .moods{    width: 0;
+    padding-left: 0;
+    margin-top: 0;
+    transform:scale(0.7)
+    }
+    .map{height:350px; left: -115px;
+      transform: scale(0.6);}
+    .cooccur{
+   height: 430px;left:-170px;padding-top:18px;
+   transform: scale(0.65);
+    }
+    .map, .cooccur{    transform: scale(0.7);
+
+    top: -70px;
+    position: relative;}
+  .source{
+    margin-top: -163px;
+  }
+  .source2{    margin-right: 3px;}
+    .highlight{
+      font-size:33px
+    }
+    .label{    top: -33px;}
+ .para .right{left:30vw;
+    padding-left: 20px;}
+.gradient-bar {   
+  width: 26vw;
+    margin-left: 28px;
+    height: 8px;
+    margin-top: -103px;
+}
+.quote{width:78vw}
+.tree{
+  transform: scale(0.85);
+    margin-left: -100px;
+    padding-bottom: 30px;
+    margin-top: -93px;
+    width: 350px;
+}
+.colorwheel {
+    height: 330px;
+    padding-top: 50px;
+}
+.colorwheel iframe{
+  transform: scale(0.85);
+    margin-top: -300px;
+    margin-left: 23px;
+
+}
+  }
+
   </style>
 </head>
 
 <body>
-  <div class="mentalhealthsvg" data-scroll>
+  <div class="mentalhealthsvg laptop-show-only" data-scroll>
     <div class="heart">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100" class="down-element3">
         <path fill="none" stroke="rgb(101, 96, 98)"
@@ -268,7 +349,7 @@
         <div class="intro-heading">
           <div class="intro-lead-in appear-element">
             <h1>Mental Health Links<br>
-              <div class="subtitle">Mapping Interrelationships Among Mental Disorders</div>
+              <div class="subtitle laptop-show-only">Mapping Interrelationships Among Mental Disorders</div>
             </h1>
           </div>
 
@@ -283,7 +364,7 @@
 
   <div class="cs-button down-element">
     <a href="https://github.com/Lanjing0803/How-We-See-Art" target="_blank" class="primary-button" style="  pointer-events: none; ">
-      <i class="fab fa-github"></i> GitHub Repository (In Progress)
+      <i class="fab fa-github"></i> GitHub Repository
     </a>
 
   </div>
@@ -323,7 +404,7 @@
 
           <div class="case-study-details">
             <h5>Tools</h5>
-            <p>Phyton, R, Google Sheet, D3.js</p>
+            <p>Python, R, Google Sheet, D3.js</p>
 
           </div>
 
@@ -350,7 +431,7 @@
 
     <div class="right">
       <div class="para">
-        <h4 class=""><span style="font-size:68px;font-weight:400;">30%</span> of people experienced
+        <h4 class=""><span class="highlight">30%</span> of people experienced
           suboptimal mental health for some days in the past 30 days.</h4>
 <br><br>
         <h4>Specifically, people met these moods: </h4>
@@ -418,7 +499,7 @@
             </div>
           </div>
         </div>
-        <p style=" margin-right: 45px;;font-size:15px;line-height:3.8;text-align:end">Source from: <a class="gray"
+        <p style=" font-size:15px;line-height:3.8;">Source from: <a class="gray"
             target="_blank" href="https://www.cdc.gov/brfss/questionnaires/index.htm">CDC</a>, <a class="gray"
             target="_blank"
             href="https://www.nyc.gov/site/doh/data/data-sets/community-health-survey-public-use-data.page">NYC
@@ -427,28 +508,29 @@
 
       </div>
       <div class="para">
-        <h4 class=""><span style="font-size:68px;font-weight:400;">State</span>-wise, the situation
+        <h4 class=""><span class="highlight">State</span>-wise, the situation
           varies noticeably.</h4>
-        <iframe src="image/map.html" width="600" height="380" frameborder="0" style="margin-left:50px;"></iframe>
+        <iframe src="image/map.html" width="600" height="380" frameborder="0" class="map"></iframe>
 
         <div class="gradient-bar-container">
-          <div class="label">Mild</div>
-          <div class="label right">Serious</div>
+          <div class="label">Percentage of Poor Mental Health: <br class="mobile-show-only">0%</div>
+          <div class="label right"><br class="mobile-show-only">50%</div>
           <div class="gradient-bar"></div>
         </div>
 
-        <p style="font-size:15px;line-height:3.8;text-align:end;    margin-top: -54px; margin-right: 45px;">Source from:
+        <p style="font-size:15px;line-height:3.8;  ">Source from:
           <a class="gray" target="_blank" href="https://www.cdc.gov/brfss/questionnaires/index.htm">CDC</a>
         </p>
       </div>
       <div class="para">
-        <h4 class=""><span style="font-size:68px;font-weight:400;">Mental</span> disorders often
+      
+        <h4 class=""><span class="highlight">Mental</span> disorders often
           coexist, with <span style="color:#299438;font-weight:400">depression</span> and <span
             style="color:#96C3EB;font-weight:400">anxiety</span> being the most common conditions.
         </h4>
-        <iframe src="image/cooccur_chord.html" width="700" height="480" frameborder="0"
-          style="padding-top:38px;margin-left:-80px;transform:scale(1.1)"></iframe>
-        <p style="font-size:15px;line-height:3.8;text-align:end;    margin-top: -103px; margin-right: 45px;">Source from:
+        <iframe src="image/cooccur_chord.html" class="cooccur" width="700" height="480" frameborder="0"
+          ></iframe>
+        <p class="source">Source from:
           <a class="gray" target="_blank" href="https://www.cdc.gov/brfss/questionnaires/index.htm">CDC</a>
         </p>
       </div>
@@ -468,10 +550,10 @@
       where only one mental disorder type was present. This helps to remove any confusion caused by irrelevant
       information.
     </p>
-<div style="width:60vw">
+<div>
     <iframe src="image/tree-polyline.html" width="900" height="580" frameborder="0"
-      style="padding-left:63px;transform:scale(1.1);padding-top:18px"></iframe>
-    <p style="font-size:15px;line-height:3.8;text-align:end;    margin-top: -93px; margin-right: 45px;">Source from:
+      class="tree"></iframe>
+    <p class="source source2">Source from:
       <a class="gray" target="_blank" href="https://www.samhsa.gov/">SAMHSA</a>
     </p>
 </div>
@@ -494,11 +576,16 @@
 
     <br>
 
-    <div class="colorwheel">
+    <div class="colorwheel laptop-show-only">
       <iframe src="image/chord_cs.html" width="400" height="500" frameborder="0"></iframe>
 
     </div>
-
+    <div class="colorwheel mobile-show-only">
+      <iframe src="image/mentalchord.svg" width="400" height="500" frameborder="0"></iframe>
+    </div>
+    <p class="mobile-show-only source source2" style="    margin-top: -210px;padding-bottom: 180px;">Source from:
+      <a class="gray" target="_blank" href="https://www.samhsa.gov/">SAMHSA</a>
+    </p>
   </div>
 
 
