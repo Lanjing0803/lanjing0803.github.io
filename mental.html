@@ -90,7 +90,7 @@
       clear: both;
     }
 .para{     padding: 47px 47px 40px 47px;
-    background-color:#96C3EB10;
+    background-color:#F1F6FB;
     border-radius: 25px;
     margin: 177px -28px 20px 9px;
   }
@@ -225,8 +225,21 @@
   justify-content: end;
     display: flex;}
 .tree{padding-left:63px;transform:scale(1.1);padding-top:18px}
+.fa-face-frown-open{color:#884DFF; font-size:58px;  margin-top: -2px;}
+.fa-face-angry{color:rgb(181, 25, 99); font-size:52px;}
+.fa-tired{color: rgb(0, 94, 96); font-size:52px;    margin-top: 1px;}
+.fa-face-sad-tear{color:#299438; font-size:41px;  margin-top: 6px;}
+.fa-meh{color:rgb(101, 96, 98); font-size:28px;margin-top: 12px;}
+.fa-face-meh-blank{color:rgb(172, 174, 192); font-size:18px;margin-top: 18px;}
+
     @media (max-width: 1020px) {
-      html{    overflow-x: hidden;}
+      .fa-face-frown-open{font-size:38px;}
+      .fa-face-angry{font-size:32px;}
+      .fa-tired{font-size:32px;}
+      .fa-face-sad-tear{font-size:28px; }
+      .fa-meh{font-size:18px;    margin-top: 10px;}
+      .fa-face-meh-blank{ font-size:15px}
+
       .custom-bottom-break {
        margin-bottom: 2vh;
       }
@@ -238,12 +251,14 @@
     }
     .clearfix .right{
       width: 83vw;
-      padding-right: 5vw;
+    padding-right: 5vw;
     padding-left: 5vw;
-    line-height:1.5em
+    position: relative;
+    line-height: 1.5em;
+    z-index: 100;
     }
     .clearfix .right .para{
-      margin: 88px -28px 20px 9px;
+      margin: 188px -28px 20px 9px;
     }
     h2{font-size: 33px;}
     h3{padding-top:0}
@@ -251,7 +266,6 @@
     .moods{    width: 0;
     padding-left: 0;
     margin-top: 0;
-    transform:scale(0.7)
     }
     .map{height:350px; left: -115px;
       transform: scale(0.6);}
@@ -293,9 +307,8 @@
 }
 .colorwheel iframe{
   transform: scale(0.85);
-    margin-top: -300px;
+  margin-top: -280px;
     margin-left: 23px;
-
 }
   }
 
@@ -438,7 +451,7 @@
         <div class="moods">
           <div class="artcontainer">
             <!-- Anxious -->
-            <i class="fa-solid fa-face-frown-open" style="color:#884DFF; font-size:58px;  margin-top: -2px;"></i>
+            <i class="fa-solid fa-face-frown-open" ></i>
             <div class="artinfo">
               <h4>Anxious</h4>
               <p>58% people feel anxious</p>
@@ -448,7 +461,7 @@
           <div class="artcontainer">
 
             <!-- Agitated -->
-            <i class="fa-solid fa-face-angry" style="color:rgb(181, 25, 99); font-size:52px;"></i>
+            <i class="fa-solid fa-face-angry" ></i>
             <div class="artinfo">
               <h4>Agitated</h4>
               <p>52% people feel agitated</p>
@@ -458,7 +471,7 @@
 
           <div class="artcontainer">
             <!-- Fatigued -->
-            <i class="fas fa-tired" style="color: rgb(0, 94, 96); font-size:52px;    margin-top: 1px;"></i>
+            <i class="fas fa-tired" ></i>
             <div class="artinfo">
               <h4>Fatigued</h4>
               <p>52% people feel fatigued</p>
@@ -468,7 +481,7 @@
 
           <div class="artcontainer">
             <!-- Depressed -->
-            <i class="fa-solid fa-face-sad-tear" style="color:#299438; font-size:41px;  margin-top: 6px;"></i>
+            <i class="fa-solid fa-face-sad-tear"></i>
             <div class="artinfo">
               <h4>Depressed</h4>
               <p>41% people feel depressed</p>
@@ -479,7 +492,7 @@
           <div class="artcontainer">
 
             <!-- Despondent -->
-            <i class="fas fa-meh" style="color:rgb(101, 96, 98); font-size:28px;margin-top: 12px;"></i>
+            <i class="fas fa-meh" ></i>
             <div class="artinfo">
               <h4>Despondent</h4>
               <p>28% people feel despondent</p>
@@ -490,8 +503,7 @@
           <div class="artcontainer">
 
             <!-- Inadequate -->
-            <i class="fa-solid fa-face-meh-blank"
-              style="color:rgb(172, 174, 192); font-size:18px;margin-top: 18px;"></i>
+            <i class="fa-solid fa-face-meh-blank"></i>
             <div class="artinfo">
               <h4>Inadequate</h4>
               <p>18% people feel inadequate</p>
