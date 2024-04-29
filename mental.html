@@ -178,7 +178,6 @@
       height: 13px;
       background: linear-gradient(to right, #edeff0, rgb(89, 40, 237));
       border-radius: 15px;
-      overflow: hidden;
     }
 
     .label {
@@ -233,6 +232,10 @@
 .fa-face-meh-blank{color:rgb(172, 174, 192); font-size:18px;margin-top: 18px;}
 
     @media (max-width: 1020px) {
+      .gradient-bar-container {
+   margin-top:-80px
+    }
+
       .fa-face-frown-open{font-size:38px;}
       .fa-face-angry{font-size:32px;}
       .fa-tired{font-size:32px;}
@@ -273,7 +276,7 @@
       transform: scale(0.6);}
     .cooccur{
    height: 430px;left:-170px;padding-top:18px;
-   transform: scale(0.65);
+   transform: scale(0.65);    margin-bottom: -130px;
     }
     .map, .cooccur{    transform: scale(0.7);
 
@@ -544,7 +547,7 @@
         </h4>
         <iframe src="image/cooccur_chord.html" class="cooccur" width="700" height="480" frameborder="0"
           ></iframe>
-        <p class="source">Source from:
+        <p >Source from:
           <a class="gray" target="_blank" href="https://www.cdc.gov/brfss/questionnaires/index.htm">CDC</a>
         </p>
       </div>
